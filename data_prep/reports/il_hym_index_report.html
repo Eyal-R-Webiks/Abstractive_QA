@@ -110,13 +110,6 @@
       font-size: 0.83rem;
     }
 
-    .grid {
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 14px;
-    }
-
     .panel {
       background: var(--card);
       border: 1px solid var(--line);
@@ -152,7 +145,9 @@
       text-transform: uppercase;
     }
 
-    .genre { font-weight: 600; }
+    .genre {
+      font-weight: 600;
+    }
 
     .bar-wrap {
       width: 100%;
@@ -195,47 +190,37 @@
       font-size: 0.86rem;
     }
 
-    .tree {
-      margin: 0;
-      padding-right: 20px;
-      line-height: 1.45;
-      list-style: none;
-    }
-
-    .tree > li {
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    .tree ul {
-      margin: 6px 0 0;
-      padding-right: 20px;
-      list-style: none;
-      border-right: 2px solid rgba(23,32,38,0.15);
-    }
-
-    .tree ul li {
-      margin-bottom: 3px;
-      position: relative;
-      padding-right: 10px;
-    }
-
-    .tree ul li::before {
-      content: "";
-      position: absolute;
-      right: -2px;
-      top: 0.8em;
-      width: 10px;
-      border-top: 2px solid rgba(23,32,38,0.15);
-    }
-
     .ltr-panel {
       direction: ltr;
       text-align: left;
     }
 
-    .ltr-panel h2 {
+    .ltr-panel h2,
+    .ltr-panel th,
+    .ltr-panel td {
       text-align: left;
+    }
+
+    .genre-table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .genre-table thead th {
+      background: rgba(255,255,255,0.96);
+    }
+
+    .genre-group .genre-start td {
+      border-top: 14px solid transparent;
+      background: rgba(219,75,63,0.08);
+    }
+
+    .genre-group:first-of-type .genre-start td {
+      border-top-width: 0;
+    }
+
+    .genre-cell {
+      min-width: 150px;
     }
 
     .foot {
@@ -252,7 +237,6 @@
 
     @media (max-width: 980px) {
       .cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .grid { grid-template-columns: 1fr; }
       .split { grid-template-columns: 1fr; }
     }
 
@@ -320,18 +304,827 @@
     </section>
 
     <section class="panel ltr-panel" style="margin-top:14px;">
-      <h2>Genre/Subgenre Tree</h2>
-      <ul class="tree"><li><strong>animals</strong><ul><li><span class="mono">adoption</span>: 50 articles, len range 1,120-8,574</li><li><em>&lt;no subgenre&gt;</em>: 275 articles, len range 310-13,255</li></ul></li><li><strong>auto</strong><ul><li><em>&lt;no subgenre&gt;</em>: 87 articles, len range 145-23,596</li><li><span class="mono">local-auto</span>: 73 articles, len range 564-3,235</li><li><span class="mono">roadtests</span>: 46 articles, len range 1,776-8,932</li><li><span class="mono">twowheels</span>: 35 articles, len range 459-6,983</li><li><span class="mono">world</span>: 7 articles, len range 1,082-2,936</li></ul></li><li><strong>business</strong><ul><li><em>&lt;no subgenre&gt;</em>: 358 articles, len range 387-21,297</li><li><span class="mono">consumers</span>: 4,352 articles, len range 103-41,267</li><li><span class="mono">real-estate</span>: 988 articles, len range 130-34,601</li></ul></li><li><strong>careers</strong><ul><li><em>&lt;no subgenre&gt;</em>: 1 articles, len range 1,375-1,375</li></ul></li><li><strong>celebrities</strong><ul><li><em>&lt;no subgenre&gt;</em>: 34 articles, len range 692-14,237</li><li><span class="mono">local-celebrities</span>: 2,420 articles, len range 114-24,846</li><li><span class="mono">world-news-celebrities</span>: 358 articles, len range 159-8,591</li></ul></li><li><strong>culture</strong><ul><li><span class="mono">art</span>: 91 articles, len range 636-7,381</li><li><span class="mono">books</span>: 229 articles, len range 585-37,935</li><li><em>&lt;no subgenre&gt;</em>: 9 articles, len range 556-3,079</li><li><span class="mono">films</span>: 726 articles, len range 360-17,806</li><li><span class="mono">language</span>: 68 articles, len range 155-34,037</li><li><span class="mono">music</span>: 1,553 articles, len range 108-56,124</li><li><span class="mono">radio</span>: 48 articles, len range 285-4,583</li><li><span class="mono">stage</span>: 419 articles, len range 387-27,075</li><li><span class="mono">standup</span>: 1 articles, len range 4,584-4,584</li><li><span class="mono">tv</span>: 2,285 articles, len range 108-98,232</li></ul></li><li><strong>food</strong><ul><li><span class="mono">breads-and-pastries</span>: 15 articles, len range 1,283-5,082</li><li><span class="mono">cakes-and-cookies</span>: 23 articles, len range 1,282-6,349</li><li><span class="mono">desserts</span>: 75 articles, len range 679-5,893</li><li><span class="mono">drinks</span>: 77 articles, len range 711-32,840</li><li><span class="mono">fish</span>: 3 articles, len range 1,519-3,861</li><li><em>&lt;no subgenre&gt;</em>: 10 articles, len range 1,208-20,981</li><li><span class="mono">food-news</span>: 910 articles, len range 163-20,265</li><li><span class="mono">food-tours</span>: 1 articles, len range 7,899-7,899</li><li><span class="mono">holiday-recipes</span>: 51 articles, len range 1,362-16,102</li><li><span class="mono">meat-and-poultry</span>: 24 articles, len range 1,047-8,922</li><li><span class="mono">pasta</span>: 18 articles, len range 1,424-8,236</li><li><span class="mono">recipes</span>: 87 articles, len range 401-9,264</li><li><span class="mono">recipes-for-kids</span>: 12 articles, len range 839-4,811</li><li><span class="mono">restaurant-reviews</span>: 38 articles, len range 639-10,237</li><li><span class="mono">salads</span>: 2 articles, len range 2,188-3,268</li><li><span class="mono">vegan-and-vegeterian</span>: 16 articles, len range 345-8,603</li></ul></li><li><strong>general</strong><ul><li><em>&lt;no subgenre&gt;</em>: 4,517 articles, len range 13-73,742</li></ul></li><li><strong>health</strong><ul><li><em>&lt;no subgenre&gt;</em>: 3,132 articles, len range 174-95,764</li></ul></li><li><strong>horoscopes</strong><ul><li><em>&lt;no subgenre&gt;</em>: 54 articles, len range 1,710-3,586</li></ul></li><li><strong>judaism</strong><ul><li><em>&lt;no subgenre&gt;</em>: 95 articles, len range 166-10,090</li><li><span class="mono">judaism-news</span>: 3,054 articles, len range 13-129,174</li><li><span class="mono">synagogue</span>: 195 articles, len range 195-32,182</li><li><span class="mono">world-news-judaism</span>: 932 articles, len range 51-16,455</li></ul></li><li><strong>lifestyle</strong><ul><li><span class="mono">beauty</span>: 175 articles, len range 366-13,038</li><li><span class="mono">design</span>: 140 articles, len range 16-8,874</li><li><span class="mono">diets-and-nutrition</span>: 13 articles, len range 1,339-9,896</li><li><span class="mono">family-and-parenting</span>: 204 articles, len range 382-8,242</li><li><span class="mono">fashion</span>: 944 articles, len range 93-11,739</li><li><em>&lt;no subgenre&gt;</em>: 359 articles, len range 185-81,151</li><li><span class="mono">relationship</span>: 198 articles, len range 190-19,154</li><li><span class="mono">shopping</span>: 97 articles, len range 298-9,022</li><li><span class="mono">well-being-and-fitness</span>: 99 articles, len range 143-9,273</li></ul></li><li><strong>magazine</strong><ul><li><span class="mono">hashavua</span>: 5,258 articles, len range 61-31,226</li><li><em>&lt;no subgenre&gt;</em>: 18 articles, len range 1,714-33,882</li><li><span class="mono">shishabat</span>: 3,961 articles, len range 187-514,611</li><li><span class="mono">special</span>: 294 articles, len range 39-101,559</li></ul></li><li><strong>marketing</strong><ul><li><em>&lt;no subgenre&gt;</em>: 7 articles, len range 1,239-5,014</li></ul></li><li><strong>military-life</strong><ul><li><em>&lt;no subgenre&gt;</em>: 68 articles, len range 377-9,507</li><li><span class="mono">military-tech</span>: 138 articles, len range 227-11,896</li><li><span class="mono">world-news-military-life</span>: 957 articles, len range 284-24,230</li></ul></li><li><strong>mumlazim</strong><ul><li><em>&lt;no subgenre&gt;</em>: 618 articles, len range 8-10,468</li></ul></li><li><strong>news</strong><ul><li><span class="mono">crime</span>: 1,133 articles, len range 377-6,795</li><li><span class="mono">defense</span>: 392 articles, len range 408-27,514</li><li><span class="mono">education</span>: 981 articles, len range 106-31,805</li><li><span class="mono">environment</span>: 994 articles, len range 443-13,806</li><li><span class="mono">europe</span>: 668 articles, len range 412-19,533</li><li><span class="mono">geopolitics</span>: 2,364 articles, len range 109-27,216</li><li><span class="mono">law</span>: 3,984 articles, len range 17-39,292</li><li><span class="mono">local</span>: 6,319 articles, len range 10-46,037</li><li><span class="mono">middle-east</span>: 1,843 articles, len range 350-35,395</li><li><em>&lt;no subgenre&gt;</em>: 14,606 articles, len range 18-56,408</li><li><span class="mono">other</span>: 140 articles, len range 423-13,416</li><li><span class="mono">politics</span>: 498 articles, len range 458-11,960</li><li><span class="mono">transportation</span>: 84 articles, len range 820-13,968</li><li><span class="mono">usa</span>: 859 articles, len range 541-12,514</li><li><span class="mono">world-news</span>: 8,081 articles, len range 52-18,507</li></ul></li><li><strong>opinions</strong><ul><li><em>&lt;no subgenre&gt;</em>: 417 articles, len range 673-12,448</li></ul></li><li><strong>podcasts</strong><ul><li><span class="mono">fifteen</span>: 1,699 articles, len range 4-122,015</li><li><em>&lt;no subgenre&gt;</em>: 25 articles, len range 212-3,017</li></ul></li><li><strong>sport</strong><ul><li><span class="mono">%d7%a9%d7%97%d7%99%d7%99%d7%94</span>: 4 articles, len range 976-1,455</li><li><span class="mono">athletics</span>: 24 articles, len range 422-9,408</li><li><span class="mono">israeli-basketball</span>: 3,418 articles, len range 200-16,651</li><li><span class="mono">israeli-soccer</span>: 6,223 articles, len range 141-15,915</li><li><span class="mono">other-sports</span>: 1,361 articles, len range 183-16,580</li><li><em>&lt;no subgenre&gt;</em>: 2,386 articles, len range 75-53,546</li><li><span class="mono">tennis</span>: 158 articles, len range 444-4,756</li><li><span class="mono">world-basketball</span>: 1,615 articles, len range 152-7,519</li><li><span class="mono">world-soccer</span>: 3,906 articles, len range 39-9,041</li></ul></li><li><strong>tech</strong><ul><li><span class="mono">apps</span>: 33 articles, len range 495-5,292</li><li><span class="mono">gadgets</span>: 26 articles, len range 760-6,194</li><li><span class="mono">gaming</span>: 73 articles, len range 158-10,041</li><li><span class="mono">reviews</span>: 56 articles, len range 150-8,776</li><li><span class="mono">security-and-privacy</span>: 3 articles, len range 1,158-4,909</li><li><span class="mono">space</span>: 80 articles, len range 508-8,046</li><li><em>&lt;no subgenre&gt;</em>: 561 articles, len range 253-13,512</li><li><span class="mono">tech-news</span>: 4,789 articles, len range 12-217,275</li></ul></li><li><strong>travel</strong><ul><li><span class="mono">tours</span>: 347 articles, len range 246-59,646</li><li><em>&lt;no subgenre&gt;</em>: 1,111 articles, len range 39-27,461</li></ul></li><li><strong>viral</strong><ul><li><em>&lt;no subgenre&gt;</em>: 1,007 articles, len range 97-38,149</li></ul></li><li><strong>weathern</strong><ul><li><em>&lt;no subgenre&gt;</em>: 22 articles, len range 566-4,968</li></ul></li><li><strong>you-may-find-interesting</strong><ul><li><span class="mono">content</span>: 101 articles, len range 506-6,743</li><li><span class="mono">experts</span>: 1,726 articles, len range 36-13,808</li><li><span class="mono">professionals</span>: 48 articles, len range 1,718-5,885</li><li><em>&lt;no subgenre&gt;</em>: 267 articles, len range 189-12,411</li></ul></li></ul>
+      <h2>Genre/Subgenre Table</h2>
+      <table class="genre-table">
+        <thead>
+          <tr>
+            <th>Genre</th>
+            <th>Subgenre</th>
+            <th>docs_amount</th>
+            <th>Min_len</th>
+            <th>max_len</th>
+          </tr>
+        </thead>
+        <tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>animals</strong></td>
+          <td></td>
+          <td>325</td>
+          <td>310</td>
+          <td>13,255</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>275</td>
+                  <td>310</td>
+                  <td>13,255</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">adoption</span></td>
+                  <td>50</td>
+                  <td>1,120</td>
+                  <td>8,574</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>auto</strong></td>
+          <td></td>
+          <td>248</td>
+          <td>145</td>
+          <td>23,596</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>87</td>
+                  <td>145</td>
+                  <td>23,596</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">local-auto</span></td>
+                  <td>73</td>
+                  <td>564</td>
+                  <td>3,235</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">roadtests</span></td>
+                  <td>46</td>
+                  <td>1,776</td>
+                  <td>8,932</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">twowheels</span></td>
+                  <td>35</td>
+                  <td>459</td>
+                  <td>6,983</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world</span></td>
+                  <td>7</td>
+                  <td>1,082</td>
+                  <td>2,936</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>business</strong></td>
+          <td></td>
+          <td>5,698</td>
+          <td>103</td>
+          <td>41,267</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>358</td>
+                  <td>387</td>
+                  <td>21,297</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">consumers</span></td>
+                  <td>4,352</td>
+                  <td>103</td>
+                  <td>41,267</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">real-estate</span></td>
+                  <td>988</td>
+                  <td>130</td>
+                  <td>34,601</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>careers</strong></td>
+          <td></td>
+          <td>1</td>
+          <td>1,375</td>
+          <td>1,375</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>1</td>
+                  <td>1,375</td>
+                  <td>1,375</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>celebrities</strong></td>
+          <td></td>
+          <td>2,812</td>
+          <td>114</td>
+          <td>24,846</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>34</td>
+                  <td>692</td>
+                  <td>14,237</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">local-celebrities</span></td>
+                  <td>2,420</td>
+                  <td>114</td>
+                  <td>24,846</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-news-celebrities</span></td>
+                  <td>358</td>
+                  <td>159</td>
+                  <td>8,591</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>culture</strong></td>
+          <td></td>
+          <td>5,429</td>
+          <td>108</td>
+          <td>98,232</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>9</td>
+                  <td>556</td>
+                  <td>3,079</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">art</span></td>
+                  <td>91</td>
+                  <td>636</td>
+                  <td>7,381</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">books</span></td>
+                  <td>229</td>
+                  <td>585</td>
+                  <td>37,935</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">films</span></td>
+                  <td>726</td>
+                  <td>360</td>
+                  <td>17,806</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">language</span></td>
+                  <td>68</td>
+                  <td>155</td>
+                  <td>34,037</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">music</span></td>
+                  <td>1,553</td>
+                  <td>108</td>
+                  <td>56,124</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">radio</span></td>
+                  <td>48</td>
+                  <td>285</td>
+                  <td>4,583</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">stage</span></td>
+                  <td>419</td>
+                  <td>387</td>
+                  <td>27,075</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">standup</span></td>
+                  <td>1</td>
+                  <td>4,584</td>
+                  <td>4,584</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">tv</span></td>
+                  <td>2,285</td>
+                  <td>108</td>
+                  <td>98,232</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>food</strong></td>
+          <td></td>
+          <td>1,362</td>
+          <td>163</td>
+          <td>32,840</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>10</td>
+                  <td>1,208</td>
+                  <td>20,981</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">breads-and-pastries</span></td>
+                  <td>15</td>
+                  <td>1,283</td>
+                  <td>5,082</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">cakes-and-cookies</span></td>
+                  <td>23</td>
+                  <td>1,282</td>
+                  <td>6,349</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">desserts</span></td>
+                  <td>75</td>
+                  <td>679</td>
+                  <td>5,893</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">drinks</span></td>
+                  <td>77</td>
+                  <td>711</td>
+                  <td>32,840</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">fish</span></td>
+                  <td>3</td>
+                  <td>1,519</td>
+                  <td>3,861</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">food-news</span></td>
+                  <td>910</td>
+                  <td>163</td>
+                  <td>20,265</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">food-tours</span></td>
+                  <td>1</td>
+                  <td>7,899</td>
+                  <td>7,899</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">holiday-recipes</span></td>
+                  <td>51</td>
+                  <td>1,362</td>
+                  <td>16,102</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">meat-and-poultry</span></td>
+                  <td>24</td>
+                  <td>1,047</td>
+                  <td>8,922</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">pasta</span></td>
+                  <td>18</td>
+                  <td>1,424</td>
+                  <td>8,236</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">recipes</span></td>
+                  <td>87</td>
+                  <td>401</td>
+                  <td>9,264</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">recipes-for-kids</span></td>
+                  <td>12</td>
+                  <td>839</td>
+                  <td>4,811</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">restaurant-reviews</span></td>
+                  <td>38</td>
+                  <td>639</td>
+                  <td>10,237</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">salads</span></td>
+                  <td>2</td>
+                  <td>2,188</td>
+                  <td>3,268</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">vegan-and-vegeterian</span></td>
+                  <td>16</td>
+                  <td>345</td>
+                  <td>8,603</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>general</strong></td>
+          <td></td>
+          <td>4,517</td>
+          <td>13</td>
+          <td>73,742</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>4,517</td>
+                  <td>13</td>
+                  <td>73,742</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>health</strong></td>
+          <td></td>
+          <td>3,132</td>
+          <td>174</td>
+          <td>95,764</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>3,132</td>
+                  <td>174</td>
+                  <td>95,764</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>horoscopes</strong></td>
+          <td></td>
+          <td>54</td>
+          <td>1,710</td>
+          <td>3,586</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>54</td>
+                  <td>1,710</td>
+                  <td>3,586</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>judaism</strong></td>
+          <td></td>
+          <td>4,276</td>
+          <td>13</td>
+          <td>129,174</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>95</td>
+                  <td>166</td>
+                  <td>10,090</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">judaism-news</span></td>
+                  <td>3,054</td>
+                  <td>13</td>
+                  <td>129,174</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">synagogue</span></td>
+                  <td>195</td>
+                  <td>195</td>
+                  <td>32,182</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-news-judaism</span></td>
+                  <td>932</td>
+                  <td>51</td>
+                  <td>16,455</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>lifestyle</strong></td>
+          <td></td>
+          <td>2,229</td>
+          <td>16</td>
+          <td>81,151</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>359</td>
+                  <td>185</td>
+                  <td>81,151</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">beauty</span></td>
+                  <td>175</td>
+                  <td>366</td>
+                  <td>13,038</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">design</span></td>
+                  <td>140</td>
+                  <td>16</td>
+                  <td>8,874</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">diets-and-nutrition</span></td>
+                  <td>13</td>
+                  <td>1,339</td>
+                  <td>9,896</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">family-and-parenting</span></td>
+                  <td>204</td>
+                  <td>382</td>
+                  <td>8,242</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">fashion</span></td>
+                  <td>944</td>
+                  <td>93</td>
+                  <td>11,739</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">relationship</span></td>
+                  <td>198</td>
+                  <td>190</td>
+                  <td>19,154</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">shopping</span></td>
+                  <td>97</td>
+                  <td>298</td>
+                  <td>9,022</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">well-being-and-fitness</span></td>
+                  <td>99</td>
+                  <td>143</td>
+                  <td>9,273</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>magazine</strong></td>
+          <td></td>
+          <td>9,531</td>
+          <td>39</td>
+          <td>514,611</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>18</td>
+                  <td>1,714</td>
+                  <td>33,882</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">hashavua</span></td>
+                  <td>5,258</td>
+                  <td>61</td>
+                  <td>31,226</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">shishabat</span></td>
+                  <td>3,961</td>
+                  <td>187</td>
+                  <td>514,611</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">special</span></td>
+                  <td>294</td>
+                  <td>39</td>
+                  <td>101,559</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>marketing</strong></td>
+          <td></td>
+          <td>7</td>
+          <td>1,239</td>
+          <td>5,014</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>7</td>
+                  <td>1,239</td>
+                  <td>5,014</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>military-life</strong></td>
+          <td></td>
+          <td>1,163</td>
+          <td>227</td>
+          <td>24,230</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>68</td>
+                  <td>377</td>
+                  <td>9,507</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">military-tech</span></td>
+                  <td>138</td>
+                  <td>227</td>
+                  <td>11,896</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-news-military-life</span></td>
+                  <td>957</td>
+                  <td>284</td>
+                  <td>24,230</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>mumlazim</strong></td>
+          <td></td>
+          <td>618</td>
+          <td>8</td>
+          <td>10,468</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>618</td>
+                  <td>8</td>
+                  <td>10,468</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>news</strong></td>
+          <td></td>
+          <td>42,946</td>
+          <td>10</td>
+          <td>56,408</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>14,606</td>
+                  <td>18</td>
+                  <td>56,408</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">crime</span></td>
+                  <td>1,133</td>
+                  <td>377</td>
+                  <td>6,795</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">defense</span></td>
+                  <td>392</td>
+                  <td>408</td>
+                  <td>27,514</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">education</span></td>
+                  <td>981</td>
+                  <td>106</td>
+                  <td>31,805</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">environment</span></td>
+                  <td>994</td>
+                  <td>443</td>
+                  <td>13,806</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">europe</span></td>
+                  <td>668</td>
+                  <td>412</td>
+                  <td>19,533</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">geopolitics</span></td>
+                  <td>2,364</td>
+                  <td>109</td>
+                  <td>27,216</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">law</span></td>
+                  <td>3,984</td>
+                  <td>17</td>
+                  <td>39,292</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">local</span></td>
+                  <td>6,319</td>
+                  <td>10</td>
+                  <td>46,037</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">middle-east</span></td>
+                  <td>1,843</td>
+                  <td>350</td>
+                  <td>35,395</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">other</span></td>
+                  <td>140</td>
+                  <td>423</td>
+                  <td>13,416</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">politics</span></td>
+                  <td>498</td>
+                  <td>458</td>
+                  <td>11,960</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">transportation</span></td>
+                  <td>84</td>
+                  <td>820</td>
+                  <td>13,968</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">usa</span></td>
+                  <td>859</td>
+                  <td>541</td>
+                  <td>12,514</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-news</span></td>
+                  <td>8,081</td>
+                  <td>52</td>
+                  <td>18,507</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>opinions</strong></td>
+          <td></td>
+          <td>417</td>
+          <td>673</td>
+          <td>12,448</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>417</td>
+                  <td>673</td>
+                  <td>12,448</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>podcasts</strong></td>
+          <td></td>
+          <td>1,724</td>
+          <td>4</td>
+          <td>122,015</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>25</td>
+                  <td>212</td>
+                  <td>3,017</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">fifteen</span></td>
+                  <td>1,699</td>
+                  <td>4</td>
+                  <td>122,015</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>sport</strong></td>
+          <td></td>
+          <td>19,095</td>
+          <td>39</td>
+          <td>53,546</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>2,386</td>
+                  <td>75</td>
+                  <td>53,546</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">%d7%a9%d7%97%d7%99%d7%99%d7%94</span></td>
+                  <td>4</td>
+                  <td>976</td>
+                  <td>1,455</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">athletics</span></td>
+                  <td>24</td>
+                  <td>422</td>
+                  <td>9,408</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">israeli-basketball</span></td>
+                  <td>3,418</td>
+                  <td>200</td>
+                  <td>16,651</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">israeli-soccer</span></td>
+                  <td>6,223</td>
+                  <td>141</td>
+                  <td>15,915</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">other-sports</span></td>
+                  <td>1,361</td>
+                  <td>183</td>
+                  <td>16,580</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">tennis</span></td>
+                  <td>158</td>
+                  <td>444</td>
+                  <td>4,756</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-basketball</span></td>
+                  <td>1,615</td>
+                  <td>152</td>
+                  <td>7,519</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">world-soccer</span></td>
+                  <td>3,906</td>
+                  <td>39</td>
+                  <td>9,041</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>tech</strong></td>
+          <td></td>
+          <td>5,621</td>
+          <td>12</td>
+          <td>217,275</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>561</td>
+                  <td>253</td>
+                  <td>13,512</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">apps</span></td>
+                  <td>33</td>
+                  <td>495</td>
+                  <td>5,292</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">gadgets</span></td>
+                  <td>26</td>
+                  <td>760</td>
+                  <td>6,194</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">gaming</span></td>
+                  <td>73</td>
+                  <td>158</td>
+                  <td>10,041</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">reviews</span></td>
+                  <td>56</td>
+                  <td>150</td>
+                  <td>8,776</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">security-and-privacy</span></td>
+                  <td>3</td>
+                  <td>1,158</td>
+                  <td>4,909</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">space</span></td>
+                  <td>80</td>
+                  <td>508</td>
+                  <td>8,046</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">tech-news</span></td>
+                  <td>4,789</td>
+                  <td>12</td>
+                  <td>217,275</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>travel</strong></td>
+          <td></td>
+          <td>1,458</td>
+          <td>39</td>
+          <td>59,646</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>1,111</td>
+                  <td>39</td>
+                  <td>27,461</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">tours</span></td>
+                  <td>347</td>
+                  <td>246</td>
+                  <td>59,646</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>viral</strong></td>
+          <td></td>
+          <td>1,007</td>
+          <td>97</td>
+          <td>38,149</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>1,007</td>
+                  <td>97</td>
+                  <td>38,149</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>weathern</strong></td>
+          <td></td>
+          <td>22</td>
+          <td>566</td>
+          <td>4,968</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>22</td>
+                  <td>566</td>
+                  <td>4,968</td>
+                </tr></tbody><tbody class="genre-group"><tr class="genre-start">
+          <td class="genre-cell"><strong>you-may-find-interesting</strong></td>
+          <td></td>
+          <td>2,142</td>
+          <td>36</td>
+          <td>13,808</td>
+        </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><em>&lt;no subgenre&gt;</em></td>
+                  <td>267</td>
+                  <td>189</td>
+                  <td>12,411</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">content</span></td>
+                  <td>101</td>
+                  <td>506</td>
+                  <td>6,743</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">experts</span></td>
+                  <td>1,726</td>
+                  <td>36</td>
+                  <td>13,808</td>
+                </tr><tr>
+          <td class="genre-cell"></td>
+                  <td><span class="mono">professionals</span></td>
+                  <td>48</td>
+                  <td>1,718</td>
+                  <td>5,885</td>
+                </tr></tbody>
+      </table>
     </section>
 
     <section class="panel" style="margin-top:14px;">
-        <h2>טווחי אורך</h2>
-        <table>
-          <thead>
-            <tr><th>טווח</th><th>קבצים</th><th>חלק יחסי</th><th>עמודה חזותית</th></tr>
-          </thead>
-          <tbody>
-            <tr>
+      <h2>טווחי אורך</h2>
+      <table>
+        <thead>
+          <tr><th>טווח</th><th>קבצים</th><th>חלק יחסי</th><th>עמודה חזותית</th></tr>
+        </thead>
+        <tbody>
+          <tr>
               <td class="genre">0-999</td>
               <td>14,308</td>
               <td>12.35%</td>
@@ -377,8 +1170,8 @@
               <td>0.00%</td>
               <td><div class="bar-wrap"><div class="bar alt" style="width:1.00%"></div></div></td>
             </tr>
-          </tbody>
-        </table>
+        </tbody>
+      </table>
     </section>
 
     <section class="panel" style="margin-top:14px;">

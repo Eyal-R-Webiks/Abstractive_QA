@@ -11,32 +11,33 @@ csv_path = base / "il-hym" / "index.csv"
 out_path = base / "reports" / "il_hym_index_report.html"
 
 
-def to_int(v):
+def to_int(value):
     try:
-        return int(v)
+        return int(value)
     except (TypeError, ValueError):
         return 0
 
 
-with csv_path.open("r", encoding="utf-8", newline="") as f:
-    rows = [row for row in csv.DictReader(f)]
+with csv_path.open("r", encoding="utf-8", newline="") as handle:
+    rows = [row for row in csv.DictReader(handle)]
 
 files_total = len(rows)
-lengths = [to_int(r.get("len")) for r in rows]
-genres = [str(r.get("genre", "unknown") or "unknown") for r in rows]
+lengths = [to_int(row.get("len")) for row in rows]
 
 genre_subgenre_lengths = defaultdict(lambda: defaultdict(list))
-for r in rows:
-  g = str(r.get("genre", "unknown") or "unknown")
-  sg = str(r.get("subgenre", "unknown") or "unknown")
-  genre_subgenre_lengths[g][sg].append(to_int(r.get("len")))
+genre_lengths = defaultdict(list)
+for row in rows:
+    genre = str(row.get("genre", "unknown") or "unknown")
+    subgenre = str(row.get("subgenre", "unknown") or "unknown")
+    length = to_int(row.get("len"))
+    genre_subgenre_lengths[genre][subgenre].append(length)
+    genre_lengths[genre].append(length)
 
 length_stats = {
     "min": min(lengths) if lengths else 0,
     "max": max(lengths) if lengths else 0,
     "mean": round(statistics.mean(lengths), 2) if lengths else 0,
     "median": round(statistics.median(lengths), 2) if lengths else 0,
-    "std": round(statistics.pstdev(lengths), 2) if len(lengths) > 1 else 0,
     "p10": round(statistics.quantiles(lengths, n=10, method="inclusive")[0], 2) if len(lengths) > 1 else 0,
     "p90": round(statistics.quantiles(lengths, n=10, method="inclusive")[8], 2) if len(lengths) > 1 else 0,
 }
@@ -52,47 +53,31 @@ bins = [
     (100000, 199999),
     (200000, 10**12),
 ]
+
 length_bins = []
-for a, b in bins:
-    label = f"{a:,}-{b:,}" if b < 10**12 else f"{a:,}+"
-    count = sum(1 for L in lengths if a <= L <= b)
+for low, high in bins:
+    label = f"{low:,}-{high:,}" if high < 10**12 else f"{low:,}+"
+    count = sum(1 for length in lengths if low <= length <= high)
     length_bins.append((label, count))
-
-genre_lengths = defaultdict(list)
-for r in rows:
-    g = str(r.get("genre", "unknown") or "unknown")
-    genre_lengths[g].append(to_int(r.get("len")))
-
-genre_stats = []
-for g, vals in sorted(genre_lengths.items(), key=lambda kv: (-len(kv[1]), kv[0])):
-    genre_stats.append(
-        {
-            "genre": g,
-            "count": len(vals),
-            "mean": round(statistics.mean(vals), 2),
-            "median": round(statistics.median(vals), 2),
-            "std": round(statistics.pstdev(vals), 2) if len(vals) > 1 else 0.0,
-            "min": min(vals),
-            "max": max(vals),
-        }
-    )
 
 if lengths:
     grand_mean = statistics.mean(lengths)
-    ss_total = sum((x - grand_mean) ** 2 for x in lengths)
-    ss_between = sum(len(v) * (statistics.mean(v) - grand_mean) ** 2 for v in genre_lengths.values())
+    ss_total = sum((length - grand_mean) ** 2 for length in lengths)
+    ss_between = sum(
+        len(values) * (statistics.mean(values) - grand_mean) ** 2
+        for values in genre_lengths.values()
+    )
     eta2 = round((ss_between / ss_total), 4) if ss_total else 0
 else:
     eta2 = 0
 
-long_rows = sorted(rows, key=lambda r: to_int(r.get("len")), reverse=True)[:50]
-short_rows = sorted(rows, key=lambda r: to_int(r.get("len")))[:50]
+long_rows = sorted(rows, key=lambda row: to_int(row.get("len")), reverse=True)[:50]
+short_rows = sorted(rows, key=lambda row: to_int(row.get("len")))[:50]
+max_bin = max((count for _, count in length_bins), default=1)
 
-max_bin = max((c for _, c in length_bins), default=1)
 
-
-def pct(n):
-    return f"{(100.0 * n / files_total):.2f}%" if files_total else "0.00%"
+def pct(count):
+    return f"{(100.0 * count / files_total):.2f}%" if files_total else "0.00%"
 
 
 def card(title, value, subtitle):
@@ -105,62 +90,68 @@ def card(title, value, subtitle):
     """
 
 
-def dist_rows(items, max_val, alt=False):
-    cls = "bar alt" if alt else "bar"
-    out = []
-    for name, c in items:
-        w = max(1.0, 100.0 * c / max_val) if max_val else 1.0
-        out.append(
+def dist_rows(items, max_value, alt=False):
+    bar_class = "bar alt" if alt else "bar"
+    output = []
+    for name, count in items:
+        width = max(1.0, 100.0 * count / max_value) if max_value else 1.0
+        output.append(
             f"""<tr>
               <td class=\"genre\">{html.escape(str(name))}</td>
-              <td>{c:,}</td>
-              <td>{pct(c)}</td>
-              <td><div class=\"bar-wrap\"><div class=\"{cls}\" style=\"width:{w:.2f}%\"></div></div></td>
+              <td>{count:,}</td>
+              <td>{pct(count)}</td>
+              <td><div class=\"bar-wrap\"><div class=\"{bar_class}\" style=\"width:{width:.2f}%\"></div></div></td>
             </tr>"""
         )
-    return "".join(out)
+    return "".join(output)
+
+
+def build_genre_subgenre_rows():
+  groups = []
+  for genre in sorted(genre_subgenre_lengths.keys()):
+    genre_values = genre_lengths[genre]
+    subgenre_names = sorted(
+      genre_subgenre_lengths[genre].keys(),
+      key=lambda subgenre: (0 if subgenre == genre else 1, subgenre),
+    )
+    group_rows = [
+      f"""<tr class=\"genre-start\">
+          <td class=\"genre-cell\"><strong>{html.escape(genre)}</strong></td>
+          <td></td>
+          <td>{len(genre_values):,}</td>
+          <td>{min(genre_values):,}</td>
+          <td>{max(genre_values):,}</td>
+        </tr>"""
+    ]
+    for subgenre in subgenre_names:
+      values = genre_subgenre_lengths[genre][subgenre]
+      if subgenre == genre:
+        subgenre_label = "<em>&lt;no subgenre&gt;</em>"
+      else:
+        subgenre_label = f"<span class=\"mono\">{html.escape(subgenre)}</span>"
+      group_rows.append(
+        f"""<tr>
+          <td class=\"genre-cell\"></td>
+                  <td>{subgenre_label}</td>
+                  <td>{len(values):,}</td>
+                  <td>{min(values):,}</td>
+                  <td>{max(values):,}</td>
+                </tr>"""
+            )
+    groups.append(f"<tbody class=\"genre-group\">{''.join(group_rows)}</tbody>")
+  return "".join(groups)
 
 
 bin_rows_html = dist_rows(length_bins, max_bin, alt=True)
-
-genre_subgenre_items = []
-for genre in sorted(genre_subgenre_lengths.keys()):
-  sub_items = []
-  for subgenre in sorted(genre_subgenre_lengths[genre].keys()):
-    vals = genre_subgenre_lengths[genre][subgenre]
-    if subgenre == genre:
-      subgenre_label = "<em>&lt;no subgenre&gt;</em>"
-    else:
-      subgenre_label = f"<span class=\"mono\">{html.escape(subgenre)}</span>"
-    sub_items.append(
-      f"<li>{subgenre_label}: "
-      f"{len(vals):,} articles, len range {min(vals):,}-{max(vals):,}</li>"
-    )
-  genre_subgenre_items.append(
-    f"<li><strong>{html.escape(genre)}</strong><ul>{''.join(sub_items)}</ul></li>"
-  )
-
-genre_stats_rows = []
-for row in genre_stats:
-    genre_stats_rows.append(
-        f"""<tr>
-          <td class=\"genre\">{html.escape(row['genre'])}</td>
-          <td>{row['count']:,}</td>
-          <td>{row['mean']:,}</td>
-          <td>{row['median']:,}</td>
-          <td>{row['std']:,}</td>
-          <td>{row['min']:,}</td>
-          <td>{row['max']:,}</td>
-        </tr>"""
-    )
+genre_subgenre_rows_html = build_genre_subgenre_rows()
 
 long_items = "".join(
-    f"<li><span class=\"mono\">{html.escape(r.get('filename', ''))} ({html.escape(r.get('genre', 'unknown'))}) - {to_int(r.get('len')):,}</span></li>"
-    for r in long_rows
+    f"<li><span class=\"mono\">{html.escape(row.get('filename', ''))} ({html.escape(row.get('genre', 'unknown'))}) - {to_int(row.get('len')):,}</span></li>"
+    for row in long_rows
 )
 short_items = "".join(
-    f"<li><span class=\"mono\">{html.escape(r.get('filename', ''))} ({html.escape(r.get('genre', 'unknown'))}) - {to_int(r.get('len')):,}</span></li>"
-    for r in short_rows
+    f"<li><span class=\"mono\">{html.escape(row.get('filename', ''))} ({html.escape(row.get('genre', 'unknown'))}) - {to_int(row.get('len')):,}</span></li>"
+    for row in short_rows
 )
 
 html_text = f"""<!doctype html>
@@ -275,13 +266,6 @@ html_text = f"""<!doctype html>
       font-size: 0.83rem;
     }}
 
-    .grid {{
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 14px;
-    }}
-
     .panel {{
       background: var(--card);
       border: 1px solid var(--line);
@@ -317,7 +301,9 @@ html_text = f"""<!doctype html>
       text-transform: uppercase;
     }}
 
-    .genre {{ font-weight: 600; }}
+    .genre {{
+      font-weight: 600;
+    }}
 
     .bar-wrap {{
       width: 100%;
@@ -360,47 +346,37 @@ html_text = f"""<!doctype html>
       font-size: 0.86rem;
     }}
 
-    .tree {{
-      margin: 0;
-      padding-right: 20px;
-      line-height: 1.45;
-      list-style: none;
-    }}
-
-    .tree > li {{
-      margin-bottom: 10px;
-      position: relative;
-    }}
-
-    .tree ul {{
-      margin: 6px 0 0;
-      padding-right: 20px;
-      list-style: none;
-      border-right: 2px solid rgba(23,32,38,0.15);
-    }}
-
-    .tree ul li {{
-      margin-bottom: 3px;
-      position: relative;
-      padding-right: 10px;
-    }}
-
-    .tree ul li::before {{
-      content: "";
-      position: absolute;
-      right: -2px;
-      top: 0.8em;
-      width: 10px;
-      border-top: 2px solid rgba(23,32,38,0.15);
-    }}
-
     .ltr-panel {{
       direction: ltr;
       text-align: left;
     }}
 
-    .ltr-panel h2 {{
+    .ltr-panel h2,
+    .ltr-panel th,
+    .ltr-panel td {{
       text-align: left;
+    }}
+
+    .genre-table {{
+      border-collapse: separate;
+      border-spacing: 0;
+    }}
+
+    .genre-table thead th {{
+      background: rgba(255,255,255,0.96);
+    }}
+
+    .genre-group .genre-start td {{
+      border-top: 14px solid transparent;
+      background: rgba(219,75,63,0.08);
+    }}
+
+    .genre-group:first-of-type .genre-start td {{
+      border-top-width: 0;
+    }}
+
+    .genre-cell {{
+      min-width: 150px;
     }}
 
     .foot {{
@@ -417,7 +393,6 @@ html_text = f"""<!doctype html>
 
     @media (max-width: 980px) {{
       .cards {{ grid-template-columns: repeat(2, minmax(0,1fr)); }}
-      .grid {{ grid-template-columns: 1fr; }}
       .split {{ grid-template-columns: 1fr; }}
     }}
 
@@ -449,20 +424,31 @@ html_text = f"""<!doctype html>
     </section>
 
     <section class=\"panel ltr-panel\" style=\"margin-top:14px;\">
-      <h2>Genre/Subgenre Tree</h2>
-      <ul class=\"tree\">{''.join(genre_subgenre_items)}</ul>
+      <h2>Genre/Subgenre Table</h2>
+      <table class=\"genre-table\">
+        <thead>
+          <tr>
+            <th>Genre</th>
+            <th>Subgenre</th>
+            <th>docs_amount</th>
+            <th>Min_len</th>
+            <th>max_len</th>
+          </tr>
+        </thead>
+        {genre_subgenre_rows_html}
+      </table>
     </section>
 
     <section class=\"panel\" style=\"margin-top:14px;\">
-        <h2>טווחי אורך</h2>
-        <table>
-          <thead>
-            <tr><th>טווח</th><th>קבצים</th><th>חלק יחסי</th><th>עמודה חזותית</th></tr>
-          </thead>
-          <tbody>
-            {bin_rows_html}
-          </tbody>
-        </table>
+      <h2>טווחי אורך</h2>
+      <table>
+        <thead>
+          <tr><th>טווח</th><th>קבצים</th><th>חלק יחסי</th><th>עמודה חזותית</th></tr>
+        </thead>
+        <tbody>
+          {bin_rows_html}
+        </tbody>
+      </table>
     </section>
 
     <section class=\"panel\" style=\"margin-top:14px;\">
