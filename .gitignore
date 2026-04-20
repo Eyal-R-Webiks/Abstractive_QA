@@ -33,7 +33,7 @@ data_prep/knesset/
 data_prep/archive/
 
 # ── Copilot session archive (local working notes, not part of the project) ─────
-preliminary_tests/copilot_session_archive/
+pilot/copilot_session_archive/
 
 # ── Editor / IDE ──────────────────────────────────────────────────────────────
 .vscode/

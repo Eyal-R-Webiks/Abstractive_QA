@@ -1,4 +1,4 @@
-# preliminary_tests — Pipeline Experimentation
+# pilot — Completed Pilot
 
 Small-scale pilot for a Hebrew QA dataset creation pipeline.
 See [PRD.md](PRD.md) for full project context and goals, and [PIPELINE_STORY_HE.md](PIPELINE_STORY_HE.md) for a narrative description of the implemented pipeline (Hebrew).
@@ -61,7 +61,7 @@ python evaluate_questions_openrouter.py
 ## Project Structure
 
 ```
-preliminary_tests/
+pilot/
 ├── input_for_q/                        # 6 input CSVs (text position × length)
 ├── output_for_q/                       # OpenRouter generation outputs
 ├── output_flashlite/                   # Gemini Flash Lite generation outputs
