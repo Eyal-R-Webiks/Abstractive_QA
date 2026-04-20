@@ -1,0 +1,45 @@
+# ── Python virtual environments ────────────────────────────────────────────────
+.venv/
+venv/
+env/
+source/
+
+# ── Python cache & compiled files ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ── Environment / secrets ──────────────────────────────────────────────────────
+.env
+.env.*
+*.env
+**/*.env
+
+# ── macOS system files ─────────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Jupyter notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Large corpus data (not versioned — too large; regenerate from scripts) ─────
+data_prep/il-hym/
+data_prep/knesset/
+data_prep/archive/
+
+# ── Copilot session archive (local working notes, not part of the project) ─────
+preliminary_tests/copilot_session_archive/
+
+# ── Editor / IDE ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+
+# ── OS temp ───────────────────────────────────────────────────────────────────
+Thumbs.db
