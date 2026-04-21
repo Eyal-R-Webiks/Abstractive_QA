@@ -28,8 +28,16 @@ __pycache__/
 *.ipynb
 
 # ── Large corpus data (not versioned — too large; regenerate from scripts) ─────
-data_prep/il-hym/
-data_prep/knesset/
+data_prep/il-hym/sample_600/
+data_prep/il-hym/docs/
+data_prep/il-hym/*.csv
+data_prep/il-hym/sample_600_file_list.txt
+data_prep/knesset/archive/
+data_prep/knesset/sample/
+data_prep/knesset/*.jsonl
+data_prep/knesset/scripts/**/*.jsonl
+data_prep/knesset/scripts/**/*.json
+data_prep/knesset/*.csv
 data_prep/archive/
 
 # ── Copilot session archive (local working notes, not part of the project) ─────
