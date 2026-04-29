@@ -16,13 +16,15 @@ from dotenv import load_dotenv
 
 DEFAULT_MODELS = (
     "gemini_3_1_pro_eval=google/gemini-3.1-pro-preview;"
-    "gpt_5_5_pro_eval=openai/gpt-5.5-pro;"
+    "gpt_5_4_mini_eval=openai/gpt-5.4-mini;"
     "mistral_large_2407_eval=mistralai/mistral-large-2407;"
     "claude_3_7_sonnet_eval=anthropic/claude-3.7-sonnet"
 )
 
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_CREDITS_URL = "https://openrouter.ai/api/v1/credits"
 REQUIRED_OUTPUT_FIELDS = ("complexity_score", "linguistic_score")
+REASONING_MAX_CHARS = 150
 
 
 def parse_args() -> argparse.Namespace:
@@ -82,6 +84,21 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=3,
         help="Retries per request for transient failures.",
+    )
+    parser.add_argument(
+        "--checkpoint-every",
+        type=int,
+        default=100,
+        help="Write intermediate per-model JSONL every N completed rows (0 disables).",
+    )
+    parser.add_argument(
+        "--errors-report",
+        type=Path,
+        default=None,
+        help=(
+            "Path to an aggregated JSONL of per-row evaluation errors across all models. "
+            "If omitted, defaults to <output-folder>/errors_report.jsonl. The file is appended to."
+        ),
     )
     parser.add_argument(
         "--limit",
@@ -216,6 +233,9 @@ def parse_single_eval_json(response_text: str) -> Tuple[Dict[str, str], str]:
         return {}, f"Invalid JSON: {str(exc)}"
 
     out: Dict[str, str] = {}
+    # Only `uuid` may be echoed; `excerpt`/`question` are intentionally not
+    # required in the model output anymore (they are known locally) to save
+    # output tokens. We still accept them if present for backward compatibility.
     for field in ["uuid", "excerpt", "question"]:
         if parsed_obj.get(field) is not None:
             out[field] = str(parsed_obj[field])
@@ -250,7 +270,10 @@ def parse_single_eval_json(response_text: str) -> Tuple[Dict[str, str], str]:
         return {}, f"linguistic_score out of range: {linguistic}"
     out["linguistic_score"] = str(linguistic)
 
-    out["reasoning"] = str(parsed_obj.get("reasoning", "") or "").strip()
+    reasoning_text = str(parsed_obj.get("reasoning", "") or "").strip()
+    if len(reasoning_text) > REASONING_MAX_CHARS:
+        reasoning_text = reasoning_text[:REASONING_MAX_CHARS]
+    out["reasoning"] = reasoning_text
     return out, ""
 
 
@@ -272,6 +295,42 @@ def _extract_content_from_choice(choice: Dict[str, object]) -> str:
     return str(content or "")
 
 
+def _extract_usage_stats(data: Dict[str, object]) -> Dict[str, int]:
+    """Pull cache/token counters from an OpenRouter chat-completions response.
+
+    Field names vary across providers; we collect all of them best-effort.
+    Returns zeros for missing fields.
+    """
+    usage = data.get("usage") if isinstance(data, dict) else None
+    if not isinstance(usage, dict):
+        return {"prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0}
+
+    def _to_int(value: object) -> int:
+        try:
+            return int(value)  # type: ignore[arg-type]
+        except (TypeError, ValueError):
+            return 0
+
+    prompt_tokens = _to_int(usage.get("prompt_tokens"))
+    completion_tokens = _to_int(usage.get("completion_tokens"))
+
+    # OpenAI/Gemini: usage.prompt_tokens_details.cached_tokens
+    cached = 0
+    details = usage.get("prompt_tokens_details")
+    if isinstance(details, dict):
+        cached = max(cached, _to_int(details.get("cached_tokens")))
+
+    # Anthropic (sometimes surfaced through OpenRouter):
+    #   usage.cache_read_input_tokens / cache_creation_input_tokens
+    cached = max(cached, _to_int(usage.get("cache_read_input_tokens")))
+
+    return {
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
+        "cached_tokens": cached,
+    }
+
+
 def call_openrouter_eval(
     api_key: str,
     model_id: str,
@@ -280,7 +339,7 @@ def call_openrouter_eval(
     timeout_seconds: int,
     max_retries: int,
     max_output_tokens: int,
-) -> Tuple[Dict[str, str], str]:
+) -> Tuple[Dict[str, str], str, Dict[str, int]]:
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
@@ -293,17 +352,43 @@ def call_openrouter_eval(
     if app_name:
         headers["X-Title"] = app_name
 
+    # Prompt caching:
+    # - Anthropic models on OpenRouter require an explicit cache breakpoint via
+    #   `cache_control: {type: "ephemeral"}` on the system content block.
+    # - Gemini and OpenAI cache long, byte-identical prompts automatically; no
+    #   special structure is required and they accept a plain string `content`.
+    # We therefore only switch to the structured-content form for Anthropic to
+    #   avoid changing the request shape for providers that don't need it.
+    if model_id.startswith("anthropic/"):
+        system_content = [
+            {
+                "type": "text",
+                "text": prompt_text,
+                "cache_control": {"type": "ephemeral"},
+            }
+        ]
+    else:
+        system_content = prompt_text
+
     payload = {
         "model": model_id,
         "messages": [
-            {"role": "system", "content": prompt_text},
+            {"role": "system", "content": system_content},
             {"role": "user", "content": build_eval_user_message(row)},
         ],
         "temperature": 0,
         "max_tokens": max_output_tokens,
     }
 
+    # Gemini "thinking" models bill internal reasoning tokens as output tokens
+    # and those tokens count against `max_tokens`. For a structured 0–3 / 0–4
+    # scoring task, low reasoning effort is sufficient and substantially
+    # reduces both truncation risk and per-call output cost.
+    if model_id.startswith("google/gemini"):
+        payload["reasoning"] = {"effort": "low"}
+
     last_error = "Unknown OpenRouter error"
+    last_usage: Dict[str, int] = {"prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0}
     for attempt in range(1, max_retries + 1):
         try:
             response = requests.post(
@@ -315,12 +400,17 @@ def call_openrouter_eval(
 
             if response.status_code != 200:
                 last_error = f"HTTP {response.status_code}: {response.text[:500]}"
+                # Insufficient credits is non-transient; do not burn retries.
+                if response.status_code == 402:
+                    break
             else:
                 try:
                     data = response.json()
                 except json.JSONDecodeError as exc:
                     last_error = f"Non-JSON OpenRouter response: {exc}; raw={response.text[:500]}"
                     data = {}
+
+                last_usage = _extract_usage_stats(data if isinstance(data, dict) else {})
 
                 choices = data.get("choices", []) if isinstance(data, dict) else []
                 first_choice = choices[0] if choices else {}
@@ -340,19 +430,39 @@ def call_openrouter_eval(
                             f"Invalid JSON output: {parse_error}{suffix}; raw_content={content[:500]}"
                         )
                     else:
-                        return parsed, ""
+                        return parsed, "", last_usage
         except Exception as exc:  # noqa: BLE001
             last_error = str(exc)
 
         if attempt < max_retries:
             time.sleep(1.5 * attempt)
 
-    return {}, f"ERROR: {last_error}"
+    return {}, f"ERROR: {last_error}", last_usage
 
 
-def _worker_eval(args: Tuple) -> Tuple[int, Dict[str, str], str]:
+def get_openrouter_available_credits(api_key: str, timeout_seconds: int = 20) -> Tuple[float, float, float, str]:
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    try:
+        response = requests.get(OPENROUTER_CREDITS_URL, headers=headers, timeout=timeout_seconds)
+        if response.status_code != 200:
+            return 0.0, 0.0, 0.0, f"HTTP {response.status_code}: {response.text[:300]}"
+
+        payload = response.json() if response.text else {}
+        data = payload.get("data") if isinstance(payload, dict) else {}
+        total_credits = float((data or {}).get("total_credits") or 0.0)
+        total_usage = float((data or {}).get("total_usage") or 0.0)
+        available = total_credits - total_usage
+        return total_credits, total_usage, available, ""
+    except Exception as exc:  # noqa: BLE001
+        return 0.0, 0.0, 0.0, str(exc)
+
+
+def _worker_eval(args: Tuple) -> Tuple[int, Dict[str, str], str, Dict[str, int]]:
     idx, api_key, model_id, prompt_text, row, timeout_seconds, max_retries, max_output_tokens = args
-    parsed, err = call_openrouter_eval(
+    parsed, err, usage = call_openrouter_eval(
         api_key=api_key,
         model_id=model_id,
         prompt_text=prompt_text,
@@ -361,7 +471,7 @@ def _worker_eval(args: Tuple) -> Tuple[int, Dict[str, str], str]:
         max_retries=max_retries,
         max_output_tokens=max_output_tokens,
     )
-    return idx, parsed, err
+    return idx, parsed, err, usage
 
 
 def _format_eta_hms(total_seconds: int) -> str:
@@ -429,6 +539,83 @@ def write_jsonl(path: Path, rows: List[Dict[str, str]]) -> None:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+_PERSISTENT_ERROR_MARKERS = (
+    "HTTP 401",
+    "HTTP 402",
+    "HTTP 403",
+    "insufficient_quota",
+    "invalid_api_key",
+    "authentication",
+    "unauthorized",
+    "forbidden",
+    "credits",
+)
+
+# Heuristic: consider these substrings to indicate a transient network/timeout
+# failure. Used to detect recurring-timeout streaks that justify aborting the
+# current model run rather than burning paid retries on a flaky route.
+_TIMEOUT_ERROR_MARKERS = (
+    "timeout",
+    "timed out",
+    "read timed out",
+    "connection aborted",
+    "connection reset",
+    "connection error",
+    "connectionerror",
+    "max retries exceeded",
+    "http 408",
+    "http 502",
+    "http 503",
+    "http 504",
+    "http 524",
+)
+
+MAX_CONSECUTIVE_TIMEOUTS = 10
+
+
+def _is_persistent_error(error_text: str) -> bool:
+    """Return True if the error looks like an auth/credits/quota issue that
+    will not resolve by retrying.
+    """
+    if not error_text:
+        return False
+    lowered = error_text.lower()
+    for marker in _PERSISTENT_ERROR_MARKERS:
+        if marker.lower() in lowered:
+            return True
+    return False
+
+
+def _is_timeout_error(error_text: str) -> bool:
+    if not error_text:
+        return False
+    lowered = error_text.lower()
+    for marker in _TIMEOUT_ERROR_MARKERS:
+        if marker in lowered:
+            return True
+    return False
+
+
+def append_errors_report(
+    report_path: Path,
+    model_label: str,
+    model_id: str,
+    failed_rows: List[Dict[str, str]],
+) -> None:
+    if not failed_rows:
+        return
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with report_path.open("a", encoding="utf-8") as f:
+        for r in failed_rows:
+            entry = {
+                "uuid": str(r.get("uuid") or ""),
+                "evaluator_model_name": model_label,
+                "evaluator_model_id": model_id,
+                "evaluation_error": str(r.get("evaluation_error") or ""),
+            }
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
 def _base_output_row(input_row: Dict[str, str], model_label: str, model_id: str) -> Dict[str, str]:
     return {
         "uuid": str(input_row.get("uuid") or ""),
@@ -468,9 +655,36 @@ def evaluate_rows_for_input(args: argparse.Namespace) -> int:
     prompt_text = read_prompt(args.prompt_file)
     base_name = args.input_json.stem
 
-    for model_label, model_id in model_map.items():
-        print(f"\n[MODEL] {model_label} ({model_id})")
+    run_start_ts = time.time()
+    n_models = len(model_map)
+    print(
+        f"\n[RUN] models={n_models} rows={len(rows)} workers={args.max_workers} "
+        f"checkpoint_every={args.checkpoint_every} "
+        f"errors_report={args.errors_report}"
+    )
+
+    for model_index, (model_label, model_id) in enumerate(model_map.items(), start=1):
+        model_start_ts = time.time()
+        print(f"\n[MODEL {model_index}/{n_models}] {model_label} ({model_id})")
         print(f"[MODEL] rows={len(rows)}, workers={args.max_workers}")
+
+        total_credits, total_usage, available_credits, credits_err = get_openrouter_available_credits(
+            api_key=api_key,
+            timeout_seconds=min(args.timeout_seconds, 20),
+        )
+        if credits_err:
+            print(f"[CREDITS] Could not fetch credits before {model_label}: {credits_err}")
+        else:
+            print(
+                f"[CREDITS] total={total_credits:.3f} used={total_usage:.3f} "
+                f"available={available_credits:.3f}"
+            )
+            if available_credits <= 0:
+                print(
+                    f"[FATAL] Available credits are <= 0 before {model_label}. "
+                    "Stopping to avoid all-error burn."
+                )
+                return 1
 
         output_path = args.output_folder / f"{base_name}_eval_{model_label}.jsonl"
 
@@ -513,21 +727,39 @@ def evaluate_rows_for_input(args: argparse.Namespace) -> int:
 
         completed = 0
         errors = 0
+        consecutive_timeouts = 0
+        aborted_for_timeouts = False
         start_ts = time.time()
+        aborted_for_credits = False
+        usage_totals = {"prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0}
+        usage_calls = 0
         with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
             futures = {executor.submit(_worker_eval, item): item[0] for item in work_items}
             for future in as_completed(futures):
-                idx, parsed, err = future.result()
+                idx, parsed, err, usage = future.result()
+
+                if usage:
+                    usage_totals["prompt_tokens"] += int(usage.get("prompt_tokens", 0) or 0)
+                    usage_totals["completion_tokens"] += int(usage.get("completion_tokens", 0) or 0)
+                    usage_totals["cached_tokens"] += int(usage.get("cached_tokens", 0) or 0)
+                    if int(usage.get("prompt_tokens", 0) or 0) > 0:
+                        usage_calls += 1
 
                 if err:
                     errors += 1
                     row_out = _base_output_row(rows[idx], model_label, model_id)
                     row_out["evaluation_error"] = err
+                    if _is_timeout_error(err):
+                        consecutive_timeouts += 1
+                    else:
+                        consecutive_timeouts = 0
                 else:
+                    consecutive_timeouts = 0
                     row_out = _base_output_row(rows[idx], model_label, model_id)
-                    row_out["uuid"] = parsed.get("uuid", row_out["uuid"])
-                    row_out["excerpt"] = parsed.get("excerpt", row_out["excerpt"])
-                    row_out["question"] = parsed.get("question", row_out["question"])
+                    # Authoritative identifiers come from the input row, not
+                    # from the model's echoed JSON. Some models (notably
+                    # Mistral) occasionally mangle the echoed uuid, and we
+                    # already instruct the prompt to omit excerpt/question.
                     row_out["complexity_score"] = parsed.get("complexity_score", "")
                     row_out["linguistic_score"] = parsed.get("linguistic_score", "")
                     row_out["reasoning"] = parsed.get("reasoning", "")
@@ -535,20 +767,108 @@ def evaluate_rows_for_input(args: argparse.Namespace) -> int:
                 result_rows[idx] = row_out
                 completed += 1
                 print("\r" + _model_progress_line(completed, len(work_items), start_ts), end="", flush=True)
+
+                if consecutive_timeouts >= MAX_CONSECUTIVE_TIMEOUTS:
+                    print(
+                        f"\n[FATAL] {model_label}: {consecutive_timeouts} consecutive timeout/network errors. "
+                        f"Cancelling pending futures and stopping the run."
+                    )
+                    for pending_future in futures:
+                        if not pending_future.done():
+                            pending_future.cancel()
+                    aborted_for_timeouts = True
+                    break
+
+                if args.checkpoint_every > 0 and (completed % args.checkpoint_every == 0):
+                    write_jsonl(output_path, result_rows)
+                    print(
+                        f"\n[CHECKPOINT] {model_label}: saved {completed}/{len(work_items)} "
+                        f"completed rows -> {output_path}"
+                    )
+                    # Mid-run credit guard: re-check credits at each checkpoint
+                    # and abort the remaining pending futures if depleted.
+                    _, _, mid_available, mid_err = get_openrouter_available_credits(
+                        api_key=api_key,
+                        timeout_seconds=min(args.timeout_seconds, 20),
+                    )
+                    if mid_err:
+                        print(f"[CREDITS] mid-run check failed: {mid_err}")
+                    elif mid_available <= 0:
+                        print(
+                            f"[FATAL] Mid-run credits depleted (available={mid_available:.3f}). "
+                            f"Cancelling pending futures for {model_label}."
+                        )
+                        for pending_future in futures:
+                            if not pending_future.done():
+                                pending_future.cancel()
+                        aborted_for_credits = True
+                        break
         print()
 
         success = len(work_items) - errors
         print(f"[MODEL DONE] success={success}, errors={errors}")
-        if success == 0:
+        if usage_calls > 0:
+            total_prompt = usage_totals["prompt_tokens"]
+            total_cached = usage_totals["cached_tokens"]
+            total_completion = usage_totals["completion_tokens"]
+            cache_pct = (100.0 * total_cached / total_prompt) if total_prompt > 0 else 0.0
             print(
-                f"[FATAL] Model {model_label} returned only errors for all {len(work_items)} rows. Stopping."
+                f"[USAGE] {model_label}: calls_with_usage={usage_calls} "
+                f"prompt_tokens={total_prompt} cached_tokens={total_cached} "
+                f"({cache_pct:.1f}% cached) completion_tokens={total_completion}"
             )
+        else:
+            print(f"[USAGE] {model_label}: no usage stats reported by provider")
+        if aborted_for_credits:
             write_jsonl(output_path, result_rows)
+            print(f"[WRITE] {output_path} (partial; aborted for credits)")
+            failed_rows = [r for r in result_rows if (r.get("evaluation_error") or "").strip()]
+            append_errors_report(args.errors_report, model_label, model_id, failed_rows)
+            return 1
+
+        if aborted_for_timeouts:
+            write_jsonl(output_path, result_rows)
+            print(f"[WRITE] {output_path} (partial; aborted for timeouts)")
+            failed_rows = [r for r in result_rows if (r.get("evaluation_error") or "").strip()]
+            append_errors_report(args.errors_report, model_label, model_id, failed_rows)
             return 1
 
         write_jsonl(output_path, result_rows)
         print(f"[WRITE] {output_path}")
 
+        # Per-model wall time + cross-model total ETA.
+        model_elapsed = int(time.time() - model_start_ts)
+        run_elapsed = int(time.time() - run_start_ts)
+        models_remaining = n_models - model_index
+        avg_per_model = run_elapsed / model_index if model_index > 0 else 0
+        total_eta = int(models_remaining * avg_per_model) if models_remaining > 0 else 0
+        print(
+            f"[TIMING] model_elapsed={_format_eta_hms(model_elapsed)} "
+            f"run_elapsed={_format_eta_hms(run_elapsed)} "
+            f"models_remaining={models_remaining} "
+            f"total_run_eta={_format_eta_hms(total_eta)}"
+        )
+
+        # Soft-fail: collect every failed row into the aggregated errors report
+        # for later inspection / re-run, regardless of failure rate.
+        failed_rows = [r for r in result_rows if (r.get("evaluation_error") or "").strip()]
+        if failed_rows:
+            append_errors_report(args.errors_report, model_label, model_id, failed_rows)
+            print(
+                f"[ERRORS] {model_label}: {len(failed_rows)} failed row(s) appended to {args.errors_report}"
+            )
+
+        # Strict halt: if a model produced 0 successes, something is systemically
+        # wrong (auth, route, prompt rejection, persistent provider failure).
+        # Stop the whole run rather than burn credits on the next model.
+        if success == 0:
+            print(
+                f"[FATAL] Model {model_label}: 0 successes / {len(work_items)} attempts. Stopping."
+            )
+            return 1
+
+    total_run_elapsed = int(time.time() - run_start_ts)
+    print(f"\n[RUN DONE] total_elapsed={_format_eta_hms(total_run_elapsed)}")
     return 0
 
 
@@ -617,6 +937,10 @@ def main() -> int:
     args.prompt_file = to_project_relative(args.prompt_file, project_root)
     args.output_folder = to_project_relative(args.output_folder, project_root)
     args.output_json = to_project_relative(args.output_json, project_root)
+    if args.errors_report is None:
+        args.errors_report = args.output_folder / "errors_report.jsonl"
+    else:
+        args.errors_report = to_project_relative(args.errors_report, project_root)
 
     rc = evaluate_rows_for_input(args)
     if rc == 0:

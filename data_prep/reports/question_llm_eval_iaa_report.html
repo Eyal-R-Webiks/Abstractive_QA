@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inter-Annotator Agreement Report — 4 Evaluator Models</title>
+<style>
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:1100px;margin:2em auto;padding:0 1.5em;color:#222;line-height:1.55}
+    h1{border-bottom:3px solid #333;padding-bottom:.3em}
+    h2{border-bottom:1px solid #ccc;padding-bottom:.2em;margin-top:2em}
+    h3{margin-top:1.6em}
+    table{border-collapse:collapse;margin:1em 0;font-size:.95em}
+    th,td{border:1px solid #bbb;padding:.4em .8em;text-align:left}
+    th{background:#f0f0f0}
+    tbody tr:nth-child(odd){background:#fafafa}
+    .explain{background:#eef6ff;border-left:4px solid #4a8edc;padding:.7em 1em;margin:.5em 0 1em;border-radius:3px}
+    .explain b{color:#1a4f8c}
+    .warn{background:#fff4e0;border-left:4px solid #d99231;padding:.7em 1em;margin:.5em 0 1em;border-radius:3px}
+    .key{background:#f3f6fa;padding:.5em .8em;border-radius:4px;display:inline-block;margin:.2em 0}
+    .band{color:#666;font-size:.9em}
+    .example{border:1px solid #ccc;border-radius:4px;padding:.7em 1em;margin:.7em 0;background:#fcfcfc}
+    .excerpt{color:#555;font-size:.93em}
+    code{background:#eee;padding:.05em .3em;border-radius:3px;font-size:.93em}
+    details{margin-top:.4em}
+    summary{cursor:pointer;color:#1a4f8c}
+    .scalar{font-size:1.6em;font-weight:600;color:#1a4f8c;margin:.2em 0}
+    .scalar-row{display:flex;gap:2em;flex-wrap:wrap;margin:1em 0}
+    .scalar-card{border:1px solid #ccc;padding:.6em 1em;border-radius:4px;min-width:180px;background:#fff}
+    .scalar-card .lbl{font-size:.85em;color:#666}
+    </style>
+</head>
+<body>
+
+<h1>Inter-Annotator Agreement (IAA) Report</h1>
+<p>4 evaluator models scoring <b>1003</b> Hebrew questions on two axes:
+<code>complexity_score</code> (0–3) and <code>linguistic_score</code> (0–4).
+The analysis below focuses on <code>complexity_score</code>; see section 2 for
+why <code>linguistic_score</code> is excluded.</p>
+
+<div class="explain">
+<b>What is IAA?</b> When several "annotators" (here, 4 LLMs) score the same items,
+inter-annotator agreement measures <i>how often they agree, beyond what we'd
+expect by chance</i>. High agreement means the rubric is unambiguous and the
+models interpret it similarly. Low agreement means the rubric is fuzzy <i>or</i>
+some models drift from it.
+</div>
+
+<h2>1. Headline — group-level agreement on complexity_score</h2>
+
+<div class="explain">
+These three numbers summarise how well <i>all four models together</i> agree on
+the complexity score, and are the single most important results in this report.
+The first two are plain percentages — easy to read but uncorrected for chance.
+The third (Fleiss' κ) corrects for chance-level agreement.
+</div>
+
+<div class="scalar-row">
+  <div class="scalar-card">
+    <div class="lbl">% items where all 4 models gave the <b>same</b> score (unanimous)</div>
+    <div class="scalar">77.8%</div>
+    <div class="band">raw agreement, not chance-corrected</div>
+  </div>
+  <div class="scalar-card">
+    <div class="lbl">% items where all 4 models agreed <b>within ±1</b> (max − min ≤ 1)</div>
+    <div class="scalar">92.9%</div>
+    <div class="band">raw near-agreement, not chance-corrected</div>
+  </div>
+  <div class="scalar-card">
+    <div class="lbl">Fleiss' κ — complexity_score</div>
+    <div class="scalar">+0.808</div>
+    <div class="band">+80.8% &nbsp;·&nbsp; almost perfect</div>
+  </div>
+</div>
+
+<div class="explain">
+<b>How to read these numbers.</b>
+<ul>
+  <li><b>% unanimous</b> and <b>% within ±1</b> are straightforward percentages
+      of items: simple, intuitive, but they include agreement that could happen
+      by chance alone (especially because the score distribution is skewed
+      toward 1 and 2).</li>
+  <li><b>Fleiss' κ</b> is reported on a conventional scale: <code>0</code> =
+      chance-level agreement, <code>1</code> = perfect agreement. The
+      "percentage" version (κ × 100) shown underneath is <i>not</i> a "% of
+      items the models agreed on" — it's the fraction of the way from
+      chance-level (0%) to perfect (100%). Rough interpretation guide: &lt;20%
+      slight, 20–40% fair, 40–60% moderate, 60–80% substantial, &gt;80% almost
+      perfect.</li>
+</ul>
+Fleiss' κ treats the four complexity values <code>0, 1, 2, 3</code> as
+<i>unordered labels</i>, so any disagreement counts equally — <code>0 vs 3</code>
+is treated as exactly as bad as <code>1 vs 2</code>. That's an imperfect fit
+for a roughly-ordered scale like ours, but it's a reasonable choice given that
+the scale isn't a clean numeric ordinal either: the values were introduced by
+the rubric (<code>data_prep/prompts/03_question_assessment.md</code>) to label
+four <i>qualitative</i> categories (paraphrased: <code>0</code> = unanswerable,
+<code>1</code> = directly findable in text, <code>2</code> = needs simple
+inference, <code>3</code> = needs deeper synthesis), and category
+<code>0</code> ("unanswerable") is arguably not on the same axis at all. For
+finer-grained pairwise analysis that does account for distance on the scale,
+see the <i>linear / quadratic weighted κ</i> columns in the pairwise table
+(section 3).
+</div>
+
+<h2>2. Score distributions per model</h2>
+
+<h3>complexity_score (0–3)</h3>
+<table><thead><tr><th>Model</th><th>0</th><th>1</th><th>2</th><th>3</th><th>n</th></tr></thead><tbody><tr><td>Claude-3.7-Sonnet</td><td>84 (8.4%)</td><td>118 (11.8%)</td><td>352 (35.1%)</td><td>449 (44.8%)</td><td>1003</td></tr><tr><td>Gemini-3.1-Pro</td><td>61 (6.1%)</td><td>109 (10.9%)</td><td>422 (42.1%)</td><td>411 (41.0%)</td><td>1003</td></tr><tr><td>GPT-5.4-mini</td><td>75 (7.5%)</td><td>115 (11.5%)</td><td>332 (33.1%)</td><td>481 (48.0%)</td><td>1003</td></tr><tr><td>Mistral-L-2407</td><td>60 (6.0%)</td><td>103 (10.3%)</td><td>372 (37.1%)</td><td>468 (46.7%)</td><td>1003</td></tr></tbody></table>
+
+<h3>linguistic_score (0–4)</h3>
+<table><thead><tr><th>Model</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>n</th></tr></thead><tbody><tr><td>Claude-3.7-Sonnet</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>1003 (100.0%)</td><td>1003</td></tr><tr><td>Gemini-3.1-Pro</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>1 (0.1%)</td><td>0 (0.0%)</td><td>1002 (99.9%)</td><td>1003</td></tr><tr><td>GPT-5.4-mini</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>1 (0.1%)</td><td>1002 (99.9%)</td><td>1003</td></tr><tr><td>Mistral-L-2407</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>3 (0.3%)</td><td>1000 (99.7%)</td><td>1003</td></tr></tbody></table>
+
+<div class="warn">
+<b>⚠ Why <code>linguistic_score</code> is excluded from the rest of this
+report:</b> the distribution above is extremely skewed — nearly every question
+is rated <code>4</code> by every model. On a degenerate distribution like this,
+all the agreement metrics break down: you can hit ~99% exact agreement just by
+always saying "4", and chance-corrected metrics (κ, α) become numerically
+unstable and uninformative. We therefore omit pairwise, group-level, outlier,
+and example analyses for the linguistic axis. The distribution table above is
+the only meaningful summary of it.
+</div>
+
+<h2>3. Pairwise agreement — complexity_score</h2>
+
+<div class="explain">
+<b>Exact %</b>: how often two models gave the <i>identical</i> score.<br>
+<b>Within-1 %</b>: how often they agreed within ±1 (e.g. one said 2, the other 3).
+This is more lenient and useful for ordinal scales where neighbours matter less
+than distant disagreements.<br>
+<b>Cohen's κ (kappa)</b>: agreement <i>after subtracting</i> the agreement you'd
+get just by random chance. 0 = chance-level. 1 = perfect.
+Rough guide: &lt;0.2 slight, 0.2–0.4 fair, 0.4–0.6 moderate, 0.6–0.8 substantial,
+&gt;0.8 almost perfect.<br>
+<b>Linear / Quadratic weighted κ</b>: penalises distant disagreements more than
+near ones (so 0 vs 3 hurts more than 0 vs 1). Quadratic weighting penalises
+distance even more strongly. For ordinal scores like ours, weighted κ is usually
+the most appropriate measure.
+</div>
+
+<table><thead><tr><th>Model A</th><th>Model B</th><th>Exact</th><th>Within-1</th><th>κ (unweighted)</th><th>κ (linear)</th><th>κ (quadratic)</th></tr></thead><tbody><tr><td>Claude-3.7-Sonnet</td><td>Gemini-3.1-Pro</td><td> 88.4%</td><td> 96.3%</td><td>+0.822 <span class='band'>(almost perfect)</span></td><td>+0.810 <span class='band'>(almost perfect)</span></td><td>+0.784 <span class='band'>(substantial)</span></td></tr><tr><td>Claude-3.7-Sonnet</td><td>GPT-5.4-mini</td><td> 85.2%</td><td> 94.8%</td><td>+0.773 <span class='band'>(substantial)</span></td><td>+0.760 <span class='band'>(substantial)</span></td><td>+0.734 <span class='band'>(substantial)</span></td></tr><tr><td>Claude-3.7-Sonnet</td><td>Mistral-L-2407</td><td> 89.2%</td><td> 96.9%</td><td>+0.833 <span class='band'>(almost perfect)</span></td><td>+0.828 <span class='band'>(almost perfect)</span></td><td>+0.813 <span class='band'>(almost perfect)</span></td></tr><tr><td>Gemini-3.1-Pro</td><td>GPT-5.4-mini</td><td> 85.2%</td><td> 95.7%</td><td>+0.772 <span class='band'>(substantial)</span></td><td>+0.765 <span class='band'>(substantial)</span></td><td>+0.746 <span class='band'>(substantial)</span></td></tr><tr><td>Gemini-3.1-Pro</td><td>Mistral-L-2407</td><td> 89.3%</td><td> 98.1%</td><td>+0.833 <span class='band'>(almost perfect)</span></td><td>+0.843 <span class='band'>(almost perfect)</span></td><td>+0.846 <span class='band'>(almost perfect)</span></td></tr><tr><td>GPT-5.4-mini</td><td>Mistral-L-2407</td><td> 88.5%</td><td> 96.5%</td><td>+0.820 <span class='band'>(almost perfect)</span></td><td>+0.816 <span class='band'>(almost perfect)</span></td><td>+0.803 <span class='band'>(almost perfect)</span></td></tr></tbody></table>
+
+<h2>4. Outliers — which model disagrees most with the rest?</h2>
+
+<div class="explain">
+For each row, we compute the median score of the <i>other 3</i> models, then
+ask how often (and by how much) a given model differed from that median.
+A model with a high "deviation rate" is the most distinctive judge — that may
+mean it's the most accurate or the most idiosyncratic. The data alone cannot
+say which.
+</div>
+
+<table><thead><tr><th>Model</th><th>% rows ≠ median of other 3</th><th>Mean |distance from median of other 3|</th><th>n</th></tr></thead><tbody><tr><td>GPT-5.4-mini</td><td> 12.2%</td><td>0.171</td><td>1003</td></tr><tr><td>Claude-3.7-Sonnet</td><td> 10.0%</td><td>0.148</td><td>1003</td></tr><tr><td>Gemini-3.1-Pro</td><td>  9.9%</td><td>0.130</td><td>1003</td></tr><tr><td>Mistral-L-2407</td><td>  8.1%</td><td>0.098</td><td>1003</td></tr></tbody></table>
+
+<h2>5. Examples of maximum disagreement — complexity_score</h2>
+
+<div class='example'><div><b>UUID:</b> 94ae2c49-b6fe-4d6a-8caa-a32ce00edaaf &nbsp; <b>Score spread (complexity_score):</b> 3</div><div><b>Question:</b> על אף שרבות נכתב על זכיית ישראל באירוויזיון 1978, אילו אירועים פחות מוכרים ממאחורי הקלעים בפריז מוצגים בטקסט, וכיצד הם השפיעו על ההישג ההיסטורי?</div><div><b>Excerpt:</b> <span class='excerpt'>1978: ישראל - דוז פואה!
+
+אינספור מילים נכתבו על הזכייה הראשונה של ישראל באירוויזיון בפריז, ובכל זאת…</span></div><div><b>Scores:</b> Gemini-3.1-Pro=2, GPT-5.4-mini=3, Mistral-L-2407=0, Claude-3.7-Sonnet=2</div><details><summary>Per-model reasoning</summary><ul><li><b>Claude-3.7-Sonnet:</b> Requires finding specific behind-the-scenes events in Paris and connecting them to Israel&#x27;s Eurovision win - information likely scattered across the d</li><li><b>Gemini-3.1-Pro:</b> השאלה דורשת איתור של מספר אירועים שונים מהטקסט המלא והבנת הקשר הסיבתי בינם לבין ההישג (כיצד השפיעו). שילוב של מספר פרטי מידע והבנת סיבה-תוצאה מתאימים לרמה 2.</li><li><b>GPT-5.4-mini:</b> Requires synthesizing behind-the-scenes events and their impact on the historic win.</li><li><b>Mistral-L-2407:</b> Excerpt does not hint at any behind-the-scenes events; likely no such details in full document.</li></ul></details></div>
+<div class='example'><div><b>UUID:</b> c816c334-790a-457a-91e6-487bc3c89761 &nbsp; <b>Score spread (complexity_score):</b> 3</div><div><b>Question:</b> בהתחשב באופי &#x27;משרת החלומות&#x27; בדובאי ובדרישות הספציפיות מהמועמדים המתוארות בטקסט, איזו אסטרטגיית התמודדות הייתם ממליצים למועמד ישראלי לאמץ כדי לבלוט מעל שאר המתחרים ולשכנע את המעסיקים שהוא המתאים ביותר לתפקיד?</div><div><b>Excerpt:</b> <span class='excerpt'>משרת החלומות לישראלים בדובאי
+
+תתחילו לחלום: ישראלי אחד יזכה להגשים פנטזיה ולהיבחר למשרה הנחשקת ביותר…</span></div><div><b>Scores:</b> Gemini-3.1-Pro=3, GPT-5.4-mini=3, Mistral-L-2407=3, Claude-3.7-Sonnet=0</div><details><summary>Per-model reasoning</summary><ul><li><b>Claude-3.7-Sonnet:</b> The excerpt doesn&#x27;t provide any specific requirements or details about the job, making it impossible to develop a strategy based on the document.</li><li><b>Gemini-3.1-Pro:</b> השאלה דורשת גיבוש אסטרטגיה והמלצה מעשית על בסיס סינתזה של מידע מורכב מתוך הטקסט (אופי המשרה והדרישות מהמועמדים). זוהי דרישה מובהקת לחשיבה אבסטרקטית וסינתזה ברמה 3.</li><li><b>GPT-5.4-mini:</b> Requires synthesizing role nature and applicant requirements to form a strategy, not just retrieve a fact.</li><li><b>Mistral-L-2407:</b> Requires synthesizing implied job requirements, cultural context, and formulating a strategic recommendation based on document insights.</li></ul></details></div>
+<div class='example'><div><b>UUID:</b> 8a8f2685-5782-49de-a407-f95f94e41a79 &nbsp; <b>Score spread (complexity_score):</b> 3</div><div><b>Question:</b> כיצד מעמדה של הפיזיקה כמדע בסיסי, הנגזר מהגדרתה המקורית כחקר ה&#x27;טבע&#x27;, משפיע על האופן שבו היא משתלבת עם תחומי מדע אחרים כדי להסביר תופעות מורכבות, ומה ניתן להסיק מכך על כיווני המחקר העתידיים?</div><div><b>Excerpt:</b> <span class='excerpt'>פִיזִיקָה (מהמילה היוונית φύσις, &quot;פיסיס&quot; – &quot;טבע&quot;) היא אחד המדעים הבסיסיים ביותר, החוקר את חוקי הטבע…</span></div><div><b>Scores:</b> Gemini-3.1-Pro=3, GPT-5.4-mini=0, Mistral-L-2407=3, Claude-3.7-Sonnet=3</div><details><summary>Per-model reasoning</summary><ul><li><b>Claude-3.7-Sonnet:</b> Requires synthesizing physics&#x27; foundational role across scientific disciplines, analyzing interdisciplinary connections, and projecting future researc</li><li><b>Gemini-3.1-Pro:</b> השאלה דורשת סינתזה של מידע רב לגבי השתלבות הפיזיקה עם מדעים אחרים, וכן חשיבה אבסטרקטית והסקה לגבי השלכות וכיווני מחקר עתידיים מתוך המסמך המלא.</li><li><b>GPT-5.4-mini:</b> The question asks for broad synthesis and future implications that are not supported by the excerpt.</li><li><b>Mistral-L-2407:</b> Requires synthesis of multiple concepts, implications, and future research directions from the document.</li></ul></details></div>
+
+<h2>6. Bottom line</h2>
+<ul>
+<li>All 4 models gave the <b>same exact</b> complexity score on
+<b>77.8%</b> of items, and agreed <b>within ±1</b> on
+<b>92.9%</b> of items.</li>
+<li>Group-level chance-corrected agreement on <code>complexity_score</code> is
+<b>almost perfect</b> by Fleiss' κ (+0.808,
++80.8%).</li>
+<li>Pay attention to the <i>weighted</i> kappas (linear/quadratic) in the
+pairwise table — they reflect the ordered nature of the scale better than
+unweighted κ does.</li>
+<li>The "outlier" table is diagnostic: the model with the highest deviation
+rate is the one whose judgments most often differ from the consensus — useful
+for deciding whether to weight or filter that model later.</li>
+</ul>
+
+<p style="color:#888;font-size:.85em;margin-top:3em">
+Generated from <code>data_prep/questions/eval/all_questions_for_eval_scored.json</code> using
+<code>data_prep/generate_iaa_report.py</code>.
+</p>
+
+</body>
+</html>

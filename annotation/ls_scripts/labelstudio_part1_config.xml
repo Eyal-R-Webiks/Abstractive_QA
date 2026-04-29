@@ -1,0 +1,90 @@
+<!--
+  Label Studio labeling config — Part 1: Question validation
+  Input task data: { record_id, source, doc_id, excerpt, question, text }
+  Output (in annotation result):
+    - level_validated  : one of "0" / "1" / "2" / "3"
+    - annotator_note   : optional free-text justification (also used to report
+                         skipped items when the question/document is unusable)
+  Notes:
+    - Hebrew RTL applied to the whole view.
+    - White-space is preserved on text blocks for legibility.
+    - `excerpt` is intentionally hidden for now (kept in payload for traceability).
+-->
+<View style="direction: rtl; font-family: 'Arial Hebrew', Arial, sans-serif; max-width: 1100px; margin: 0 auto;">
+
+  <Style>
+    .htx-text, .lsf-richtext, .lsf-htx-richtext { white-space: pre-wrap; line-height: 1.7; font-size: 16px; }
+    .ls-hidden { display: none; }
+    .ls-meta { color: #6b7280; font-size: 13px; margin: 4px 0 14px 0; }
+    .ls-card {
+      background: #f7f8fa;
+      border: 1px solid #e3e6eb;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 10px 0 18px 0;
+    }
+    .ls-card-question { background: #fff8e6; border-color: #f0d77a; }
+    /* Render Choices as boxed cards instead of plain radios */
+    .ls-level-choices .ant-radio-group { display: flex; gap: 12px; flex-wrap: wrap; width: 100%; }
+    .ls-level-choices .ant-radio-wrapper {
+      flex: 1 1 220px;
+      border: 1px solid #d4d8df;
+      border-radius: 10px;
+      padding: 12px 14px;
+      background: #ffffff;
+      transition: border-color .15s, box-shadow .15s, background .15s;
+      margin: 0;
+      align-items: flex-start;
+    }
+    .ls-level-choices .ant-radio-wrapper:hover {
+      border-color: #4a90e2;
+      background: #f3f8ff;
+    }
+    .ls-level-choices .ant-radio-wrapper-checked {
+      border-color: #1d72d6;
+      background: #e8f1fb;
+      box-shadow: 0 0 0 2px rgba(29,114,214,0.15);
+    }
+    .ls-level-choices .ant-radio-wrapper > span:last-child { white-space: normal; line-height: 1.4; }
+  </Style>
+
+  <View className="ls-meta">
+    <Text name="meta" value="מקור: $source   |   מזהה רשומה: $record_id   |   מזהה מסמך: $doc_id"/>
+  </View>
+
+  <!-- Hidden excerpt (kept in data payload, not shown to annotator for now) -->
+  <View className="ls-hidden">
+    <Text name="excerpt" value="$excerpt"/>
+  </View>
+
+  <View className="ls-card">
+    <Header value="📄 מסמך:" size="3"/>
+    <Text name="doc" value="$text"/>
+  </View>
+
+  <View className="ls-card ls-card-question">
+    <Header value="❓ שאלה שהמודל שאל:" size="3"/>
+    <Text name="question" value="$question"/>
+  </View>
+
+  <View className="ls-card">
+    <Header value="🏷️ סווג/י את רמת השאלה:" size="3"/>
+    <View className="ls-level-choices">
+      <Choices name="level_validated" toName="question" choice="single-radio" required="true"
+               requiredMessage="חובה לבחור רמה">
+        <Choice value="רמה 0 · לא ניתן לענות מתוך המסמך" alias="0"/>
+        <Choice value="רמה 1 · שליפה (משפט אחד)" alias="1"/>
+        <Choice value="רמה 2 · אינטגרציה / הסקה (2–3 משפטים)" alias="2"/>
+        <Choice value="רמה 3 · סינתזה / חשיבה אבסטרקטית" alias="3"/>
+      </Choices>
+    </View>
+  </View>
+
+  <View visibleWhen="choice-selected" whenTagName="level_validated" className="ls-card">
+    <Header value="📝 הערת מסווג (רשות):" size="4"/>
+    <TextArea name="annotator_note" toName="question"
+              placeholder="נמק/י בקצרה אם תיקנת את הרמה (אם דילגת על הפריט — צריך לציין את הסיבה)"
+              rows="2" maxSubmissions="1" editable="true"/>
+  </View>
+
+</View>
