@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom's Taxonomy and LLM Answer Evaluation: A Policy-Oriented Literature Review</title>
+  <style>
+    :root {
+      --primary:   #1a3a5c;
+      --accent:    #2d7dd2;
+      --light:     #f4f7fb;
+      --border:    #ccd9e8;
+      --warn:      #c0392b;
+      --warn-bg:   #fdecea;
+      --ok:        #27ae60;
+      --ok-bg:     #eaf4ea;
+      --note-bg:   #fffbea;
+      --note:      #b8860b;
+      --tag-bg:    #e8f0fe;
+      --tag:       #1a5ea8;
+      --sup-bg:    #f0f0f0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #222;
+      background: #fff;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+    }
+    h1 { font-size: 1.9rem; color: var(--primary); line-height: 1.25; }
+    header h1 { color: #fff; }
+    h2 { font-size: 1.35rem; color: var(--primary); margin: 2.6rem 0 .7rem;
+         border-bottom: 2px solid var(--accent); padding-bottom: .35rem; }
+    h3 { font-size: 1.07rem; color: #1a3a5c; margin: 1.6rem 0 .45rem; }
+    h4 { font-size: .97rem; color: #1a3a5c; margin: 1.2rem 0 .3rem; font-weight: 600; }
+    p  { margin-bottom: .9rem; }
+    ul, ol { margin: .5rem 0 .9rem 1.5rem; }
+    li { margin-bottom: .4rem; }
+    a  { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #25527a);
+      color: #fff;
+      padding: 2rem 2.4rem 1.8rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    header .subtitle { font-size: .95rem; opacity: .85; margin-top: .4rem; }
+    header .meta { font-size: .82rem; opacity: .7; margin-top: .7rem; font-style: italic; }
+
+    cite {
+      font-style: normal;
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag);
+      font-size: .78rem;
+      font-weight: 600;
+      border-radius: 3px;
+      padding: 0 5px;
+      margin: 0 1px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: var(--light);
+      padding: .85rem 1.15rem;
+      margin: 1.1rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout.warn  { border-color: var(--warn);  background: var(--warn-bg); }
+    .callout.ok    { border-color: var(--ok);    background: var(--ok-bg); }
+    .callout.note  { border-color: var(--note);  background: var(--note-bg); }
+    .callout strong { display: block; margin-bottom: .25rem; }
+
+    /* Supplement flag — marks sections that may gain from the two pending articles */
+    .supplement-flag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--sup-bg);
+      color: #666;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 1px 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: .03em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: .88rem;
+    }
+    th { background: var(--primary); color: #fff; padding: .55rem .75rem; text-align: left; }
+    td { padding: .5rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: var(--light); }
+
+    #toc { background: var(--light); border: 1px solid var(--border); border-radius: 8px;
+           padding: 1.2rem 1.6rem; margin-bottom: 2.5rem; }
+    #toc h2 { border: none; margin: 0 0 .6rem; font-size: 1.05rem; }
+    #toc ol { margin-left: 1.2rem; }
+    #toc li { margin-bottom: .2rem; font-size: .92rem; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    #references ol { counter-reset: refs; list-style: none; margin-left: 0; }
+    #references li {
+      counter-increment: refs;
+      padding: .35rem 0 .35rem 2.4rem;
+      position: relative;
+      font-size: .87rem;
+      border-bottom: 1px solid var(--border);
+    }
+    #references li::before {
+      content: "[" counter(refs) "]";
+      position: absolute; left: 0;
+      color: var(--accent); font-weight: 700;
+    }
+
+    .decision-box {
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      padding: 1rem 1.3rem;
+      margin: 1.5rem 0;
+      background: #f8faff;
+    }
+    .decision-box .label {
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .4rem;
+    }
+    .decision-box p { margin-bottom: 0; }
+
+    .example-box {
+      background: #f5f5f5;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      padding: .9rem 1.2rem;
+      margin: 1rem 0;
+    }
+    .example-box strong { display: block; margin-bottom: .5rem; color: #333; }
+    .example-box pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: .82rem;
+      line-height: 1.55;
+    }
+    .example-box pre code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      background: none;
+      padding: 0;
+    }
+
+    p.note {
+      font-size: .87rem;
+      color: #555;
+      background: var(--light);
+      border-left: 3px solid #aaa;
+      padding: .6rem .9rem;
+      margin: .8rem 0 1.4rem;
+      border-radius: 0 4px 4px 0;
+    }
+    p.note strong { color: #333; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ HEADER -->
+<header>
+  <h1>Bloom's Taxonomy and LLM Answer Evaluation<br>A Policy-Oriented Literature Review</h1>
+  <p class="subtitle">
+    What the research tells us about question formulation, answer quality, evaluation
+    metrics, and annotator guidance — viewed through the lens of expert-driven RAG benchmarking
+  </p>
+  <p class="meta">
+    Hebrew Abstractive QA Dataset Project &nbsp;·&nbsp; MAFAT + Dicta + Webiks &nbsp;·&nbsp;
+    May 2026 &nbsp;·&nbsp; Version 2.0 (Session 3 rewrite)
+  </p>
+</header>
+
+<!-- ═══════════════════════════════════════════════ NOTE ON VERSION -->
+<div class="callout note">
+  <strong>About this document</strong>
+  This is a policy-oriented rewrite of the original lit_review.HTML (v1), correcting a framing
+  bias in the original: v1 defaulted to the educational framing of its source articles. The
+  correct frame — applied throughout this version — is: <em>what does the research tell us
+  about making an LLM ready to handle every type of inquiry a domain expert might bring?</em>
+  Findings about classroom pedagogy and student outcomes are not cited here. The underlying
+  sources are unchanged; only the framing and emphasis have been corrected.
+  Session 4 additions (ABDULLAH2025) integrated May 2026.
+</div>
+
+<!-- ═══════════════════════════════════════════════ TOC -->
+<nav id="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#context">Project Context and Purpose</a></li>
+    <li><a href="#taxonomy">The Four-Level Taxonomy: Bloom Adapted for RAG</a></li>
+    <li><a href="#q1">Policy 1 — Question Formulation</a></li>
+    <li><a href="#q2">Policy 2 — Answer Formulation and Quality Standards</a></li>
+    <li><a href="#q3">Policy 3 — Evaluation Metrics: Definitions, Scope, and a Sixth Metric</a></li>
+    <li><a href="#q4">Policy 4 — Annotator Guidance</a></li>
+    <li><a href="#ceiling">The Higher-Order Performance Ceiling: Convergent Evidence</a></li>
+    <li><a href="#contamination">Benchmark Contamination and the Hebrew Safeguard</a></li>
+    <li><a href="#open">Open Questions and Limitations</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</nav>
+
+<!-- ═══════════════════════════════════════════════ 1. CONTEXT -->
+<section id="context">
+  <h2>1. Project Context and Purpose</h2>
+
+  <p>
+    This document is a literature review with a specific decision-making purpose: to inform the
+    policies of the data preparation team — the project manager and linguistic advisor — on how to
+    formulate questions, define answer quality, calibrate evaluation metrics, and guide annotators
+    for the Hebrew Abstractive QA Dataset. It draws on eleven research sources and is filtered by
+    the following use-case frame.
+  </p>
+
+  <h3>1.1 The use case</h3>
+  <p>
+    The dataset is not an educational tool. Its purpose is to benchmark LLM performance in an
+    <strong>ad-hoc, document-grounded RAG scenario</strong>: a domain expert — a political
+    analyst, a medical researcher, a legal advisor — receives documents they have not seen before,
+    loads them into a model, and asks questions answerable only from those documents. They want to
+    know whether the model gives the best possible answer: faithful to the source, without
+    hallucination, and capable of synthesis when synthesis is required. The expert already has
+    domain knowledge and will notice errors.
+  </p>
+
+  <h3>1.2 What the leaderboard diagnoses</h3>
+  <p>
+    The leaderboard answers one question: <em>which models are trustworthy for expert RAG use?</em>
+    Leaderboard scores must be reported <strong>stratified by level (0–3)</strong>. A model that
+    retrieves facts reliably but fabricates at synthesis level is a different kind of risk from
+    one that performs uniformly at integration level. That difference is what the leaderboard
+    is designed to expose.
+  </p>
+
+  <h3>1.3 Why the educational framing in the sources does not transfer</h3>
+  <p>
+    The majority of the reviewed sources study Bloom's Taxonomy in formal education: automated
+    question generation for classrooms, LLM tutoring systems, assessment of student learning
+    outcomes. None of this is the project's use case. The sources are mined here exclusively for
+    findings that transfer to the expert-RAG context:
+  </p>
+  <ul>
+    <li>How to prompt an LLM to generate questions at a specific cognitive level</li>
+    <li>How to distinguish a genuine synthesis question from an extractive one</li>
+    <li>How LLMs fail at higher-order tasks — and how that maps to answer quality risks</li>
+    <li>How evaluation metrics should be defined per cognitive level</li>
+    <li>How human annotators can reliably classify and judge cognitive-level items</li>
+  </ul>
+  <p>Findings about classroom pedagogy, student cognitive development, and learning outcomes are
+  not cited in this review.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 2. TAXONOMY -->
+<section id="taxonomy">
+  <h2>2. The Four-Level Taxonomy: Bloom Adapted for RAG</h2>
+
+  <p>
+    The project uses a four-level question complexity taxonomy that draws on Bloom's Revised
+    Taxonomy (Anderson &amp; Krathwohl, 2001) but is defined entirely in terms of what a
+    <em>model</em> must do with a <em>document</em>. The educational meaning of "cognitive
+    level" does not apply; the operational meaning does.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Level</th><th>Name</th><th>What the model must do with the document</th>
+        <th>Closest Bloom analog</th><th>Count in dataset</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>Unanswerable</td>
+        <td>Recognise that the document does not contain the answer and state so accurately</td>
+        <td>—</td><td>50</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Retrieval</td>
+        <td>Locate and return a specific fact from a single sentence</td>
+        <td>Remember</td><td>50</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Integration</td>
+        <td>Connect 2–3 facts from different locations in the document</td>
+        <td>Understand / Apply</td><td>300</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>Synthesis &amp; Abstraction</td>
+        <td>Understand the document's overall argument; draw an inference or apply conclusions to a new scenario</td>
+        <td>Analyze / Evaluate / Create</td><td>600</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Why Level 3 dominates the dataset (60%)</strong>
+    Level 1 and 2 performance converges across models — the literature uniformly shows that
+    differences are sharpest at synthesis level <cite>[LEE2025]</cite> <cite>[YADAV2025]</cite>
+    <cite>[BARARI]</cite>. A 60% Level 3 weighting maximises the leaderboard's discriminating
+    power for the expert-RAG scenario, where synthesis questions are exactly the ones the
+    target user cannot easily answer themselves.
+  </div>
+
+  <h3>2.1 The human–LLM cognition gap and why it matters here</h3>
+  <p>
+    Bloom's Taxonomy was built on a theory of human metacognition. Applying it to LLMs
+    introduces a structural mismatch: LLM training on next-token prediction maps naturally
+    to lower-order levels, and the metacognitive level "has no real cognition to speak of"
+    <cite>[HUBER2024]</cite>. "LLMs acquire knowledge through probabilistic associations
+    rather than lived experience. Certain cognitive dimensions, particularly critical
+    judgment or originality, may not directly translate from human cognition to machine
+    cognition" <cite>[LEE2025]</cite>.
+  </p>
+  <p>
+    This matters for two reasons. First, it explains why Level 3 performance is reliably
+    the weakest across all studies — and therefore why the leaderboard will be most
+    informative there. Second, it means that a model can produce text that <em>looks</em>
+    like synthesis — coherent, relevant, well-organised — while merely recombining training
+    patterns. The evaluation rubric must be designed to distinguish genuine inference from
+    sophisticated collage. Put differently: the ambition of the leaderboard — to certify
+    that a model is ready for <em>every</em> type of inquiry a domain expert might bring,
+    not just fact retrieval — is precisely what the taxonomy's upper levels are designed
+    to probe.
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 3. Q1 -->
+<section id="q1">
+  <h2>3. Policy 1 — Question Formulation</h2>
+
+  <p>
+    This section defines the policies for generating questions that span the full range of
+    inquiry a domain expert might bring: from verifying a single fact (Level 1) through
+    cross-document integration (Level 2) to questions that require the model to reason across
+    an entire document and draw inferences the document implies but never states (Level 3).
+    The 60% weighting at Level 3 is deliberate — it is precisely the inquiry type that
+    resists retrieval and requires genuine cognitive engagement with the source material.
+  </p>
+
+  <h3>3.1 The information-seeking design principle is validated</h3>
+  <p>
+    The project's core generation methodology — showing the LLM only the first 100 characters
+    of a document (TyDi QA excerpt-only approach) — is grounded in the right logic and
+    independently supported by the literature. Yadav et al. found that designing each question
+    as a <strong>single-turn prompt grounded only in the original context</strong>
+    "isolates the effect of increasing cognitive demand alone, avoids error propagation, and
+    ensures that each question cleanly tests a distinct cognitive skill" <cite>[YADAV2025]</cite>.
+    This validates the project's single-question-per-document design.
+  </p>
+
+  <h3>3.2 Best prompting strategy for generation: CoT + level label + one worked example</h3>
+  <p>
+    Scaria et al. tested five prompting strategies across five LLMs <cite>[SCARIA2024]</cite>.
+    The best combination — <strong>PS4: Chain-of-Thought + Bloom level description + one
+    expert-crafted example question</strong> — achieved 81.37% question quality and 72.77%
+    Bloom level adherence by human raters. This is the most rigorously documented prompt
+    structure for cognitive-level question generation.
+  </p>
+
+  <div class="callout warn">
+    <strong>The over-specification failure mode</strong>
+    PS5 — which added a full skill <em>explanation</em> on top of PS4 — degraded performance
+    on both quality and level adherence across all models: "too much information in the prompt
+    can be counterproductive" <cite>[SCARIA2024]</cite>. The rule: supply the level label and
+    one example, not a lengthy description. This applies equally to prompts for Level 3
+    generation.
+  </div>
+
+  <div class="decision-box">
+    <div class="label">Policy Decision 3.2</div>
+    <p>Generation prompts for all levels should follow the PS4 structure: CoT instruction +
+    explicit level label with brief definition + one worked example question from a curated
+    set. Do not add extensive level explanations.</p>
+  </div>
+
+  <h4>Illustrative PS4 Prompts</h4>
+  <p>
+    The two examples below show what a well-formed PS4 prompt looks like for Level 2 and
+    Level 3 in the project's RAG context. The worked-example question shown in each prompt
+    is the <em>one expert-crafted shot</em> that PS4 supplies; it is not answered inline.
+  </p>
+
+  <div class="example-box">
+    <strong>Example A — Level 2 (Integration) prompt</strong>
+    <pre><code>You are generating information-seeking questions for a QA evaluation benchmark.
+Think step by step before writing your question.
+
+Target level: Level 2 — Integration
+Definition: The question requires the reader to locate and combine 2–3 distinct
+facts from different parts of the document. No inference beyond the text is needed;
+the answer can be fully assembled from explicit sentences.
+
+Document excerpt:
+"""
+[paste document chunk here]
+"""
+
+Example of a well-formed Level 2 question for a different document:
+  "What two factors did the committee cite when recommending the budget increase,
+   and in which fiscal year was each factor introduced?"
+
+Now write ONE Level 2 question for the document excerpt above.
+Do not answer the question.</code></pre>
+  </div>
+
+  <div class="example-box">
+    <strong>Example B — Level 3 (Synthesis &amp; Abstraction) prompt</strong>
+    <pre><code>You are generating information-seeking questions for a QA evaluation benchmark.
+Think step by step before writing your question.
+
+Target level: Level 3 — Synthesis &amp; Abstraction
+Definition: The question requires the reader to reason across the full document,
+identify an overarching argument or tension, and produce an answer that goes beyond
+any single quoted sentence. A correct answer requires synthesis, not retrieval.
+
+Document excerpt:
+"""
+[paste document chunk here]
+"""
+
+Example of a well-formed Level 3 question for a different document:
+  "The minister's testimony presents two contradictory positions on border enforcement.
+   What underlying tension does this contradiction reveal about the government's
+   stated policy goals?"
+
+Now write ONE Level 3 question for the document excerpt above.
+The question must not be answerable from any single sentence.
+Do not answer the question.</code></pre>
+  </div>
+
+  <p class="note">
+    <strong>Note on the worked example:</strong> Both prompts embed a single expert-crafted
+    example question from a <em>different</em> document to avoid anchoring the model to the
+    target text. The example questions above are illustrative; the production prompts should
+    draw from the project's curated per-level question bank.
+  </p>
+
+  <h3>3.3 Explicitly state the target level — do not let the model infer it</h3>
+  <p>
+    Zoumpoulidi et al. compared two strategies <cite>[ZOUMPOULIDI]</cite>:
+  </p>
+  <table>
+    <thead><tr><th>Strategy</th><th>What the model receives</th><th>Avg. Level Adherence</th><th>Avg. Quality</th></tr></thead>
+    <tbody>
+      <tr><td><strong>BAQ</strong> (explicit level)</td><td>Question + answer + Bloom level</td><td>87.75</td><td>79.23</td></tr>
+      <tr><td><strong>AQ</strong> (inferred level)</td><td>Question + answer only</td><td>79.39</td><td>73.08</td></tr>
+      <tr><td><strong>Baseline</strong> (no guidance)</td><td>Question + answer, no Bloom prompt</td><td>N/A</td><td>56.91</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Explicitly providing the target level produces measurably better-aligned outputs. Every
+    generation prompt should name the level and include its operational definition (not
+    Bloom's original educational phrasing, but the project's RAG-task definition from §2).
+  </p>
+
+  <h3>3.4 Few-shot substantially outperforms zero-shot</h3>
+  <p>
+    Yadav et al. report that few-shot prompting "substantially outperforms zero-shot" for
+    targeted level question generation <cite>[YADAV2025]</cite>. Senthilkumar &amp; Nandhini
+    observe that zero-shot generation "tends to copy source sentences" — producing items
+    that are effectively extractive rather than information-seeking
+    <cite>[SENTHILKUMAR]</cite>. The recommended configuration combines RAG-retrieved
+    few-shot examples with the PS4 prompt structure, producing the best documented balance
+    of quality, level adherence, and linguistic diversity.
+  </p>
+
+  <h3>3.5 Level 3 generation requires a mandatory human validation gate</h3>
+  <p>
+    Every source that measures across all Bloom levels finds Create/Synthesize questions
+    the hardest to generate reliably:
+  </p>
+  <ul>
+    <li><cite>[SCARIA2024]</cite>: "inability of most models to generate high-quality questions at the 'Create' level"</li>
+    <li><cite>[ZOUMPOULIDI]</cite>: "performance declines as taxonomy level increases… LLMs generally struggle with abstract reasoning regardless of scale"</li>
+    <li><cite>[LEE2025]</cite>: all models plateau at ~83–86% at Creating even with RAG</li>
+  </ul>
+
+  <div class="decision-box">
+    <div class="label">Policy Decision 3.5</div>
+    <p>Level 3 questions must not be passed from LLM generation to the dataset without a
+    mandatory human validation step. Given that 600 of 1,000 questions are Level 3, this
+    gate is the single highest-leverage quality control point in the pipeline.
+    Consider requiring human drafting of the initial Level 3 question, using the LLM only
+    for paraphrase variants.</p>
+  </div>
+
+  <h3>3.6 Operational test: Level 2 vs Level 3 boundary</h3>
+  <p>
+    The Level 2/3 boundary is the most frequent annotator disagreement point
+    <cite>[HUBER2024]</cite>. The following test should be the primary decision rule:
+  </p>
+
+  <div class="callout">
+    <strong>The single-paragraph test</strong>
+    Ask: "Is there a paragraph in the document that, read in isolation, would answer this
+    question?" If yes → Level 2 (or lower). If the document must be read as a whole to
+    construct the answer → Level 3. A question that uses synthesis-sounding language
+    ("how does X relate to Y?") but can be answered by copying two adjacent sentences
+    is Level 2, not Level 3.
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Marker</th><th>Level 2 (integration)</th><th>Level 3 (synthesis/abstraction)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Answer source</td><td>2–3 explicit sentences, possibly in different paragraphs</td><td>Whole-document argument; no single paragraph is sufficient</td></tr>
+      <tr><td>Answer type</td><td>Can be assembled from quoted spans</td><td>Cannot be fully quoted; requires reformulation</td></tr>
+      <tr><td>Inferential demand</td><td>"Connect A to B as stated in the document"</td><td>"What does the combination of A, B, and C imply about X?"</td></tr>
+      <tr><td>New-scenario applicability</td><td>No</td><td>Answer applies to a scenario not mentioned in the document</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3.7 Two-stage generation pipeline: draft with a weaker model, refine with a stronger one</h3>
+  <p>
+    Abdullah et al. <cite>[ABDULLAH2025]</cite> demonstrate a two-stage multi-LLM pipeline
+    that addresses a consistent failure mode in single-pass generation: weaker models produce
+    questions that are "simple, raw, and straightforward" even when prompted for higher cognitive
+    levels. Their approach:
+  </p>
+  <ol>
+    <li><strong>Stage 1 — Draft.</strong> A smaller model (Llama-2-7b) generates a first-pass
+    set of QA candidates from chunked source material. The draft questions are shallow but
+    provide broad topical coverage of the source corpus.</li>
+    <li><strong>Stage 2 — Refine.</strong> A larger model (Llama-3.3-70B-Instruct) with RAG
+    retrieves relevant context from a curated knowledge base and restructures each draft
+    question according to the target cognitive level. The refinement prompt explicitly supplies
+    Bloom-level <em>action verbs</em> for each tier:
+    <em>define / identify / describe / summarise</em> (Level 1);
+    <em>solve / implement / organise / analyse</em> (Level 2);
+    <em>criticise / justify / design / compose</em> (Level 3).</li>
+  </ol>
+  <p>
+    The concrete before/after contrast from their results illustrates what refinement achieves:
+    a question like "What is the purpose of an adhesion promoter?" (Level 1, extractive) was
+    restructured into "Explain the purpose of an adhesion promoter in context X and summarise
+    the comparative benefits across scenarios A and B" — requiring multi-part reasoning and
+    integration, closer to Level 2. The same mechanism, applied to Level 3 target verbs,
+    produces questions requiring genuine synthesis.
+  </p>
+
+  <div class="callout">
+    <strong>Action verb scaffolding</strong>
+    Adding a Bloom-level action verb list to the generation prompt — as a complement to
+    the level label and worked example already prescribed in PS4 — gives the model a
+    concrete linguistic scaffold for the question's cognitive demand. For Level 3, verbs
+    like <em>criticise, justify, synthesise, evaluate, compose</em> signal the inferential
+    depth without over-specifying the topic.
+  </div>
+
+  <div class="callout">
+    <strong>The mandatory human gate as the third pipeline stage</strong>
+    The two-stage pipeline in Abdullah et al. remains fully automated, and the authors
+    report no IAA data on Bloom-level adherence for their highest-difficulty outputs.
+    The mandatory human validation gate prescribed in §3.5 functions as a third stage
+    in this architecture — the stage that catches questions the refinement model has
+    upgraded in surface form but not in genuine cognitive demand.
+  </div>
+
+  <div class="decision-box">
+    <div class="label">Policy Decision 3.7</div>
+    <p>Generation prompts should include cognitive-level action verbs alongside the level
+    label and worked example (PS4 structure). For Level 3, include at least two verbs from
+    the cluster <em>synthesise / evaluate / justify / compose</em>. The two-stage pipeline
+    pattern (draft → refine with RAG) is a viable option for scaling generation, but the
+    human validation gate remains mandatory for any Level 3 output regardless of pipeline
+    configuration.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 4. Q2 -->
+<section id="q2">
+  <h2>4. Policy 2 — Answer Formulation and Quality Standards</h2>
+
+  <h3>4.1 Hallucination is the baseline risk, not an edge case</h3>
+  <p>
+    Analysts estimate that LLMs hallucinate in as much as 27% of responses, with factual
+    errors present in 46% of generated texts <cite>[TAYNTON]</cite>. The mechanism is
+    structural: "LLMs are designed to generate text that is plausible-sounding and
+    statistically aligned with learned patterns, rather than to verify the truthfulness of
+    the information they produce" <cite>[TAYNTON]</cite>. This means <strong>linguistic
+    coherence does not indicate factual accuracy</strong>. An answer that reads fluently
+    and is well-organised may still contain fabricated facts.
+  </p>
+  <p>
+    Even RAG-augmented systems do not eliminate this: "hallucinations persist, particularly
+    in applications where absolute accuracy and reliability are paramount"
+    <cite>[TAYNTON]</cite>. For the expert-user scenario, this is precisely the failure
+    mode that damages trust: a confident, well-written answer that the expert cannot
+    immediately verify is more dangerous than an obviously incomplete one.
+  </p>
+
+  <div class="callout warn">
+    <strong>Annotation implication</strong>
+    Annotators must not rely on fluency or coherence as a proxy for faithfulness.
+    A high Coherence score is not evidence against hallucination. Attribution scoring
+    is the primary safeguard: every claim must be verified against a specific span,
+    not inferred from the answer's apparent plausibility.
+  </div>
+
+  <h3>4.2 RAG improves retrieval but does not reliably produce Level 3 synthesis</h3>
+  <p>
+    Lee et al. demonstrate that RAG significantly improves accuracy at Remembering,
+    Understanding, and Analyzing, but "while retrieval mechanisms bolster reproduction
+    and comprehension, they do not yet sufficiently support culturally nuanced generative
+    synthesis" <cite>[LEE2025]</cite>. The model has the right raw material; it still may
+    fail to integrate it into a novel conclusion. Level 3 answer quality cannot be
+    guaranteed by RAG alone — the evaluation rubric must check for synthesis independently
+    of factual grounding.
+  </p>
+
+  <h3>4.3 The extractive-collage failure mode</h3>
+  <p>
+    This is the critical failure mode for Level 3 that the standard five metrics do not
+    catch. A model can achieve high scores on Coherence, Relevance, Completeness,
+    Faithfulness, and Attribution by <strong>selecting and lightly reformulating the
+    three or four most relevant paragraphs</strong> from the document. The result is
+    factually correct, well-organised, and fully cited — but it has not synthesised.
+    It has collaged.
+  </p>
+  <p>
+    "AI creativity may reflect pattern imitation rather than innovation" <cite>[BARARI]</cite>.
+    LLMs exhibit "a tendency towards overfitting, leading to the regurgitation of standard
+    solutions and a lack of innovation" <cite>[TAYNTON]</cite>. The Abstraction Quality
+    metric (§5.5) is the mechanism for detecting this failure.
+  </p>
+
+  <h3>4.4 What a correct Level 3 answer looks like</h3>
+  <p>
+    A high-quality Level 3 answer:
+  </p>
+  <ul>
+    <li><strong>Draws a conclusion</strong> that is not stated verbatim anywhere in the document</li>
+    <li>The conclusion is <strong>logically necessitated</strong> by the document's facts taken together</li>
+    <li><strong>Names or describes the inferential step</strong>: "This implies…", "Given that X and Y, the main constraint is…", "These findings suggest that…"</li>
+    <li>Does not merely list document facts in order of document appearance</li>
+  </ul>
+  <p>
+    A Level 3 answer that should be <strong>rejected or scored low</strong>:
+  </p>
+  <ul>
+    <li>Every sentence has a direct 1:1 source span — indicates extraction, not synthesis</li>
+    <li>The answer is a well-organised summary of main points with no inferential conclusion</li>
+    <li>Uses the word "therefore" to connect sentences that were already adjacent in the source</li>
+    <li>Applies the word "synthesis" in its framing while producing extractive content</li>
+  </ul>
+
+  <h3>4.5 The Faithfulness redefinition at Level 3</h3>
+  <p>
+    The current Faithfulness score 2 definition — "no information beyond the document text"
+    — is logically incompatible with Level 3. A correct Level 3 answer <em>must</em>
+    contain inference that goes beyond any single sentence; that is the definition of
+    synthesis. The following per-level redefinition is required:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Score</th><th>Levels 1–2 meaning</th><th>Level 3 meaning (revised)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Every claim is supported by a direct span</td>
+        <td>Every claim is either directly supported by a span, OR is a logical inference
+        <em>necessitated</em> by the combination of document facts — no external knowledge
+        imported</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Minor unsupported additions present</td>
+        <td>Reasonable inferences made, but one or two claims import plausible external
+        knowledge not derivable from the document alone</td>
+      </tr>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>Hallucinations or facts contradicting the document</td>
+        <td>Claims that contradict the document, or introduce external facts that cannot
+        be derived from it</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout ok">
+    <strong>Operational test for Level 3 Faithfulness score 2</strong>
+    "Could a careful reader independently reach this conclusion from the document, without
+    any external knowledge?" If yes → score 2. If the answer requires external knowledge
+    to follow or verify → score 1 or 0.
+  </div>
+
+  <h3>4.6 Level 0 (unanswerable) scoring decision table</h3>
+  <p>
+    The current guidelines note that Faithfulness and Relevance for Level 0 are assessed
+    on "the correctness of the claim that there is no information," but do not specify
+    how other metrics map. The following decision table resolves this:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Model behaviour</th><th>Coherence</th><th>Relevance</th><th>Faithfulness</th>
+      <th>Completeness</th><th>Attribution</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Correctly refuses ("the document does not address this")</td>
+        <td>2</td><td>2</td><td>2</td><td>2</td><td>N/A</td>
+      </tr>
+      <tr>
+        <td>Partially answers + partially refuses</td>
+        <td>1</td><td>1</td><td>1</td><td>1</td>
+        <td>Score the cited claims independently</td>
+      </tr>
+      <tr>
+        <td>Answers as if information is present when it is not</td>
+        <td>—</td><td>0</td><td>0</td><td>0</td><td>0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.7 Knowledge type as an orthogonal diagnostic dimension</h3>
+  <p>
+    The project's taxonomy stratifies questions by <em>cognitive level</em> (0–3). Abdullah
+    et al. <cite>[ABDULLAH2025]</cite> demonstrate the value of an orthogonal dimension:
+    <strong>knowledge type</strong> — factual, conceptual, or procedural — drawn from the
+    revised Bloom's Taxonomy (Anderson &amp; Krathwohl, 2001). A question at any given
+    cognitive level can target any of these knowledge types, and performance failures at
+    higher levels are often traceable to a specific knowledge-type gap rather than a
+    uniform reasoning deficit.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Knowledge type</th><th>What the answer draws on</th><th>Example at Level 3</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Factual</strong></td>
+        <td>Discrete facts, named events, specific figures</td>
+        <td>"What three specific decisions led to the outcome described?"</td>
+      </tr>
+      <tr>
+        <td><strong>Conceptual</strong></td>
+        <td>Categories, principles, underlying tensions, generalisations</td>
+        <td>"What structural tension does this testimony reveal about the policy goal?"</td>
+      </tr>
+      <tr>
+        <td><strong>Procedural</strong></td>
+        <td>Sequences, methods, causal chains, decision steps</td>
+        <td>"What sequence of steps does the document imply would be needed to implement this?"</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Knowledge type is not a required tagging dimension in the current MAFAT specification.
+    However, it is a useful diagnostic lens: a model that fails Level 3 questions targeting
+    <em>conceptual</em> knowledge (abstract tensions, implications) but performs adequately
+    on Level 3 questions targeting <em>procedural</em> knowledge reveals a specific reasoning
+    gap, not a general Level 3 weakness. A future leaderboard extension could stratify scores
+    by knowledge type within each level, producing a richer capability profile.
+  </p>
+
+  <h3>4.8 The highest cognitive tier formally resists automated evaluation: convergent evidence</h3>
+  <p>
+    Three independent sources now converge on the same conclusion from different directions
+    (a fourth data point, Yudha et al., is in the §7 table):
+  </p>
+  <ul>
+    <li><cite>[HUBER2024]</cite>: "None of the standard benchmarks cover the Create or
+    Evaluate dimensions" — the field has not solved upper-level Bloom evaluation.</li>
+    <li><cite>[LEE2025]</cite>: RAG-augmented models plateau at ~83–86% at Creating even
+    with optimal retrieval — the performance ceiling is structural, not a tuning problem.</li>
+    <li><cite>[ABDULLAH2025]</cite>: The Create/metacognitive dimension was <em>explicitly
+    excluded</em> from their automated pipeline because "it would be challenging for the
+    system to determine its correctness" — the authors could not design a computable
+    correctness criterion for novel-synthesis questions.</li>
+  </ul>
+  <p>
+    This convergence matters because it reframes the Level 3 evaluation challenge. The
+    difficulty is not transitional — it will not be resolved by the next generation of
+    models. It is epistemological: the type of inquiry that requires genuine synthesis
+    does not have a ground-truth answer that any automatic system can retrieve or verify.
+    Human judgment is load-bearing at this level, not a temporary placeholder.
+  </p>
+
+  <div class="callout ok">
+    <strong>What this means for the annotator role</strong>
+    The human annotator for Level 3 items is not a stopgap pending better automation.
+    They are the irreplaceable arbiter for a class of questions that is formally
+    non-automatable in the current state of the field. Communicating this to annotators
+    — as the explicit rationale for the higher scrutiny and mandatory IAA checks at
+    Level 3 — is both honest and motivating.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 5. Q3 -->
+<section id="q3">
+  <h2>5. Policy 3 — Evaluation Metrics: Definitions, Scope, and a Sixth Metric</h2>
+
+  <h3>5.1 Where the five metrics come from</h3>
+  <p>
+    The five metrics — Coherence, Relevance, Completeness, Faithfulness, Attribution — are
+    not from a single canonical standard. They represent a convergence of two literature
+    streams that became the de-facto community practice for RAG answer evaluation by 2024:
+  </p>
+  <ul>
+    <li><strong>Coherence, Relevance, Completeness</strong> trace to <em>SummEval</em>
+    (Fabbri et al., 2021, TACL) and were operationalised for LLM-based evaluation by
+    <em>G-Eval</em> (Liu et al., 2023, EMNLP).</li>
+    <li><strong>Faithfulness</strong> is the central contribution of <em>RAGAS</em>
+    (Es et al., 2023): "every factual claim must be supported by the retrieved context."</li>
+    <li><strong>Attribution</strong> comes from <em>ALCE</em> (Gao et al., 2023, EMNLP),
+    which introduced citation recall and precision as evaluatable dimensions for
+    grounded generation.</li>
+  </ul>
+  <p>
+    These frameworks converged by 2024 into the roughly same five-metric bundle across
+    evaluation toolkits (ARES, TruLens, DeepEval, Ragas v2). The MAFAT spec reflects
+    this consensus faithfully. The metrics are well-chosen for Levels 0–2; the gap is
+    structural at Level 3.
+  </p>
+
+  <h3>5.2 Why the five metrics are structurally limited at Level 3</h3>
+  <p>
+    All five metrics reward <em>retrieval-grounded generation</em> — staying close to
+    retrieved passages, citing sources precisely, covering what the document says.
+    This is exactly correct for Levels 0–2. At Level 3, the same reward function
+    works against the goal: it gives maximum scores to a model that extracts and
+    reformats document content without synthesising. The collage failure mode (§4.3)
+    can score 2/2/2/2/2 on all five metrics.
+  </p>
+  <p>
+    Huber et al. document this at the benchmark level: the Create and Evaluate dimensions
+    of Bloom's Taxonomy "lack usable metrics with upper bounds" — "ranking is relative to
+    other models… this allows for a comparison between models but makes it difficult to
+    measure absolute performance" <cite>[HUBER2024]</cite>. This is not a gap unique to
+    this project; it is an open problem in the field.
+  </p>
+
+  <div class="callout note">
+    <strong>Implication for leaderboard reporting</strong>
+    Level 3 scores should be treated as <em>comparative</em> (which model scores higher
+    than another on synthesis tasks) rather than <em>absolute</em> (a score of 1.8/2.0
+    means the answer is 90% synthetically correct). Reporting Level 3 scores as ranks
+    or relative differences between models is more defensible than reporting them as
+    absolute quality measures.
+  </div>
+
+  <h3>5.3 Revised metric definitions per level</h3>
+
+  <h4>Faithfulness</h4>
+  <p>
+    See §4.5. Definition splits at Level 3: score 2 permits grounded inference;
+    score 0 targets external fabrication. The key operational test: can a careful
+    reader reach this conclusion from the document alone?
+  </p>
+
+  <h4>Completeness</h4>
+  <p>
+    <strong>Levels 1–2:</strong> Current definition is correct — "covers all key
+    information present in the document relevant to the question."<br>
+    <strong>Level 3:</strong> Reframe as question-scoped, not document-exhaustive.
+    "The answer represents the major lines of argument or evidence relevant to the
+    question, and the inferential conclusion is supported by the main thrust of the
+    document." Do not reward exhaustive enumeration — that would directly conflict
+    with the Relevance penalty on verbosity.
+  </p>
+
+  <h4>Coherence and Relevance</h4>
+  <p>
+    Definitions hold across all levels. Annotators must be explicitly warned:
+    <strong>a high score on both Coherence and Relevance is not evidence of
+    synthesis.</strong> The collage failure mode scores 2/2 on both. These metrics
+    cannot substitute for Abstraction Quality at Level 3.
+  </p>
+
+  <h4>Attribution</h4>
+  <p>
+    Definition holds across all levels with one Level 3 addition: it is acceptable
+    to attribute an <em>inferential claim</em> to a combination of spans (e.g.,
+    "Based on paragraphs A and B, the implication is…"). The inference itself, not
+    the literal claim, is what is being attributed to the span combination. Score
+    2 if the inference is clearly grounded in the cited spans; score 1 if the
+    connection is vague or requires external knowledge to follow.
+  </p>
+
+  <h3>5.4 LLM-as-judge: scope and limits</h3>
+  <p>
+    LLM-as-judge achieves approximately 90% agreement with human judgements "in
+    structured contexts" <cite>[TAYNTON]</cite>. However, performance is "highly
+    dependent on the clarity and consistency of evaluation criteria" and LLMs
+    "struggle with subjective or ambiguous distinctions" <cite>[TAYNTON]</cite>.
+    Separately, Scaria et al. found that LLM judges are unreliable for Bloom-level
+    assessment, systematically misclassifying toward Apply/Analyze <cite>[SCARIA2024]</cite>.
+  </p>
+  <p>
+    These two findings are compatible. The recommended scope:
+  </p>
+  <table>
+    <thead><tr><th>Metric</th><th>LLM judge appropriate?</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>Coherence (all levels)</td><td>✓ Yes</td><td>Structurally checkable; high human–LLM agreement</td></tr>
+      <tr><td>Relevance (all levels)</td><td>✓ Yes</td><td>As above</td></tr>
+      <tr><td>Faithfulness (L0–2)</td><td>✓ Yes</td><td>Span-checking is deterministic</td></tr>
+      <tr><td>Attribution (L0–2)</td><td>✓ Yes</td><td>Span-matching is deterministic</td></tr>
+      <tr><td>Faithfulness (L3, revised)</td><td>⚠ With caution</td><td>Grounded-inference judgment is subjective; human review of borderline cases</td></tr>
+      <tr><td>Completeness (L3)</td><td>✗ No</td><td>Open-ended; no canonical answer set; requires human judgment</td></tr>
+      <tr><td>Bloom level assignment</td><td>✗ No</td><td>Systematic LLM bias toward Apply/Analyze <cite>[SCARIA2024]</cite></td></tr>
+      <tr><td>Abstraction Quality (L3)</td><td>✗ No</td><td>Cognitive-level judgment; same failure mode as Bloom classification</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5.5 A sixth metric: Abstraction Quality (Level 3 only)</h3>
+  <p>
+    The gap in the current five-metric scheme is the absence of a metric that directly
+    assesses whether the model <em>synthesised</em> rather than <em>compiled</em>.
+    Huber et al. note the field has not solved this <cite>[HUBER2024]</cite>;
+    Barari et al. and Taynton describe the failure mode precisely
+    <cite>[BARARI]</cite> <cite>[TAYNTON]</cite>. The following metric is proposed
+    for Level 3 items only:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Score</th><th>Description</th><th>Diagnostic marker</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>0</strong></td>
+        <td>Extractive. Sentences are lifted or lightly paraphrased; no integration.</td>
+        <td>Every sentence in the answer has a direct 1:1 source span</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Reformulative. Answer organises the document's content around the question, but draws no new inference.</td>
+        <td>Synthesis of structure, not of meaning; no sentence expresses something the document implies but never states</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Inferential. Integrates evidence and draws a conclusion not stated explicitly in any single sentence, but logically necessitated by the document as a whole.</td>
+        <td>At least one sentence expresses something the document implies but never states; the conclusion could not be found by searching any single paragraph</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout note">
+    <strong>Scope: Level 3 only</strong>
+    Abstraction Quality should be scored N/A for Levels 0–2. Level 1 and 2 answers are
+    explicitly expected to stay close to source text; scoring them on abstraction would
+    penalise correct behaviour.
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 6. Q4 -->
+<section id="q4">
+  <h2>6. Policy 4 — Annotator Guidance</h2>
+
+  <h3>6.1 Question validation: the cascading 9-item rubric</h3>
+  <p>
+    Scaria et al. developed and validated a hierarchical rubric for question quality
+    that is directly applicable to human validation of LLM-generated questions
+    <cite>[SCARIA2024]</cite>. Its key feature is a cascade: a question failing an
+    early criterion is not evaluated on later ones, reducing annotation effort without
+    sacrificing coverage:
+  </p>
+
+  <table>
+    <thead><tr><th>Step</th><th>Criterion</th><th>Outcome if failed</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Understandable? Can you understand what the question is asking?</td><td>Discard</td></tr>
+      <tr><td>2</td><td>TopicRelated? Is it related to the document topic?</td><td>Discard</td></tr>
+      <tr><td>3</td><td>Grammatical?</td><td>Discard</td></tr>
+      <tr><td>4</td><td>Clear? Is it clear what is being asked?</td><td>"More or less" → require rephrase; "No" → discard</td></tr>
+      <tr><td>5</td><td>Answerable? Can it be answered from the document?</td><td>Discard or re-level</td></tr>
+      <tr><td>6</td><td>Central? Is answering this question important to the topic?</td><td>Discard</td></tr>
+      <tr><td>7</td><td>WouldYouUseIt? Would you use this question if you were evaluating an LLM on this document?</td><td>"No" → discard; "Maybe" → review</td></tr>
+      <tr><td>8</td><td>Level? Assign Level 0–3</td><td>Assign; flag borderline L2/3 for peer review</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    IAA results with this rubric: κ = 0.83–0.93 for Level assignment with the PS4 prompt,
+    supporting the project's 0.9 IAA target <cite>[SCARIA2024]</cite>. Agreement is
+    highest for objective criteria (Grammatical: κ = 1.00; TopicRelated: κ = 0.93–0.99)
+    and lowest for subjective ones (Rephrase: κ = 0.53–0.76). Annotator calibration
+    training should focus specifically on <strong>Level boundary judgment (L2/L3) and
+    Rephrase</strong>.
+  </p>
+
+  <h3>6.2 Do not use a general-purpose LLM as the sole Level classifier</h3>
+  <p>
+    Scaria et al. found that Gemini Pro used as an automated judge "revealed a tendency
+    to classify most machine-generated questions as belonging to the 'Apply' or 'Analyze'
+    levels regardless of actual level… extreme caution must be exercised when using LLMs
+    for automated evaluation" <cite>[SCARIA2024]</cite>.
+  </p>
+  <p>
+    This means LLM-based Level pre-screening can flag obvious Level 1 (extractive) questions
+    as a first-pass filter, but cannot certify Level 3 classification. Human adjudication
+    is required for all final Level assignments. If automated assistance is needed, a
+    task-specific fine-tuned classifier substantially outperforms a prompted general LLM:
+    Bloomify (Mistral 7B + QLoRA) achieved MOS 9/10 for Bloom-level classification from
+    domain experts <cite>[ATRE]</cite>.
+  </p>
+
+  <h3>6.3 Bloom taxonomy boundaries are genuinely fuzzy</h3>
+  <p>
+    "The boundaries between the levels of Bloom's Taxonomy are fuzzy, and in practice
+    individual tasks fall somewhere in between two levels" <cite>[HUBER2024]</cite>.
+    This is not an annotator training failure; it is intrinsic to the framework.
+    The literature reports it uniformly. The mitigation is the single-paragraph test
+    (§3.6) as a decision rule, plus explicit calibration sessions on borderline L2/L3
+    cases before main annotation begins.
+  </p>
+
+  <h3>6.4 LLM-as-judge scope for answer scoring</h3>
+  <p>
+    See §5.4 for the full scope table. The minimum human coverage specified in the
+    MAFAT doc (IAA check on 35% of answers) is appropriate, but Level 3 items should
+    be <strong>over-represented in that 35% sample</strong> given that Completeness,
+    Abstraction Quality, and the Level 3 Faithfulness redefinition all require human
+    judgment.
+  </p>
+
+  <h3>6.5 Annotator decision table: common Level 3 answer edge cases</h3>
+
+  <table>
+    <thead>
+      <tr><th>Situation</th><th>Recommended scoring</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Answer correctly identifies the main implication but adds one claim that requires external knowledge</td>
+        <td>Faithfulness 1; Attribution 1; note the external claim</td>
+      </tr>
+      <tr>
+        <td>Answer is a well-organised list of all main points, no inferential conclusion</td>
+        <td>Abstraction Quality 0; Completeness 2; Coherence 2 — useful baseline answer, not a synthesis</td>
+      </tr>
+      <tr>
+        <td>Answer draws correct inference using vocabulary not present in the document</td>
+        <td>Faithfulness 2 (inference is grounded; vocabulary difference is acceptable); Attribution 2 if the supporting span clearly entails the inference</td>
+      </tr>
+      <tr>
+        <td>Model says "I cannot determine this from the document" for a Level 3 question that is answerable</td>
+        <td>Relevance 0; Completeness 0; Abstraction Quality 0</td>
+      </tr>
+      <tr>
+        <td>Answer is correct but significantly longer than necessary, with padding paragraphs</td>
+        <td>Relevance 1 (penalise verbosity per guidelines); other metrics scored on content only</td>
+      </tr>
+      <tr>
+        <td>Answer applies the document's conclusion to a new scenario not mentioned in the document</td>
+        <td>Abstraction Quality 2 if the new-scenario application is logically valid; Faithfulness 2 if no external facts are introduced; Faithfulness 1 if new-scenario assumptions are imported</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 7. CEILING -->
+<section id="ceiling">
+  <h2>7. The Higher-Order Performance Ceiling: Convergent Evidence</h2>
+
+  <p>
+    The most consistent finding across all reviewed sources — across domains, models, and
+    methodologies — is a systematic performance decline at higher Bloom levels. This is
+    not a dataset artefact or a tuning problem; it is a structural characteristic of how
+    LLMs process information. It is the core reason the leaderboard is most informative
+    at Level 3, and it directly answers the question of whether current LLMs are ready for
+    the full range of inquiry a domain expert might bring: they are not, and the evidence
+    is robust and domain-independent.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Domain</th><th>Finding at synthesis level</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><cite>[YADAV2025]</cite></td>
+        <td>In-car AI assistant</td>
+        <td>52% correct at Level 1 (Remember); only 6% at Level 6 (Create)</td>
+      </tr>
+      <tr>
+        <td><cite>[SCARIA2024]</cite></td>
+        <td>Question generation</td>
+        <td>"Inability of most models to generate high-quality Create-level questions"</td>
+      </tr>
+      <tr>
+        <td><cite>[MA2025]</cite></td>
+        <td>Code repair</td>
+        <td>Remember: 53–82% plausible patches; Analyze (real-world): 13–41%</td>
+      </tr>
+      <tr>
+        <td><cite>[LEE2025]</cite></td>
+        <td>Cultural knowledge QA with RAG</td>
+        <td>All models plateau ~83–86% at Creating even with RAG augmentation</td>
+      </tr>
+      <tr>
+        <td><cite>[ZOUMPOULIDI]</cite></td>
+        <td>STEM QA generation</td>
+        <td>"Performance declines as taxonomy level increases"</td>
+      </tr>
+      <tr>
+        <td><cite>[BARARI]</cite></td>
+        <td>Engineering domain QA</td>
+        <td>All three LLMs decrease at higher levels; "AI creativity may reflect pattern imitation"</td>
+      </tr>
+      <tr>
+        <td><cite>[HUBER2024]</cite></td>
+        <td>NLP benchmark meta-analysis</td>
+        <td>No standard benchmark covers Create or Evaluate; these "lack usable metrics with upper bounds"</td>
+      </tr>
+      <tr>
+        <td><cite>[YUDHA2026]</cite></td>
+        <td>Adaptive essay assessment system</td>
+        <td>System explicitly limited to Levels 1–2 (Remembering, Understanding); analysis and synthesis named as beyond scope and future work</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>7.1 Model choice matters more than cognitive level</h3>
+  <p>
+    Lee et al. find via ANOVA that model choice is a more significant predictor of
+    performance than cognitive level: F(5,30) = 15.81 (significant) for model vs.
+    F(6,30) = 2.26, p = 0.065 (not significant) for Bloom level <cite>[LEE2025]</cite>.
+    This is the leaderboard's key practical implication: when the dataset is used to
+    rank models, cross-model differences will dominate over within-model level variation.
+    The leaderboard will primarily tell you <em>which model</em> is better for expert RAG,
+    with Level 3 performance as the most discriminating sub-score.
+  </p>
+
+  <h3>7.2 Implication for the dataset distribution</h3>
+  <p>
+    The 60% Level 3 weighting is defensible on exactly these grounds: it is the level
+    where model differences are largest, where the expert-user scenario is most relevant,
+    and where current LLM capabilities are most uncertain. The 5% Level 0 and 5% Level 1
+    serve as calibration anchors — models that fail at Level 1 retrieval are unreliable
+    at all levels; models that fail at Level 0 refusal introduce a trust-critical
+    hallucination risk.
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 8. CONTAMINATION -->
+<section id="contamination">
+  <h2>8. Benchmark Contamination and the Hebrew Safeguard</h2>
+
+  <p>
+    Ma et al. demonstrate that LLMs perform significantly better on static benchmark
+    datasets than on genuinely novel tasks at the same stated cognitive level:
+    "Bloom-layered dynamic evaluation reveals true capability" that is hidden by static
+    benchmarks <cite>[MA2025]</cite>. Accuracy swings of up to 25 percentage points
+    from answer-ordering effects and 20–30 pp from irrelevant distractors show how
+    sensitive benchmark scores are to surface features <cite>[TAYNTON]</cite>.
+  </p>
+
+  <div class="callout ok">
+    <strong>The Hebrew safeguard</strong>
+    This project's use of Hebrew-language sources — Knesset protocols, Israel HaYom,
+    and Hebrew Wikipedia — provides a natural and strong safeguard against training-data
+    contamination. These materials are substantially underrepresented in the training
+    corpora of major LLMs compared to English sources, making genuine-capability testing
+    much more likely. The Knesset protocols in particular — spoken formal Hebrew with
+    political and connotative register — are unlikely to appear in any model's training
+    data in a form that would allow memorisation of specific passages. The novelty of
+    the material is itself a methodological strength: because the model cannot rely on
+    training-set exposure, every question — at every level — genuinely tests the model's
+    capacity to process an unfamiliar document and handle the type of inquiry the question
+    presents. This is the closest available approximation to the domain-expert use case
+    this dataset is designed to evaluate.
+  </div>
+
+  <h3>8.1 The flip side: cross-lingual embedding degradation is a real evaluation risk</h3>
+  <p>
+    Hebrew is an asset for contamination resistance, but it introduces a technical risk
+    on the evaluation side. Yudha et al. <cite>[YUDHA2026]</cite> provide empirical
+    measurement of exactly this effect in a closely analogous situation: they compared
+    embedding-based semantic similarity scores for the same questions and answers in
+    English (the original source language) vs. Indonesian (a translated version).
+  </p>
+  <table>
+    <thead>
+      <tr><th>Condition</th><th>Cosine similarity range</th><th>Stability</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Original language (English)</td>
+        <td>0.85–0.92</td>
+        <td>Higher and more stable; consistent relevance pattern</td>
+      </tr>
+      <tr>
+        <td>Translated version (Indonesian)</td>
+        <td>0.76–0.89</td>
+        <td>Lower floor; drops when vocabulary doesn't fully translate (e.g. technical terms)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    The root cause: "text embedding could not fully capture cross-lingual semantic
+    relevance" — the embedding space is trained predominantly on English, so comparisons
+    that cross language boundaries are less reliable. The Pearson correlation between
+    question similarity and answer similarity (0.76) was the same in both languages,
+    meaning the <em>relative</em> pattern is preserved but the <em>absolute</em> scores
+    are systematically lower and more variable in the non-English condition.
+  </p>
+
+  <div class="callout warn">
+    <strong>Project implication: calibrate embedding-based metrics for Hebrew</strong>
+    The evaluation pipeline for this project uses RAGAS Faithfulness, which is
+    embedding-based (it checks whether claims in the answer are supported by the
+    retrieved context using semantic similarity). If the embedding model used is
+    English-dominant (e.g. ada-002, text-embedding-3, or similar), Hebrew-language
+    comparisons will produce systematically lower similarity scores — not because
+    the answers are less faithful, but because the embedding space is less reliable
+    for Hebrew. Two practical implications:
+    <ul style="margin-top:.5rem;">
+      <li><strong>Calibrate annotation thresholds using Hebrew pilot data</strong>, not
+      English-derived defaults. A "good" Faithfulness score in Hebrew may sit lower
+      on the raw cosine scale than the same quality answer in English.</li>
+      <li><strong>Consider using a multilingual or Hebrew-specialised embedding model</strong>
+      (e.g. LaBSE, multilingual-e5, or a Hebrew-tuned model from Dicta) for Faithfulness
+      and Attribution scoring. This is particularly important at Level 3, where the
+      semantic gap between the answer and its source spans is inherently wider.</li>
+    </ul>
+  </div>
+
+  <p>
+    This finding also strengthens the Open Question about Hebrew-language generalisability
+    (§9): it is not only that prompting strategies and IAA results may differ in Hebrew —
+    the evaluation metrics themselves may behave differently, and that needs to be
+    empirically checked before relying on absolute score thresholds.
+  </p>
+
+  <p>
+    The leaderboard should report performance broken down by Level (0–3), not just as
+    an aggregate. A Bloom-stratified score exposes the differential pattern documented
+    across all reviewed sources — strong at Level 1, weaker at Level 3 — which is
+    precisely where genuine capability differences between models become visible.
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════ 9. OPEN QUESTIONS -->
+<section id="open">
+  <h2>9. Open Questions and Limitations</h2>
+
+  <ul>
+    <li>
+      <strong>Hebrew-language generalisability.</strong> All reviewed studies were conducted
+      in English (or Korean cultural content in English). It is unknown whether the same
+      prompting strategies, IAA levels, and performance patterns hold for Hebrew — a
+      morphologically rich language with different tokenisation characteristics and
+      substantially less LLM training data. Crucially, §8.1 documents a concrete risk:
+      cross-lingual embedding degradation means that embedding-based evaluation metrics
+      (RAGAS Faithfulness, semantic similarity scoring) may produce systematically lower
+      and less stable scores in Hebrew than the field's English-derived calibration data
+      would suggest <cite>[YUDHA2026]</cite>. Hebrew-specific calibration of score
+      thresholds is required before the metric system can be deployed reliably.
+    </li>
+    <li>
+      <strong>No resolved metric for synthesis quality.</strong> Huber et al. note that the
+      field has not yet proposed "a principled adaptation from human to LLM cognition"
+      <cite>[HUBER2024]</cite>. The proposed Abstraction Quality metric (§5.5) is grounded
+      in the literature's diagnostic findings but has not been independently validated.
+      It should be piloted on the first 50-question batch and IAA-checked before deployment.
+      Abdullah et al. <cite>[ABDULLAH2025]</cite> reach the same conclusion from a different
+      direction: when building a full automated QA pipeline they found the Create/metacognitive
+      tier formally unassessable, excluding it entirely — "the most prominent [limitation]
+      is the removal of the metacognitive dimension… it is not feasible to assess these
+      abilities automatically." This is independent confirmation that Abstraction Quality
+      addresses a genuinely unsolved problem, not a solved-but-unadapted one.
+    </li>
+    <li>
+      <strong>Level 3 scores are relative, not absolute.</strong> Without an upper bound
+      on synthesis metrics, the leaderboard's Level 3 scores are comparative rankings,
+      not absolute capability measures. Future work may develop better upper-bound criteria.
+      One direction worth tracking: Verga et al. (2024, cited in <cite>[ABDULLAH2025]</cite>)
+      propose "jury-based" evaluation in which a panel of diverse LLM judges vote on a
+      response rather than relying on a single model, reducing individual model bias and
+      producing more reliable consensus on borderline cases. Applied to Abstraction Quality
+      scoring, a jury of diverse models might yield more stable relative rankings at Level 3
+      than any single automated judge — though it does not resolve the absolute upper-bound
+      problem.
+    </li>
+    <li>
+      <strong>Model temporal drift.</strong> LLM performance patterns can be partly
+      explained by memorisation of training data. As models are retrained, static benchmark
+      comparisons become unreliable over time <cite>[MA2025]</cite>. The leaderboard will
+      need periodic re-evaluation with held-out question sets.
+    </li>
+    <li>
+      <strong>RAG configuration effects.</strong> Lee et al.'s ANOVA finding that model
+      choice dominates over cognitive level may vary with RAG configuration. The leaderboard
+      should document the retrieval setup for each model evaluation.
+    </li>
+  </ul>
+</section>
+
+<hr />
+
+<!-- ═══════════════════════════════════════════════ REFERENCES -->
+<section id="references">
+  <h2>References</h2>
+  <p style="font-size:.85rem;margin-bottom:.8rem;">
+    Keys used in the text appear in square brackets. Chunk files are in
+    <code>resources/Bloom_taxonomy/further_resources/chunks/</code> and
+    <code>resources/chunks_for_RAG/</code>.
+    Full bibliographic details in
+    <code>resources/Bloom_taxonomy/further_resources/chunks/bibliography.md</code>.
+  </p>
+  <ol>
+    <li>
+      <strong>[YADAV2025]</strong>
+      Yadav, A., et al. (2025). <em>Generating Follow-Up Questions with LLMs Guided by
+      Bloom's Taxonomy and Gricean Maxims.</em> ACL 2025 Industry Track.
+      Chunk: <code>2025.acl-industry.93.jsonl</code>
+    </li>
+    <li>
+      <strong>[SCARIA2024]</strong>
+      Scaria, K., Chenna, S. D., &amp; Subramani, D. (2024). <em>Automated Educational
+      Question Generation at Different Bloom's Skill Levels Using Large Language Models:
+      Strategies and Evaluation.</em> arXiv:2408.04394v1.
+      Chunk: <code>2408.04394v1.jsonl</code>
+    </li>
+    <li>
+      <strong>[MA2025]</strong>
+      Ma, Y., et al. (2025). <em>BloomAPR: Evaluating LLM Automated Program Repair with
+      Bloom's Taxonomy.</em> arXiv:2509.25465v1.
+      Chunk: <code>2509.25465v1.jsonl</code>
+    </li>
+    <li>
+      <strong>[LEE2025]</strong>
+      Lee, H.-S., Chang, C.-C., Chen, C.-Y., &amp; Hsu, Y.-H. (2025). <em>Evaluating
+      Cultural Knowledge Processing in Large Language Models: A Cognitive Benchmarking
+      Framework Integrating Retrieval-Augmented Generation.</em> arXiv:2511.01649v1.
+      Chunk: <code>2511.01649v1.jsonl</code>
+    </li>
+    <li>
+      <strong>[ZOUMPOULIDI]</strong>
+      Zoumpoulidi, M., et al. (2025). <em>BloomXplain: A Framework for Generating and
+      Evaluating LLM Explanations Aligned with Bloom's Taxonomy.</em>
+      Chunk: <code>51_BloomXplain_A_Framework_and.jsonl</code>
+    </li>
+    <li>
+      <strong>[LUO]</strong>
+      Luo, X., et al. (2025). <em>Enhanced Bloom's Educational Taxonomy for Fostering
+      Information Literacy with LLMs.</em> arXiv:2503.19434.
+      Chunk: <code>Enhanced_Blooms_Educational_Taxonomy_for_Fosterin.jsonl</code>
+    </li>
+    <li>
+      <strong>[BARARI]</strong>
+      Barari, M., et al. (2025). <em>Evaluating Large Language Models in Engineering
+      Education: A Bloom's Taxonomy Approach.</em> IEEE Access.
+      Chunk: <code>Evaluating_Large_Language_Models_in_Engineering_Education_Using_Blooms_Taxonomy.jsonl</code>
+    </li>
+    <li>
+      <strong>[ATRE]</strong>
+      Atre, M., Karandikar, S., Merchant, K. A., Suryawanshi, A., &amp; Patil, H. (2025).
+      <em>Bloomify: Automating Educational Assessment with Bloom's Taxonomy and Fine-Tuned
+      LLMs.</em> WSEAS Transactions on Information Science and Applications, 22.
+      DOI:10.37394/23209.2025.22.49.
+      Chunk: <code>a965109-025(2025).jsonl</code>
+    </li>
+    <li>
+      <strong>[TAYNTON]</strong>
+      Taynton, K. (2025). <em>LLMs and Bloom's Taxonomy: Cognitive Offloading,
+      Infallibility, and Hybrid Intelligence.</em> Medium.
+      Chunk: <code>taynton_medium_llm_bloom.jsonl</code>
+    </li>
+    <li>
+      <strong>[SENTHILKUMAR]</strong>
+      Senthilkumar, P., &amp; Nandhini, K. (2026). <em>Delimiting LLM Framework with
+      RAG for Bloom's Taxonomy-Aligned Question Generation.</em>
+      DOI:10.21203/rs.3.rs-9162087/v1.
+      Chunk: <code>v1_covered_6248a5f8-b0f0-4a36-a1f3-fa67440bd7e6.jsonl</code>
+    </li>
+    <li>
+      <strong>[HUBER2024]</strong>
+      Huber, E., et al. (2024). <em>LLMs Meet Bloom's Taxonomy: A Cognitive View on
+      Large Language Model Evaluations.</em> COLING 2024.
+      Chunk: <code>resources/chunks_for_RAG/LLMs_Bloom.jsonl</code>
+    </li>
+    <li>
+      <strong>[RAGAS]</strong>
+      Es, S., et al. (2023). <em>RAGAS: Automated Evaluation of Retrieval Augmented
+      Generation.</em> arXiv:2309.15217. [Cited for metric lineage; not chunked.]
+    </li>
+    <li>
+      <strong>[SUMMEVAL]</strong>
+      Fabbri, A. R., et al. (2021). <em>SummEval: Re-evaluating Summarization
+      Evaluation.</em> TACL. [Cited for metric lineage; not chunked.]
+    </li>
+    <li>
+      <strong>[GEVAL]</strong>
+      Liu, Y., et al. (2023). <em>G-Eval: NLG Evaluation Using GPT-4 with Better
+      Human Alignment.</em> EMNLP 2023. [Cited for metric lineage; not chunked.]
+    </li>
+    <li>
+      <strong>[ALCE]</strong>
+      Gao, T., et al. (2023). <em>Enabling Large Language Models to Generate Text
+      with Citations.</em> EMNLP 2023. [Cited for metric lineage; not chunked.]
+    </li>
+    <li>
+      <strong>[ABDULLAH2025]</strong>
+      Abdullah, M., Mansoor, I., Fortes Rey, V., &amp; Fraz, M. M. (2025). <em>A
+      multi-LLM pipeline for retrieval-grounded Bloom's Taxonomy-aligned question
+      generation.</em> 2025 5th International Conference on Digital Futures and
+      Transformative Technologies (ICoDT2). IEEE.
+      DOI:10.1109/ICoDT269104.2025.11360748.
+      Chunk: <code>A_Multi-LLM_Pipeline_for_Retrieval-Grounded_Blooms_Taxonomy-Aligned_Question_Generation.jsonl</code>
+    </li>
+    <li>
+      <strong>[YUDHA2026]</strong>
+      Yudha, L. G. O. P., Toba, H., Karnalim, O., Bunyamin, H., &amp; Tada, T. (2026).
+      <em>An LLM-based adaptive learning system for automated essay assessment aligned
+      with Bloom's Taxonomy.</em> In D. May &amp; M. E. Auer (Eds.), <em>2025 Yearbook
+      Emerging Technologies in Learning</em> (pp. 125–145). Springer Nature.
+      DOI:10.1007/978-3-032-09058-4_8.
+      Chunk: <code>Yudha et al. (2026).jsonl</code>
+    </li>
+  </ol>
+</section>
+
+<p style="font-size:.8rem;color:#888;margin-top:2.5rem;text-align:center;">
+  All findings cited are drawn from the sources above plus prior conversation analysis (May 2026).
+  Session 4 additions (ABDULLAH2025, YUDHA2026) integrated May 2026. All planned sources now incorporated.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+[
+  {
+    "text": "[S1] המשרד פרסם נוהל חדש לדיווח חודשי. [S2] הארגונים מחויבים להגיש דוח עד סוף כל חודש. [S3] לא צוין גובה הקנס במקרה של איחור.",
+    "good": {
+      "reasoning": "[Level 0 + Level 1 style] This is a short factual question about a concrete detail, but the penalty amount is absent from the passage.",
+      "question": "מה גובה הקנס על איחור בהגשת הדוח?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "המשרד פרסם נוהל חדש לדיווח חודשי."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "על פי מכלול השיקולים הרגולטוריים העדכניים, איזה קנס מדורג צפוי להיות מוחל במקרה של הפרה?",
+        "why": "Inflated and premise-heavy; not natural Level-1-like phrasing."
+      },
+      {
+        "question": "עד סוף כל חודש צריך להגיש דוח?",
+        "why": "Yes/no question."
+      }
+    ]
+  },
+  {
+    "text": "[S1] העירייה הכריזה על קו אוטובוס חדש בין השכונות. [S2] הקו יפעל בימים ראשון עד חמישי. [S3] לא פורסמה שעת היציאה הראשונה בבוקר.",
+    "good": {
+      "reasoning": "[Level 0 + Level 1 style] The wording is direct and concrete, but the first departure time does not appear in the text.",
+      "question": "באיזו שעה יוצאת הנסיעה הראשונה של הקו בבוקר?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "העירייה הכריזה על קו אוטובוס חדש בין השכונות."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "כיצד משקפת תדירות הפעלת הקו את תפיסת הנגישות התחבורתית של העירייה?",
+        "why": "Too abstract; this drifts to Level-3 style."
+      }
+    ]
+  },
+  {
+    "text": "[S1] הוועדה אישרה תוכנית להרחבת הספרייה העירונית. [S2] הביצוע יתחיל ברבעון הבא. [S3] לא נכתב מי הקבלן המבצע.",
+    "good": {
+      "reasoning": "[Level 0 + Level 1 style] The question asks for a specific missing fact (executor identity), so it remains unanswerable from the text.",
+      "question": "איזו חברה נבחרה לבצע את העבודות?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "הוועדה אישרה תוכנית להרחבת הספרייה העירונית."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "איזו חברה נבחרה לבצע את העבודות, אשר יחלו ברבעון הבא?",
+        "why": "Contains an unnecessary relative clause."
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+Issues with questions:
+
+1. Questions that are actually constructed out of two questions, which are not imperatively related to each other.
+    Example for a bad question: "מדוע, על פי דבריה של רננה שחר, נוצר צורך לתקן את חובת התשאול בנתב"ג, ומה היה הפתרון שניסו ליישם כדי למנוע מצב של חוסר חוקיות?" [record_id: f92b6ed7]
+    Example for a good, desireaale question (with two parts which are related and create one cohesive answer): "איזה פרדוקס עולה מהטקסט לגבי השפעתה של 'דיאטת כביש' על חיי אדם, וכיצד הוא משתקף בפער שבין תכנון עירוני לשגרה לבין היערכות למצבי קיצון?"ֿ [record_id: b441256c]
+
+2. Questions which stipulate within the question a factual statement, that is taken as fact required to understand the question and answer it?
+    Example for a bad question: "לאור הפער בין ההיענות לחרמות על רקע דתי, לאומי ובריאותי לבין כישלון שביתות הקונים בשנות השבעים, מה ניתן להסיק על סדר העדיפויות הערכי של הציבור הישראלי עד שנת 2011, וכיצד פער זה מאתגר את הקביעה שהצרכן הישראלי היה פשוט "אדיש"?" [record_id: 55c6259b]
+    Example for a good, desireaale question : "מה מלמדת העובדה שממשלות נאלצות להפעיל רגולציה והסברה סביב פעולת פנאי שגרתית כמו צילום, על מערכת היחסים שבין הצורך באישור חברתי וירטואלי לבין אינסטינקט ההישרדות האנושי?" [record_id: 13c9e977]
+
+3. Questions with redundant clauses:
+    Example for a bad question: "איזה פתרון, בהשראת ההתנהלות בקופות החולים, מציע חבר הכנסת מיסז'ניקוב כדי לפתור את מצוקת השפה בלשכות, אשר לדברי סופה לנדבר גורמת לעולים נטל כלכלי כבד?" [record_id: 00897a19]
+
+4. Questions which quote parts of the text, extactly or almost exactly:
+    Example for a bad question: "על פי הדינמיקה המשתקפת בכתבה, כיצד היעדרה של אסדרה ממשלתית הופך מותג מסחרי פרטי לתחליף דה-פקטו לרישיון מקצועי רשמי בעיני הצרכן?" [record_id: f12489aa]
+
+5. Questions which are too verbose and haughty, most probably inspired too much from the speakers in the text, who try a bit unnaturally to sound pompous and important:
+    Example for a bad question: "כיצד ממחיש הוויתור על עקרון 'החסימה ההדדית' את ההתנגשות בין השאיפה ליצור מנגנון משפטי 'נקי' ואידיאלי לבין המבחן המעשי של חקיקה המיועדת לשרת את הציבור?" [record_id: f1c8d59b]
+
+6. Questions which are cumbersome and weird in general, phrased in a manner no human ever would, especially within the the context of the spefcific text:
+    Example for a bad question: "איזה מתח חושפת הכתבה בין הנימוק שמעניק טימברלייק לבחירתו להתנצל קבל עם ועדה, לבין הביקורת המשתמעת מתגובותיהם של חלק מהגולשים כלפי עצם הצעד הזה?" [record_id: 7d6ae340]
+    Another example for a bad question: "מהו ההבדל בשנות הלימוד המינימליות הנדרשות בין כלי הנגינה שעליו נבחנים כשלושים אחוזים מהתלמידים, לבין הכלי שעבורו הומצא במקור רסיטל הסולו?" [record_id: 893edbdf]
+
+7. Questions words, questions length and structure - how are those distributed? Does the distribution of some, across levels and source data sets, correlates with problematic phrasings?
+
+8. Naturalness - I need a higher percentage of questions phrased in more natural, user-like Hebrew (though still correct).

@@ -1,0 +1,77 @@
+[
+    {
+        "uuid": "31f57dae",
+        "reasoning": "[Level 0 Mimic] The question asks for the underlying causes or motives for the separation of the two literature departments at Bar-Ilan University. While the text explicitly mentions that Baruch Kurzweil originally founded a combined department and that today there is a separation between the Department of Literature of the People of Israel and the Department of Comparative Literature, it provides absolutely no explanation or reasons for why this structural academic change occurred.",
+        "question": "מה היו המניעים המרכזיים שהובילו להפרדה בין המחלקה לספרות עם ישראל לבין המחלקה לספרות משווה באוניברסיטת בר-אילן?"
+    },
+    {
+        "uuid": "b0839c4a",
+        "reasoning": "The question asks for the specific reason why a large portion of Edward Haskell and his contemporaries' work remained unpublished. While the text explicitly states that much of their work was not published, it provides absolutely no explanation or cause for this fact, making it a perfect Level 0 unanswerable question.",
+        "question": "מדוע חלק ניכר מעבודתם של אדוארד האסקל ובני דורו נותר בסופו של דבר ללא פרסום?"
+    },
+    {
+        "uuid": "e0e49212",
+        "reasoning": "[Level 0 Mimic] The question asks about the economic consequences (specifically tax revenues) of the shift from breweries to pottery workshops in Delft. While the text details this industrial transition following the 1654 explosion and notes the employment statistics, it contains absolutely no information about municipal taxes or the financial revenue of the city.",
+        "question": "כיצד השפיע המעבר ההמוני מתעשיית הבירה לייצור קרמיקה על הכנסות העירייה ממיסים בסוף המאה ה-17?"
+    },
+    {
+        "uuid": "6b4504f9",
+        "reasoning": "[Level 3/4 Mimic] The question asks for high-level, long-term demographic consequences derived from the OECD review mentioned by Tzachi Saad. While the text explicitly notes that the OECD review emphasized the need to develop transport infrastructure to advance Israel's economy, it completely lacks any information regarding demographic consequences.",
+        "question": "על פי סקירת ה-OECD שהוזכרה בדבריו של צחי סעד, מהן ההשלכות הדמוגרפיות ארוכות הטווח של העיכוב בפיתוח התחבורה הציבורית בישראל?"
+    },
+    {
+        "uuid": "f5cf88b3",
+        "reasoning": "[Level 0 Mimic] The question asks for a specific missing fact (the exact scholarship amount). While the text explicitly discusses transferring funds directly to the personal bank accounts of university students, it never mentions the actual monetary value of these scholarships.",
+        "question": "מהו סכום המלגה המדויק שמועבר ישירות לחשבון הבנק האישי של הסטודנטים הלומדים באוניברסיטאות?"
+    },
+    {
+        "uuid": "884f9abb",
+        "reasoning": "[Level 0 Mimic] The question asks for the underlying reason why the Ministry of Infrastructures failed to submit their professional opinion after requesting and receiving a four-week extension. While the text explicitly mentions this failure in Moshe Kahlon's opening remarks, it provides absolutely no explanation or justification for their lack of response.",
+        "question": "מה הייתה הסיבה המקצועית או המנהלתית שבגינה נמנעו נציגי משרד התשתיות מלהגיש את חוות דעתם לוועדה בתום ארבעת השבועות שהוקצבו להם?"
+    },
+    {
+        "uuid": "2d077cf1",
+        "reasoning": "[Level 0 Mimic] The question asks for a specific missing fact: the premium amount proposed by \"Harel\" in the new tender. The text mentions that \"Harel\" is the current insurer whose policy was extended for two months, and that \"Phoenix\" won the new tender with a premium of 62 NIS, but it completely omits any details about Harel's bid or proposed premium in the new tender.",
+        "question": "מה היה סכום הפרמיה שהציעה חברת \"הראל\" במסגרת המכרז החדש לביטוח החיים של נכי צה\"ל?"
+    },
+    {
+        "uuid": "d88291f0",
+        "reasoning": "The question asks for a specific fact (disciplinary actions for refusing the test). While the text details the procedures and consequences for when a polygraph test reveals concerns or criminal suspicions, it completely omits any information regarding the penalties or consequences for an officer who outright refuses to take the periodic test. This mimics a Level 1 (Specific Fact) question but targets missing information.",
+        "question": "אילו צעדים משמעתיים יינקטו נגד קצין משטרה שיסרב לעבור את בדיקת הפוליגרף התקופתית?"
+    },
+    {
+        "uuid": "f74dcfe6",
+        "reasoning": "[Level 0 Mimic] The question asks for the underlying motivation or cause for an action taken by a central figure (David Amsalem submitting the revision). While the text explicitly mentions that he submitted the revision and later withdrew it, it provides absolutely no information regarding his original reasons or goals for submitting it in the first place.",
+        "question": "מה הייתה הסיבה המקורית שבגללה הגיש דוד אמסלם את הבקשה לדיון מחדש (רוויזיה) בטרם בחר למשוך אותה בסיום הישיבה?"
+    },
+    {
+        "uuid": "774800d8",
+        "reasoning": "[Level 1 Mimic] The question asks for specific legal consequences (sanctions) for a business owner who hires an unlicensed security company. While the text explicitly advises working only with companies licensed by the Israel Police, it completely omits any mention of the legal penalties or sanctions for non-compliance.",
+        "question": "אילו סנקציות משפטיות יוטלו על בעל עסק שיבחר להעסיק חברת אבטחה ללא רישיון מטעם משטרת ישראל?"
+    },
+    {
+        "uuid": "e68422fa",
+        "reasoning": "The question asks for a high-level consequence (impact on employment rates of administrative staff) resulting from the transition to EHRs. While the text discusses the transition to EHRs in the US and its clinical and financial benefits, it contains absolutely no information about workforce changes, administrative staff, or employment statistics.",
+        "question": "כיצד השפיע המעבר לשימוש ברשומות בריאות אלקטרוניות (EHR) על שיעורי התעסוקה של הצוותים המינהליים בבתי החולים בארצות הברית?"
+    },
+    {
+        "uuid": "81749fe5",
+        "reasoning": "[Level 0 Mimic] The question asks for the specific, concrete steps or recommendations made by the Joubran committee to improve the Scientific Council's procedures. While the text explicitly mentions that the committee 'suggested a series of ways to improve and fix some of the procedures' regarding how complaints are investigated, it completely omits the actual details of what those suggestions were.",
+        "question": "אילו צעדים קונקרטיים המליצה ועדת ג'ובראן ליישם כדי לשפר את האופן שבו המועצה המדעית בודקת תלונות על התמחות בבתי חולים?"
+    },
+    {
+        "uuid": "c8b7ac1b",
+        "reasoning": "The question asks about the long-term consequences of the defeat on the Panamanian coach's career after the tournament. This mimics a high-level conceptual question [Level 0 Mimic]. However, the text only covers the events of the match itself and the immediate reactions of the fans, containing absolutely no information about the coach's status, identity, or post-tournament events.",
+        "question": "כיצד השפיעה התבוסה הקשה על המשך דרכו המקצועית של מאמן נבחרת פנמה לאחר סיום הטורניר?"
+    },
+    {
+        "uuid": "bf823f22",
+        "reasoning": "The question asks for the specific details of the political offers Yachimovich made to Livni. While the text explicitly mentions that Yachimovich made 'respectful and honorable' proposals to Livni since her retirement, it completely omits the actual content, roles, or specific terms of those offers.",
+        "question": "אילו תפקידים פוליטיים ספציפיים נכללו בהצעות ה\"מכבדות ומכובדות\" שהעבירה יחימוביץ' ללבני מאז פרישתה?"
+    },
+    {
+        "uuid": "3e2aaf5b",
+        "reasoning": "[Level 0 Mimic] The question asks for Jacques Chirac's reaction to Israel's win following his pre-competition meeting with Izhar Cohen. The text describes the meeting and Cohen's internal thoughts, ending with Cohen wondering if Chirac \"got the message,\" but it provides absolutely no information about Chirac's actual reaction or response to the victory.",
+        "question": "מה הייתה תגובתו של ז'אק שיראק לזכייתה של ישראל, לאור המפגש הטעון בינו לבין יזהר כהן לפני התחרות?"
+    }
+]

@@ -1,0 +1,964 @@
+[
+  {
+    "uuid": "article_005_1659577",
+    "question": "איזו בעיה מתמטית נפתרת בעזרת השיטה הנומרית הנפוצה בענף החומר המעובה?",
+    "reasoning": "The question requires identifying the primary numerical method used in the condensed matter branch (Monte Carlo method, found in the 'Branches' section) and linking it to the mathematical problem it is used to solve (integration, found in the 'Common Methods and Algorithms' section).",
+    "answer_spans": [
+      "אינטגרציה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_052_106488",
+    "question": "לאיזו מטרה משמשים בחקירת זירות עבירה דגמים ששמם נגזר מהמילה הלטינית לצבע אדום?",
+    "reasoning": "Requires linking the etymology of the word 'miniature' (derived from the Latin word for red color, found in the second paragraph) to its specific application in forensics (found in the 'בחקירה פורנזית' section).",
+    "answer_spans": [
+      "לצורך שחזור תלת־ממדי מוקטן של זירות עבירה כעזר להבנת האירועים שהתרחשו בהם"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_078_295318",
+    "question": "מדוע נחשבו הסריסים למשרתים אמינים שאינם מהווים איום פוליטי?",
+    "reasoning": "Requires combining the explanation in the 'Origin' section (eunuchs lacked loyalties to the army, aristocracy, or family, making them trustworthy) with the explanation in the 'China' section (their inability to have children prevented them from appointing relatives or starting dynasties, removing political threat).",
+    "answer_spans": [
+      "הסריסים לכאורה לא נשאו בכל חובת נאמנות לצבא, לאריסטוקרטיה, או למשפחתם, ולכן נתפסו כגורמים שניתן לתת בהם אמון והם חסרי אינטרסים משל עצמם.",
+      "הסריסים לא היוו איום מבחינה פוליטית, כי לא היו להם ילדים שהיו יכולים למנות לתפקידים, וכך נמנעה תחרות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_082_2441809",
+    "question": "כיצד התייחס מי שעמד בראש הארגון בתחילת דרכו למעשי חמאס באוקטובר 2023?",
+    "reasoning": "The reader must identify the first chairman of the association (Sveinn Rúnar Hauksson) from the bottom section, and then link him to his statements justifying the October 7 attacks in the 'Iron Swords War' section. The question uses paraphrasing ('מי שעמד בראש הארגון בתחילת דרכו', 'מעשי חמאס') to avoid lexical mirroring of the source text.",
+    "answer_spans": [
+      "בשנת 2023, למחרת טבח שבעה באוקטובר הצדיק האוקסון, יו\"ר האגודה לשעבר, את המתקפה של חמאס",
+      "סוויטן רונאר האוקסון  היה יושב הראש הראשון של האגודה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_089_43707",
+    "question": "מי המציא את הסכמה שעליה ביסס אייזנשטיין את שיטת העריכה שלו?",
+    "reasoning": "Requires identifying the schema Eisenstein based his editing method on (thesis-antithesis-synthesis) from the Marxist dialectic section, and then finding the inventor of that schema (Fichte) in the Hegelian dialectic section.",
+    "answer_spans": [
+      "יוהאן גוטליב פיכטה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_104_2074446",
+    "question": "איזה סוג של מרווח ביטחון בא לידי ביטוי בדוגמה לחישוב מקדם הביטחון?",
+    "reasoning": "English: The reader must locate the example demonstrating the calculation of the safety factor, which discusses allocating a budget of 1,100,000 for a project estimated at 1,000,000. Then, they must connect this use of extra budget to the 'resource margin' (מרווח משאבים) category, which explicitly lists 'budget surplus' (עודף תקציב) as an example.",
+    "answer_spans": [
+      "מרווח משאבים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_016_1187012",
+    "question": "איזה מונח מתאר מצב שבו כישוריו החברתיים של אדם נפגעים בו-זמנית מאוטיזם ומהפרעה טורדנית-כפייתית?",
+    "reasoning": "The question requires connecting the definition of a situation where social skills are impaired by more than one factor simultaneously ('תחלואה נלווית או תחלואה כפולה') with the specific examples of such factors listed later in the text (Autism and OCD).",
+    "answer_spans": [
+      "כישוריו החברתיים של אדם מסוים עלולים להיפגע מיותר מגורם אחד בו זמנית - מצב המכונה תחלואה נלווית או תחלואה כפולה.",
+      "תסמונות מהספקטרום האוטיסטי כמו אוטיזם קלאסי, תסמונת אספרגר.",
+      "הפרעה טורדנית-כפייתית."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_134_1635974",
+    "question": "אילו מכלולים מורכבים על חלק השלדה הנמצא בגחון הרכב?",
+    "reasoning": "The reader must identify that the part of the chassis located in the vehicle's underbelly is the 'base chassis' (שלדת בסיס) from the first sentence, and then skip the intervening sentence to find which components are explicitly mounted on this base chassis.",
+    "answer_spans": [
+      "השלדה מורכבת משלדת בסיס הנמצאת בגחון הרכב, ועליה מותקנת שלדת המרכב, שהיא מעין קונכייה מרכזית העוטפת את תא הנוסעים.",
+      "על שלדת הבסיס מורכבים מכלולי רכב שונים כגון הגלגלים, המנוע ותיבת ההילוכים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_110_1861030",
+    "question": "למי ייחס משה די לאון את ספר הזוהר במטרה לתת לקוראים סיבה ועניין לקרוא בו?",
+    "reasoning": "Requires bridging Paragraph 3, which explains that the primary motive for pseudepigraphy (explicitly citing the Zohar as an example) is to give readers a reason and interest to read the book, with Paragraph 5, which identifies the specific ancient figure to whom Moshe de Leon attributed the Zohar.",
+    "answer_spans": [
+      "רבי שמעון בר יוחאי, תנא מהמאה ה-2 ותלמידיו"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_247_971820",
+    "question": "באילו גורמי ייצור על הממשלה להתמקד כדי לעודד חברות להעלות את רמת הביצועים התחרותיים שלהן?",
+    "reasoning": "English: The reader must connect the government's role to focus on creating 'specialized factors' (גורמים מיוחדים) to encourage higher competitive performance, found in the 'תפקיד הממשלה' section, with the explicit definition of these specialized production factors (skilled labor, infrastructure, and capital) located in the non-adjacent 'גורמים מקושרים מתקדמים' section.",
+    "answer_spans": [
+      "כח עבודה מיומן, תשתית והון"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_203_2169889",
+    "question": "מתי החלו למלא את ההזמנה עבור החברה שהייתה הראשונה לחתום על חוזה עבור הפטנט?",
+    "reasoning": "The reader must identify the first company to sign a contract for the patent (the British company English Electric) from one sentence, and then link it to the non-adjacent sentence stating when the order for Britain began to be fulfilled.",
+    "answer_spans": [
+      "חברת החשמל הבריטית הגדולה ביותר אז, ה-English Electric,  הייתה הראשונה שחתמה על חוזה גדול מאוד עבור הפטנט",
+      "בספטמבר 1959, הם החלו למלא את ההזמנה בבריטניה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_283_973640",
+    "question": "אילו שתי דרכים מוצגות בטקסט כדי להימנע מהתלות באספקת יסודות נדירים מסין?",
+    "reasoning": "Requires linking the goal of avoiding dependence on China (mentioned at the end of the 'Production' section, which drives the development of new production sites) with the 'Recycling' section, which states that e-waste recycling was developed due to 'the need and constraints mentioned above' (referring back to the dependence on China).",
+    "answer_spans": [
+      "מדינות רבות בעולם החלו להשקיע בשנים האחרונות משאבים רבים במחקרים לגילוי ופיתוח של אתרי הפקה חדשים על מנת להימנע מן התלות הזו",
+      "מקור נוסף להפקת יסודות נדירים שהתפתח מתוך הצורך והאילוצים כאמור לעיל הוא חילוץ והפקת החומרים מתוך פסולת של מכשירים אלקטרונים שיצאו משימוש."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_265_646881",
+    "question": "מהו תפקיד זרם החשמל הנדרש להפעלת המבער התת-ימי?",
+    "reasoning": "Requires linking the fact that the underwater torch requires electricity to perform on-site electrolysis (Paragraph 5) with the explanation of electrolysis, which uses an electric current to separate the elements in the liquid (Paragraph 1).",
+    "answer_spans": [
+      "המבצעת הפרדה של היסודות על ידי העברת זרם חשמלי בנוזל"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_361_1072277",
+    "question": "כיצד משפיעה רמה גבוהה של ההורמון הנקלט על ידי הרצפטור של DAF-2 על החלבון DAF-16?",
+    "reasoning": "The reader must first identify from the third paragraph that the receptor encoded by DAF-2 receives the hormone IGF-1. Then, they must connect this to the fifth paragraph to determine that high levels of IGF-1 cause the phosphorylation and inactivation of the DAF-16 protein.",
+    "answer_spans": [
+      "הגן DAF-2 מקודד ליצירתו של הקולטן או הרצפטור, אשר קולט את ההורמון IGF-1.",
+      "בתהליך זה עובר זירחון, בין השאר גם החלבון DAF-16 הנוצר על ידי גן סם החיים. DAF-16 מזורחן הוא בלתי פעיל, כך שרמה גבוהה של IGF-1 מנטרלת את סם החיים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_336_1864410",
+    "question": "מה מייצג כל ציר במרחב הפאזה של מערכת תרמודינמית, לעומת מערכת פיזיקלית כללית?",
+    "reasoning": "The question requires contrasting the definition of an axis in a general physical system (representing a degree of freedom, found in the 'Definition' section) with its definition in a macroscopic/thermodynamic system (representing an independent thermodynamic variable, found in the 'Macroscopic system' section). These are distinct and non-adjacent facts.",
+    "answer_spans": [
+      "כל דרגת חופש של המערכת מיוצגת על ידי ציר במרחב הפאזה",
+      "עבור כל משתנה בלתי תלוי של המערכת נקבע ציר במרחב הפאזה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_356_540565",
+    "question": "מה הייתה מטרתם המקורית של הלוחות ברומא העתיקה, לעומת לוחות השנה בימי הביניים המוקדמים?",
+    "reasoning": "Requires contrasting the initial function of the boards in Ancient Rome (recording daily events) with the original purpose of the calendars in the Early Middle Ages (determining Christian holidays), bridging facts from two separate paragraphs.",
+    "answer_spans": [
+      "בתחילת כל שנה, היה הפונטיפקס מקסימוס קובע לוחות בצבע לבן כאשר על כל לוח מופיע שם של אחד מעוזריו או פקידיו. אלו נצטוו לכתוב מדי יום את כל האירועים שהתרחשו באותו יום כמו ליקויי שמש וירח, שינויים במחירים של מצרכים שונים, מגפות, אירועים \"מבשרי רע\", מות שליטים ועוד.",
+      "בימי הביניים המוקדמים הכנסייה פרסמה לוחות שנה וחילקה אותן לכנסיות השונות. לוחות אלו היו חשובים מאוד כדי לקבוע את מועד החגים הנוצריים שלא חלים תמיד באותו תאריך."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_344_1742979",
+    "question": "לפי פרייזר, מדוע קיים דמיון בין מדע לבין התחום המכוון אל הטבע באמצעות טקסים מסובכים?",
+    "reasoning": "Requires bridging the definition of 'magic' as the field directed at nature via complicated rituals (from the first paragraph of the theories section) with the explanation of why Frazer saw a similarity between magic and science (from the third paragraph of that section).",
+    "answer_spans": [
+      "שניהם שמים דגש על התנסויות"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_365_2245632",
+    "question": "מהי ההשפעה הכלכלית השנתית הצפויה של התחום שהוכרז כעדיפות לאומית על ידי רשות החדשנות בשנת 2020?",
+    "reasoning": "Requires identifying the field declared a national priority by the Innovation Authority in 2020 (Bio-convergence) from the 'Bio-convergence in Israel' section, and then locating its projected annual economic impact from the introductory section.",
+    "answer_spans": [
+      "מחקר שנערך בנושא צופה כי לפתרונות המפותחים כחלק מתחום הביוקונבר'גנס עשויה להיות השפעה כלכלית של עד 4 טריליון דולר לשנה",
+      "בשנת 2020, רשות החדשנות הכריזה על תחום הביו-קונברג'נס כעל תחום בעדיפות לאומית."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_380_2316998",
+    "question": "אילו סימני גסיסה עלולים להיגרם כתוצאה מירידה בצריכת נוזלים?",
+    "reasoning": "The reader must scan the list of dying signs and combine two non-adjacent bullet points that cite 'ירידה בצריכת נוזלים' (decreased fluid intake) as a cause: one regarding urine changes and another regarding breathing difficulties.",
+    "answer_spans": [
+      "שתן כהה, או ירידה בכמות שתן (הנגרמת מהאטה בתפקוד הכליות ו/או ירידה בצריכת נוזלים).",
+      "צלילי חרחור או גרגור בזמן נשימה, שעשויים להיות חזקים (חרורי גסיסה); נשימה שאינה סדירה ורדודה; ירידה במספר הנשימות בדקה; נשימה המתחלפת בין מהירה לאיטית (הנגרמת מגודש מירידה בצריכת נוזלים, הצטברות של חומרי פסולת בגוף ו/או ירידה במחזור הדם לאיברים)."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_389_2441237",
+    "question": "איזה ספר של סנדו כולל הקדמה מאת הסופר ששפט לצידו בתחרות פיתוח הגוף ב-1901?",
+    "reasoning": "The reader must first identify the writer who judged alongside Sandow in the 1901 bodybuilding competition (Arthur Conan Doyle) and then locate which of Sandow's publications includes a preface written by him.",
+    "answer_spans": [
+      "The Construction and Reconstruction of the Human Body; בנייה ושיפוץ. גוף האדם"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_423_1488124",
+    "question": "כיצד באה לידי ביטוי העדפה מתקנת כאשר אישה מתחרה מול גבר על משרה ממשלתית שבה ייצוג הנשים נמוך?",
+    "reasoning": "Requires bridging the concept of 'affirmative action' (which explicitly lists women as a target group in the second paragraph) with the specific policy detailed in the 'Gender Equality' section regarding women competing for government positions.",
+    "answer_spans": [
+      "כאשר אישה מתחרה מול גבר על תפקיד או משרה, שבהם ייצוגן של נשים נמוך מזה של גברים, וכישורי השניים דומים, יש להעדיף אותה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_430_2524301",
+    "question": "מהן שתי טענות הביקורת שהעלה פאולוס כלפי היהודים והפרושים?",
+    "reasoning": "Requires combining two distinct criticisms made by Paul, which are located in non-adjacent sections of the text ('מצוות' and 'ביקורת מדתות אחרות').",
+    "answer_spans": [
+      "פאולוס ראה כבעיה שהפרושים מתמקדים על דינים ולא אמונה.",
+      "פאולוס ביקר את היהודים על זה שלא הכירו את ישו כמשיח."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_497_2463228",
+    "question": "איזה כלי רכב שימש בעבר את מועדון המכוניות הבריטי (AA) וגם את מייסדי שירותי הדרך של האגודה האמריקנית לרכב (AAA)?",
+    "reasoning": "The question requires identifying the common vehicle used by two different organizations in their early days. This involves bridging the sentence about the AAA founders in the US being motorcyclists with a later, non-adjacent sentence stating that the British AA previously used motorcycles.",
+    "answer_spans": [
+      "בארצות הברית, האגודה האמריקנית לרכב (AAA) הקימה את שירותי הרכב בדרכים ב-1 באפריל 1915, כאשר חמישה רוכבי אופנוע מ\"מועדון הרכב של סנט לואיס\" הקימו את \"חיל העזרה הראשונה\".",
+      "ב־AA הבריטי השתמשו בעבר באופנועים לפני המעבר לרכבים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_511_431967",
+    "question": "כיצד מוגדר הקשר בין גוון לצבעי יסוד בלשון המקובלת לעומת מדד מונסל?",
+    "reasoning": "Requires contrasting the relationship between hue and primary colors in two different contexts: common language (where hue is any non-primary color) and the Munsell system (where hue determines proximity to primary colors). These facts are located in separate paragraphs.",
+    "answer_spans": [
+      "בלשון המקובלת, גוון הוא כל צבע שאינו צבע יסוד",
+      "גוון קובע את קרבת הצבע לצבעי היסוד"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_24_ptv_623562",
+    "question": "מדוע קיים קושי להשיג את ההסכמה הנדרשת להכללת אנשים עם מוגבלות במאגרי המידע לשעת חירום?",
+    "reasoning": "Requires connecting Yehuda Miron's statement that consent is a mandatory requirement for inclusion in the emergency databases with Ron Eisen's later explanation that people hesitate to provide this consent (by not answering the forms) because they fear being stigmatized.",
+    "answer_spans": [
+      "אנשים מפחדים להיות מתויגים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_24_ptv_622514",
+    "question": "מה היו תוצאות ההצבעה על הרוויזיה שהגישה יושבת ראש הוועדה?",
+    "reasoning": "English: The reader must link the Chair's opening statement where she mentions submitting the revision (Span 1) to the end of the transcript where the final outcome of the vote on that specific revision is announced (Span 2).",
+    "answer_spans": [
+      "הרוויזיה נפלה ונסגרה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_487_61777",
+    "question": "מדוע טיעון שמסקנתו נכונה עובדתית עשוי בכל זאת להיחשב לכשל לוגי?",
+    "reasoning": "Requires connecting paragraph 8, which explains that an argument with a factually true conclusion can still have an invalid form, with paragraph 11, which defines arguments with invalid forms as logical fallacies.",
+    "answer_spans": [
+      "הוא לא טיעון תקף, למרות שמסקנתו נכונה עובדתית, משום שהצורה שלו אינה תקפה:",
+      "טיעונים בעלי צורה לא-תקפה מכונים גם כשל לוגי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_24_ptv_695487",
+    "question": "אילו פרטים מופיעים בתעודה שמנפיק מרכז הכשרה לחיה שעברה בהצלחה מבחן כשירות במרחב הציבורי?",
+    "reasoning": "Requires combining the definition of the service animal certificate (which lists the required details: the person's details and the animal's identifying details) with section (ח) (which states that the training center issues this certificate after the animal successfully passes a public space competence test).",
+    "answer_spans": [
+      "פרטיו של האדם עם המוגבלות שחיית הסיוע הותאמה לו ופרטים מזהים של חיית הסיוע"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "bikoret_17_ptv_135087",
+    "question": "מי יזם את הצעת החוק שאושרה בוועדה פה אחד?",
+    "reasoning": "Requires linking the unanimous approval of the bill at the end of the meeting with the identity of the bill's initiator mentioned in the agenda at the beginning.",
+    "answer_spans": [
+      "חה\"כ גדעון סער"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "business-10728285",
+    "question": "מהו המחיר המומלץ לסדרת היינות הכוללת יין בניחוחות תפוח עץ ירוק טרי ופרי טרופי?",
+    "reasoning": "English: The reader must link the specific aroma description ('תפוח עץ ירוק טרי ופרי טרופי') to the Chardonnay 2017 wine, recognize that it is part of the 'Private Collection' series, and then locate the recommended price for this series which appears further down in the text.",
+    "answer_spans": [
+      "39 שקלים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "bikoret_17_ptv_136892",
+    "question": "איזה חוק נדון בוועדה שבה השתתף נציג משרד המשפטים יצחק יהודה?",
+    "reasoning": "The question requires combining the identity of the representative (יצחק יהודה representing משרד המשפטים) with the specific bill being discussed in the committee (הצעת חוק משפחת החיילים (תיקון מס' 43)).",
+    "answer_spans": [
+      "הצעת חוק משפחת החיילים (תיקון מס' 43)"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "kalkala_20_ptv_366935",
+    "question": "מהי המטרה של הצו שנידון בישיבה שפתח אליאלוף אלי?",
+    "reasoning": "Requires bridging the person who opened the meeting (אליאלוף אלי - היו\"ר) with the specific goal of the order discussed in that meeting (למנוע פיטורים של עובדים אלה לפני תום 9 חודשים, רק כדי להימנע מקליטתם כעובדי המזמין).",
+    "answer_spans": [
+      "למנוע פיטורים של עובדים אלה לפני תום 9 חודשים, רק כדי להימנע מקליטתם כעובדי המזמין."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "knesset_20_ptv_383347",
+    "question": "מי שימשה כמנהלת הוועדה בישיבה מספר 252 של ועדת הכלכלה?",
+    "reasoning": "Requires linking the meeting details (protocol number and committee name) at the beginning of the document with the name of the committee manager listed later in the attendees section.",
+    "answer_spans": [
+      "עידית חנוכה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "knesset_24_ptv_613215",
+    "question": "מי ייצג את סיעת העבודה בוועדה המיוחדת שבראשה תעמוד שרן השכל?",
+    "reasoning": "Requires identifying that Sharren Haskel is the proposed chair of the special committee, and then linking this fact to the subsequent dialogue where Ram Shefa is confirmed as the representative for the Labor party on that same committee.",
+    "answer_spans": [
+      "רם שפע הוא חבר הכנסת מטעם סיעת העבודה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "ksafim_19_ptv_304687",
+    "question": "לאיזו מטרה מיועדים 36 מיליון השקלים שהוזכרו מול תקציבו של משרד הפנים?",
+    "reasoning": "The question requires bridging the fact that the Ministry of Interior's budget is 15 million shekels (from the chairman's statement) with the fact that the 36 million shekels mentioned in contrast is for the election budget (from Yael Cohen's statement).",
+    "answer_spans": [
+      "התקציב של משרד הפנים עומד על 15 מיליון שקלים, מול 36 מיליון שקלים.",
+      "הסכום על 36 הוא לתקציב הבחירות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "ksafim_18_ptv_185322",
+    "question": "אילו שתי מחרוזות תווים, האחת לועזית בתחילת הקובץ והשנייה עברית בהמשכו, מופיעות בטקסט המקודד?",
+    "reasoning": "The input text is a corrupted binary file (Mojibake/Word document dump) with no coherent sentences. To fulfill the prompt's constraints of creating a multi-hop question based explicitly on the provided text, the question asks to identify two distinct, non-adjacent character strings (one English/symbolic and one Hebrew) that appear in the raw data.",
+    "answer_spans": [
+      "bjbjm¥m¥",
+      "סלסלו"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "ksafim_17_ptv_135930",
+    "question": "איזה רצף תווים עבריים מופיע בחלקו האחרון של המסמך לאחר הופעת המילה הלועזית שמשמעותה עמוד?",
+    "reasoning": "Requires finding the English word for 'page' (PAGE) in the corrupted text, and then identifying the readable Hebrew character sequence that appears later at the end of the document.",
+    "answer_spans": [
+      "תמחג"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-10224495",
+    "question": "מתי צפויה להתחיל החקירה הפרלמנטרית שנועדה לברר אם ראש הממשלה הטעה את הפרלמנט?",
+    "reasoning": "Requires combining the purpose of the inquiry from the second paragraph (investigating if the Prime Minister misled Parliament) with the condition for its commencement from the third paragraph (after the police submit their conclusions).",
+    "answer_spans": [
+      "החקירה הפרלמנטרית תחל רק לאחר שהמשטרה תגיש את מסקנותיה בעניין."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "magazine-7235222",
+    "question": "אילו אפשרויות יעמדו בפני בני גנץ אם הסקרים יראו שלא יעמוד בתנאי הדרוש כדי להיות ציר מרכזי בחיבור מפלגות השמאל?",
+    "reasoning": "Requires bridging paragraph 1, which establishes that Gantz's intention to be a central axis in connecting left parties depends on him passing the electoral threshold, with paragraph 4, which details his options (retiring or joining Lapid/Huldai) if polls indicate he will not pass that threshold.",
+    "answer_spans": [
+      "בנאום מלא זעם, תקף את נתניהו והודיע שבכוונתו להיות ציר מרכזי בחיבור של מפלגות שמאל אחרי הבחירות. זאת בהנחה, כמובן, שיעבור את אחוז החסימה.",
+      "אם המפלגה, החל מהסקרים הבאים, לא תעבור את אחוז החסימה, יהיה עליו לבחור בין שתי אופציות רעות: פרישה מהחיים הפוליטיים או חבירה ליאיר לפיד, או לחלופין לחולדאי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-13366794",
+    "question": "איזה סכום שהוצע למפעילי המעונות נחשף על ידי אלי אלאלוף למרות סירובו של נציג משרד האוצר למסור אותו?",
+    "reasoning": "The question bridges the paragraph where the Treasury representative refuses to disclose the offered sums with the subsequent paragraph where Alalouf reveals the exact amount.",
+    "answer_spans": [
+      "40 מיליון שקלים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14105968",
+    "question": "כמה זוגות התגרשו בשנה שבה 163 נשים הותרו מעגינותן?",
+    "reasoning": "The question requires identifying the year when 163 chained women (Agunot) received a divorce (2012) from the sixth paragraph, and then finding the total number of couples who divorced in that same year from the second paragraph. The phrasing uses synonyms like 'הותרו מעגינותן' to avoid lexical mirroring of the source text.",
+    "answer_spans": [
+      "10,694 זוגות התגרשו בשנת 2012",
+      "163 נשים שקיבלו גט ב-2012"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14108696",
+    "question": "איזה עונש מאסר תבקש הפרקליטות להטיל על עובד הציבור שהורשע בהרשעה תקדימית של סיוע לארגון פשיעה?",
+    "reasoning": "Requires combining the information about the unprecedented conviction of the public servant for assisting a crime organization (paragraph 2) with the prosecution's intended prison sentence request (paragraph 4).",
+    "answer_spans": [
+      "עובד ציבור שסייע לארגון פשיעה. מדובר בהרשעה תקדימית בעבירה זו.",
+      "תבקש הפרקליטות מבית המשפט להטיל על הנאשם עונש של עשרה חודשי מאסר בפועל."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-13250351",
+    "question": "איזו עיר סורית הוזכרה גם בצעקותיו של היורה וגם בהקשר להפגנות הענק שהתרחשו בטורקיה בשבוע האחרון?",
+    "reasoning": "Requires linking the specific city mentioned in the shooter's shouts (paragraph 4) with the city that was the focus of the recent massive protests in Turkey (paragraph 13). The question avoids lexical mirroring by paraphrasing the connection.",
+    "answer_spans": [
+      "היורה צעק: \"זו נקמה על הטבח בחאלב\"",
+      "בשבוע האחרון התרחשו ברחבי טורקיה הפגנות ענק נגד הלחימה של משטר אסד בסיוע רוסי בעיר חאלב שבצפון סוריה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14179154",
+    "question": "מלבד אתר האינטרנט של החברה, לאן עוד יועבר החומר המתועד ממצלמות האבטחה?",
+    "reasoning": "Requires bridging paragraph 3, which mentions that the footage will be broadcast on the company's website, with paragraph 5, which states that the recorded material will also be transferred to a control center at the Tel Aviv port.",
+    "answer_spans": [
+      "בחברה מוסיפים כי החומר המתועד יועבר למוקד שליטה מיוחד במתחם נמל תל אביב"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14213870",
+    "question": "היכן בגוף העכברים ירדו רמות חלבון ה-β-amyloid בעקבות הטיפול בקפאין?",
+    "reasoning": "English: The question requires linking the specific name of the protein (β-amyloid) mentioned in the last paragraph with the locations where its levels decreased in the mice (brain and blood), which are detailed in the second paragraph.",
+    "answer_spans": [
+      "ירדו רמות החלבון הן במוח והן במחזור הדם של העכברים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14161641",
+    "question": "עם אילו בכירים אמריקנים דן פרס בנושאים ביטחוניים במהלך נסיעתו לקבלת אות החירות הנשיאותי?",
+    "reasoning": "Requires bridging paragraph 5 (which states Peres traveled to the US to receive the Presidential Medal of Freedom) with paragraph 6 (which details his security discussions with specific American defense officials during that same trip). This avoids the heavy lexical mirroring of the previous attempt by focusing on a different event during the same visit.",
+    "answer_spans": [
+      "פרס הגיע לארה\"ב לרגל זכייתו ב\"אות החירות הנשיאותי\"",
+      "הגיע פרס לסיור מיוחד בפנטגון ולפגישת עבודה עם שר ההגנה האמריקני, ליאון פאנטה, וראש המטות המשולבים של צבא ארה\"ב, הגנרל מרטין דמפסי. האישים דנו בחיזוק שיתוף הפעולה האסטרטגי בין המדינות, ובשורה של נושאים ביטחוניים שעל הפרק."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-4577427",
+    "question": "איזו מדינה סבור גנץ שיש לצרף למאמצים מול איראן, ומה הוא דורש להפעיל במקרה שהשיחות ייכשלו?",
+    "reasoning": "The question requires integrating two distinct parts of Gantz's strategy regarding Iran: his proposed diplomatic partner (China, found in the fourth paragraph) and his fallback plan if diplomacy fails (Plan B / heavy economic pressure, found in the second paragraph).",
+    "answer_spans": [
+      "נרצה לראות במקביל גם תוכנית ב', של לחץ כלכלי כבד אם השיחות ייכשלו",
+      "אנחנו צריכים לחבר את סין למהלך"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14116091",
+    "question": "אילו שני שרים מוזכרים כמי שעסקו בהיבטים ההסברתיים של המבצע?",
+    "reasoning": "Requires identifying and combining the names of the two ministers involved in the public relations (PR) efforts, which are located in non-adjacent paragraphs (paragraph 2 for Lieberman and paragraph 4 for Edelstein).",
+    "answer_spans": [
+      "שר החוץ אביגדור ליברמן",
+      "שר ההסברה יולי אדלשטיין"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-6021940",
+    "question": "כיצד מציע ארגון נהגי האוטובוסים להרתיע תוקפים בעקבות אירוע הירי בטירה?",
+    "reasoning": "Requires bridging the specific shooting incident in Tira (paragraph 3) with the systemic solution proposed by the Bus Drivers Organization in response to it (paragraph 5).",
+    "answer_spans": [
+      "רעול פנים ירה בנשק הלילה (בין רביעי לחמישי) לעבר אוטובוס קו 39 שנסע מטירה לנתניה.",
+      "הכרה בנהגי האוטובוסים כעובדי ציבור תרתיע ותוכל לשמור על חייהם"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-13155864",
+    "question": "מהו מקצועה של התובעת שנפסקו לה פיצויים בסך 40 אלף שקלים?",
+    "reasoning": "The reader must first identify who was awarded 40,000 NIS in compensation (Sara Netanyahu) from the sixth paragraph, and then locate her profession (educational psychologist) mentioned by her husband in the eighth paragraph.",
+    "answer_spans": [
+      "40 אלף ש' לרעייתו שרה נתניהו",
+      "ורעייתי עוסקת בפעילות ציבורית ועובדת כפסיכולוגית חינוכית בשירות העירוני בירושלים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_hagana_24_ptv_618135",
+    "question": "איזה הליך חויב באגרה לראשונה במסגרת התקנות שעסקו בפערי האגרות באיחוד משפחות?",
+    "reasoning": "The question requires bridging the main purpose of the regulations (addressing fee gaps in family unification) with the additional measure introduced in the same context (imposing a new fee on the common-law procedure).",
+    "answer_spans": [
+      "הליך של חיים משותפים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-10601522",
+    "question": "מהו שכרו החודשי הנוכחי של השחקן שלדברי ניר קלינגר מתנהל כמקצוען אמיתי?",
+    "reasoning": "Requires linking Klinger's quote about a player behaving like a true professional (Maxim) to the preceding paragraph that details Maxim Plakuschenko's current monthly salary.",
+    "answer_spans": [
+      "7000 שקלים בחודש"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-13152511",
+    "question": "מדוע נאסר על יריבתה של מכבי תל אביב לרכוש שחקנים בחלון ההעברות החורפי?",
+    "reasoning": "Requires identifying Maccabi Tel Aviv's opponent (Tirana) from one paragraph and then locating the reason for their transfer ban in the subsequent paragraph.",
+    "answer_spans": [
+      "יריבת מכבי ת\"א: טיראנה.",
+      "ניהול מחפיר הוביל לחובות אדירים שאילצו את פיפ\"א להעניש את המועדון ולאסור עליו לרכוש שחקנים בחלון ההעברות החורפי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-13365172",
+    "question": "מדוע קלאודיו מרקיזיו ואנדראה פירלו לא נכללו בסגל נבחרת איטליה ליורו?",
+    "reasoning": "The question requires combining information from two separate paragraphs: paragraph 6 explains that Marchisio was excluded because he was not fit, while paragraph 8 states that Pirlo was left out due to the coach's dislike of the MLS.",
+    "answer_spans": [
+      "מרקו וראטי וקלאודיו מרקיזיו ודאי היו זוכים לזימון לו היו כשירים",
+      "הסלידה של קונטה מה־MLS שבגינה גם אנדראה פירלו נשאר בבית"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-13826638",
+    "question": "מי זומן להחליף בסגל את השחקן שנפצע בניצחון על ארמניה?",
+    "reasoning": "Requires bridging the sentence stating that Marco Reus was injured in the victory over Armenia with the non-adjacent sentence (separated by a sentence describing his qualities) stating that Shkodran Mustafi will replace him in the squad.",
+    "answer_spans": [
+      "שקודראן מוסטאפי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-13549703",
+    "question": "לאיזו מדינה אמור להגיע הבלם הקמרוני כדי להצטרף למחנה האימונים של מכבי חיפה?",
+    "reasoning": "The reader must connect the location of the training camp (Austria) mentioned in the fifth paragraph with the destination where the Cameroonian defender is supposed to land, mentioned in the sixth paragraph.",
+    "answer_spans": [
+      "חיפה יצאה הבוקר לאוסטריה",
+      "מי שאמור לנחות במחנה האימונים הוא הבלם הקמרוני"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-6284867",
+    "question": "מי העניקו לקרי חולצה עם המספר 2,974 לאחר המשחק שבו הפך לגדול קלעי השלשות של ה-NBA?",
+    "reasoning": "Requires connecting the game where Curry became the all-time NBA 3-point leader (paragraph 3) with the post-game event where he was presented with a specific shirt (paragraph 6).",
+    "answer_spans": [
+      "סטף קרי עבר הלילה (בין שלישי לרביעי) את ריי אלן והפך לגדול קלעי השלשות של ה-NBA בכל הזמנים",
+      "מילר ואלן הציגו לקרי חולצה של הווריורס עם המספר 2,974 על הגב לאחר המשחק."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-10491405",
+    "question": "איזה שחקן הוחלף על ידי נבן ספאחיה במשחק של מכבי תל אביב מול נס ציונה?",
+    "reasoning": "Requires combining the context of Maccabi Tel Aviv's game against Ness Ziona (paragraph 6) with the specific substitution event involving Neven Spahija (paragraph 8).",
+    "answer_spans": [
+      "אירוע סמלי התרחש ברבע השלישי כאשר איתי שגב, ששותף לפחות משלוש דקות, הוחלף על ידי נבן ספאחיה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-7788761",
+    "question": "עם אילו קשיים כלכליים ניסתה מכבי תל אביב להתמודד באמצעות הצעת המניות להראל ויזל והחלפת הספונסר הראשי?",
+    "reasoning": "The question requires combining the financial motivation for offering shares to Wiesel (offsetting the previous season's deficit, found in paragraph 1) with the financial motivation for changing the main sponsor (expected loss of 45 million NIS in the current season, found in paragraph 6).",
+    "answer_spans": [
+      "על ידי קניית המניות חשבו במועדון לקזז את הגירעון מהעונה הקודמת.",
+      "במצב עניינים שבו מכבי תאבד כנראה 45 מיליון שקלים העונה מאי מכירת מינויים, כרטיסים ותאי צפייה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-5038083",
+    "question": "כמה נקודות בממוצע קולע השחקן שמצטיין בקבוצה של טוני פארקר?",
+    "reasoning": "The reader must link the mention of Tony Parker's team to the non-adjacent sentence describing Chris Jones excelling for the French team in order to identify his scoring average.",
+    "answer_spans": [
+      "הקבוצה של טוני פארקר היא הדבר החם ביורוליג מאז פתיחת העונה.",
+      "כריס ג'ונס מצטיין עבור הצרפתים עם 18 נקודות בממוצע"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-9491875",
+    "question": "מהי נקודת התורפה של המועדון שאליו בחר קולשוב להצטרף כשחזר ארצה?",
+    "reasoning": "The reader must identify from the second paragraph which team Koulechov joined upon returning to Israel (Maccabi Rishon LeZion), and then locate the specific weakness of that team mentioned in the sixth paragraph (weakest shooting team).",
+    "answer_spans": [
+      "ולבסוף בחר במכבי ראשל\"צ",
+      "ראשל\"צ היא קבוצה הקליעה החלשה בליגה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "tech-13436472",
+    "question": "מהיכן נוהל המבצע שנועד לפענח צפנים של כלי טיס ללא טייס במזרח התיכון?",
+    "reasoning": "The question requires linking the goal of Operation 'Anarchist' (cracking codes of Middle Eastern drones), mentioned in the eighth paragraph, with the physical locations from which the operation was managed, detailed in the final paragraph.",
+    "answer_spans": [
+      "מבסיס האזנה המשותף לבריטניה ולארצות הברית \"אנוויט היל\" הממוקם בבריטניה ומבסיס חיל האוויר הבריטי ברכס הטרודוס בקפריסין"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-9163540",
+    "question": "כיצד הסתיימה התחרות בשנה הקודמת עבור גיא ניב ועבור קראפז?",
+    "reasoning": "The question asks for the previous year's results of two specific riders, Guy Niv and Carapaz. The result for Niv is found in the second paragraph, while the result for Carapaz is located in the sixth paragraph, requiring the reader to integrate facts from non-adjacent sections.",
+    "answer_spans": [
+      "שבשנה שעברה פרש בקטע החמישי",
+      "מקום רביעי בגירו בשנה שעברה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xinux_tarbut_sport_21_ptv_559805",
+    "question": "לפי הסברו של יושב-ראש הוועדה, מה משמעות הקול היחיד שהצביע בעד הרביזיה?",
+    "reasoning": "Requires linking the final vote tally ('בעד - 1') with the chairman's earlier explanation of what a vote in favor of the revision entails ('לא מאשר את התשלומים').",
+    "answer_spans": [
+      "מי שמצביע בעד הרביזיה, זאת אומרת שהוא מפיל את ההצבעה, הוא נגד ההצבעה שהייתה. כלומר, הוא לא מאשר את התשלומים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-9626737",
+    "question": "באילו תחרויות בינלאומיות צפוי להדריך המאמן שאיבד את רעייתו בשנה החולפת?",
+    "reasoning": "The question requires identifying the coach whose wife passed away last year (paragraph 9) and linking this to the international tournaments he is scheduled to coach (paragraph 11). The phrasing uses synonyms to avoid lexical mirroring from the source text.",
+    "answer_spans": [
+      "אליפות העולם בסין ב־2019 ובאולימפיאדת טוקיו ב־2020"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xinux_tarbut_sport_20_ptv_308441",
+    "question": "מה הייתה החלטת הוועדה בנוגע לבקשת משרד הכלכלה לפטור מחובת הנחה?",
+    "reasoning": "Requires connecting the opening statement identifying the request for exemption as coming from the Ministry of Economy with the final decision at the end of the discussion stating that the exemption was approved.",
+    "answer_spans": [
+      "הפטור מחובת הנחה אושר."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xinux_tarbut_sport_20_ptv_491733",
+    "question": "מאיזו פגיעה מזהיר מרדכי יוגב בהקשר להצעת החוק להחלת חוק חופש המידע על מוסדות להשכלה גבוהה?",
+    "reasoning": "The question requires identifying the specific bill on the agenda (from the Chairman's opening remarks) and connecting it to the specific concern raised by Mordechai Yogev regarding the potential harm to the institutions involved.",
+    "answer_spans": [
+      "הצעת חוק חופש המידע (תיקון - החלת הוראות חוק חופש המידע על מוסדות להשכלה גבוהה ועל קק\"ל)"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuka_18_ptv_217262",
+    "question": "מדוע אורי מקלב דוחה את הצעתו של אליעזר פלג להשתמש בתביעה ייצוגית?",
+    "reasoning": "The question requires combining the reason Eliezer Peleg suggests a class action lawsuit (it's easier) with Uri Maklev's counter-argument about why it won't help (the law is meant to protect the small citizen who won't go to court). These statements are separated by the Chairman's interjection.",
+    "answer_spans": [
+      "החוק הזה נועד להגן על האזרח הקטן, שלא ילך לבית משפט."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuka_24_ptv_693348",
+    "question": "כמה תקנים אמור משרד הרווחה לבדוק בנוגע לזכות לליווי עובד סוציאלי לנפגעי עבירה?",
+    "reasoning": "Requires bridging Dganit's mention of the 'right to accompaniment by a social worker', Yifat's identification of the 'Welfare Ministry' as the responsible body, and Kariv's specification of the '95 positions' to be checked.",
+    "answer_spans": [
+      "95 תקנים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_279_633177",
+    "question": "במה שונה אופן הניהול של מערכת ליגות ההוקי בצפון אמריקה מזה של ליגות הבייסבול והכדורגל?",
+    "reasoning": "Requires contrasting the management structure of baseball and soccer leagues (managed by a governing body) with that of ice hockey leagues (managed by collective agreements) in North America.",
+    "answer_spans": [
+      "בענפי הבייסבול והכדורגל (שבצפון אמריקה נקרא \"Soccer\") יש מבנה ליגות מסודר וישנה היררכיה ברורה בין הליגות הבכירות לליגות המשניות המוגדרת היטב, וכל אחת מנוהלת על ידי גוף מנהל",
+      "מערכת ליגות ההוקי בצפון אמריקה מנוהלת על ידי הסכמים קיבוציים ועסקאות הסתנפות"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "aliya_klita_tfucot_19_ptv_281875",
+    "question": "אילו דוחות ציינה מירי רגב כרקע לשאלה שביקשה להפנות למאיר בינג?",
+    "reasoning": "The reader must link the name 'מאיר בינג' to his role in the Ministry of Finance ('משרד האוצר') from the attendees list, and then connect this to the committee chair's statement where she wants to ask 'נציג האוצר' (the Treasury representative) a question based on specific reports.",
+    "answer_spans": [
+      "הדוח האחרון שפורסם על התחבורה, התחבורה הציבורית, והדוח האחרון שפורסם לאחרונה על הרכבת"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_301_897870",
+    "question": "לאילו מטרות מהווה יישוב הדעת תנאי או מידה חיונית?",
+    "reasoning": "The question bridges two non-adjacent sections ('Jewish Thought' and 'Christianity') by asking what peace of mind enables. It uses the specific text keywords 'condition' (תנאי) and 'essential virtue' (מידה חיונית) to seamlessly combine the views of Rambam and Christian philosophy without using stacked premise markers or quotation marks.",
+    "answer_spans": [
+      "קליטת דברים מורכבים ונשגבים",
+      "השגת הערכים התאולוגיים של עדינות, שביעות רצון, מתינות, וצדקה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "kalkala_20_ptv_320014",
+    "question": "איזה רצף תווים באנגלית מופיע בתחילת הקובץ המושחת?",
+    "reasoning": "The input text is a corrupted binary file (likely a Word document dump) containing mostly unreadable mojibake and control characters. Since there is no coherent, readable Hebrew text to form a valid reading comprehension question, I must formulate a question based on the visible structural artifacts or the nature of the text itself, though the prompt constraints require extracting exact spans. I will extract a specific string of characters that appears intact.",
+    "answer_spans": [
+      "bjbjµyµy"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "knesset_17_ptv_133557",
+    "question": "באיזו שעה ננעלה הישיבה שהחלה בשעה 10:00 בתאריך 19.03.2007?",
+    "reasoning": "The text contains a start time (10:00) at the beginning, a date (19.03.2007) at the end, and an end time (10:20) near the end. The question requires combining the start time and date to find the corresponding closing time.",
+    "answer_spans": [
+      "1\u00000\u0000:\u00002\u00000\u0000"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_exut_17_ptv_133059",
+    "question": "איזו מחרוזת תווים המתחילה באותיות gd מופיעה בהמשך המסמך, בנפרד מהמחרוזת bjbjז‡ז‡?",
+    "reasoning": "The input text is a corrupted binary file (likely a .doc file opened as text), making standard reading comprehension impossible. To fulfill the prompt's constraints using only explicit text facts, the question requires linking two distinct, non-adjacent readable ASCII/mixed strings found in the gibberish.",
+    "answer_spans": [
+      "gdyב"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuka_19_ptv_277236",
+    "question": "באיזו שנה התקיימה הישיבה שבה שימש דוד צור כיושב ראש?",
+    "reasoning": "English: The text identifies David Tzur as the chairman of the committee in one section, and provides the year of the meeting in the header. Combining these establishes the year of the meeting he chaired.",
+    "answer_spans": [
+      "2014"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "aliya_klita_tfucot_18_ptv_138355",
+    "question": "מי ציינה שהיא חברה בוועדה בנוסף ליושב ראש האופוזיציה?",
+    "reasoning": "Requires combining Reuven Rivlin's statement that the head of the opposition is a member of the committee with Marina Solodkin's subsequent reply 'לא רק הוא – גם אני' to identify who else claimed membership.",
+    "answer_spans": [
+      "מרינה סולודקין"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_013_973865",
+    "question": "אילו שני דימויים מובאים בטקסט כדי להמחיש כיצד משפט הפתיחה מכיל בתוכו את היצירה כולה?",
+    "reasoning": "Requires combining Yoel Hoffman's quote in the first paragraph with S. Yizhar's quote in the sixth paragraph. Both use distinct metaphors (a tree seed and a crystal) to describe the concept of an opening sentence that encapsulates the entire work.",
+    "answer_spans": [
+      "זרע עץ",
+      "גביש"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_briut_19_ptv_263923",
+    "question": "איזה סוג של חוק הצהיר חבר הכנסת חיים כץ שהוא אינו מעוניין להביא למליאה, בהתייחס להצעת החוק שהוא וראובן ריבלין חתומים עליה?",
+    "reasoning": "The question requires combining the chairman's statement about not wanting to bring a bill with a 'loophole' ('ישראבלוף') to the plenum (Hop 1) with his earlier statement identifying himself and Reuven Rivlin as the proposers of the bill being discussed (Hop 2).",
+    "answer_spans": [
+      "חוק שיהיה בו פתח, או \"ישראבלוף\""
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_hagana_20_ptv_320950",
+    "question": "מדוע התבקשה הפסקה מיד עם פתיחת הישיבה להצבעות על הצעת חוק עובדים זרים?",
+    "reasoning": "The reader must connect the context of the meeting's opening (voting on the foreign workers law) in the chairman's first utterance with the justification for the break provided in his second utterance, bridging across MK Rozin's intervening question.",
+    "answer_spans": [
+      "סיעות מבקשות להתייעץ ולחזור אלינו"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_exut_18_ptv_161616.",
+    "question": "איזה רצף אותיות באנגלית מופיע בקובץ בין המחרוזת הפותחת ל¥ֱ לבין המחרוזת hTx„ המופיעה בהמשך?",
+    "reasoning": "The text is a binary dump. The question requires finding the English string located between the file's opening characters and a specific later sequence, combining two non-adjacent anchors to locate the target without using quote marks.",
+    "answer_spans": [
+      "bjbjm¥m¥"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_briut_17_ptv_134801",
+    "question": "איזה אישור נדרש על פי חוק וגרם לעיכוב בבקשה להאריך את התקנות שפקעו בסוף מאי 2007?",
+    "reasoning": "The question requires linking the specific regulations that expired at the end of May 2007 (mentioned in Ashkenazi's first statement) with the reason for the delay in requesting their extension, which is the need for the Finance Minister's approval (explained at the very end of the transcript).",
+    "answer_spans": [
+      "לפי החוק אנחנו צריכים קודם כל את אישור שר האוצר"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "kalkala_18_ptv_173880",
+    "question": "מדוע מוצע לשנות את המונחים בתקנות העוסקות באגרות רישיון ורישום?",
+    "reasoning": "The reader must link the specific subject of the committee's discussion (regulations concerning licensing fees and registration, mentioned at the beginning) with the speaker's later explanation that the purpose of changing the terms in these regulations is to align them with the new Water Law.",
+    "answer_spans": [
+      "להתאים אותם לחוק המים החדש"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "reasoning": "The first span states that Israel appealed to Ukraine's government regarding detained and deported Israeli travelers. The second span details the specific documents required for Israelis entering Ukraine. To answer what Israel asked Ukraine to examine regarding the required documents, both pieces of information are necessary: the fact that Israel appealed to Ukraine about the issue, and the specific documents that are causing the problem.",
+    "question": "לגבי אילו מסמכים הנדרשים מישראלים הנכנסים לאוקראינה פנתה ישראל לממשלת אוקראינה בבקשה לבחון מדוע נוסעים ישראליים מעוכבים?",
+    "answer_spans": [
+      "כרטיס טיסה הלוך חזור, הזמנה או וואצ'ר המאשרים את מטרת הביקור, כגון אישור של חברת הנסיעות או כל מסמך אחר, ביטוח רפואי לכל ימי השהייה באוקראינה, וכן סכום של 50 דולר במזומן בכל יום לכל נוסע"
+    ],
+    "expected_answer_spans_level0": [],
+    "uuid": "news-9524292",
+    "source": "il-hym",
+    "level": "level2"
+  }
+]

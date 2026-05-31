@@ -1,0 +1,152 @@
+[
+    {
+        "uuid": "f05210ac",
+        "reasoning": "The question requires the reader to first identify in the 'Rule-based consequentialism' section that this specific theory attempts to reconcile consequentialism with deontological ethics. Then, the reader must navigate back to the introductory paragraph to extract the explicit difference between these two approaches (whether moral value is determined solely by the consequences or by the acts themselves). This successfully links a specific sub-category at the end of the text to the overarching philosophical contrast defined at the very beginning.",
+        "question": "על פי הטקסט, מהי המחלוקת העקרונית בין שתי הגישות המוסריות שאותן מנסה ליישב 'תוצאתנות מבוססת כללים'?"
+    },
+    {
+        "uuid": "87077e46",
+        "reasoning": "Requires integrating the fact that the sign is completely obsolete in modern standard Arabic texts and grammar (found in the 'שימוש בכתיבה מודרנית' section) with the specific justification for its inclusion in the Unicode standard (found in the 'מעמד תקני' section). Relationship: Contrast and resolution (Why X despite Y).",
+        "question": "מדוע הוחלט לכלול את הסימן \"ראי\" בתקן יוניקוד, אף על פי שהוא נעדר לחלוטין ממערכות הכתיב והדקדוק של הערבית המודרנית?"
+    },
+    {
+        "uuid": "893edbdf",
+        "reasoning": "The reader must identify the instrument taken by ~30% of students (wind instruments, from the second paragraph) and the instrument for which the solo recital was originally invented (piano, from the first paragraph). Then, they must integrate these two distinct facts with the prerequisites detailed in the final paragraph to compare the minimum required years of study for both instruments (5 years for wind instruments vs. 8 years for piano).",
+        "question": "מהו ההבדל בשנות הלימוד המינימליות הנדרשות בין כלי הנגינה שעליו נבחנים כשלושים אחוזים מהתלמידים, לבין הכלי שעבורו הומצא במקור רסיטל הסולו?"
+    },
+    {
+        "uuid": "dc201b86",
+        "reasoning": "The question requires the reader to connect Bernard Williams' ethical expectation that a non-negligent driver should feel 'agent regret' due to their mere involvement (found in the 'Agent Regret' section) with Susan Wolf's proposed solution that an individual must take personal responsibility for their actions regardless of luck or society's blame (found in the 'Solutions' section). These are distinct, non-adjacent concepts located in completely different parts of the text that together illustrate a unified approach to personal responsibility.",
+        "question": "כיצד הפתרון שמציעה סוזן וולף למתח שיוצר המזל המוסרי מתיישב עם הציפייה האתית של ברנארד ויליאמס מנהג שפגע בהולך רגל מבלי שהתרשל?"
+    },
+    {
+        "uuid": "74eadbd7",
+        "reasoning": "Requires linking the specific legal prohibition in Regulation 65 (entering an un-clear intersection, found in paragraph 4) to the psychological motive that drives this exact behavior (the individual desire to shorten travel time due to uncertainty about other drivers, explained via the prisoner's dilemma in paragraph 5). Relationship: A legal rule and the underlying behavioral cause it attempts to curb.",
+        "question": "איזה מניע של נהגים, המומחש בטקסט באמצעות 'דילמת האסיר', מוביל להתנהגות שאותה אוסרת תקנה 65 לתקנות התעבורה בישראל?"
+    },
+    {
+        "uuid": "6d5a874a",
+        "reasoning": "Requires synthesizing information from the section on Aquinas's arguments (specifically the Teleological argument which mentions 'סדר חייב במסדר' and the precision of the universe) and the earlier section on the Anthropic argument (which discusses the complexity of the universe and life requiring a 'designer'). Relationship: Comparing and linking specific philosophical arguments based on their shared underlying premise of design/complexity.",
+        "question": "איזה טיעון מבין אלו שניסח תומאס אקווינס משקף את העיקרון של הטיעון הטלאולוגי, וכיצד הוא מתקשר לטיעון האנתרופי?"
+    },
+    {
+        "uuid": "33cf7cf3",
+        "reasoning": "The reader must integrate information from three non-adjacent parts of the text to answer this question. First, they must identify that a 'poem' (שיר) is an example of an individual creation that expresses the creator's personal emotional world (found in the third paragraph). Next, they must locate the 'Histadrut and Kibbutzim' near the end of the text and identify them as examples of 'social creations' (יצירה חברתית). Finally, they must link this to the explanation provided earlier in the social creation section, which states that a social creation represents the value system of an entire society and serves as a source for collective feelings such as identification and pride. This creates a clear contrast between individual and collective expressions.",
+        "question": "על פי הטקסט, מהו ההבדל בין סוג הרגשות והערכים שבאים לידי ביטוי בשיר, לבין אלו המיוצגים על ידי תופעות כדוגמת ההסתדרות והקיבוצים?"
+    },
+    {
+        "uuid": "5774f7ac",
+        "reasoning": "Requires linking the legal concern raised by the legal advisor in [S17] (the lack of overlap between the populations covered by the two laws) with the proposed terminology change detailed by MK Asher in [S11]. Relationship: Proposed action and its specific legal complication.",
+        "question": "מדוע היועצת המשפטית מזהירה מפני שימוש במונח \"אדם עם מוגבלות\" בחוק הביטוח הלאומי, למרות שהמונח כבר קיים בחוק שוויון זכויות?"
+    },
+    {
+        "uuid": "f92b6ed7",
+        "reasoning": "Requires combining the explanation for the need to amend the questioning requirement (the lifting of restrictions on leaving home for flights, mentioned by Renana Shahar in her first statement) with the attempted solution (the government's draft stating the checking requirement would be valid until the 15th of the month, also in her first statement). Relationship: Cause (lifting restrictions) and attempted legal solution.",
+        "question": "מדוע, על פי דבריה של רננה שחר, נוצר צורך לתקן את חובת התשאול בנתב\"ג, ומה היה הפתרון שניסו ליישם כדי למנוע מצב של חוסר חוקיות?"
+    },
+    {
+        "uuid": "47bd77df",
+        "reasoning": "Requires connecting the specific rep ranges detailed in the bullet points (1-5 reps for strength, 6-12 reps for hypertrophy) with the subsequent, non-adjacent sentences explaining how these specific physiological adaptations serve different athletes (explosive power for a basketball player's jump vs. increased muscle mass for bodybuilding). Relationship: Linking a training method to its specific practical application.",
+        "question": "כיצד התאמת טווח החזרות בסט נותנת מענה לדרישות השונות של שחקן כדורסל המעוניין לשפר את קפיצתו לעומת מתאמן בפיתוח גוף?"
+    },
+    {
+        "uuid": "1a4b44a2",
+        "reasoning": "Requires linking the dominant vehicle sales trends in the US (SUVs and trucks, from the second paragraph) to their defining physical characteristic (heavy weight, from the first paragraph), and then connecting this to the 'Air pollution' section, which explains that heavy vehicles emit toxic non-exhaust particles from tire and brake wear even when using electric engines.",
+        "question": "מדוע הפופולריות של סוגי הרכבים השולטים כיום בשוק האמריקאי גורמת לכך שגם מעבר לרכבים חשמליים לא יפתור לחלוטין את בעיית פליטת החלקיקים הרעילים?"
+    },
+    {
+        "uuid": "3353aaf9",
+        "reasoning": "Requires connecting the core methodology described in the 'Characteristics' section (using different versions of an exercise to increase intensity and reduce repetitions) with the inherent limitation detailed in the 'Cons' section (the existence of an 'upper ceiling' to how much intensity can be increased using only body weight). Relationship: A specific training strategy and its ultimate physical limitation.",
+        "question": "מדוע העיקרון של שינוי גרסאות התרגיל לשם הפחתת מספר החזרות אינו יכול לשמש כפתרון בלתי מוגבל להעלאת עצימות האימון?"
+    },
+    {
+        "uuid": "c211c9c4",
+        "reasoning": "To answer the question, the reader must first identify which city withdrew because its mayor felt their existing camera system and municipal supervision were sufficient (Ness Ziona, based on Eliezer Rosenbaum's statement). Then, the reader must scan the text to find which municipality is replacing Ness Ziona in the addendum (Pardes Hanna-Karkur, based on Ayelet Levin's reading of the order and Yoav Kisch's summary). These facts are located in distinct, non-adjacent parts of the transcript spoken by different individuals.",
+        "question": "איזו רשות מקומית צפויה להצטרף לתוכנית במקומה של העיר שפרשה ממנה בנימוק שמערך המצלמות והפיקוח המקומי שלה מספיקים לה?"
+    },
+    {
+        "uuid": "00897a19",
+        "reasoning": "Requires linking the specific financial problem raised by Landver in [S3] (immigrants paying out of pocket for document translations due to a lack of bilingual clerks) with the practical solution proposed by Misezhnikov in [S6] (bringing in bilingual volunteers, a model inspired by HMOs). The relationship is Problem-Solution spanning non-adjacent statements made by different speakers.",
+        "question": "איזה פתרון, בהשראת ההתנהלות בקופות החולים, מציע חבר הכנסת מיסז'ניקוב כדי לפתור את מצוקת השפה בלשכות, אשר לדברי סופה לנדבר גורמת לעולים נטל כלכלי כבד?"
+    },
+    {
+        "uuid": "0d87ca9a",
+        "reasoning": "The question requires the reader to integrate information across two separate conversational turns. The reader must connect David Koech's statement that Kenya is heavily dependent on manual agriculture, making it highly vulnerable to droughts, and his conclusion that they must make a 'transition' (found in Koech's second speaking turn), with Meir Sheetrit's earlier explanation of Israel's historical employment shift—moving from 18 out of 20 people working in agriculture to just 1 out of 20, with a new focus on technology (found in Sheetrit's second speaking turn).",
+        "question": "על פי דברי הדוברים, כיצד נתוני התעסוקה ההיסטוריים שהציג מאיר שטרית משקפים את 'המעבר' שקניה שואפת לעשות כדי להקטין את פגיעותה הכלכלית מבצורת?"
+    },
+    {
+        "uuid": "bce7c84c",
+        "reasoning": "The question requires the reader to connect Azoulay's initial motivation for the revision (reducing the incarceration standard in [S3]-[S4]) with the specific compromise offered by the Ministry's legal advisor (bringing a new standard for discussion within two weeks in [S25] and [S31]), and finally link this resolution to the Chairman's concluding action of advancing the bill to the plenum for second and third readings in [S32].",
+        "question": "כיצד נפתרה המחלוקת סביב דרישתו המקורית של חבר הכנסת אזולאי להקטין את תקן הכליאה, באופן שאפשר לבסוף את המשך קידומה של הצעת החוק לקריאה שנייה ושלישית?"
+    },
+    {
+        "uuid": "dcd4580e",
+        "reasoning": "Requires linking Gafni's initial disappointment and suspicion towards Shas regarding their protection of the weak (mentioned in his speech) with his subsequent reaction (\"אז ש\"ס בסדר\") after receiving the specific detail about the law applying to seven children from the Ministry of Industry, Trade and Labor representative. Relationship: Cause (new information) and effect (change in stated opinion/attitude).",
+        "question": "כיצד השפיע המידע על מספר הילדים המינימלי שעליו יחול החוק על עמדתו של חבר הכנסת גפני כלפי מפלגת ש\"ס?"
+    },
+    {
+        "uuid": "3985b6e2",
+        "reasoning": "The question requires the reader to locate the two separate mentions of FIFA in the text and integrate the information to explain how the organization's rules or actions blocked certain developments. The reader must combine the detail about FIFA preventing Macías's father from buying his son's rights (from the section on José Juan Macías) with the detail about FIFA halting the progress of Barcelona's Korean players (from the section on Lee Kang-in). These are distinct, non-adjacent sentences in different paragraphs.",
+        "question": "על פי הכתבה, באילו שני אופנים שונים בלמו החוקים וההחלטות של פיפ\"א תוכניות או התפתחויות מקצועיות הקשורות לשחקנים צעירים?"
+    },
+    {
+        "uuid": "8cf825e2",
+        "reasoning": "Requires connecting the specific encounter with a soldier from the recent wave of Ethiopian immigration mentioned by Merav Ben Ari to the general description of 'Nefesh B'Nefesh' as an organization exclusively for English-speaking immigrants. The reader must then identify the explanation for this apparent contradiction, which is the organization's partnership with FIDF and the IDF to serve lone soldiers from all countries.",
+        "question": "אף על פי שארגון 'נפש בנפש' מטפל בשגרה רק בעולים דוברי אנגלית, כיצד מסביר הטקסט את השתתפותו באירוע של חייל עולה מאתיופיה?"
+    },
+    {
+        "uuid": "8d1bfa1f",
+        "reasoning": "Requires connecting Michal Chorin's explicit request early in the text to clarify the terminology so that State-Religious schools can continue their practice of separating boys and girls, with the actual text of the law read later by the legal advisor (Merav Israeli), specifically the clause that forbids discrimination regarding 'maintaining separate classes in the same educational institution'. Relationship: Identifying a specific legal threat to a stated practice based on two separate statements.",
+        "question": "איזה איסור ספציפי מתוך נוסח החוק שהקריאה היועצת המשפטית היה עלול לפגוע בהתנהלות המקובלת בחינוך הממלכתי-דתי, אלמלא ההבהרה שביקשה מיכל חורין להוסיף לפרוטוקול?"
+    },
+    {
+        "uuid": "6506018f",
+        "reasoning": "Requires linking the legislative change mentioned in the text (amending the law so local authority audit reports are treated like government ministry reports) with its direct future consequence (the Prime Minister will now be required to add his comments because the reports will be placed on the Knesset table). These two pieces of information are located in distinct, non-adjacent sentences separated by a sentence discussing the status of the current report.",
+        "question": "כיצד התיקון לחוק, שהשווה את מעמד דוחות הביקורת על הרשויות המקומיות לאלו של משרדי הממשלה, צפוי להשפיע על מעורבותו של ראש הממשלה בדוחות העתידיים?"
+    },
+    {
+        "uuid": "f8f7dc2e",
+        "reasoning": "Requires contrasting the general reason for resignation provided by Mattis in his letter [S5] (disagreements over the treatment of US allies) with the specific triggering event reported by White House sources in [S9] (the US withdrawal from Syria). Relationship: Stated general cause versus reported specific catalyst.",
+        "question": "בעוד שבמכתב ההתפטרות שלו ייחס מאטיס את עזיבתו למחלוקת בנוגע ליחס לבעלות בריתה של ארצות הברית, איזו סוגיה ספציפית היוותה את העילה האחרונה לקרע בינו לבין הנשיא על פי גורמים בבית הלבן?"
+    },
+    {
+        "uuid": "0c7f0fa0",
+        "reasoning": "The question requires the reader to identify Prof. Nachman Ash's stated justification for his decision in the third paragraph (that the decision was made following an in-depth examination by a committee) and connect it to Dr. Shani Shilo's specific criticism of that justification in the eighth paragraph (where she expresses amazement that the decision relied merely on a committee's conclusions rather than on clinical trials). Relationship: Connecting a decision's rationale with its direct counter-argument across non-adjacent paragraphs.",
+        "question": "כיצד מבקרת ד\"ר שני שילה את הנימוק המרכזי שעליו ביסס פרופ' נחמן אש את החלטתו לאשר את המהלך?"
+    },
+    {
+        "uuid": "c339e705",
+        "reasoning": "To answer the question, the reader must identify who plays Doron Kavillio and his background (Lior Raz, who served as a combatant in the Duvdevan unit, found in the third paragraph), and contrast it with the actress who plays Marwa and her background (Luna Mansour, whose previous experience was primarily in modeling, found in the fifth and sixth paragraphs). This requires integrating information across multiple distinct and non-adjacent sentences.",
+        "question": "במה שונה ניסיון העבר של השחקן המגלם את דורון קביליו מזה של השחקנית המגלמת את מרווה?"
+    },
+    {
+        "uuid": "373edd51",
+        "reasoning": "The question requires the reader to resolve an apparent contradiction by integrating information from different parts of the text. The reader must connect the fact that the new system relies on diesel-operated generators (Paragraph 5) with its ability to reduce pollutant emissions (Paragraph 3). To answer how this is possible compared to the old method, they must synthesize the explanation of the new mechanism—capturing residual heat/hot gases from electricity generation (Paragraphs 3 and 5)—with the fact that it replaces the old thermoil water heaters which actively burned polluting fuels (Paragraph 5).",
+        "question": "בהתחשב בכך שהמערכת החדשה ניזונה מגנרטורים המופעלים בסולר, כיצד מנגנון הפעולה שלה מאפשר בכל זאת להפחית את זיהום האוויר בבסיס לעומת אמצעי החימום שבהם השתמשו עד כה?"
+    },
+    {
+        "uuid": "d0007251",
+        "reasoning": "Requires contrasting the global economic response described in one section (where governments bailed out companies with public money: 'הצילו חברות בכסף ממשלתי') with Steinitz's specific policy detailed several paragraphs later (where he explicitly refused to inject state funds to save the tycoons' bonds: 'האוצר לא יזרים... לטובת הצלת הטייקונים'). Relationship: Comparison/Contrast across distinct, non-adjacent sections of the text.",
+        "question": "באיזה אופן סותרת החלטתו של שר האוצר לגבי משבר האג\"ח של הטייקונים את דרך הפעולה הכלכלית שננקטה ברחבי העולם כלפי חברות במשבר?"
+    },
+    {
+        "uuid": "266dd45d",
+        "reasoning": "Requires combining the fact that Odeya Rush played Fiona in \"The Giver\" [Paragraph 18] and was under 18 at the time (she is 17 in the article) with the legal requirement explained by her father [Paragraph 32] that actors under 18 must be accompanied by a parent or guardian on set. Relationship: Connecting a specific role/timeframe to a general rule explaining a family member's behavior.",
+        "question": "מדוע אביה של אודיה רש, שלמה, נאלץ ללוות אותה באופן צמוד במהלך צילומי הסרט שבו גילמה את פיונה, ידידתו של ג'ונאס?"
+    },
+    {
+        "uuid": "144ac086",
+        "reasoning": "The question requires the reader to connect the psychological reaction to crises described in [S5] and [S6] (where the brain focuses on immediate survival and abandons non-essential initiatives) with the first principle of Greenketing, 'Timeliness' (עכשוויות), detailed in [S13] and [S14], which demands that brands prepare and act on environmental issues right now, despite the ongoing crisis.",
+        "question": "כיצד הדרישה המרכזית של עקרון ה\"עכשוויות\" מנוגדת להשפעה הפסיכולוגית שיש למצבי משבר על התנהלותם של צרכנים ועסקים?"
+    },
+    {
+        "uuid": "1ed3662c",
+        "reasoning": "Requires integrating information from the second paragraph (which states that the parrots learned to operate the touchscreens using their tongues) with the fourth paragraph (which explains the underlying biological limitation—their beaks are made of keratin and cannot activate the screens—and the researchers' creative solution of smearing peanut butter to encourage licking). The reader must bridge the biological cause with the specific behavioral workaround.",
+        "question": "מהי הסיבה הביולוגית לכך שהחוקרים נאלצו להשתמש בחמאת בוטנים כדי לגרום לתוכים לתפעל את מסכי המגע באמצעות לשונם?"
+    },
+    {
+        "uuid": "0039746a",
+        "reasoning": "The question requires the reader to connect the lawyer's professional connections in the Ministry of Defense, which allow him to stay constantly updated on changing regulations and laws (detailed in the fifth paragraph), to the specific risk mentioned earlier in the text: that even a minor technical error or failure to follow exact procedures can cause a release request to be rejected outright (detailed in the third paragraph). By integrating these two non-adjacent sections, the reader understands how staying updated on rules directly prevents technical disqualifications.",
+        "question": "כיצד תורמים קשריו של עורך הדין במשרד הביטחון למניעת מצב שבו בקשת השחרור של החייל נדחית על הסף?"
+    }
+]

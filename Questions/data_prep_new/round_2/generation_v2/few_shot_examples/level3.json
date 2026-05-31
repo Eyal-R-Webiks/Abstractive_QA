@@ -1,0 +1,53 @@
+[
+  {
+    "text": "[S1] הנהלת בית הספר הודיעה על איסור שימוש בטלפונים בהפסקות. [S2] במקביל, היא הקימה אזור למפגשים חברתיים ומשחקי קופסה. [S3] תלמידים טענו שההחלטה מגבילה אותם, אך המורים דיווחו על פחות עימותים.",
+    "good": {
+      "reasoning": "Inference/stance: synthesize tension between perceived restriction and reported social benefits.",
+      "question": "איזה איזון הנהלת בית הספר מנסה ליצור בין חופש אישי לבין אקלים חברתי רגוע יותר?",
+      "answer_spans": [
+        "הנהלת בית הספר הודיעה על איסור שימוש בטלפונים בהפסקות."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "כיצד חושפת הדיאלקטיקה המוסדית בין רגולציית התנהגות למרחב סמי-קהילתי את פרדוקס הסמכות החינוכית?",
+        "why": "Pompous, thesis-like wording."
+      }
+    ]
+  },
+  {
+    "text": "[S1] העיר פתחה שבילי אופניים חדשים. [S2] לצד זאת בוטלו 120 מקומות חניה ברחוב הראשי. [S3] בעלי עסקים טענו לירידה בתנועת לקוחות, אך העירייה הציגה עלייה בתנועת הולכי רגל.",
+    "good": {
+      "reasoning": "Requires abstraction from conflicting stakeholder evidence and policy trade-offs.",
+      "question": "מה הוויכוח העקרוני שעולה כאן בין נגישות לרכב פרטי לבין תפיסת רחוב מבוססת הליכה ורכיבה?",
+      "answer_spans": [
+        "העיר פתחה שבילי אופניים חדשים."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "על פי הנתונים ובשים לב לכלל ההיבטים העירוניים, מה הוויכוח העקרוני?",
+        "why": "Premise-heavy opening; unnecessary scaffolding."
+      }
+    ]
+  },
+  {
+    "text": "[S1] החברה מציגה קמפיין סביבתי רחב. [S2] בדוחות הכספיים שלה נרשמה השקעה גבוהה בהפקת פלסטיק חד-פעמי. [S3] המנכ\"ל טוען שהמעבר לחומרים חלופיים ייקח זמן.",
+    "good": {
+      "reasoning": "Inference about credibility gap between declared values and current business behavior.",
+      "question": "איזה פער בין מסר ציבורי לבין התנהלות בפועל בולט בתיאור פעילות החברה?",
+      "answer_spans": [
+        "החברה מציגה קמפיין סביבתי רחב."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "איזה מתח מהותי חושף הטקסט בין האתוס התאגידי לבין המציאות האופרטיבית?",
+        "why": "Overly formal and unnatural for reader-style Hebrew."
+      }
+    ]
+  }
+]

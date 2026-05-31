@@ -1,0 +1,354 @@
+[
+  {
+    "question": "למי מהדוברים יש קשרים בעת הנוכחית עם אנשים בארגונים יהודיים בחו״ל?",
+    "reasoning": "חיבור של שני פריטי מידע ממקומות שונים במסמך.. התשובה אמורה להיות: מלכה קפקא (37) ומרינה סולודקין (58)..",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "aliya_klita_tfucot_17_ptv_134130",
+    "record_id": "fb82c4f9"
+  },
+  {
+    "question": "האם הטיעונים להגדרתו של חומסקי את כלכלת ארה״ב כקפיטליזם מדיני מתאימים לתפיסה המרקסיסטית?",
+    "reasoning": "השוואה של 2 ו-6. ישנו גם כולל פתיון ״טריקי״ שדורש להזהר ולהסתמך רק על הכתוב לגבי ספרות מרקסיסטית בפרט ולא להסתמך על ידע חיצוני לגבי מרקסיזם באופן כללי.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_002_1511547",
+    "record_id": "1c0a59a1"
+  },
+  {
+    "question": "לפי הפילוסוף שהשתמש בחברי המפלגה הנאצית כדוגמה, מה יקרה אם נשלול לחלוטין את קיומו של מזל מוסרי?",
+    "reasoning": "The reader must identify Thomas Nagel as the philosopher who used Nazi party members as an example (in the 'סוגים של מזל מוסרי' section) and then locate his assertion regarding the consequence of completely rejecting moral luck (in the 'הטיעון מהפחתת הסוכנות' section). The question uses synonyms ('נשלול לחלוטין', 'השתמש... כדוגמה') to avoid lexical mirroring of the source text.",
+    "answer_spans": [
+      "להפחתת הסוכנות עד כדי נקודה חסרת ממדים (\"Extenstionless Point\")"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_048_1179718",
+    "record_id": "ce26c4cb"
+  },
+  {
+    "question": "מה מסמן בגאומטריה הסימן ששמו נגזר מהאות הערבית ر?",
+    "reasoning": "The question requires combining the origin of the sign's name from the 'Name origin' section (derived from the Arabic letter ر) with its specific function in the 'Pronunciation and phonetic value' section (marking the radius in geometry).",
+    "answer_spans": [
+      "הוא משמש לסימון הרדיוס (R) במעגל במקצוע המתמטיקה והגאומטריה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_311_2515577",
+    "record_id": "599b0082"
+  },
+  {
+    "question": "איזו תקנה בישראל אוסרת על הפעולה שגורמת לגרידלוק?",
+    "reasoning": "The reader must connect the fact that gridlock is caused by cars entering a blocked intersection with the fact that Israeli Regulation 65 prohibits entering an intersection unless the driver can pass without interruption.",
+    "answer_spans": [
+      "תקנה 65 לתקנות התעבורה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_425_2188235",
+    "record_id": "7c39aa80"
+  },
+  {
+    "question": "כמה שנות לימוד לפחות נדרשות כדי לגשת לרסיטל בגרות בכלי הנגינה שהמצאת רסיטל הסולו עבורו מיוחסת לפרנץ ליסט?",
+    "reasoning": "The question asks for the required years of study for the instrument whose solo recital invention is attributed to Franz Liszt. The reader must first identify the instrument (piano) from the second paragraph and then find the required years of study for it in the final paragraph.",
+    "answer_spans": [
+      "המצאת הרסיטל סולו לפסנתר מיוחסת לפרנץ ליסט.",
+      "פסנתר וכלי קשת דורשים לפחות 8 שנות לימוד"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_392_469656",
+    "record_id": "27b76e0b"
+  },
+  {
+    "question": "לאיזה תחום מציע אורלב להרחיב את החיוב האישי, המוטל כיום על ראשי רשויות בנושאי הגנת הסביבה והעסקת עובדים שלא כדין?",
+    "reasoning": "The question requires combining the current areas where personal liability applies to mayors (environmental protection and illegal hiring) with Orlev's proposal to expand this liability to planning and building laws, which appears a few sentences later.",
+    "answer_spans": [
+      "זה הוזכר בכל מה שקשור בחוקי תכנון ובנייה. יש בעיות חמורות מאוד. אחת הדרכים להתמודד עם העניין הזה זה להרחיב את חוק האחריות האישית או החיוב האישי כדי שיחול גם על החוקים האלה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "bikoret_17_ptv_135665",
+    "record_id": "51c4705e"
+  },
+  {
+    "question": "מי הם האנשים שאליאב מעדיף שיהיו בגמר?",
+    "reasoning": "חיבור פשוט של שלושה פרטי מידע שונים, וזיהויי ששנים מהם זהים (מש׳ 1 ו-31).. התשובה אמורה להיות: אליאב עצמו, ישראל, אביבית ו/או מירב (משפטים 1+18+31).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "celebrities-10142742",
+    "record_id": "d5d743f8"
+  },
+  {
+    "question": "מהי הסוגיה האחרונה שעוררה מחלוקת בין הנשיא טראמפ לבין מזכיר ההגנה שפטריק שנהאן מונה למלא את מקומו?",
+    "reasoning": "To answer the question, the reader must first identify who Patrick Shanahan is replacing (Defense Secretary James Mattis, found in the second paragraph) and then link this to the final paragraph to find the latest issue that caused a dispute between him and the President (the US withdrawal from Syria).",
+    "answer_spans": [
+      "נסיגת ארצות הברית מסוריה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "news-9732675",
+    "record_id": "143de6ef"
+  },
+  {
+    "question": "מהיכן ניתן להוריד את הספר שבו הופיע לראשונה המונח קליסטניקס באנגלית?",
+    "reasoning": "English: The question requires connecting the fact that the term 'calisthenics' first appeared in English in Watson's Manual (from the 'Etymology and history' section) with the information that this book can be downloaded via the Library of Congress (from the 'Further reading' section).",
+    "answer_spans": [
+      "ספריית הקונגרס"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_076_2352093",
+    "record_id": "2d4a39d9"
+  },
+  {
+    "question": "איזה פסטיבל תחרותי מתקיים במדינה שבה פועל איגוד מפיקי האודיו-ויזואלי?",
+    "reasoning": "English: To answer, one must link the member organization 'איגוד מפיקי האודיו-ויזואלי' to its country (Czech Republic) in the members list, and then find the competitive festival held in that country (Karlovy Vary) in the festivals list.",
+    "answer_spans": [
+      "קרלובי וארי (צ'כיה) / פסטיבל קרלובי וארי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_307_1551015",
+    "record_id": "f393d035"
+  },
+  {
+    "question": "בשיתוף עם איזה גוף יזמו את התיקון המאפשר לקרן נאמנות חייבת לשנות את סיווגה לקרן פטורה?",
+    "reasoning": "The question requires linking Michal Hener Deutsch's explanation of the amendment's purpose (allowing a taxable mutual fund to change its classification to an exempt mutual fund) with Miki Zivier's later statement identifying the partner who co-initiated this amendment (the Israel Securities Authority).",
+    "answer_spans": [
+      "זאת הייתה יוזמה עם רשות ניירות ערך."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "ksafim_18_ptv_164162.",
+    "record_id": "209f864c"
+  },
+  {
+    "question": "איזה פתרון למחסור בדוברי רוסית מציע חבר הכנסת שמרכז את הפניות של משרד הפנים?",
+    "reasoning": "The reader must link Sofa Landver's statement identifying MK Misezhnikov as the one who coordinates the Ministry of Interior petitions with Misezhnikov's later speech where he proposes a solution for the lack of Russian-speaking staff.",
+    "answer_spans": [
+      "לבדוק אפשרות להכניס שם עובדים דוברי רוסית אפילו אם לא במסגרת תקנים בשלב הראשון אז אולי במסגרת מתנדבים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "pniyot_17_ptv_133513",
+    "record_id": "19bdd00a"
+  },
+  {
+    "question": "איזו קבוצה חולם בנו של אלף-אינגה האלאנד להוביל לאליפות?",
+    "reasoning": "The question requires combining the fact that Erling Haaland's father is Alf-Inge Haaland (stated in the first paragraph of his section) with Erling's quote about his dream to lead a specific team to a championship (stated two sentences later).",
+    "answer_spans": [
+      "לידס יונייטד"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "sport-9196888",
+    "record_id": "baf962f4"
+  },
+  {
+    "question": "באיזה מבצע קודם נפצע מפקדו של סמל עמית זהר?",
+    "reasoning": "The reader must first establish the connection that Sgt. Amit Zohar is the subordinate of Roi Levy (found in the fifth paragraph), and then locate the information regarding Levy's previous injury in a past operation (found in the third paragraph).",
+    "answer_spans": [
+      "רועי נפצע בעבר במבצע עופרת יצוקה",
+      "בשיבא מאושפז גם פקודו של לוי, סמל עמית זהר"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "tech-13808138",
+    "record_id": "88e76856"
+  },
+  {
+    "question": "מה עושה סגן השרה יאיר גולן במסגרת תפקידו?",
+    "reasoning": "נדרש חיבור והבנת קשר לוגי בין הנאמר ב-22 וב-43.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "avoda_ravaxa_24_ptv_613498",
+    "record_id": "369e2008"
+  },
+  {
+    "question": "כיצד סבר יעקב מרגי שהיה נכון לפתור את הבעיה שנוצרה בעקבות העברת הנוסח לכנסת בשעה 00:30 בלילה?",
+    "reasoning": "The question requires connecting Renana's statement that submitting the text at 00:30 created a 'half hour of illegality' with Margi's later statement proposing a solution specifically for that 'half hour of illegality'.",
+    "answer_spans": [
+      "להישאר עם החצי שעה של האי חוקיות ולתת הנחיה לא לתשאל"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "kalkala_23_ptv_586265",
+    "record_id": "1f96ee88"
+  },
+  {
+    "question": "מה שמה של הסוכנת של השחקנית המגלמת את דמותה של מרווה?",
+    "reasoning": "The question requires identifying the actress who plays the character Marwa (Luna Mansour) from the sixth paragraph, and then locating the name of her agent from her interview in the tenth paragraph.",
+    "answer_spans": [
+      "אירית מילר"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "culture-11000599",
+    "record_id": "b4c32be8"
+  },
+  {
+    "question": "לאילו שני סוגים התפתחו המועדונים באנגליה?",
+    "reasoning": "חיבור והשוואה של משפטים 16-17 עם משפט 33.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_001_1196898",
+    "record_id": "20389e81"
+  },
+  {
+    "question": "מדוע החבילה שמוצעת אצל רמי לוי יכולה להראות מגוחכת בעוד מספר שנים?",
+    "reasoning": "השאלה משלבת מידע משני מקומות בטקסט ודורשת למצוא קשר ביניהם. השימוש במילה \"יכולה\" לא דורשת הסקה של רמה 3 כי מופיע הצירוף \"ככל הנראה\". במסמך כבר מוצגת מסקנה.. התשובה אמורה להיות: מדובר בטקסט על חבילה של 40 ג'יגה ושזה נראה כמו חבילה ללא הגבלה ורק מעט משתמשים מגיעים לצריכה זו ושנתיים לפני כן הציעו חבילה של 4 ג'יגה. עוד נטען שהדרישות לנפח הגלישה עולות בכל חודש ולכן גם חבילה של 40 ג'יגה בחודש עלולה להראות מגוחכת (משפטים 4-6). החבילה שמוצעת ברמי לוי כיום היא חבילה של 14 ג'יגה ועל כן בתוך מספר שנים עלולה להיות לא מספקת (משפט 13)..",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "business-10642983",
+    "record_id": "7e7c8045"
+  },
+  {
+    "question": "מהם הישגיו הספורטיביים של חבר הכנסת שנבחר ליושב-ראש הוועדה?",
+    "reasoning": "English: The reader must link the election of the new committee chairman (Yoel Razvozov), established at the beginning of the text, with the description of his specific sports background provided much later by Tzachi Hanegbi.",
+    "answer_spans": [
+      "אלוף ישראל בג'ודו. סגן אלוף אירופה פעמיים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "aliya_klita_tfucot_19_ptv_230168",
+    "record_id": "4d3f2c57"
+  },
+  {
+    "question": "על פי איזה עיקרון נקבע גודל העילוי של החפץ המשמש במקום כדור במשחק האולטימייט?",
+    "reasoning": "Requires bridging the physical principle governing the disc's lift (Paragraph 3) with the description of Ultimate as a game that uses this disc instead of a ball (Paragraph 4).",
+    "answer_spans": [
+      "עילוי שגודלו נקבע על ידי עקרון ברנולי",
+      "ובו משתמשים בפריזבי במקום בכדור"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_274_369378",
+    "record_id": "e8e3e6b5"
+  },
+  {
+    "question": "לאיזה שיעור משכר המינימום הועלתה השלמת ההכנסה של קבוצת הקשישים שהוגדרה בדיון כזקוקה ביותר לעזרה?",
+    "reasoning": "The question requires linking the statement near the end of the text that the group receiving income supplement ('השלמת הכנסה') is the one most in need of help, with the earlier statement specifying that this supplement was raised to 70% of the minimum wage.",
+    "answer_spans": [
+      "לשבעים אחוז"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "avoda_ravaxa_24_ptv_618146",
+    "record_id": "2b2e87ee"
+  },
+  {
+    "question": "באיזה כתב עת שימשה איסקין כחברת מערכת לפני שהשלימה את לימודי הדוקטורט שלה באותה עיר?",
+    "reasoning": "The question requires identifying the city where Iskin completed her PhD (Los Angeles, in 1997) from the 'Education' section, and then finding the journal she was an editorial board member of in that same city prior to her graduation (Los Angeles Institute of Contemporary Art Journal, 1983-1986) from the 'Journals' section.",
+    "answer_spans": [
+      "Los Angeles Institute of Contemporary Art Journal"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_406_2517857",
+    "record_id": "aa53e266"
+  },
+  {
+    "question": "אילו קבוצות נהנו יותר מהעלייה בהוצאה הלאומית לבריאות, אף על פי שרמת הבריאות המדווחת שלהן נמוכה יותר?",
+    "reasoning": "English: The question requires combining the finding in paragraph 7 (women and people without an academic degree benefited more from increased health spending) with the demographic health data in paragraphs 4 and 5 (men report better health than women, and academics report better health than non-academics) to identify the groups that benefited most despite having lower overall reported health.",
+    "answer_spans": [
+      "נשים ואלה ללא תואר אקדמי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "health-7223511",
+    "record_id": "5914e7c4"
+  },
+  {
+    "question": "באיזה מצב נדרשת זהירות או הימנעות משימוש גם בזעתר וגם בקינמון?",
+    "reasoning": "Requires cross-referencing the sections on Za'atar and Cinnamon to identify the shared condition (pregnancy) where their use is restricted or requires caution.",
+    "answer_spans": [
+      "היריון"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "lifestyle-9644013",
+    "record_id": "72d22d95"
+  },
+  {
+    "question": "במה ייעצה המפלגה לשר הביטחון לעסוק, לאחר שטען כי זהותה מבוססת על שנאת האחר?",
+    "reasoning": "Requires linking Naftali Bennett's accusation that the party's identity is based on hatred (paragraph 8) with the party's official response advising him on what he should be focusing on instead (paragraph 10).",
+    "answer_spans": [
+      "בהשבת השקט לתושבי הדרום"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "magazine-8478065",
+    "record_id": "5c576647"
+  },
+  {
+    "question": "איזו טענה של השחקנים עומדת בסתירה לקביעתו של השופט דרויאן כי אין חשש לנזק חריג מפרסום שמותיהם?",
+    "reasoning": "Requires connecting the judge's assertion in paragraph 3 that publication will not cause exceptional damage with the players' opposing claim in paragraph 6 regarding the irreversible nature of the damage.",
+    "answer_spans": [
+      "השחקנים עצמם טוענים כי פרסום שמם לא יתרום לדיון הציבורי ואם התיק לא יוביל לאישום הנזק שיגרם להם הינו בלתי הפיך וישאר עליהם כאות קלון."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "sport-7975633",
+    "record_id": "adca039b"
+  },
+  {
+    "question": "את מי מחליפה רחל עזריה בוועדת המשנה שאליה צורפה בגלל הרקע שלה בירושלים?",
+    "reasoning": "The reader must first locate the later part of the text where Dichter explains that Rachel Azaria was added to the Seam Zone committee ('מרחב התפר') because she was in Jerusalem. Then, they must connect this to the earlier list of appointments to find out who she is replacing in that specific committee (Moti Yogev).",
+    "answer_spans": [
+      "בוועדת המשנה לענייני מרחב התפר - חברת הכנסת רחל עזריה תצטרף כממלאת מקום לחבר הכנסת מוטי יוגב.",
+      "אבי דיכטר: אנחנו הכנסנו אותה למרחב התפר. היינו איתה בסיור וראינו שהיכולות שלה, בגלל שהיא הייתה בירושלים, והתפר עוסק גם בתפר בירושלים, ראינו את היתרונות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "xuc_bitaxon_20_ptv_534349",
+    "record_id": "678f5fd3"
+  },
+  {
+    "question": "כיצד פותר התיקון לחוק את האבסורד שבו מליאת הוועדה נחשפת לקטעים שרק ועדת הביטחון יכולה לדון בהם?",
+    "reasoning": "The question requires connecting the description of the 'absurdity' (where the full committee is exposed to sensitive sections meant for the defense committee) with the solution provided later in the transcript (the amendment making it mandatory that only the defense subcommittee is authorized to discuss them). These two parts are separated by several conversational turns.",
+    "answer_spans": [
+      "התיקון של חבר הכנסת שנלר עושה את זה בסמכות חובה, ואם החוק יעבור, ואני מקווה שהוא יעבור, אזי רק ועדת המשנה לביטחון היא זו שתהיה מוסמכת לדון באותם דוחות"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "bikoret_17_ptv_135449",
+    "record_id": "daa5712e"
+  }
+]

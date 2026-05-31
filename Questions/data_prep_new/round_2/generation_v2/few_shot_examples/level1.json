@@ -1,0 +1,53 @@
+[
+  {
+    "text": "[S1] העירייה תפעיל קו לילה חדש. [S2] הקו יפעל בימים חמישי ושישי בלבד. [S3] תחילת ההפעלה ב-1 ביולי.",
+    "good": {
+      "reasoning": "The operating days are explicitly stated in [S2], a single local span.",
+      "question": "באילו ימים יופעל קו הלילה החדש?",
+      "answer_spans": [
+        "העירייה תפעיל קו לילה חדש."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "באילו ימים יופעל קו הלילה החדש, אשר תחילת הפעלתו ב-1 ביולי?",
+        "why": "Redundant trailing qualifier."
+      }
+    ]
+  },
+  {
+    "text": "[S1] בכנס השתתפו 400 מורים. [S2] את ההרצאה המרכזית נשאה ד\"ר מרים לוי. [S3] הכנס התקיים בירושלים.",
+    "good": {
+      "reasoning": "The speaker name appears directly in [S2].",
+      "question": "מי נשאה את ההרצאה המרכזית בכנס?",
+      "answer_spans": [
+        "בכנס השתתפו 400 מורים."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "כיצד מתבטאת תרומתה של ד\"ר מרים לוי לשיח המקצועי בכנס?",
+        "why": "This shifts to level-3 abstraction and misses level-1 intent."
+      }
+    ]
+  },
+  {
+    "text": "[S1] התקנות תוקנו ב-2022. [S2] התיקון חל על חברות שמעסיקות מעל 50 עובדים. [S3] האכיפה תחל בינואר 2023.",
+    "good": {
+      "reasoning": "Applicability threshold is explicit in [S2].",
+      "question": "על אילו חברות חל התיקון לתקנות?",
+      "answer_spans": [
+        "התקנות תוקנו ב-2022."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "על פי נוסח התקנות המתוקן, על אילו חברות חל התיקון?",
+        "why": "Premise-heavy opening without need."
+      }
+    ]
+  }
+]

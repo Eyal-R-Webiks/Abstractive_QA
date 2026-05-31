@@ -1,0 +1,142 @@
+[
+    {
+        "uuid": "460b0f3d",
+        "reasoning": "The exact percentage of COVID-19 patients who reported an improvement in their medical condition following an antibody infusion is explicitly stated in the final sentence of the 'רקע' (Background) section.",
+        "question": "על פי הפרסום מאפריל 2020, איזה אחוז מחולי הקורונה דיווחו על שיפור במצבם בעקבות קבלת עירוי נוגדנים?"
+    },
+    {
+        "uuid": "a7f08fed",
+        "reasoning": "The name of the cabin boy who was killed and eaten by the survivors of the Mignonette is explicitly stated in the section discussing the legal recognition of the custom.",
+        "question": "מה היה שמו של נער הסיפון שאותו הרגו ואכלו שני הניצולים מהספינה Mignonette?"
+    },
+    {
+        "uuid": "03d46c34",
+        "reasoning": "The text explicitly states in the section discussing thematic catalogs that the catalog for Boccherini's works was processed by Yves Gérard and published in 1969.",
+        "question": "מי אחראי לעיבוד הקטלוג הנושאי ליצירותיו של בוקריני, אשר יצא לאור בשנת 1969?"
+    },
+    {
+        "uuid": "1ea2bace",
+        "reasoning": "The text explicitly states in the section about telephone canvassing that it is the only effective way to conduct canvassing in rural areas.",
+        "question": "איזו שיטה מוזכרת בטקסט כדרך היעילה היחידה לביצוע ציד קולות באזורים כפריים?"
+    },
+    {
+        "uuid": "3733e562",
+        "reasoning": "The text explicitly states in the limitations section that median income is more useful than per capita income for measuring prosperity because it is less affected by outliers.",
+        "question": "איזה מדד מוצג בטקסט כשימושי יותר מהכנסה לנפש למדידת שגשוג, משום שהוא מושפע פחות מנתונים חריגים?"
+    },
+    {
+        "uuid": "411cfec1",
+        "reasoning": "The answer is explicitly stated in the bullet point defining 'Homeostasis' (הומאוסטזיס), which provides sweating as an example of a process used to lower body temperature.",
+        "question": "איזו פעולה מוזכרת כדוגמה לתהליך של הומאוסטזיס המסייע בהורדת טמפרטורת הגוף?"
+    },
+    {
+        "uuid": "79758855",
+        "reasoning": "The maximum temperature that the internal part of a honey bee's thorax can reach during flight is explicitly stated in the final sentence of the 'הטרותרמיה אזורית' (Regional heterothermy) section.",
+        "question": "מהי הטמפרטורה שאליה עשוי להגיע פנים בית החזה של דבורת הדבש בעת מעופה?"
+    },
+    {
+        "uuid": "d46b6c67",
+        "reasoning": "The organization where Einav Kabla did significant work and received praise is explicitly mentioned by Eitan Ginzburg in the second paragraph of the text.",
+        "question": "על פי דבריו של איתן גינזבורג, באיזה ארגון ביצעה עינב קאבלה עבודה משמעותית שעליה זכתה לשבחים?"
+    },
+    {
+        "uuid": "1c80e794",
+        "reasoning": "The specific field of study that deals with the history, production, and distribution of banknotes is explicitly named in the bullet point defining 'בוניסטיקה' (Bonistics).",
+        "question": "כיצד נקרא תחום המחקר המוקדש להיסטוריה, לייצור ולהפצה של שטרות כסף?"
+    },
+    {
+        "uuid": "e7c90b3f",
+        "reasoning": "The answer is explicitly located in the final sentence of the 'סימנים ותסמינים' (Signs and symptoms) section, which states that type B is four times more common than type A among older white populations.",
+        "question": "פי כמה שכיחה דלקת קיבה מסוג B בהשוואה לסוג A בקרב אוכלוסיית המבוגרים הלבנים?"
+    },
+    {
+        "uuid": "7de5837a",
+        "reasoning": "The exact timeframe within which a cellular company must respond to a customer's account closure request is explicitly stated in Maimon Shamila's first response.",
+        "question": "על פי ההוראה ברישיונות החברות, בתוך כמה ימים מהגשת הבקשה לסיום החשבון אמור הלקוח לקבל מענה המאשר כי שילם ואינו חייב כסף לחברה?"
+    },
+    {
+        "uuid": "75de626e",
+        "reasoning": "The specific professional background of MK Eli Avidar (military and Ministry of Foreign Affairs) is explicitly mentioned by Gabi Ashkenazi in the opening paragraph of the transcript.",
+        "question": "אילו תחומי ניסיון מקצועי של חבר הכנסת אלי אבידר ציין גבי אשכנזי כהצדקה לצירופו לוועדת המשנה?"
+    },
+    {
+        "uuid": "278a114d",
+        "reasoning": "The exact number of days proposed by the Hadash faction in their reservation is explicitly stated in Halit Megido's remarks near the end of the transcript.",
+        "question": "לכמה ימים הציעו חברי סיעת חד\"ש להאריך את תקופת הגבלת הפיטורים במסגרת ההסתייגות שהגישו?"
+    },
+    {
+        "uuid": "1c88671d",
+        "reasoning": "The specific annual interest rate that will be added to the refund if the National Insurance Institute fails to return the overpayment within 12 months is explicitly stated in Roee Keret's explanation.",
+        "question": "מהו שיעור הריבית השנתית שיתווסף להחזר הכספי החל מהחודש השלושה עשר, במקרה שהמוסד לביטוח לאומי יעכב את התשלום?"
+    },
+    {
+        "uuid": "ae2dfab8",
+        "reasoning": "The specific party that did not sign the proposed bill is explicitly named by Moshe Gafni in his opening remarks.",
+        "question": "על פי דבריו של משה גפני, איזו מפלגה היא היחידה שנציגיה לא חתמו על הצעת החוק?"
+    },
+    {
+        "uuid": "cef2aaae",
+        "reasoning": "The exact number of employees currently working in the State Comptroller's office is explicitly stated in David Bitan's explanation regarding the amendment to the State Comptroller Law.",
+        "question": "כמה עובדים מועסקים כיום במשרד מבקר המדינה, על פי דבריו של דוד ביטן בדיון?"
+    },
+    {
+        "uuid": "2ada56a2",
+        "reasoning": "The exact percentage of startups located in Haifa (4%) is explicitly stated during the exchange between Tzafrir Neumann and Uri Gabai.",
+        "question": "איזה שיעור מכלל הסטארטאפים בישראל ממוקם בעיר חיפה, על פי הנתונים שהוצגו בדיון?"
+    },
+    {
+        "uuid": "c6b66d5f",
+        "reasoning": "The exact date when the bill passed its first reading is explicitly stated at the end of the first paragraph.",
+        "question": "באיזה תאריך עברה הצעת החוק המדוברת את אישורה בקריאה הראשונה?"
+    },
+    {
+        "uuid": "c22f42a6",
+        "reasoning": "The exact duration for the extension of the subcommittee's activity is explicitly stated in Sharren Haskel's opening remarks: 'תוקף פעילות הוועדה הוא למשך שישה שבועות נוספים'.",
+        "question": "לכמה זמן נוסף הוחלט להאריך את תוקף פעילותה של ועדת המשנה לתקציב הספורט?"
+    },
+    {
+        "uuid": "f38ffc0e",
+        "reasoning": "The specific hormones released during aerobic exercise that cause a good feeling (the \"high\") are explicitly named in the paragraph discussing the benefits of aerobic activity.",
+        "question": "אילו הורמונים המשתחררים במהלך פעילות אירובית אחראים לתחושה הטובה שלאחר האימון?"
+    },
+    {
+        "uuid": "4baf65df",
+        "reasoning": "The name of the hacker group that claimed responsibility for the cyber attack is explicitly stated in the second paragraph.",
+        "question": "מהו שמה של קבוצת ההאקרים שלקחה אחריות על מתקפת הסייבר נגד חברת שירביט?"
+    },
+    {
+        "uuid": "f641cc33",
+        "reasoning": "The specific individual who presented the recordings about fake COVID-19 tests on the show 'HaTzinor' is explicitly named in the first sentence of the fourth paragraph.",
+        "question": "מי הביא לתוכנית \"הצינור\" את ההקלטות המעידות על כך שנוסעים נכנסים לנתב\"ג עם בדיקות קורונה מזויפות?"
+    },
+    {
+        "uuid": "3c815608",
+        "reasoning": "The text explicitly names the chef who manages the kitchen of 'Malka Grill and Tavshil' in the paragraph discussing the standout kitchen ('המטבח מנוהל על ידי השף – אוהד ונסו').",
+        "question": "מה שמו של השף שעומד בראש המטבח של מסעדת \"מלכה גריל ותבשיל\"?"
+    },
+    {
+        "uuid": "7e091245",
+        "reasoning": "The exact number of toys that could be returned is explicitly stated in the sentence: 'החדשות הרעות עבור בת'אני היו שרק 4 מתוך 13 הצעצועים היו ניתנים להחזרה.'",
+        "question": "כמה מתוך הצעצועים שהוזמנו התאפשר לאם להחזיר?"
+    },
+    {
+        "uuid": "02dcd80f",
+        "reasoning": "The age range of Ian Batten's grandchildren is explicitly stated in the sixth paragraph ('הנכדים של באטן, חבורה מגוונת של בני 15-4...').",
+        "question": "מהו טווח הגילים של נכדיו של איאן באטן, כפי שמצוין בטקסט?"
+    },
+    {
+        "uuid": "4b420540",
+        "reasoning": "The specific building whose windows reflected the sunlight observed by Malus is explicitly named in the second sentence of the 'רקע התגלית' (Discovery Background) section.",
+        "question": "מחלונותיו של איזה ארמון הוחזר אור השמש שבו צפה מאלוס בעזרת גביש הקלציט?"
+    },
+    {
+        "uuid": "c8b0b109",
+        "reasoning": "The specific ministers who took charge of promoting the open skies plan are explicitly named in the first sentence of the second paragraph.",
+        "question": "אילו שרים קיבלו לידיהם את האחריות לקידום המתווה לפתיחת השמיים?"
+    },
+    {
+        "uuid": "dfb4318f",
+        "reasoning": "The text explicitly mentions the design inspiration for the 'Imperial Red' bar in the eighth paragraph, stating it was inspired by the famous jazz clubs of New Orleans.",
+        "question": "אילו מקומות שימשו כמקור השראה לעיצובו של הבר היוקרתי \"אימפריאל רד\"?"
+    }
+]

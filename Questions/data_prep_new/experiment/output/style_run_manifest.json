@@ -1,0 +1,16 @@
+{
+  "input": "data_prep_3/experiment/question_and_levels.json",
+  "models": [
+    "anthropic/claude-sonnet-4.6",
+    "google/gemini-3.1-pro-preview"
+  ],
+  "output_dir": "data_prep_3/experiment/output",
+  "counts": {
+    "anthropic_claude_sonnet_4_6": 103,
+    "google_gemini_3_1_pro_preview": 103
+  },
+  "errors": {
+    "anthropic_claude_sonnet_4_6": 0,
+    "google_gemini_3_1_pro_preview": 0
+  }
+}

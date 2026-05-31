@@ -1,0 +1,53 @@
+[
+  {
+    "text": "[S1] העירייה הודיעה על קיצור שעות הקבלה. [S2] ההודעה נומקה במחסור בכוח אדם. [S3] במקביל הושקה מערכת תורים דיגיטלית. [S4] המערכת מאפשרת לקבוע תור מראש ולצמצם עומסים.",
+    "good": {
+      "reasoning": "Requires combining [S1]-[S2] with [S3]-[S4]: policy change and compensating mechanism are in separate parts.",
+      "question": "איזה פתרון הציגה העירייה כדי להתמודד עם העומס שנוצר בעקבות קיצור שעות הקבלה?",
+      "answer_spans": [
+        "העירייה הודיעה על קיצור שעות הקבלה."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "לאור המחסור בכוח אדם ובהתאם למהלך הדיגיטלי החדש, איזה פתרון הוצג?",
+        "why": "Premise-stacking creates unnecessary heaviness."
+      }
+    ]
+  },
+  {
+    "text": "[S1] החברה העלתה את מחיר המנוי החודשי. [S2] בהמשך נמסר כי נוספו 24/7 תמיכה טכנית ושירות צ'אט מהיר. [S3] לקוחות ותיקים יקבלו חודש הסתגלות ללא תוספת.",
+    "good": {
+      "reasoning": "Requires bridging [S1] with [S2]: pricing decision and added services must be connected.",
+      "question": "אילו שדרוגי שירות הוצגו כהצדקה לעליית מחיר המנוי?",
+      "answer_spans": [
+        "החברה העלתה את מחיר המנוי החודשי."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "מה היו השדרוגים, אשר הוצגו כהצדקה לעליית מחיר המנוי?",
+        "why": "Redundant clause and stilted phrasing."
+      }
+    ]
+  },
+  {
+    "text": "[S1] ועדת התחבורה המליצה להגביל כניסת משאיות למרכז העיר בשעות הבוקר. [S2] בדוח אחר צוין שבתי הספר באזור מדווחים על עומסי תנועה חמורים בשעות 7:00-8:30.",
+    "good": {
+      "reasoning": "Needs integration between recommendation in [S1] and school-hour congestion data in [S2].",
+      "question": "איך נתוני העומס ליד בתי הספר מחזקים את המלצת הוועדה לגבי כניסת משאיות בבוקר?",
+      "answer_spans": [
+        "ועדת התחבורה המליצה להגביל כניסת משאיות למרכז העיר בשעות הבוקר."
+      ],
+      "expected_answer_spans_level0": []
+    },
+    "avoid": [
+      {
+        "question": "כיצד משתקף, באופן מהותי ורחב, הקשר המערכתי בין ההמלצה לבין הדוח?",
+        "why": "Over-abstract for level 2."
+      }
+    ]
+  }
+]

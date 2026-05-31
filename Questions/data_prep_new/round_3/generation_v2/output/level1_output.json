@@ -1,0 +1,530 @@
+[
+  {
+    "uuid": "article_028_115269",
+    "question": "מה מטרתה של זכוכית צבעונית בבקבוקים?",
+    "reasoning": "The text explicitly states the purpose of using colored glass for bottles in a single sentence.",
+    "answer_spans": [
+      "תפקידה של זכוכית צבעונית הוא לסנן את קרני השמש בדרכן אל תכולת הבקבוק, כדי להגן עליה משינויים כימיים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_014_2043695",
+    "question": "מדוע התעורר ויכוח סביב ההיסטוריות של האיליאדה?",
+    "reasoning": "The text explicitly states the reason for the debate regarding the historicity of the Iliad in a single sentence.",
+    "answer_spans": [
+      "מכיוון שממצאים ארכאולוגיים מאוחרים יותר מראים שהיצירה התבססה על אירוע אמיתי כלשהו."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_025_1989382",
+    "question": "באיזה ספר מופיעה הגרסה המוקדמת ביותר של אגדת דנגון?",
+    "reasoning": "The text explicitly states the source of the earliest documented version of the Dangun legend in a single sentence.",
+    "answer_spans": [
+      "הגרסה המוקדמת המתועדת ביותר של אגדת דנגון מופיעה בסאמגוק יוסה מהמאה ה-13."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_047_2470769",
+    "question": "כיצד משפיעה אוריינות פוליטית על יחס האזרחים למוסדות השלטון?",
+    "reasoning": "The text explicitly states the effect of political literacy on citizens' attitude towards government institutions in the first paragraph.",
+    "answer_spans": [
+      "הגברת אמון האזרחים במוסדות השלטון"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_166_2451856",
+    "question": "איזה תנאי חייב לקיים הדחף ההתחלתי כדי שהרקטה תצליח להמריא?",
+    "reasoning": "The text explicitly states the condition required for the rocket's initial thrust to enable takeoff in the first sentence of the second paragraph.",
+    "answer_spans": [
+      "על מנת שהרקטה תוכל בכלל להמריא, הדחף ההתחלתי המינימלי צריך להיות גדול ממשקלה העצמי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_080_2506194",
+    "question": "מי ניסח את הביקורת המוכרת ביותר נגד ההוכחה של גדל?",
+    "reasoning": "The text explicitly identifies Jordan Howard Sobel as the author of the most famous criticism of the proof. The question uses synonyms ('ניסח', 'המוכרת') to avoid mirroring the exact phrasing of the source ('הועלתה על ידי', 'המפורסמת').",
+    "answer_spans": [
+      "הביקורת המפורסמת ביותר על ההוכחה הועלתה על ידי ג'ורדן הווארד סובל, אשר הראה כי האקסיומות של גדל חזקות מדי ומובילות למה שמכונה קריסה מודאלית (Modal Collapse)."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_269_2459185",
+    "question": "כיצד נמדד עושר של מדינה על פי גישת המרקנטיליזם?",
+    "reasoning": "The text explicitly states how mercantilism measures a nation's wealth in a single local span.",
+    "answer_spans": [
+      "המרקנטיליזם גרס כי עושרה של אומה נמדד בכמות ההון שלה – מטילי זהב וכסף וערך הסחר המצטבר"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_308_2419639",
+    "question": "איזו תוכנית ניצחה בתחרות CASP13?",
+    "reasoning": "The winner of the CASP13 competition is explicitly stated in the first sentence of the 'AlphaFold' section.",
+    "answer_spans": [
+      "בדצמבר 2018, CASP13 עשה כותרות כאשר AlphaFold, תוכנית בינה מלאכותית שפותחה על ידי DeepMind, ניצחה בתחרות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_204_1271288",
+    "question": "מה פיתחו החוקרים מקליבלנד קליניק באוהיו כדי לסייע באבחון סרטן?",
+    "reasoning": "The text explicitly mentions that scientists from the Cleveland Clinic in Ohio developed a blood test for early cancer detection. The question asks what they developed, using synonyms like 'חוקרים' (researchers) instead of 'מדענים' (scientists) and 'אבחון' (diagnosis) instead of 'גילוי' (detection) to avoid lexical mirroring.",
+    "answer_spans": [
+      "בדיקת דם שתאפשר גילוי מוקדם של סרטן."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_331_2128587",
+    "question": "איזה אחוז מהספרים שחברות סרטים קונות את זכויותיהם מגיע למסך הגדול?",
+    "reasoning": "The percentage of books that make it to the big screen after their rights are bought is explicitly stated in the 'בקולנוע' section.",
+    "answer_spans": [
+      "פחות משני אחוזים מכל הספרים שזכויותיהם נקנות על ידי חברות סרטים מגיעים למעשה למסך הגדול."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_421_1090966",
+    "question": "היכן ממוקמת כיום הפקולטה לכימיה?",
+    "reasoning": "The current location of the faculty is explicitly stated in the history section. The question uses natural phrasing ('ממוקמת כיום') to avoid mirroring the source text ('שוכנת עד היום').",
+    "answer_spans": [
+      "בשנת 1964 המחלקה לכימיה עברה לקומפלקס הבניינים על שם ברנשטיין, קנדה וקומפטון, בו היא שוכנת עד היום."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_456_2142372",
+    "question": "למי נהוג לייחס את המצאתם של קווי ההפרדה בכביש?",
+    "reasoning": "The text explicitly names the person credited with inventing lane markings. The question uses synonyms ('קווי ההפרדה בכביש' instead of 'סימון נתיבים', and 'נהוג לייחס' instead of 'זוכה לזכותו') to avoid lexical mirroring while maintaining a Level 1 explicit retrieval target.",
+    "answer_spans": [
+      "לפיכך, יו\"ר ועדת הכבישים דאז, אדוארד נ. היינס, זוכה לזכותו כממציא סימון נתיבים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_480_1425475",
+    "question": "מדוע יש לאמנים חופש פעולה רב בבחירת הצבעים של היצור?",
+    "reasoning": "The text explicitly explains the reason for the artist's creative freedom regarding coloring in a single clause, which can be queried without mirroring the exact terms 'חירות אמנותית' or 'צביעת הציור'.",
+    "answer_spans": [
+      "מאחר שברוב המקרים לא נשמר במאובנים מידע על צבע העור של בעל-החיים"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_24_ptv_619219",
+    "question": "מי מונתה לעמוד בראש ועדת המשנה לנגישות עירונית?",
+    "reasoning": "The text explicitly states the name of the Knesset member appointed to head the new subcommittee in a single sentence.",
+    "answer_spans": [
+      "אני מאשרת בזאת את הקמת ועדת המשנה לעניין נגישות עירונית בראשותה של חברת הכנסת שירלי פינטו"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_321_779269",
+    "question": "לאן יש לשפוך מים קדושים על פי הנצרות?",
+    "reasoning": "The specific rule for disposing of holy water in Christianity is explicitly stated in the final sentence of the Christianity section.",
+    "answer_spans": [
+      "בנצרות אין לשפוך מים קדושים לביוב ויש לשפוך אותם ישירות על האדמה, או לתוך מערכת מים המובילה אותם אל האדמה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "bikoret_17_ptv_133868",
+    "question": "באילו מתקני כליאה יחולו התקנות על עציר צבאי?",
+    "reasoning": "The text explicitly states in a single sentence the specific holding facilities where the regulations apply to a military detainee.",
+    "answer_spans": [
+      "עציר צבאי שנמצא במתקן כליאה של המשטרה או של שירות בתי הסוהר חלים עליו התקנות האלה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "business-10689001",
+    "question": "כמה בארות יקודחו בשדה כריש בשנת 2019?",
+    "reasoning": "The number of wells to be drilled in the Karish field in 2019 is explicitly stated in the seventh paragraph.",
+    "answer_spans": [
+      "במהלך 2019, ייקדחו שלוש בארות בשדה כריש, באמצעות ספינת הקידוח Stena Forth."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "business-6992875",
+    "question": "איזה סוג נכס הוא המבוקש ביותר בטבריה?",
+    "reasoning": "The most demanded property type is explicitly stated in a single sentence under the 'הכי מבוקשות' section.",
+    "answer_spans": [
+      "דירות 4 חדרים הן הנכס המבוקש ביותר בטבריה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_379_1901621",
+    "question": "באיזו שנה הופיעה המילה בדפוס לראשונה?",
+    "reasoning": "The year the word first appeared in print is explicitly stated in the first sentence of the History section.",
+    "answer_spans": [
+      "המילה הופיעה בדפוס לראשונה כבר בשנת 1953"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "culture-13303144",
+    "question": "לאיזו דמות מושווית דמותו של גאורגי?",
+    "reasoning": "The comparison of Georgi's character to Vito Corleone is explicitly stated in a single sentence.",
+    "answer_spans": [
+      "דמותו של הבורר גאורגי מוצגת באופן דומה לזו של הסנדק ויטו קורליאונה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "culture-7289906",
+    "question": "כמה זמן ארכה החקירה הפנימית של אנשי מערכת העיתון?",
+    "reasoning": "The duration of the internal investigation conducted by the newspaper's staff is explicitly stated in a single sentence.",
+    "answer_spans": [
+      "לאחר שעומתו עם הממצאים הבעייתיים, החלו אנשי מערכת העיתון בחקירה פנימית מדוקדקת שארכה כחודשיים, ובסופה הודו ביום שישי האחרון בהצהרה ששוחררה לתקשורת, כי הפרשה שהתפוצצה היא תוצר של כשל מערכתי חמור שהיה אמור להיעצר בשלבים מוקדמים על ידי גורמים בכירים במערכת, וכי העיתון לוקח על כך אחריות מלאה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "gender_19_ptv_571615",
+    "question": "באיזה רוב אושרה הצעת החוק בוועדה?",
+    "reasoning": "The voting result on the bill is explicitly stated in a single short sentence by the committee chair.",
+    "answer_spans": [
+      "הצעת החוק אושרה פה אחד."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "general-8573552",
+    "question": "כמה כסף מציעה ארצות הברית למי שיסגיר לידיה את אחמד עומאר?",
+    "reasoning": "The reward amount offered by the US for the extradition of Ahmed Omar is explicitly stated in a single sentence in the fifth paragraph.",
+    "answer_spans": [
+      "מי שירש את תפקיד \"אמיר אל-שבאב\" הוא אחמד עומאר וגם הוא נחשב ליעד אסטרטגי של ארצות הברית, שמציעה 6 מיליון דולר למי שיסגיר אותו לידיה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "general-10808722",
+    "question": "כמה יעדים תקף חיל האוויר ברצועת עזה בתגובה לפיגוע?",
+    "reasoning": "The number of targets attacked by the Air Force is explicitly stated in a single sentence in the text.",
+    "answer_spans": [
+      "בתגובה לפיגוע החמור ביותר מאז צוק איתן, תקף גם חיל האוויר את התקיפה הכי מסיבית שלו מאז צוק איתן: 18 יעדים ברחבי הרצועה, ובראשם תוואי מנהרה שיצאה מהפאתים המזרחיים של זייתון, ונועדה לחדור לישראל."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "health-9027173",
+    "question": "מהו שיעור הנכות הפסיכיאטרית שנקבע לתובע?",
+    "reasoning": "The percentage of the plaintiff's psychiatric disability is explicitly stated in a single sentence in the fifth paragraph.",
+    "answer_spans": [
+      "בנוסף מומחה לפסיכיאטריה בדק את מ' וקבע כי נותרה לו נכות צמיתה פסיכיאטרית בשיעור 50%."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "judaism-7785520",
+    "question": "כמה גולשים נרשמו לשירות בעקבות ההשקה השקטה בארצות הברית?",
+    "reasoning": "The number of users who registered after the soft launch in the US is explicitly stated in a single sentence.",
+    "answer_spans": [
+      "אחרי שהושק בארה\"ב בהשקה שקטה, ללא פרסום, כבר נרשמו יותר מ-42,000 גולשים לשירות החינמי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "magazine-13167302",
+    "question": "מי עומד בראש ועדת הבחירות של הסתדרות המורים?",
+    "reasoning": "The head of the election committee is explicitly named in the second paragraph.",
+    "answer_spans": [
+      "יום לפני הבחירות להנהגת הסתדרות המורים, הנחשבת לאחד מארגוני העובדים החזקים במדינה (150 אלף חברים), עדיין מרחף צל כבד על טוהר הבחירות ועל טוהר ההליך הדמוקרטי שעליו מפקחת ועדת בחירות בראשות שופט שלום בדימוס, יעקב שמעוני."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "magazine-1765009",
+    "question": "איזה חבר כנסת אמר שהוא בטוח שיוכל להביא את החרדים לתוך ממשלת השינוי?",
+    "reasoning": "The identity of the MK who expressed certainty about bringing the Haredi parties into the change government is explicitly stated in the second paragraph.",
+    "answer_spans": [
+      "לאחרונה אמר ח\"כ זאב אלקין (תקווה חדשה) לבני שיחו כי הוא בטוח שיוכל להביא את החרדים אל תוך ממשלת השינוי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-13239192",
+    "question": "איזה סוג שתייה מותר להגיש בצהרונים?",
+    "reasoning": "The allowed type of beverage is explicitly stated in a single sentence in the text.",
+    "answer_spans": [
+      "כמו כן, אין להגיש שתייה ממותקת אלא מי ברז בלבד."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14079008",
+    "question": "באיזו תדירות יחויבו בתי החולים לדווח למשרד הבריאות על התורים לניתוחים?",
+    "reasoning": "The frequency of the required reports is explicitly stated in the fourth paragraph.",
+    "answer_spans": [
+      "ההוראות הועברו בימים האחרונים ולפיהן יחויבו כל בתי החולים בארץ להעביר את הדיווחים למשרד הבריאות בכל חצי שנה, החל מינואר 2014."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_hagana_20_ptv_313853",
+    "question": "איזה רצף תווים לועזיים מופיע בתחילת הטקסט?",
+    "reasoning": "The provided text is a binary file dump containing mostly garbled characters. The distinct sequence of Latin characters and symbols 'bjbjµyµy' is explicitly located near the beginning of the text.",
+    "answer_spans": [
+      "bjbjµyµy"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-10305289",
+    "question": "למה הדרך של הפועל באר שבע לליגת האלופות תהיה קשה יותר העונה?",
+    "reasoning": "The text explicitly lists the reasons why the team's path to the Champions League will be harder this season in the seventh paragraph.",
+    "answer_spans": [
+      "בשל שינוי שיטת המוקדמות והעובדה שאלופת ישראל תצטרך לעבור ארבעה סיבובים וגם תתמודד מול יריבות חזקות יותר."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-9420006",
+    "question": "כמה ריבאונדים לקחה מכבי תל אביב במשחק?",
+    "reasoning": "The total number of rebounds taken by Maccabi is explicitly stated in a single sentence in the second paragraph.",
+    "answer_spans": [
+      "מכבי לקחה שיא יורוליג עונתי של 54 ריבאונד."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_exut_18_ptv_138988",
+    "question": "איזה גוף מייצגת אירה רוזיו בדיון?",
+    "reasoning": "The text explicitly states the affiliation of the speaker in the list of attendees.",
+    "answer_spans": [
+      "אירה רוזיו – משטרת ישראל"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "travel-3782570",
+    "question": "מתי תיכנס לתוקף ההחלטה להרחיב את רשימת המדינות המחייבות בידוד?",
+    "reasoning": "The effective date of the committee's decision is explicitly stated in the third paragraph.",
+    "answer_spans": [
+      "ההחלטה תיכנס לתוקף החל משישי הקרוב (7 באוגוסט)."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "tech-9630944",
+    "question": "איזה הורמון מעודד פעילות ומצב רוח טוב?",
+    "reasoning": "The text explicitly identifies serotonin as the hormone responsible for encouraging activity and good mood in the second paragraph.",
+    "answer_spans": [
+      "סרוטונין, ההורמון שמעודד פעילות ומצב רוח טוב"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_hagana_19_ptv_301845",
+    "question": "איזו ישיבה פותח דוד צור?",
+    "reasoning": "The text explicitly states the name of the committee meeting that David Tzur is opening.",
+    "answer_spans": [
+      "אני פותח את ישיבת ועדת הפנים והגנת הסביבה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xinux_tarbut_sport_18_ptv_174020.",
+    "question": "אילו עבירות פליליות נקבעות בסעיפים 9 ו-13 לחוק?",
+    "reasoning": "The text explicitly states that sections 9 and 13 define criminal offenses related to employing a private investigator or security guard without a license.",
+    "answer_spans": [
+      "בסעיף 9 ובסעיף 13 קובעים עבירות פליליות של העסקת חוקר פרטי או מאבטח ללא רישיון"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuc_bitaxon_20_ptv_596830",
+    "question": "איזה רצף אותיות באנגלית מופיע בתחילת המסמך?",
+    "reasoning": "The provided text is a corrupted binary file dump (likely a .doc file) where most Hebrew characters are unreadable or interleaved with null bytes. However, the English string 'bjbj' (a common magic number/header in Microsoft Word documents) appears explicitly near the beginning.",
+    "answer_spans": [
+      "bjbj"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuka_18_ptv_139626",
+    "question": "עד איזה תאריך הוארך תוקף התקנות?",
+    "reasoning": "The exact date until which the regulations are extended is explicitly stated in the text.",
+    "answer_spans": [
+      "16 באוגוסט 2010."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_348_113744",
+    "question": "כיצד מפיקים צלילים עיליים ברוב כלי הנשיפה?",
+    "reasoning": "The method for producing overtones in wind instruments is explicitly stated in a single sentence in the text.",
+    "answer_spans": [
+      "ברוב כלי הנשיפה ניתן להפיק צלילים עיליים על ידי נשיפה חזקה יותר לתוך הכלי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_briut_17_ptv_132585",
+    "question": "באיזו שעה ננעלה הישיבה?",
+    "reasoning": "The exact time the meeting was adjourned is explicitly stated at the end of the transcript in a single local span.",
+    "answer_spans": [
+      "הישיבה ננעלה בשעה 12:30"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "kalkala_18_ptv_140754",
+    "question": "מהו מספר הפרוטוקול של הישיבה?",
+    "reasoning": "The protocol number is explicitly stated at the beginning of the document in a single local span.",
+    "answer_spans": [
+      "פרוטוקול מס' 274"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "knesset_20_ptv_312940",
+    "question": "איזה רצף של ארבע אותיות באנגלית מופיע בתחילת הטקסט?",
+    "reasoning": "The input text is a corrupted binary file dump containing almost no legible text. The English string 'bjbj' appears clearly near the beginning, making it the only viable target for an explicit retrieval question.",
+    "answer_spans": [
+      "bjbj"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "ksafim_17_ptv_133249",
+    "question": "מה היה תקציב הרשות לקידום מעמד האישה בשנת 2005?",
+    "reasoning": "The text explicitly states the budget of the Authority for the Advancement of the Status of Women in 2005 in a single sentence.",
+    "answer_spans": [
+      "בשנת 2005 התקציב של הרשות לקידום מעמד האישה היה 55 מיליון שקלים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "aliya_klita_tfucot_17_ptv_136706",
+    "question": "מי מציע את החוק הנידון בוועדה?",
+    "reasoning": "The text explicitly states the role of Ze'ev Elkin in the list of attendees: 'זאב אלקין - מציע החוק'.",
+    "answer_spans": [
+      "זאב אלקין - מציע החוק"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pnim_exut_18_ptv_173897.",
+    "question": "כמה תיירים מבליז הגיעו לישראל בין שנת 2005 לסוף יוני 2011?",
+    "reasoning": "The exact number of tourists from Belize who arrived in Israel during the specified timeframe is explicitly stated in Michal Yosefov's response.",
+    "answer_spans": [
+      "משנת 2005 ועד סוף יוני 2011 הגיעו 75 תיירים מבליז."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  },
+  {
+    "uuid": "bikoret_20_ptv_341733",
+    "question": "איזה תפקיד מילא יולי אדלשטיין לפני שנבחר ליושב-ראש הכנסת?",
+    "reasoning": "The text explicitly states Edelstein's previous role in the sentence where he says 'Before I was elected to the position of Speaker of the Knesset I was, as is known, the Minister of Public Diplomacy' (שר ההסברה).",
+    "answer_spans": [
+      "לפני שנבחרתי לתפקיד יושב-ראש הכנסת הייתי, כידוע, שר ההסברה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini"
+  }
+]

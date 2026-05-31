@@ -1,0 +1,53 @@
+[
+  {
+    "text": "[S1] העירייה פתחה מרכז למידה חדש בשכונה. [S2] המרכז יפעל שלושה ערבים בשבוע. [S3] לא פורסמו נתוני השתתפות ראשוניים.",
+    "good": {
+      "reasoning": "[Level 0 + Level 3 style] The question is evaluative/predictive in tone, but the needed baseline data is absent, so the claim cannot be grounded in the text.",
+      "question": "מה מצביע על כך שהמרכז כבר יצר עלייה בהשתתפות תלמידים מהשכונה?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "העירייה פתחה מרכז למידה חדש בשכונה."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "מתי המרכז פתוח?",
+        "why": "Direct retrieval style (Level 1-like) and partially answerable."
+      }
+    ]
+  },
+  {
+    "text": "[S1] החברה הודיעה על מדיניות עבודה היברידית חדשה. [S2] העובדים יוכלו לעבוד מהבית יומיים בשבוע. [S3] לא הוצגו נתוני תפוקה מאז השינוי.",
+    "good": {
+      "reasoning": "[Level 0 + Level 3 style] The question seeks evidence-based judgment, but no productivity evidence is provided in the passage.",
+      "question": "איזו עדות בטקסט מחזקת את הטענה שהמדיניות שיפרה את תפוקת הצוותים?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "החברה הודיעה על מדיניות עבודה היברידית חדשה."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "האם העובדים יכולים לעבוד מהבית יומיים בשבוע?",
+        "why": "Yes/no and directly answerable."
+      }
+    ]
+  },
+  {
+    "text": "[S1] המועצה הקימה פורום שיתוף ציבור לתכנון שכונתי. [S2] הפורום יתכנס אחת לחודש. [S3] לא נמסרו מדדים להצלחת ההליך.",
+    "good": {
+      "reasoning": "[Level 0 + Level 3 style] The question asks for argumentative support, but the text lacks measurable success indicators.",
+      "question": "על סמך מה ניתן לקבוע שהפורום כבר שיפר את איכות ההחלטות התכנוניות?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "המועצה הקימה פורום שיתוף ציבור לתכנון שכונתי."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "על פי הפורום ובהתאם למנגנון החודשי, על סמך מה ניתן לקבוע שהפורום כבר שיפר את איכות ההחלטות?",
+        "why": "Premise-heavy, awkward opening, and inflated style."
+      }
+    ]
+  }
+]

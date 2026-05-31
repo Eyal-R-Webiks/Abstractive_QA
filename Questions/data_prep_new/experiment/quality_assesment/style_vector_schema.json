@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "style_vector_schema.json",
+  "title": "Hebrew Question Style Vector",
+  "description": "Per-question style-focused vector for linguistic pattern mapping. Content/topic should be minimized.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "ls_id",
+    "level",
+    "question",
+    "style_features",
+    "style_embedding",
+    "model_meta"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "ls_id": {
+      "type": "integer"
+    },
+    "level": {
+      "oneOf": [
+        { "type": "integer", "enum": [0, 1, 2, 3] },
+        { "type": "string", "enum": ["0", "1", "2", "3"] }
+      ]
+    },
+    "question": {
+      "type": "string"
+    },
+    "style_features": {
+      "type": "object",
+      "required": [
+        "length_chars",
+        "length_tokens",
+        "avg_token_len",
+        "question_mark_count",
+        "comma_count",
+        "colon_count",
+        "semicolon_count",
+        "dash_count",
+        "quote_count",
+        "paren_count",
+        "conjunction_count",
+        "subordinator_count",
+        "relative_clause_markers",
+        "modal_markers",
+        "negation_markers",
+        "contrast_markers",
+        "causal_markers",
+        "condition_markers",
+        "comparison_markers",
+        "evidential_markers",
+        "pronoun_count",
+        "preposition_count",
+        "function_word_ratio",
+        "content_word_mask_ratio",
+        "type_token_ratio",
+        "repeated_token_ratio",
+        "max_token_repeat",
+        "interrogative_repetition_count",
+        "interrogative_family_repetition_count",
+        "function_word_repetition_ratio",
+        "question_word_type",
+        "question_opening_pattern",
+        "syntactic_complexity_band",
+        "information_structure_pattern",
+        "clause_count_estimate",
+        "argument_component_count",
+        "argumentative_density",
+        "premise_marker_count",
+        "claim_marker_count",
+        "detail_enumeration_markers",
+        "declarative_fragment_count",
+        "interrogative_fragment_count",
+        "declarative_to_interrogative_ratio",
+        "indicative_statement_density",
+        "register_band",
+        "formality_band",
+        "ambiguity_markers",
+        "meta_discourse_markers",
+        "explicit_constraint_markers",
+        "time_scope_markers",
+        "entity_reference_density",
+        "interrogative_force"
+      ],
+      "properties": {
+        "length_chars": { "type": "integer", "minimum": 0 },
+        "length_tokens": { "type": "integer", "minimum": 0 },
+        "avg_token_len": { "type": "number", "minimum": 0 },
+        "question_mark_count": { "type": "integer", "minimum": 0 },
+        "comma_count": { "type": "integer", "minimum": 0 },
+        "colon_count": { "type": "integer", "minimum": 0 },
+        "semicolon_count": { "type": "integer", "minimum": 0 },
+        "dash_count": { "type": "integer", "minimum": 0 },
+        "quote_count": { "type": "integer", "minimum": 0 },
+        "paren_count": { "type": "integer", "minimum": 0 },
+        "conjunction_count": { "type": "integer", "minimum": 0 },
+        "subordinator_count": { "type": "integer", "minimum": 0 },
+        "relative_clause_markers": { "type": "integer", "minimum": 0 },
+        "modal_markers": { "type": "integer", "minimum": 0 },
+        "negation_markers": { "type": "integer", "minimum": 0 },
+        "contrast_markers": { "type": "integer", "minimum": 0 },
+        "causal_markers": { "type": "integer", "minimum": 0 },
+        "condition_markers": { "type": "integer", "minimum": 0 },
+        "comparison_markers": { "type": "integer", "minimum": 0 },
+        "evidential_markers": { "type": "integer", "minimum": 0 },
+        "pronoun_count": { "type": "integer", "minimum": 0 },
+        "preposition_count": { "type": "integer", "minimum": 0 },
+        "function_word_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "content_word_mask_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "type_token_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "repeated_token_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "max_token_repeat": { "type": "integer", "minimum": 0 },
+        "interrogative_repetition_count": { "type": "integer", "minimum": 0 },
+        "interrogative_family_repetition_count": { "type": "integer", "minimum": 0 },
+        "function_word_repetition_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "question_word_type": {
+          "type": "string",
+          "enum": [
+            "who",
+            "what",
+            "which",
+            "when",
+            "where",
+            "why",
+            "how",
+            "how_many_or_much",
+            "yes_no",
+            "indirect_or_none"
+          ]
+        },
+        "question_opening_pattern": {
+          "type": "string",
+          "enum": [
+            "interrogative_word_initial",
+            "aux_or_modal_initial",
+            "noun_phrase_initial",
+            "prepositional_phrase_initial",
+            "subordinate_clause_initial",
+            "other"
+          ]
+        },
+        "syntactic_complexity_band": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "information_structure_pattern": {
+          "type": "string",
+          "enum": [
+            "single_focus",
+            "contrastive_focus",
+            "causal_chain",
+            "conditional_frame",
+            "comparison_frame",
+            "multi_constraint",
+            "other"
+          ]
+        },
+        "clause_count_estimate": { "type": "integer", "minimum": 1 },
+        "argument_component_count": { "type": "integer", "minimum": 0 },
+        "argumentative_density": { "type": "number", "minimum": 0, "maximum": 1 },
+        "premise_marker_count": { "type": "integer", "minimum": 0 },
+        "claim_marker_count": { "type": "integer", "minimum": 0 },
+        "detail_enumeration_markers": { "type": "integer", "minimum": 0 },
+        "declarative_fragment_count": { "type": "integer", "minimum": 0 },
+        "interrogative_fragment_count": { "type": "integer", "minimum": 0 },
+        "declarative_to_interrogative_ratio": { "type": "number", "minimum": 0 },
+        "indicative_statement_density": { "type": "number", "minimum": 0, "maximum": 1 },
+        "register_band": {
+          "type": "string",
+          "enum": ["colloquial", "neutral", "formal", "academic"]
+        },
+        "formality_band": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "ambiguity_markers": { "type": "integer", "minimum": 0 },
+        "meta_discourse_markers": { "type": "integer", "minimum": 0 },
+        "explicit_constraint_markers": { "type": "integer", "minimum": 0 },
+        "time_scope_markers": { "type": "integer", "minimum": 0 },
+        "entity_reference_density": { "type": "number", "minimum": 0 },
+        "interrogative_force": {
+          "type": "string",
+          "enum": ["factoid", "explanatory", "comparative", "inferential", "evaluative", "procedural", "other"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "style_embedding": {
+      "description": "Embedding computed on content-reduced question text (masked content words).",
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 64,
+      "maxItems": 2048
+    },
+    "model_meta": {
+      "type": "object",
+      "required": ["analyzer_model", "temperature", "prompt_version", "masking_mode"],
+      "properties": {
+        "analyzer_model": { "type": "string" },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 1 },
+        "prompt_version": { "type": "string" },
+        "masking_mode": {
+          "type": "string",
+          "enum": ["hard_content_mask", "soft_content_mask"]
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,152 @@
+[
+    {
+        "uuid": "55c6259b",
+        "reasoning": "Basis: The text claims the Israeli consumer was 'apathetic' regarding economic boycotts until 2011, citing failed attempts in 1973 and 1978. Conversely, it details prominent pre-2011 boycotts driven by religious, national, or health ideologies (Haredi boycotts, anti-German products, Remedia). Cognitive capacity: Synthesis and drawing conclusions. The reader must synthesize these contrasting historical facts to evaluate the 'apathy' claim, inferring that the Israeli public was actually highly mobilizable, but their hierarchy of values prioritized ideological and existential issues over purely economic ones until the 2011 shift.",
+        "question": "לאור הפער בין ההיענות לחרמות על רקע דתי, לאומי ובריאותי לבין כישלון שביתות הקונים בשנות השבעים, מה ניתן להסיק על סדר העדיפויות הערכי של הציבור הישראלי עד שנת 2011, וכיצד פער זה מאתגר את הקביעה שהצרכן הישראלי היה פשוט \"אדיש\"?"
+    },
+    {
+        "uuid": "2b838f42",
+        "reasoning": "The text explicitly states that the circle was formed for aesthetic-philosophical discussions, had no ideological prerequisites for joining, and Lukács claimed it was 'not a pre-Bolshevik assembly.' However, the text immediately follows this by detailing how almost all members became highly active officials in the Hungarian Soviet Republic (acting as commissars, nationalizing art, etc.) and had to flee when it fell. The cognitive capacity required here is synthesis (identifying a contradiction or tension) between the group's self-proclaimed apolitical, open intellectual identity and the unified, radical political reality its members ultimately enacted.",
+        "question": "איזה מתח עולה מן הכתוב בין הגדרתו העצמית של החוג כמרחב פילוסופי פתוח ונטול תנאים מקדימים, לבין המסלול ההיסטורי והפוליטי שבו בחרו רוב חבריו בסופו של דבר?"
+    },
+    {
+        "uuid": "011f8f15",
+        "reasoning": "Basis: The text contrasts traditional planning, which focuses on \"system performance\" (efficiency/engineering), with Martens' approach, which focuses on equitable accessibility, views transport as a \"basic good,\" and applies Rawls/Dworkin to assert government responsibility. Cognitive capacity: Synthesis and Abstraction. The reader must synthesize these disparate points to explain the paradigm shift—how redefining the metric of success from engineering efficiency to social equity fundamentally transforms the ethical and practical obligations of both the state and the planners.",
+        "question": "כיצד המעבר ממיקוד ב\"ביצועי המערכת\" להתייחסות אל נגישות תחבורתית כאל \"מוצר יסוד\" משנה את תפיסת האחריות המוטלת על המדינה ועל מתכנני התחבורה?"
+    },
+    {
+        "uuid": "3d791eba",
+        "reasoning": "Basis: The text explains that the final step of the extraction process involves removing the solvent via evaporation or heating to isolate the target substance. Later, it lists common solvents alongside their specific boiling points, which are notably low (34.6°C to 68.5°C). Cognitive capacity: Synthesis and inference. The reader must connect the procedural necessity of evaporating the solvent with the provided physical data to deduce that a low boiling point is a deliberately chosen, critical property for these solvents, even though the text never explicitly states this causal relationship.",
+        "question": "כיצד השלב הסופי של בידוד החומר המבוקש מכתיב את בחירת התכונות הפיזיקליות של הממסים, כפי שמשתקף בדוגמאות המובאות בטקסט?"
+    },
+    {
+        "uuid": "b441256c",
+        "reasoning": "The text presents a tension regarding public safety: on one hand, road diets reduce daily traffic accidents (saving lives in routine scenarios); on the other hand, they can hinder emergency vehicles and mass evacuations (costing lives in extreme emergencies, as seen in the Paradise fire). The question requires the reader to synthesize these opposing arguments to identify the underlying paradox of 'safety' and the conflict between everyday urban planning and disaster management.",
+        "question": "איזה פרדוקס עולה מהטקסט לגבי השפעתה של 'דיאטת כביש' על חיי אדם, וכיצד הוא משתקף בפער שבין תכנון עירוני לשגרה לבין היערכות למצבי קיצון?"
+    },
+    {
+        "uuid": "a39f90c9",
+        "reasoning": "The text contrasts theoretical physicists, who use heuristic or intuitive arguments to align theories with experimental observations, with mathematical physicists, who demand strict mathematical rigor and often expose theoretical solutions as incomplete or naive. The cognitive capacity required is synthesis (evaluating a stance/drawing a conclusion): the reader must abstract this contrast to infer that the two disciplines hold fundamentally different epistemological criteria for what constitutes a valid, 'solved' scientific model.",
+        "question": "מה ניתן ללמוד מהפער בין גישתו של הפיזיקאי התאורטי לזו של הפיזיקאי המתמטי על האופן השונה שבו כל דיסציפלינה מגדירה מהו פתרון מדעי שלם ותקף?"
+    },
+    {
+        "uuid": "f610be1c",
+        "reasoning": "Basis: The text details how Ars Poetica manifests through showing the writing process (Bialik), the physical tools (Picasso's pencils), the production phase (Almodovar's film about a film), and the internal psychological split (Borges). Cognitive capacity: Synthesis / Abstraction. The reader must abstract these specific examples to conclude that Ars Poetica serves to dismantle the traditional boundary between the hidden labor (both technical and emotional) and the final artistic product presented to the audience.",
+        "question": "מה ניתן להסיק מתוך שלל הדוגמאות בטקסט על האופן שבו הארס-פואטיקה מפרקת את ההפרדה המקובלת שבין תהליך העבודה – הטכני והנפשי – לבין התוצר האמנותי הסופי?"
+    },
+    {
+        "uuid": "67413fb2",
+        "reasoning": "Cognitive capacity: Synthesis and abstraction (identifying an underlying conceptual tension). Textual basis: The text defines mythopoeia early on as an 'artificial mythology' that does not develop 'naturally' (citing Dundes). However, later sections (citing Campbell and examples like Star Wars and Superman) demonstrate that these highly conscious, authored constructs are actually functioning to fulfill a 'primal need' and are replacing ancient, organic religious frameworks in the modern world. The reader must synthesize these distinct parts to recognize the inherent paradox: a deliberately artificial creation is being used to satisfy a deep, organic human need for sacred tradition.",
+        "question": "איזה מתח מהותי חושף הטקסט בין הגדרתה של המיתופואיה כיצירה מלאכותית ומודעת לעצמה, לבין הצורך האנושי והתרבותי שהיא באה לשרת בעידן המודרני?"
+    },
+    {
+        "uuid": "e38d208e",
+        "reasoning": "Basis: Gideon Sa'ar's comment \"זה יכול להשיג אפילו את ההיפך, שהדבר הזה כאילו לא מובן במצב המשפטי הנוכחי\" and Halit Megido's explanation that \"שמירת הריון כבר נכלל בתוך היריון\". Cognitive capacity: Spotting a paradox/Evaluating legal implications (הערכת השלכות משפטיות). The question requires understanding that explicitly adding a sub-category might imply that the broader category (pregnancy) didn't already cover it, thus weakening existing protections.",
+        "question": "מדוע התוספת של \"שמירת היריון\" לחוק עלולה, באופן פרדוקסלי, להחליש את ההגנה על נשים בהיריון?"
+    },
+    {
+        "uuid": "301962cc",
+        "reasoning": "Basis: The text details how different Jewish sects explain the Holocaust (e.g., Haredim blaming secularization, Religious Zionists viewing it as a catalyst for Aliyah, and Satmar blaming the premature attempt to end the exile). Cognitive capacity: Synthesis and Abstraction. The reader must recognize the overarching pattern that these theological explanations are not objective deductions, but rather retroactive applications of each group's pre-existing ideological and political agenda to make sense of the historical trauma.",
+        "question": "כיצד ממחישות הסיבות השונות שניתנו לשואה על ידי הזרמים השונים (כגון עונש על התבוללות, הכרח לעלות לארץ ישראל או עונש על הפרת 'שלוש השבועות') את האופן שבו תאולוגיה משמשת ככלי לאשרור והצדקה של תפיסות עולם ואידיאולוגיות קיימות?"
+    },
+    {
+        "uuid": "f8976828",
+        "reasoning": "Basis: Margalit and Bar-Lev demand shortening the temporary provision to force the advancement of a permanent Cyber Law. Dichter agrees to the earlier deadline (Dec 2018) to achieve consensus, but immediately notes that if they fail to meet it, they can simply extend the temporary provision again. Cognitive capacity: Synthesis and identifying an underlying tension. The reader must infer the gap between the members' attempt to use deadlines as a strict forcing mechanism and the chairman's pragmatic view of deadlines as flexible, motivational tools rather than absolute constraints.",
+        "question": "כיצד משתקף הפער בין הניסיון של חברי הוועדה לכפות לוח זמנים נוקשה לחקיקה, לבין המציאות הפרגמטית של הכנסת, מתוך האופן שבו דיכטר מתייחס לפשרה על תאריך היעד?"
+    },
+    {
+        "uuid": "01c015ec",
+        "reasoning": "Basis: The text explicitly states that the raw materials are \"personal digital documentation\" and \"private conversations\" (WhatsApp messages), yet the organization's goal is to transform them into a \"historical and research raw material\" and a public \"digital monument.\" The methods used to manage this transition include ethical protocols, masking third parties, creating different access levels, and journalistic editing. Cognitive capacity: Synthesis and Abstraction (סינתזה והפשטה). The reader must identify the unstated core tension (the clash between private intimacy and public/historical exposure) and synthesize the various technological and ethical mechanisms the NGO employs to resolve it.",
+        "question": "כיצד מתמודדת העמותה עם המתח המובנה שבין אופיו האינטימי והפרטי של חומר הגלם לבין ייעודו כנכס היסטורי וציבורי, כפי שניתן להסיק משיטות הפעולה שלה?"
+    },
+    {
+        "uuid": "be771981",
+        "reasoning": "Basis: Odelia Edri's explanation that the delay in implementing the minor's address registration is due to the 'marathon' of implementing the Biometric Law, which consumes IT and training resources. Cognitive capacity: Synthesis and Abstraction (סינתזה והפשטה). The reader must abstract this specific excuse to understand the broader bureaucratic 'domino effect' where a massive, unrelated national project creates a bottleneck that delays basic social/civil legislation.",
+        "question": "כיצד ממחיש הדיון את 'אפקט הדומינו' הביורוקרטי, שבו התגייסות המערכת לפרויקט לאומי מורכב מעכבת בעקיפין את מימושן של זכויות אזרחיות פשוטות בתחומים אחרים?"
+    },
+    {
+        "uuid": "13dc6a45",
+        "reasoning": "Basis: Gafni's explanation of the committee's authority to split and advance legislation independently of the Arrangements Law timeline, contrasted with Levy-Abekasis's concern about the Knesset Speaker's directive against discussing split topics before the budget. Cognitive capacity: Evaluating a stance/justification (הערכת עמדה) - understanding the procedural distinction Gafni makes to legitimize his action despite the apparent contradiction with the Speaker's rule.",
+        "question": "מדוע גפני מאשר את פיצול החוק למרות החשש שהעלתה לוי אבקסיס לגבי תקדים של עקיפת נהלים?"
+    },
+    {
+        "uuid": "f1c8d59b",
+        "reasoning": "Cognitive capacity: Abstraction and synthesis (הפשטה וסינתזה). The reader must abstract a broader conceptual theme—the tension between theoretical legal purity and practical utility—from a specific legislative pivot. Textual basis: Yigal-Am Paz explains the original rationale was to reserve the new track for 'clean' cases by keeping public and private debts mutually exclusive. However, after Anat Har Even presents empirical data showing massive overlap (up to 49%) between debt types, the Ministry of Justice realizes the 'clean' model would render the law unusable for most of the public. They are forced to abandon their rigid principle in favor of a messy but functional compromise.",
+        "question": "כיצד ממחיש הוויתור על עקרון 'החסימה ההדדית' את ההתנגשות בין השאיפה ליצור מנגנון משפטי 'נקי' ואידיאלי לבין המבחן המעשי של חקיקה המיועדת לשרת את הציבור?"
+    },
+    {
+        "uuid": "7e1a2448",
+        "reasoning": "Basis: Legal Advisor Kogut's explanation that narrowing the bill's scope (targeting only serious crime/half a million NIS) is a standard adjustment to ensure proportionality and protect privacy, contrasted with the MKs' (Maklev, Michaeli) insistence that this significant reduction constitutes a 'new subject' and their subsequent use of procedural delays (revision). Cognitive capacity: Synthesis (סינתזה) and identifying an underlying tension. The reader must abstract how a substantive legal improvement (making a law more proportional) is interpreted and weaponized by politicians as a fundamental alteration of the bill's identity for procedural maneuvering.",
+        "question": "איזה פער תפיסתי עולה מהטקסט בין ההצדקה המשפטית לצמצום החוק והגברת המידתיות שלו, לבין האופן שבו חברי הכנסת מפרשים את מהות השינוי הזה באמצעות כלים פרלמנטריים?"
+    },
+    {
+        "uuid": "b5b42a3b",
+        "reasoning": "Basis: Forer's quick satisfaction with securing funding until the end of 2021 and immediate closure of the discussion, contrasted with Ne'eman's explicit warning that this is merely a temporary 'band-aid' for one specific hospital rather than a systemic solution. Cognitive capacity: Synthesis and abstraction. The reader must infer the underlying tension between short-term, localized crisis management (celebrated by the committee chair) and the need for long-term, systemic policy (demanded by the healthcare administrator).",
+        "question": "איזה דפוס פעולה של המערכת הציבורית נחשף מתוך הפער שבין שביעות רצונו של יושב ראש הוועדה לבין אזהרתו של נציג קופת חולים כללית באשר לאופי הפתרון התקציבי שהושג?"
+    },
+    {
+        "uuid": "a3cf36a0",
+        "reasoning": "Basis: Yoav Arbel's explanation that the authority moved between three different ministries in a short time, and the decision to replace specific ministry names with generic legal definitions ('The Minister as defined in the law') to avoid future amendments. Cognitive capacity: Synthesis / Abstraction. The reader must connect the specific legislative drafting choice to the broader conceptual problem of administrative systems needing to 'future-proof' themselves against constant political shuffling and instability.",
+        "question": "מה ניתן ללמוד מהפתרון הניסוחי שאומץ בתיקון לתקנות על האופן שבו המערכת המשפטית והביורוקרטית מנסה לחסן את עצמה מפני חוסר היציבות בחלוקת התיקים והסמכויות בממשלה?"
+    },
+    {
+        "uuid": "a4895007",
+        "reasoning": "Cognitive capacity: Spotting an underlying tension and drawing a conceptual conclusion. Textual basis: Pindrus points out that when private entities have asbestos, they are strictly forced to comply with the law, but when a state or public entity (like the electric company) fails to plan, the legislature simply changes the law to accommodate them. The reader must synthesize this to identify the broader theme of regulatory double standards and the difficulty of enforcing laws against essential state monopolies.",
+        "question": "איזה פער עקרוני חושפים דבריו של פינדרוס בנוגע לאופן שבו המערכת אוכפת חוקי סביבה ובריאות על גופים ממלכתיים חיוניים לעומת האכיפה המופעלת על המגזר הפרטי?"
+    },
+    {
+        "uuid": "13c9e977",
+        "reasoning": "Basis: The text explains that individuals are dying from physical dangers (trains, drowning, heights) because they are driven by the desire for \"likes and comments\" on social media, prompting governments (like India and Russia) to implement \"no-selfie zones\" and educational campaigns. Cognitive capacity: Synthesis and Abstraction. The reader must connect the individual psychological motivation (virtual validation) with the macro-level institutional response (state intervention) to deduce a broader conclusion about how digital social pressures are powerful enough to override basic human survival instincts.",
+        "question": "מה מלמדת העובדה שממשלות נאלצות להפעיל רגולציה והסברה סביב פעולת פנאי שגרתית כמו צילום, על מערכת היחסים שבין הצורך באישור חברתי וירטואלי לבין אינסטינקט ההישרדות האנושי?"
+    },
+    {
+        "uuid": "00a8a4f9",
+        "reasoning": "The text details how current inflation is driven by external global factors (commodity prices like wheat and oil) and structural local issues (housing supply shortage), while the Bank of Israel's primary tool (raising interest rates) only affects borrowing costs and actually increases the immediate cost of living. The cognitive capacity required is synthesis and abstraction (סינתזה והפשטה): the reader must connect these distinct arguments to identify the overarching theme—a fundamental mismatch or gap between the central bank's traditional monetary tools and the actual root causes of the economic crisis.",
+        "question": "כיצד משתקף מתוך הניתוח הפער המובנה בין כלי המדיניות שבידי בנק ישראל לבין שורשי הבעיה האמיתיים המניעים את יוקר המחיה, בזירה הגלובלית והמקומית כאחד?"
+    },
+    {
+        "uuid": "4f91c132",
+        "reasoning": "The text presents two distinct phases of the medical response: the rigid, dismissive approach of MDA and the HMOs during the initial diagnostic phase (refusing to test Yehuda because his symptoms weren't 'normative') and the highly adaptive, collaborative approach of the hospital ICU (consulting globally to treat Dina due to extreme uncertainty). The cognitive capacity required is synthesis (סינתזה) and drawing a conclusion (הסקת מסקנה) to identify the underlying tension between bureaucratic rigidity at the gates and medical improvisation inside the hospital, reflecting the system's overall unpreparedness and steep learning curve.",
+        "question": "מה ניתן להסיק מהפער שבין ההתנהלות הבירוקרטית והנוקשה של מד\"א וקופות החולים במקרה של יהודה, לבין הגמישות והחיפוש אחר ידע בינלאומי בטיפול בדינה, לגבי מצבה של מערכת הבריאות באותה עת?"
+    },
+    {
+        "uuid": "8ba70445",
+        "reasoning": "Cognitive capacity: Identifying an underlying tension and synthesizing contrasting viewpoints (Synthesis / Abstraction). Textual basis: The text presents a stark contrast between the subjective, dismissive attitude of the individual passengers (who claim Israel is 'exaggerating,' there is 'no reason to panic,' and they 'choose not to fear') and the objective, severe reality of the institutions. The reader must synthesize the passengers' quotes with the detailed systemic collapse (terminals closing, mass furloughs of security personnel, retail crises, and airlines freezing flights) to deduce the profound gap between public perception and institutional crisis management.",
+        "question": "איזה מתח מצטייר בכתבה בין האופן שבו האדם הפרטי מפרש את צעדי המדינה לבין המציאות התפעולית והכלכלית שנכפית על המערכות הגדולות בענף התעופה?"
+    },
+    {
+        "uuid": "36f1f26c",
+        "reasoning": "Basis: The text repeatedly links the prestige and high price of the dresses to their ability to break Google search records, top LYST rankings, and their association with highly publicized celebrity moments (J.Lo at the Grammys, Aniston on a magazine cover). Cognitive capacity: Synthesis and Abstraction. The reader must abstract an overarching pattern from these specific examples to conclude that a garment's 'iconic' status and commercial value are driven by internet virality and celebrity culture, rather than just the physical design itself.",
+        "question": "מה ניתן להסיק מהכתבה לגבי המנגנון המרכזי שמקנה לפריטי אופנה מעמד \"אייקוני\" וערך מסחרי גבוה בעידן הנוכחי?"
+    },
+    {
+        "uuid": "229e663e",
+        "reasoning": "Basis: The text repeatedly highlights the use of \"commercial ships\" (אוניית סחר, אוניית מסחר קפריסאית) and explicitly mentions hiding weapons inside \"sacks containing civilian equipment\" (שקים שבהם היה ציוד אזרחי). Cognitive capacity: Synthesis and Abstraction. The reader must connect these recurring operational details to deduce Iran's broader strategic reliance on the guise of legitimate international civilian maritime trade to camouflage its military supply lines and obscure its direct involvement.",
+        "question": "על פי תיאור הספינות והמטענים שנתפסו לאורך השנים, מה ניתן להסיק על השיטה המערכתית שבה נוקטת איראן כדי לטשטש את מעורבותה הישירה בעת העברת אמצעי לחימה לשלוחותיה באזור?"
+    },
+    {
+        "uuid": "67a06d32",
+        "reasoning": "Basis: The text presents a fan's perspective that splitting the movie allowed it to remain highly faithful to the book's plot (artistic/fan satisfaction) [Paragraph 2], while simultaneously presenting the critics' view that the split is a cynical move to 'squeeze every cent' from the brand (commercial maximization) [Paragraph 7]. Cognitive capacity: Synthesis and evaluating a tension. The reader must synthesize these two contrasting viewpoints to understand how a single strategic decision (splitting the film) serves both the emotional/artistic demands of the consumers and the financial imperatives of the corporation, thereby explaining the brand's enduring success.",
+        "question": "כיצד ממחישה ההחלטה לפצל את הסרט האחרון את האופן שבו המותג מצליח לגשר בין סיפוק הציפיות האומנותיות של קהל המעריצים לבין מקסום הרווחים הכלכליים של האולפנים?"
+    },
+    {
+        "uuid": "7d6ae340",
+        "reasoning": "Basis: Timberlake explicitly states he is posting the public apology because it is 'important for my family' and to protect his loved ones. However, the text notes that a segment of the public mocked this 'public groveling' and suggested he should apologize to his wife privately. Cognitive capacity: Synthesis / Identifying a tension. The reader must deduce the inherent paradox of a celebrity using a highly public platform to manage a private family crisis, contrasting his stated protective motive with the public's perception of the act as performative.",
+        "question": "איזה מתח חושפת הכתבה בין הנימוק שמעניק טימברלייק לבחירתו להתנצל קבל עם ועדה, לבין הביקורת המשתמעת מתגובותיהם של חלק מהגולשים כלפי עצם הצעד הזה?"
+    },
+    {
+        "uuid": "f12489aa",
+        "reasoning": "Cognitive capacity: Synthesis and abstraction (evaluating underlying market dynamics). Textual basis: The text states that the mortgage advising field is completely unregulated, the state refuses to intervene, and consumers lack objective markers like a formal license to evaluate an advisor's competence. Later, it explains that the 'Eitanim' network provides a 'brand' that signals quality, reliability, and professional backing. The reader must synthesize these points to conclude that in a regulatory vacuum, a private commercial entity is essentially monetizing trust, turning its franchise brand into a de facto substitute for a state-issued professional license.",
+        "question": "על פי הדינמיקה המשתקפת בכתבה, כיצד היעדרה של אסדרה ממשלתית הופך מותג מסחרי פרטי לתחליף דה-פקטו לרישיון מקצועי רשמי בעיני הצרכן?"
+    },
+    {
+        "uuid": "3cbf2c6c",
+        "reasoning": "Basis: Orlev's urgency to bypass the wait for a 600-page report because 'the home front is burning,' combined with Schneller's assertion that a massive report means 'we know nothing' unless the main points are extracted. Cognitive capacity: Identifying an underlying tension (זיהוי מתח). The reader must abstract the conflict between retrospective, exhaustive bureaucratic oversight and the need for prospective, agile, and actionable policy-making in the face of imminent threats.",
+        "question": "כיצד חושף יחסם של חברי הוועדה לדו\"ח המבקר את המתח המובנה שבין הצורך בביקורת יסודית ומקיפה לבין הדרישה להפקת לקחים מהירה ומעשית לנוכח איומים ביטחוניים?"
+    },
+    {
+        "uuid": "fa780728",
+        "reasoning": "The text outlines Beinart's ideological progression from criticizing settlements to advocating for a binational state (with a Palestinian right of return) and demanding nuclear disarmament. The cognitive capacity required is synthesis (סינתזה) and evaluating a stance (הערכת עמדה): the reader must connect these distinct demographic and military issues to abstract the author's underlying thesis—that the radical left's critique has mutated from a territorial policy disagreement into a comprehensive assault on Israel's foundational survival mechanisms.",
+        "question": "מה ניתן להסיק מהאופן שבו הכותב כורך יחד את התמיכה ב\"זכות השיבה\" ואת הדרישה לפירוז גרעיני, לגבי תפיסתו את המטרה הסופית של התפתחות הביקורת הפרוגרסיבית כלפי ישראל?"
+    }
+]

@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "good_pool_size": 82,
+    "bad_pool_size": 45,
+    "missing_good_level_source_cells": [],
+    "good_has_full_level_source_coverage": true
+  },
+  "good_pool_level_source_counts": {
+    "0": {
+      "il-hym": 8,
+      "knesset": 6,
+      "wiki": 6
+    },
+    "1": {
+      "il-hym": 10,
+      "knesset": 10,
+      "wiki": 8
+    },
+    "2": {
+      "il-hym": 7,
+      "knesset": 6,
+      "wiki": 6
+    },
+    "3": {
+      "il-hym": 5,
+      "knesset": 4,
+      "wiki": 6
+    }
+  },
+  "bad_pool_level_source_counts": {
+    "0": {
+      "il-hym": 0,
+      "knesset": 1,
+      "wiki": 0
+    },
+    "1": {
+      "il-hym": 0,
+      "knesset": 2,
+      "wiki": 4
+    },
+    "2": {
+      "il-hym": 5,
+      "knesset": 6,
+      "wiki": 6
+    },
+    "3": {
+      "il-hym": 7,
+      "knesset": 8,
+      "wiki": 6
+    }
+  },
+  "input_source_distribution_inferred": {
+    "level0": {
+      "knesset": 7,
+      "wiki": 7,
+      "il-hym": 6
+    },
+    "level1": {
+      "knesset": 7,
+      "wiki": 7,
+      "il-hym": 6
+    },
+    "level2": {
+      "knesset": 10,
+      "wiki": 10,
+      "il-hym": 10
+    },
+    "level3": {
+      "knesset": 10,
+      "wiki": 10,
+      "il-hym": 10
+    }
+  },
+  "note": "No question text is included in this report."
+}

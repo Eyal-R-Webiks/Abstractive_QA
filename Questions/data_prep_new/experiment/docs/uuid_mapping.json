@@ -1,0 +1,650 @@
+[
+    {
+        "uuid": "3d791eba",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_432_1438386.json"
+    },
+    {
+        "uuid": "2b838f42",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_473_1803024.json"
+    },
+    {
+        "uuid": "55c6259b",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_420_729864.json"
+    },
+    {
+        "uuid": "011f8f15",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_514_2446983.json"
+    },
+    {
+        "uuid": "f610be1c",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_364_97588.json"
+    },
+    {
+        "uuid": "a39f90c9",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_289_2204799.json"
+    },
+    {
+        "uuid": "67413fb2",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_222_2141406.json"
+    },
+    {
+        "uuid": "b441256c",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_022_2168747.json"
+    },
+    {
+        "uuid": "301962cc",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_113_2518944.json"
+    },
+    {
+        "uuid": "01c015ec",
+        "level": "level3",
+        "source": "wiki",
+        "filename": "article_351_2524209.json"
+    },
+    {
+        "uuid": "e38d208e",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "isha_17_ptv_571122.jsonl"
+    },
+    {
+        "uuid": "f8976828",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "xuc_bitaxon_20_ptv_591920.jsonl"
+    },
+    {
+        "uuid": "be771981",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "yeled_18_ptv_186000.jsonl"
+    },
+    {
+        "uuid": "f1c8d59b",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "xuka_20_ptv_504632.jsonl"
+    },
+    {
+        "uuid": "7e1a2448",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "knesset_19_ptv_242941.jsonl"
+    },
+    {
+        "uuid": "13dc6a45",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "ksafim_20_ptv_315372.jsonl"
+    },
+    {
+        "uuid": "b5b42a3b",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "gender_23_ptv_588601.jsonl"
+    },
+    {
+        "uuid": "a3cf36a0",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "avoda_ravaxa_briut_19_ptv_304548.jsonl"
+    },
+    {
+        "uuid": "3cbf2c6c",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "bikoret_17_ptv_133395.jsonl"
+    },
+    {
+        "uuid": "a4895007",
+        "level": "level3",
+        "source": "knesset_short",
+        "filename": "pnim_hagana_24_ptv_611194.jsonl"
+    },
+    {
+        "uuid": "13c9e977",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "viral-10009980.txt"
+    },
+    {
+        "uuid": "00a8a4f9",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "business-9254806.txt"
+    },
+    {
+        "uuid": "fa780728",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "opinions-4001915.txt"
+    },
+    {
+        "uuid": "4f91c132",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "health-8282856.txt"
+    },
+    {
+        "uuid": "229e663e",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "tech-14018318.txt"
+    },
+    {
+        "uuid": "8ba70445",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "travel-8334131.txt"
+    },
+    {
+        "uuid": "36f1f26c",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "lifestyle-8035700.txt"
+    },
+    {
+        "uuid": "7d6ae340",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "celebrities-8610463.txt"
+    },
+    {
+        "uuid": "67a06d32",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "judaism-14189781.txt"
+    },
+    {
+        "uuid": "f12489aa",
+        "level": "level3",
+        "source": "Il-hym",
+        "filename": "mumlazim-3662506.txt"
+    },
+    {
+        "uuid": "1c80e794",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_387_1786237.json"
+    },
+    {
+        "uuid": "03d46c34",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_362_146099.json"
+    },
+    {
+        "uuid": "a7f08fed",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_383_2531912.json"
+    },
+    {
+        "uuid": "460b0f3d",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_322_1845210.json"
+    },
+    {
+        "uuid": "1ea2bace",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_119_453925.json"
+    },
+    {
+        "uuid": "3733e562",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_258_2358345.json"
+    },
+    {
+        "uuid": "411cfec1",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_219_2365317.json"
+    },
+    {
+        "uuid": "79758855",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_241_2394938.json"
+    },
+    {
+        "uuid": "e7c90b3f",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_214_1785082.json"
+    },
+    {
+        "uuid": "4b420540",
+        "level": "level1",
+        "source": "wiki",
+        "filename": "article_251_349383.json"
+    },
+    {
+        "uuid": "d46b6c67",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "mada_23_ptv_577617.jsonl"
+    },
+    {
+        "uuid": "7de5837a",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "pniyot_20_ptv_313850.jsonl"
+    },
+    {
+        "uuid": "278a114d",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "isha_17_ptv_571102.jsonl"
+    },
+    {
+        "uuid": "75de626e",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "xuc_bitaxon_23_ptv_569168.jsonl"
+    },
+    {
+        "uuid": "ae2dfab8",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "xuka_20_ptv_419566.jsonl"
+    },
+    {
+        "uuid": "1c88671d",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "avoda_ravaxa_briut_18_ptv_188087.jsonl"
+    },
+    {
+        "uuid": "cef2aaae",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "knesset_20_ptv_382076.jsonl"
+    },
+    {
+        "uuid": "2ada56a2",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "ksafim_20_ptv_519889.jsonl"
+    },
+    {
+        "uuid": "c6b66d5f",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "gender_20_ptv_313626.jsonl"
+    },
+    {
+        "uuid": "c22f42a6",
+        "level": "level1",
+        "source": "knesset_short",
+        "filename": "xinux_tarbut_sport_24_ptv_614820.jsonl"
+    },
+    {
+        "uuid": "f641cc33",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "opinions-3827517.txt"
+    },
+    {
+        "uuid": "f38ffc0e",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "lifestyle-11031721.txt"
+    },
+    {
+        "uuid": "4baf65df",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "tech-7417838.txt"
+    },
+    {
+        "uuid": "3c815608",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "mumlazim-5797926.txt"
+    },
+    {
+        "uuid": "8f97ef71",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "celebrities-8627382.txt"
+    },
+    {
+        "uuid": "02dcd80f",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "judaism-14178226.txt"
+    },
+    {
+        "uuid": "7e091245",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "viral-13244076.txt"
+    },
+    {
+        "uuid": "c8b0b109",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "travel-7791064.txt"
+    },
+    {
+        "uuid": "7e133295",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "business-14204393.txt"
+    },
+    {
+        "uuid": "dfb4318f",
+        "level": "level1",
+        "source": "Il-hym",
+        "filename": "food-11102330.txt"
+    },
+    {
+        "uuid": "87077e46",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_311_2515577.json"
+    },
+    {
+        "uuid": "74eadbd7",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_425_2188235.json"
+    },
+    {
+        "uuid": "893edbdf",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_392_469656.json"
+    },
+    {
+        "uuid": "f05210ac",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_440_1599141.json"
+    },
+    {
+        "uuid": "dc201b86",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_048_1179718.json"
+    },
+    {
+        "uuid": "33cf7cf3",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_349_81072.json"
+    },
+    {
+        "uuid": "3353aaf9",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_076_2352093.json"
+    },
+    {
+        "uuid": "6d5a874a",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_372_940954.json"
+    },
+    {
+        "uuid": "47bd77df",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_366_166340.json"
+    },
+    {
+        "uuid": "1a4b44a2",
+        "level": "level2",
+        "source": "wiki",
+        "filename": "article_096_2498043.json"
+    },
+    {
+        "uuid": "5774f7ac",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "avoda_ravaxa_24_ptv_715664.jsonl"
+    },
+    {
+        "uuid": "f92b6ed7",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "kalkala_23_ptv_586265.jsonl"
+    },
+    {
+        "uuid": "0d87ca9a",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "mada_18_ptv_140596.jsonl"
+    },
+    {
+        "uuid": "c211c9c4",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "pnim_hagana_20_ptv_502001.jsonl"
+    },
+    {
+        "uuid": "bce7c84c",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "pnim_exut_18_ptv_189147.jsonl"
+    },
+    {
+        "uuid": "00897a19",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "pniyot_17_ptv_133513.jsonl"
+    },
+    {
+        "uuid": "8cf825e2",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "aliya_klita_tfucot_20_ptv_391277.jsonl"
+    },
+    {
+        "uuid": "dcd4580e",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "yeled_18_ptv_140016.jsonl"
+    },
+    {
+        "uuid": "6506018f",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "bikoret_17_ptv_135665.jsonl"
+    },
+    {
+        "uuid": "8d1bfa1f",
+        "level": "level2",
+        "source": "knesset_short",
+        "filename": "xinux_tarbut_sport_19_ptv_274488.jsonl"
+    },
+    {
+        "uuid": "3985b6e2",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "sport-9196888.txt"
+    },
+    {
+        "uuid": "0c7f0fa0",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "general-5991301.txt"
+    },
+    {
+        "uuid": "373edd51",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "military-life-8051114.txt"
+    },
+    {
+        "uuid": "f8f7dc2e",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "news-9732675.txt"
+    },
+    {
+        "uuid": "c339e705",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "culture-11000599.txt"
+    },
+    {
+        "uuid": "d0007251",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "podcasts-14224682.txt"
+    },
+    {
+        "uuid": "144ac086",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "marketing-7315554.txt"
+    },
+    {
+        "uuid": "266dd45d",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "magazine-13799998.txt"
+    },
+    {
+        "uuid": "0039746a",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "you-may-find-interesting-13132832.txt"
+    },
+    {
+        "uuid": "1ed3662c",
+        "level": "level2",
+        "source": "Il-hym",
+        "filename": "animals-4771033.txt"
+    },
+    {
+        "uuid": "1c8b3ae9",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_401_2300254.json"
+    },
+    {
+        "uuid": "c5aa2b16",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_066_881044.json"
+    },
+    {
+        "uuid": "b0839c4a",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_049_2373708.json"
+    },
+    {
+        "uuid": "31f57dae",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_158_1589824.json"
+    },
+    {
+        "uuid": "e68422fa",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_146_2135809.json"
+    },
+    {
+        "uuid": "e0e49212",
+        "level": "level0",
+        "source": "wiki",
+        "filename": "article_314_2079029.json"
+    },
+    {
+        "uuid": "9baeeb1e",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "pnim_exut_17_ptv_137205.jsonl"
+    },
+    {
+        "uuid": "f5cf88b3",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "aliya_klita_tfucot_23_ptv_591733.jsonl"
+    },
+    {
+        "uuid": "6b4504f9",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "bikoret_20_ptv_383358.jsonl"
+    },
+    {
+        "uuid": "2d077cf1",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "avoda_ravaxa_24_ptv_622927.jsonl"
+    },
+    {
+        "uuid": "884f9abb",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "kalkala_17_ptv_133438.jsonl"
+    },
+    {
+        "uuid": "f74dcfe6",
+        "level": "level0",
+        "source": "knesset_short",
+        "filename": "pnim_hagana_20_ptv_364186.jsonl"
+    },
+    {
+        "uuid": "d88291f0",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "magazine-13135696.txt"
+    },
+    {
+        "uuid": "774800d8",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "you-may-find-interesting-8896511.txt"
+    },
+    {
+        "uuid": "c8b7ac1b",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "sport-10378978.txt"
+    },
+    {
+        "uuid": "81749fe5",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "health-8825734.txt"
+    },
+    {
+        "uuid": "3e2aaf5b",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "general-9357769.txt"
+    },
+    {
+        "uuid": "bf823f22",
+        "level": "level0",
+        "source": "Il-hym",
+        "filename": "news-14115207.txt"
+    }
+]

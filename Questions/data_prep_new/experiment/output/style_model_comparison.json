@@ -1,0 +1,27 @@
+{
+  "model_a": "anthropic_claude_sonnet_4_6",
+  "model_b": "google_gemini_3_1_pro_preview",
+  "common_records": 103,
+  "per_field": {
+    "syntactic_complexity_band": {
+      "agreement_count": 88,
+      "agreement_rate": 0.8544
+    },
+    "information_structure_pattern": {
+      "agreement_count": 69,
+      "agreement_rate": 0.6699
+    },
+    "register_band": {
+      "agreement_count": 81,
+      "agreement_rate": 0.7864
+    },
+    "formality_band": {
+      "agreement_count": 96,
+      "agreement_rate": 0.932
+    },
+    "interrogative_force": {
+      "agreement_count": 75,
+      "agreement_rate": 0.7282
+    }
+  }
+}

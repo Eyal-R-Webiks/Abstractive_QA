@@ -1,0 +1,242 @@
+[
+  {
+    "question": "מי טבע את המונח לראשונה?",
+    "reasoning": "שליפה ממשפט 13.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_002_1511547",
+    "record_id": "81e00d4f"
+  },
+  {
+    "question": "אילו דוגמאות יש ליצירות ספרותיות שעוסקות במועדוני גברים?",
+    "reasoning": "שליפה ממשפט 30.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_001_1196898",
+    "record_id": "e3605a41"
+  },
+  {
+    "question": "באיזו שנה פורסמה היצירה אופוס 1 של היינריך שיץ?",
+    "reasoning": "The text explicitly states the publication year of Heinrich Schütz's Opus 1 at the end of the second paragraph.",
+    "answer_spans": [
+      "אחת היצירות המוקדמות ביותר שקוטלגו כך היא Op. 1 (אופוס 1) של היינריך שיץ (Heinrich Schütz) שפורסמה בשנת 1611."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_362_146099",
+    "record_id": "0563ebad"
+  },
+  {
+    "question": "איפה נמצא בדרך כלל הבעלים של אקספון?",
+    "reasoning": "שליפה של \"ניו יורק\" מתוך משפט 15 ולא ציטוט של כל המשפט.. התשובה אמורה להיות: ניו יורק.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "business-10642983",
+    "record_id": "986b95ae"
+  },
+  {
+    "question": "מדוע הקפריסאים אינם מאפשרים מעבר לצפון קפריסין?",
+    "reasoning": "The reason Cypriots do not allow passage to Northern Cyprus is explicitly stated in the second paragraph.",
+    "answer_spans": [
+      "בטענה כי מדובר בשטח כבוש"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "celebrities-8627382",
+    "record_id": "5029b022"
+  },
+  {
+    "question": "את מי החליפה זהבה גלאון באופן זמני בישיבה?",
+    "reasoning": "Zehava Galon explicitly states in the opening paragraph that she is temporarily replacing MK Gideon Sa'ar.",
+    "answer_spans": [
+      "חבר הכנסת גדעון סער"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "isha_17_ptv_571102",
+    "record_id": "7e69316c"
+  },
+  {
+    "question": "תוך כמה זמן לקוח שמבקש לסיים חשבון צריך לקבל מענה מהחברה?",
+    "reasoning": "The timeframe for a company to respond to an account closure request is explicitly stated in Maimon Shamila's first response.",
+    "answer_spans": [
+      "תוך 60 יום הוא צריך לקבל מענה מהחברה שהוא אכן שילם ושהוא אינו חייב"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "pniyot_20_ptv_313850",
+    "record_id": "eb5cb8da"
+  },
+  {
+    "question": "איזה תרחיש ישמח את אליאב?",
+    "reasoning": "שליפה מתוך משפט אחד. רק צריך לקרוא ולהבין שאליאב הוא מי שמרואיין במסמך כי זה לא מוזכר ספציפית במשפט.. התשובה אמורה להיות: שהוא וישראל יגיעו לסוף ביחד (משפט 18).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "celebrities-10142742",
+    "record_id": "155cf2ae"
+  },
+  {
+    "question": "מהו שיעור ההנחה המוצע לאזרחים ותיקים בכניסה לסרטים ישראליים?",
+    "reasoning": "The text explicitly states the proposed discount rate for senior citizens entering Israeli movies in a single sentence by Aharon Azulay.",
+    "answer_spans": [
+      "לתת להם הנחה של 50% בכניסה לסרטים ישראליים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "avoda_ravaxa_briut_18_ptv_167021.",
+    "record_id": "163f6324"
+  },
+  {
+    "question": "אילו תחושות עלולות להתעורר בעקבות מעבר לדיור מוגן או לבית אבות?",
+    "reasoning": "The text explicitly lists the feelings that can result from moving to a nursing home or assisted living in a single sentence under the causes of depression section.",
+    "answer_spans": [
+      "תחושה של חוסר אונים ושל היקרעות מהמרחב הבטוח ביותר."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "mumlazim-7566364",
+    "record_id": "4d77d7de"
+  },
+  {
+    "question": "לפי המסמך, כמה יהודים היו כיום בעולם אילולא גרמניה?",
+    "reasoning": "שליפה ממשפט 48 והסתמכות רק על המידע בטקסט ולא על ידע חיצוני.. התשובה אמורה להיות: 60 מיליון.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "aliya_klita_tfucot_17_ptv_134130",
+    "record_id": "c55f730c"
+  },
+  {
+    "question": "איזה מדד נחשב שימושי יותר מהכנסה לנפש למדידת שגשוג?",
+    "reasoning": "English: The text explicitly states in the limitations section that median income is more useful than per capita income when measuring prosperity.",
+    "answer_spans": [
+      "הכנסה חציונית שימושית יותר בעת מדידת שגשוג מאשר הכנסה לנפש, מכיוון שהיא פחות מושפעת מחריגים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_258_2358345",
+    "record_id": "42834f39"
+  },
+  {
+    "question": "מי מכהן כיועץ המשפטי למבקר המדינה?",
+    "reasoning": "The text explicitly names the Legal Advisor to the State Comptroller in the first paragraph during Shelly Yachimovich's opening remarks.",
+    "answer_spans": [
+      "פרופ' יורם רבין"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "bikoret_20_ptv_514743",
+    "record_id": "727bc25e"
+  },
+  {
+    "question": "אילו תחושות מנסה קמפיין געוואלד ליצור בקרב קהל היעד?",
+    "reasoning": "The text explicitly states the emotions a 'Gevald' campaign aims to evoke in a single sentence.",
+    "answer_spans": [
+      "במקרים מסוימים, משולב ציד קולות יחד עם קמפיין געוואלד, שמטרתו ליצור תחושות פחד ובהלה בקרב קהל היעד, במטרה לעודדם להצביע באופן הרצוי מהצד שמאחורי הקמפיין."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_119_453925",
+    "record_id": "24530b66"
+  },
+  {
+    "question": "על ירי הרקטות לאיזו עיר היה אחראי אחמד סעד ביום חמישי?",
+    "reasoning": "The text explicitly states in a single sentence that Ahmed Sa'ad was personally responsible for the rocket fire towards Ashkelon last Thursday.",
+    "answer_spans": [
+      "הוא היה אחראי באופן אישי על ירי הרקטות לעבר אשקלון ביום חמישי האחרון."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "tech-14036785",
+    "record_id": "9673946d"
+  },
+  {
+    "question": "באיזו שנה פותחה הקלטת הסטריאו?",
+    "reasoning": "The text explicitly states the year stereo recording was developed in a single sentence in the fourth paragraph.",
+    "answer_spans": [
+      "ב-1957 פותחה הקלטת הסטריאו ומאז זהו הסטנדרט."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_370_66207",
+    "record_id": "dda7222b"
+  },
+  {
+    "question": "מדוע קיבל איתי שכטר כרטיס צהוב?",
+    "reasoning": "The reason for Itay Shechter's yellow card is explicitly stated in the text under the 72nd minute update.",
+    "answer_spans": [
+      "דקה 72': איתי שכטר זרק את עצמו בתוך הרחבה של באר שבע, השופט לא התרשם והוציא לו כרטיס צהוב על התחזות"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "sport-13440720",
+    "record_id": "3abf64c8"
+  },
+  {
+    "question": "מי הוא המשנה ליו\"ר ועדת משנה לעניין בטיחות בעבודה?",
+    "reasoning": "שליפה של משפט 31.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "avoda_ravaxa_24_ptv_613498",
+    "record_id": "9e9cd7f4"
+  },
+  {
+    "question": "כמה חברי כנסת נכחו בהצבעה על הצעת החוק?",
+    "reasoning": "The number of Knesset members present during the vote is explicitly stated at the end of the transcript.",
+    "answer_spans": [
+      "כל חברי הכנסת שנוכחים, חמישה במספר, אישרו את הצעת החוק כהכנה לקריאה השנייה והשלישית."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "avoda_ravaxa_briut_19_ptv_304572",
+    "record_id": "b7441314"
+  },
+  {
+    "question": "כמה משפחות מייצג רם מוסרי?",
+    "reasoning": "The number of families represented by Ram Mosseri is explicitly stated in a single sentence during his first speaking turn.",
+    "answer_spans": [
+      "אני מייצג 15 משפחות שמתגוררות בשני בניינים שנבנו בשיטת הפל קל."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "pnim_exut_17_ptv_137313",
+    "record_id": "b1cf7eda"
+  },
+  {
+    "question": "מדוע הגיעו הוריו של הילד למרכול?",
+    "reasoning": "The purpose of the parents' visit to the supermarket is explicitly stated in a single sentence detailing the preliminary findings of the incident.",
+    "answer_spans": [
+      "מפרטים ראשוניים עולה כי הוריו של הילד הגיעו לערוך קניות במרכול כשהילד נכנס ללא ידיעתם לתא מטען של הרכב וננעל."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "news-13127475",
+    "record_id": "20ce7324"
+  }
+]

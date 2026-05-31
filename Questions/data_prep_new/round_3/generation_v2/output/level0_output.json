@@ -1,0 +1,399 @@
+[
+  {
+    "uuid": "aliya_klita_tfucot_23_ptv_586062",
+    "question": "מדוע סירבה חברת טלדור להקים מחדש את המרכז?",
+    "reasoning": "[Level 0 + Level 1 style] The text states that Taldor initially refused to re-establish the center ('כידוע הם סירבו'), but it never explains the reason for their refusal. The question is short, direct, and asks for a specific factual detail, perfectly mimicking a Level 1 style while remaining unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "אנחנו עושים ניסיון להקים מחדש את המרכז עם הזכיין הקיים. כידוע הם סירבו ואחרי הרבה פניות הם עושים פנייה מחודשת."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_240_676691",
+    "question": "מה היה המוצר הראשון שמסחרה חברת יישום?",
+    "reasoning": "The question asks for a specific concrete detail (the first product commercialized by 'Yissum') in a direct, Level-1 style. While the text explicitly mentions the first product commercialized by the 'Yeda' company (hybrid cucumbers), it does not provide any examples of products commercialized by 'Yissum', making the question unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "באוניברסיטה העברית בירושלים הוקמה חברת \"יישום - החברה לפיתוח המחקר של האוניברסיטה העברית בירושלים\" ב-1964ת כחברת מסחור ידע של האוניברסיטה"
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_360_2045817",
+    "question": "באיזו שנה פרצה מלחמת קרים?",
+    "reasoning": "The question asks for a specific year (a classic Level 1 'when' question) regarding an event explicitly mentioned in the text (the Crimean War). However, the text only cites the war as an early example of industrial warfare and omits any dates, making it unanswerable (Level 0). The phrasing is short, direct, and avoids any complex premises.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מקרים מוקדמים של לוחמה תעשייתית היו מלחמת קרים ומלחמת האזרחים האמריקאית"
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_287_1585808",
+    "question": "כמה יצירות הוצגו בתערוכה שהתקיימה בפטרוגרד?",
+    "reasoning": "The question asks for a specific quantity (how many artworks were displayed) regarding an event mentioned in the text (the exhibition in Petrograd). The text provides the dates and location of this exhibition but completely omits the number of works shown, making it a perfect Level 0 question. The phrasing mimics Level 1 by being short, direct, using a simple 'how many' factual slot, and avoiding any quotation marks.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ותערוכה \"0,10\" שהתקיימה בדצמבר-ינואר 1915–1916 בפטרוגרד"
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "health-14036185",
+    "question": "כמה עולה מכשיר הסי.טי החדש שהושק בארצות הברית?",
+    "reasoning": "The question asks for a specific, concrete detail (the price of the new CT scanner) using a direct, Level-1 style ('How much...'). However, the text only mentions that the scanner was launched in the US and will arrive in Israel, without stating its cost, making it unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מכשיר סי.טי חדשני שהושק השבוע בארה\"ב צפוי להגיע בעוד כשנה לישראל, ולשפר ואף להאריך את חייהם של חולי סרטן."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "culture-13623808",
+    "question": "באיזו שנה ביקר דניאל גלרה בישראל?",
+    "reasoning": "The question asks for a specific time/date (the year of the visit), which is a classic Level 1 factual slot. However, the text only mentions that he visited Israel with a writers' delegation, without specifying the year, making it a Level 0 unanswerable question. The phrasing is direct, natural, and avoids quotation marks.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ואף ביקר בישראל במסגרת משלחת סופרים מברזיל."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "news-14022755",
+    "question": "כמה בני אדם נהרגו בעימותים האלימים בעיר חרקוב?",
+    "reasoning": "The question asks for a specific number (how many people were killed), which mimics a Level 1 factual question. It is unanswerable because the text only mentions that dozens of citizens were injured ('נפצעו') in the clashes in Kharkiv, but does not state if anyone was killed.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "המתיחות גם הגיעה לעיר חרקוב שבמזרח אוקראינה: עשרות אזרחים נפצעו במהלך עימותים אלימים בין הפעילים הפרו רוסים לתומכים בממשל החדש באוקראינה."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "tech-10697590",
+    "question": "אילו חומרים הוכנסו לתוך המנהרה שהתגלתה ברפיח?",
+    "reasoning": "The question asks for a specific factual detail (the exact type of materials used to block the tunnel), which mimics a Level 1 style question. However, the text only states that 'materials were inserted into it' without specifying what those materials were, making it unanswerable (Level 0).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הותר לפרסום כי צה\"ל סיכל הבוקר (ראשון) מנהרה שהתגלתה בימים האחרונים ברפיח, זאת באמצעות חומרים שהוכנסו לתוכה."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "knesset_19_ptv_227503",
+    "question": "איזו חברה זכתה במכרז בתאריך 17/04/2013?",
+    "reasoning": "[Level 0 + Level 1 style] The question asks for a concrete, specific detail (the name of a winning company) tied to a date that is explicitly visible in the corrupted text (17/04/2013). The phrasing is short and direct, mimicking Level 1 style. However, the text is a binary document dump and does not contain this information, making it unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "1\u00007\u0000/\u00000\u00004\u0000/\u00002\u00000\u00001\u00003\u0000"
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuc_bitaxon_23_ptv_575271",
+    "question": "באיזו שנה נחקק חוק שירות הביטחון הכללי?",
+    "reasoning": "The text mentions the General Security Service Law and a specific section within it, making it plausible to ask when this law was enacted. However, the exact year of enactment is missing from the text. The question uses a short, direct 'in what year' format, perfectly matching Level 1 style without using any quote marks, acronyms, or complex phrasing.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כך נקבע בסעיף 129א לפקודת בתי הסוהר, בסעיף 20(ב) לחוק שירות הביטחון הכללי, אבל לגבי המוסד למודיעין, טרם הוסדר הנושא בחקיקה."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_111_1276826",
+    "question": "באיזו שנה הובא כדור ההתעמלות לארצות הברית?",
+    "reasoning": "The question asks for the specific year the exercise ball was introduced to the United States. While the text mentions that American therapists brought the ball to the US, it only provides the year of its initial invention in Italy (1963), making the question unanswerable. The phrasing is direct and asks for a single factual detail (a year), perfectly mimicking Level 1 style.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כאשר טכניקות הטיפול הללו יובאו לארצות הברית בידי מטפלים אמריקאים שגילו את יתרונות הטיפולים בשווייץ, קיבל הכדור את השם \"כדור שווייצרי\"."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_009_130263",
+    "question": "כיצד מסומן פיק אפ אקטיבי בקונפיגורציית הפיק אפים של הגיטרה?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes the 'Notation' section (which explains how 'S' and 'H' are used) with the 'Active and Passive Pickups' section. It asks for a specific, practical detail that links these two concepts, sounding highly plausible, but the text never mentions the notation symbol for an active pickup.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "סימון המערך בו הפיק אפים מורכבים מתבצע על ידי \"S\" לפיק אפ בודד ו־\"H\" לפיק אפ מסוג האמבקר."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_288_1884904",
+    "question": "כיצד מטפלים בפליטות הפורמלדהיד הרעילות הנוצרות בשלב הסינטור?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes two specific details from the text (the sintering stage and its toxic formaldehyde byproduct) and asks for the practical operational solution (how these emissions are treated). This mimics a Level 2 implementation question, but the text only states that the emissions occur and completely omits any information on how they are handled.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "עם זאת, חלק מפעולות הגימור כמו סינטור, מייצרות פליטות רעילות כגון פורמלדהיד, עקב שריפת שעווה או פולימרים אחרים, מה שמוביל לפליטת גזי חממה."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_250_1729335",
+    "question": "מהו קצב הדגימה הנדרש כדי להמיר מדידות רציפות של טמפרטורה ולחץ לאותות בדידים?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes the concept of 'sampling rate' (used to convert continuous signals to discrete ones) with the specific examples of continuous physical quantities (temperature and pressure) mentioned later in the text. It asks for a specific required rate, which sounds highly plausible given the technical context, but this detail is entirely absent from the passage.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כאשר אות זמן בדיד מתקבל על ידי דגימה בזמנים במרווחים אחידים, נוכל לומר שיש לו קצב דגימה מסוים – הקצב שבו נדגם האות הרציף."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_24_ptv_616012",
+    "question": "מתי צפויה חברת הכנסת שירלי פינטו לשוב מחופשת הלידה ולהקים את ועדת המשנה לנגישות עירונית?",
+    "reasoning": "[Level 0 + Level 2 style] The question connects the planned establishment of the urban accessibility subcommittee with MK Pinto's return from maternity leave (a Level 2 synthesis style), but the exact timeframe or date for her return is completely absent from the text.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כאשר תשוב חברת הכנסת שירלי פינטו מחופשת הלידה שלה, אני אציע להקים ועדת משנה נוספת שתהיה משלימה לוועדת המשנה של יוראי, לעניין נגישות עירונית."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_165_1392469",
+    "question": "אילו ראיות הציגו החוקרים הבריטיים כדי להפריך את ההיסטוריוגרפיה הפרוגרסיבית של מלחמות שלוש הממלכות?",
+    "reasoning": "[Level 0 + Level 2 style] The question mimics Level 2 by connecting the core mechanism of historical revisionism (presenting new evidence) to a specific historical debate mentioned in the text (the Wars of the Three Kingdoms). It sounds highly plausible and answerable, but the text only states the researchers' conclusion (refuting the progressive historiography) without detailing the actual evidence they presented.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "באותן שנים, הפריכו חוקרים בריטיים את ההיסטוריוגרפיה הפרוגרסיבית – בין אם ויגית ובין מרקסיסטית – שהציגה חוקיות והתקדמות בגורמים למלחמות שלוש הממלכות (\"מלחמת האזרחים האנגלית\") והראו את הקונטינגנטיות והארעיות הרבה שדחפה לפריצתן."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "gender_20_ptv_323439",
+    "question": "כמה ימים לאחר אישור אצילת הסמכויות לעובד הרשות נדרש לפרסם את ההודעה על כך ברשומות?",
+    "reasoning": "[Level 0 + Level 2 style] The question connects the administrative action discussed (delegating powers to an employee) with the procedural requirement raised in the debate (publishing a notice in Reshumot), mimicking a Level 2 practical linkage. However, the specific timeframe for this publication is entirely absent from the transcript.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "אני חושבת שעל כל אצילת סמכויות כזאת צריכה להיות הודעה ברשומות."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "judaism-8588448",
+    "question": "בבתים שבהם כל אחד מבני המשפחה מדליק חנוכייה משלו, על מי מוטלת האחריות להישאר ער עד כיבוי הנרות?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes two distinct details from the text: the custom where every household member lights their own menorah, and the safety instruction to stay awake until the candles go out. It asks for a practical resolution to this combined scenario (who specifically must stay awake), which is completely absent from the text.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מנהג האשכנזים הוא שכל אחד מבני הבית מדליק חנוכייה משל עצמו.",
+      "שימו לב כמובן להישאר ערים עד שהחנוכייה נכבית ולהניח אותה במקום בטוח"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "business-7915489",
+    "question": "כמה מתוך עשרת המלונות החדשים המתוכננים באילת צפויים להיבנות על השטח של נמל התעופה הישן?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes two distinct details mentioned in the text: the clearing of the old airport for development and the 10 new hotels currently in process. It asks for the intersection of these facts (how many of those hotels are on that specific land), which mimics a Level 2 integration task, but the text does not provide this specific overlap.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כעת יש כ־10 מלונות בתהליכים שונים."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "ksafim_18_ptv_201017",
+    "question": "כמה זמן נדרש להמתין לקבלת אישור ממשרד החקלאות לצורך הקמת חממה הפטורה מהיתר?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes two related details from the discussion (the exemption from a building permit for greenhouses and the requirement for Ministry of Agriculture approval) to ask about the practical bureaucratic timeline. This mimics a Level 2 implementation question, but the specific waiting time is entirely absent from the transcript.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הצעת חוק התכנון והבניה (תיקון מס' 95) (פטור מהיתר למבנים חקלאיים)"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "travel-13183286",
+    "question": "לאחר כמה חיפושים של אותה טיסה צפויים המחירים לעלות במנועי החיפוש?",
+    "reasoning": "The question links the mechanism of search engines tracking user behavior to the practical consequence of price increases, mimicking a Level 2 synthesis style. However, it asks for the exact number of searches required to trigger this increase, which the text only vaguely describes as 'a number of times' (מספר פעמים), making it unanswerable (Level 0).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מנועי החיפוש (לדוגמה: סקייסקאנר, טריוואגו, קאיאק) עובדים בצורה מסוימת ו\"זוכרים\" את החיפושים האחרונים שלכם, מה שמעלה את הסבירות שלאחר שתחפשו לדוגמא מספר פעמים \"חופשה בלונדון\" או טיסה בתאריכים מסוימים מתל אביב ללונדון, המחירים יעלו"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "pniyot_17_ptv_533736",
+    "question": "מדוע התנגד הקבלן לדרישה להעניק הנחה של חמישים אחוזים בשכר הדירה לדיירי הקומה שמתחת לקומה האחרונה?",
+    "reasoning": "[Level 0 + Level 2 style] The question asks for the underlying rationale behind a specific negotiation outcome (the contractor's refusal to grant a 50% discount to the second-to-highest floor). This mimics a Level 2 synthesis of the dialogue and the conflicting interests, but the text only states that the contractor had a 'problem' with the demand, without ever explaining the actual reason for the refusal.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "היא ביקשה חמישים אחוזים לקומה מתחתיה, אבל עם זה יש לנו בעיה. כל הבניין יקבל הנחה בגובה של 25 אחוזים."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xuka_18_ptv_165885.",
+    "question": "מהו שיעור החיסכון הכספי לחברות הדואליות בעקבות הפטור מדיווח כפול לרשות ניירות ערך?",
+    "reasoning": "[Level 0 + Level 2 style] The question links the regulatory exemption for dual-listed companies to its practical financial impact (cost savings), which is a natural synthesis-style inquiry. However, the specific amount or rate of financial savings is never mentioned in the transcript.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "תקנות ניירות ערך (דוחות תקופתיים ומיידיים) (תיקון), התשע\"א-2010"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_342_2373321",
+    "question": "אילו ממצאים מעידים על כך שהשימוש בנוסטוק באזורי קרחונים נסוגים כבר הוביל לביסוס צמחייה יציבה?",
+    "reasoning": "The question mimics a Level 3 evaluative style by asking for evidence or findings regarding the success of a specific environmental intervention. However, it is a Level 0 question because the text only mentions that using Nostoc in retreating glacier environments was *proposed* ('הוצע להשתמש'), and provides no actual findings or proof of successful implementation.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הוצע להשתמש ב-\"נוסטוק\" בסביבות של קרחונים נסוגים על מנת לבסס נוכחות חדשה ויציבה יותר של צמחייה על משטחי מינרלים שנחשפו לאחרונה."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_271_268059",
+    "question": "כיצד הגוף מווסת את החום הנפלט בקיבה בעת נטילת כדורים סותרי חומצה?",
+    "reasoning": "The question synthesizes two separate facts from the text (neutralization is an exothermic reaction that releases heat, and antacids are used to neutralize stomach acid) to ask about a physiological mechanism (how the body handles this heat in the stomach). This mimics a Level 3 synthesis/inference question, but the text never explains how the stomach deals with the heat, making it strictly Level 0.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "תרופות אלו כדוגמת 'אלקה-זלצר' או 'פפטו-ביסמול', כולן תרופות המכילות בתוכן בסיס שמגיב עם חומצות הקיבה בתגובת סתירה, ובכך מקטין את החומציות בקיבה ואת הסבל למטופל."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_034_2456687",
+    "question": "כיצד השפיעה בריחת ההון החריגה מבריטניה על תוצאות משאל העם בנוגע לעזיבת האיחוד האירופי?",
+    "reasoning": "The question asks for an evaluation of the impact of capital flight on the Brexit referendum results, mimicking a Level 3 analytical style. However, it is Level 0 because the text only provides data on the capital outflow leading up to the referendum, without mentioning the actual results or how the economic shift influenced the vote.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "לקראת משאל העם הבריטי על עזיבת האיחוד האירופי (ברקזיט) הייתה יציאת הון נטו של 77 מיליארד ליש\"ט בשני הרבעונים הקודמים, 65 מיליארד ליש\"ט ברבעון שלפני משאל העם ו-59 מיליארד ליש\"ט במרץ כאשר החל קמפיין משאל העם, בהשוואה לנתון של 2 מיליארד ליש\"ט בששת החודשים המקבילים בשנה שלפני כן."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "article_184_1708702",
+    "question": "כיצד השפיע ביטול חוקי חילול הקודש במדינות המערב על היקף הפשיעה על רקע דתי?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for the consequences of a policy change (abolishing blasphemy laws in the West), which sounds like a higher-level evaluative question. However, the text only notes the trend of abolition and reduced enforcement, without providing any information about its impact on religiously motivated crime.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "בסוף המאה ה-20 ותחילת המאה ה-21 ישנה נטייה במדינות המערב לביטול או לרפורמה של חוקי חילול הקודש, והחוקים הנותרים שעוסקים בכך נאכפים באותן המדינות רק לעיתים רחוקות."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "celebrities-7852433",
+    "question": "כיצד מבססות העובדות את דרישתן לפיצוי של מיליון שקלים חרף תנאי ההעסקה שקיבלו?",
+    "reasoning": "The question asks for the logical basis of the workers' claims, mimicking a Level 3 analytical question that contrasts two elements from the text (the high financial demand vs. the reportedly excellent working conditions). However, it is Level 0 because the text only presents the defense's perspective (calling the claims baseless and extortion), completely omitting the workers' actual arguments or justification for the lawsuit.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "העובדת לשעבר של הכוכבת מצטרפת לעובדת נוספת שפוטרה, ושתיהן תובעות את ראידמן על מיליון שקלים"
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "general-8658392",
+    "question": "כיצד השפיעה חזרתו של נסראללה מהאשמותיו כלפי המפגינים על מידת האמון של הציבור הלבנוני בארגון חיזבאללה?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for an evaluation of the impact of Nasrallah's rhetorical shift on public trust, mimicking a higher-level analysis question. However, it is fundamentally unanswerable because the text only reports his speech and does not provide any information about the public's subsequent reaction or changes in their trust toward Hezbollah.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ראש ארגון הטרור חזר בו מהיחס העוין שגילה ארגון הטרור למפגינים ולהאשמה שלו כלפיהם כי הם ממומנים בכסף זר."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "kalkala_24_ptv_614201",
+    "question": "מדוע נקבע דווקא ה-2 באוגוסט 2021 כמועד החיתוך להחלת הסדרי התדרים השונים על כוחות הביטחון?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for the underlying rationale behind a specific policy decision (the cutoff date), which mimics a Level 3 analytical question. However, it is unanswerable because the text merely states the date as a fact without providing any background or justification for why it was chosen.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הנושא היחיד שנקבע לו מועד אחר מופיע פה בפירוש, שזה העניין של החיתוך שנעשה ב-2 באוגוסט."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "xinux_tarbut_sport_20_ptv_396197",
+    "question": "מה מצביע על כך שהסדרת המוסד החינוכי תוביל לקליטת תלמידים נוספים מהשכונה?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for an evidence-based prediction regarding student enrollment, mimicking a higher-level analytical question. However, the text is a planning committee protocol that does not contain information about future student absorption or enrollment.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הסדרת מוסד חינוכי שובו"
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "sport-13524089",
+    "question": "כיצד צפויה שיטת המשחק של הכוכב האדום לסייע למקל להגשים בעתיד את חלום ה-NBA?",
+    "reasoning": "[Level 0 + Level 3 style] The question requires synthesizing two major themes in the text—the team's unique, team-oriented playing style and Mekel's suspended NBA dream—to predict a future outcome. It sounds like a high-level evaluative question, but the text never explains how or if this specific European system will actually improve his chances for the NBA, making it completely unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "החתימה בכוכב האדום בלגרד הראתה שחלום האן.בי.אי יכול לחכות או להיכנס ל\"הקפאה\"."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "you-may-find-interesting-8202566",
+    "question": "ממה נובע הפער בזמני התגובה ללחץ בין עור הפנים לבין שאר הגוף?",
+    "reasoning": "The question asks for the underlying cause of a contrast presented in the text (the body reacts immediately to stress, while the skin takes longer). This mimics a Level 3 analytical question by asking for a mechanism or reason behind a stated phenomenon. However, it is Level 0 because the text only states that there is a delay, without ever explaining the biological or physiological reason for it.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "בשונה מתסמיני הגוף, לוקח לו יותר זמן להגיב"
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "bikoret_17_ptv_133014",
+    "question": "מה גובה הקנס על פרסום שירותי זנות לקטינים?",
+    "reasoning": "English: The question asks for a specific concrete detail (the fine amount) using a direct 'what' format, which perfectly mimics Level 1 style. However, it is Level-0-unanswerable because the text only discusses the prison sentence and general penalties for the offense, without ever specifying a monetary fine.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הצעת חוק העונשין (תיקון – הגנה על קטינים מפני פרסום של זנות)"
+    ],
+    "mimic_target": "level1",
+    "author": "gemini"
+  },
+  {
+    "uuid": "magazine-9381289",
+    "question": "כיצד יבטיח המנגנון שמציעה שקד למינוי שופטים את עצמאותה של מערכת המשפט?",
+    "reasoning": "The question adopts an evaluative tone typical of Level 3, asking about the systemic implications and safeguards of a proposed policy. However, it is Level 0 because the text only lists Shaked's proposed mechanism for appointing judges (government and Knesset approval) without providing any information on how, or if, this mechanism would maintain the independence of the judicial system.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ביטול הוועדה למינוי שופטים לשופטי עליון, ובמקום זאת שרת המשפטים תביא מועמד לאישור הממשלה והכנסת."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  },
+  {
+    "uuid": "avoda_ravaxa_briut_18_ptv_138868",
+    "question": "איזו עדות בדיון מחזקת את הטענה שוועדת המשנה החדשה תייעל את הנגשתם של מבני הציבור?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks the reader to evaluate the text for evidence supporting a predictive claim (streamlining accessibility). This mimics a higher-order reasoning question. However, the text only details the bureaucratic formation and staffing of the subcommittee, providing no evidence or discussion regarding its actual future efficiency or impact, making the question unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "אני מציע להקים ועדת משנה לנגישות אשר תדון בבקשות להיתר בניה בנושא נגישות לאנשים עם מוגבלויות במבני ציבור ובמרחב הציבורי."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini"
+  }
+]

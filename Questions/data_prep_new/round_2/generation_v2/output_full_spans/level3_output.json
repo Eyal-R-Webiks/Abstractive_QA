@@ -1,0 +1,365 @@
+[
+  {
+    "question": "מדוע דיאטת כביש, שמפחיתה את שיעור התאונות, עלולה במקביל לסכן חיי אדם?",
+    "reasoning": "The question requires the reader to synthesize the 'Pros' section (which highlights a reduction in traffic accidents) with the 'Cons' section (which details risks to emergency response times and evacuation routes), recognizing the tension between routine traffic safety and emergency preparedness.",
+    "answer_spans": [
+      "התנגדויות אחרות בקשר לדיאטת כבישים נובעות מחשש לביטחון הציבור ופגיעה אפשרית במהירות המשטרה, אמבולנסים וכיבוי אש במקרי חירום.",
+      "מבקרי המהלך האשימו מאוחר יותר את מקבלי ההחלטות בכך שהוא גרם ללכידת נהגים בשריפה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_022_2168747",
+    "record_id": "0886a6fa"
+  },
+  {
+    "question": "מדוע פתרונות של פיזיקאים תאורטיים נתפסים לעיתים כחסרים או שגויים בעיני פיזיקאים מתמטיים?",
+    "reasoning": "The question requires synthesizing the methodological tension between theoretical and mathematical physicists, specifically inferring how the theoretical reliance on heuristic and intuitive arguments conflicts with the mathematical demand for strict rigor, leading to the re-evaluation of accepted solutions.",
+    "answer_spans": [
+      "הפיזיקה התאורטית מדגישה את הקישורים לתצפיות ולפיזיקה ניסויית, שלעיתים קרובות מחייבת פיזיקאים תאורטיים להשתמש בטיעונים היוריסטיים, אינטואיטיביים או משוערים. טיעונים כאלה אינם נחשבים קפדניים על ידי מתמטיקאים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_289_2204799",
+    "record_id": "546d2d5a"
+  },
+  {
+    "question": "מדוע הוחלט להשתמש בהגדרה כללית לשר האחראי בתיקון לתקנות, במקום לציין במפורש את המשרד לאזרחים ותיקים?",
+    "reasoning": "Requires inferring the practical motive behind the specific legal drafting choice (using a generic reference instead of naming the current responsible ministry) based on the described history of bureaucratic instability.",
+    "answer_spans": [
+      "אנחנו לא יודעים מה יהיה בעתיד, אבל עם התיקון הזה לא נצטרך לתקן שוב את התקנות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "avoda_ravaxa_briut_19_ptv_304548",
+    "record_id": "01fb1ca7"
+  },
+  {
+    "question": "מהו ההבדל המרכזי בין המניעים לחרמות צרכנים בישראל לפני קיץ 2011 לבין המניע לחרם שהחל באותה תקופה?",
+    "reasoning": "The question requires the reader to contrast the underlying motivations for consumer boycotts in Israel before and after the summer of 2011, abstracting the shift from social-political goals to economic ones.",
+    "answer_spans": [
+      "עד לקיץ 2011 נחשב הצרכן הישראלי לאדיש בתחום חרמות-הצרכנים להשגת מטרה הכלכלית",
+      "כל אירועי החרמות האלה היו להשגת מטרה חברתית-פוליטית"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_420_729864",
+    "record_id": "99900a01"
+  },
+  {
+    "question": "מה עזר לאליאב להימנע מעימותים אישיים בבית \"האח הגדול\"?",
+    "reasoning": "אליאב מציין שיש לו שקט פנימי שעוזר לו לשמור על איזון (משפט 5). במשפטים 20-28 הוא מספר באופן כולל על מקרים שהיו בבית ושהוא לא לקח חלק בהם אם הם לא נגעו לכולם. לא כתוב במפורש שהשקט הוא מה שעזר לו, צריך להסיק שבעזרתו הוא לא נכנס לריבים ורק צפה מהצד.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "celebrities-10142742",
+    "record_id": "077691ae"
+  },
+  {
+    "question": "מדוע ציון מפורש של שמירת היריון בחוק עלול לדעת המשתתפים בדיון להשיג דווקא תוצאה הפוכה מהרצוי?",
+    "reasoning": "Requires synthesizing the legal advisor's statement that the condition is already implicitly covered with the chairman's inference that explicitly adding it now might legally imply it wasn't protected beforehand, thus creating unintended negative consequences. The question avoids quotation marks to comply with the style guidelines.",
+    "answer_spans": [
+      "שמירת הריון כבר נכלל בתוך היריון.",
+      "זה יכול להשיג אפילו את ההיפך, שהדבר הזה כאילו לא מובן במצב המשפטי הנוכחי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "isha_17_ptv_571122",
+    "record_id": "218dac23"
+  },
+  {
+    "question": "מדוע נציג קופת חולים כללית רואה בפתרון התקציבי שהושג מענה חלקי בלבד?",
+    "reasoning": "Requires inferring the representative's stance that the agreement is insufficient long-term because it is temporary and limited only to this specific case, rather than a systemic solution.",
+    "answer_spans": [
+      "ניתן פתרון שכרגע הוא מניח את הדעת, לפחות לתקופה הזאת, אבל לתקופה הזאת בלבד ולמקרה הספציפי הזה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "gender_23_ptv_588601",
+    "record_id": "fb7c1770"
+  },
+  {
+    "question": "לפי הרב קריגר, מה אפשר להסיק מהכמות הספציפית של זוגות התפילין שנמצאו יחד בבונקר?",
+    "reasoning": "English: The question requires the reader to identify the specific inference made by Rabbi Kryger, connecting the exact quantity of artifacts found (10 pairs of tefillin) to the nature of the religious practice maintained in hiding (underground minyans).",
+    "answer_spans": [
+      "כמות התפילין מצביעה על מניינים מחתרתיים שהצליחו לקיים בתוך הבונקר, מתחת לאדמה ומתחת לאפם של הנאצים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "judaism-7044619",
+    "record_id": "1e618d84"
+  },
+  {
+    "question": "כיצד המוניטין של רשת איתנים אמור להוות תחליף לרישוי ממשלתי עבור לקוחות המחפשים יועץ משכנתאות?",
+    "reasoning": "The question requires synthesizing the problem of an unregulated market (lack of state intervention/licensing) with the proposed free-market solution, specifically understanding how a private brand's reputation acts as a proxy for official certification and trust.",
+    "answer_spans": [
+      "עצם הקשירה של היועץ למותג איתנים, מאותת ללקוח הפוטנציאלי שמדובר ביועץ משכנתא רציני ואיכותי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "mumlazim-3662506",
+    "record_id": "07597d5f"
+  },
+  {
+    "question": "איזה פער עולה מהכתבה בין תפיסת המצב של הנוסעים לבין ההיערכות המעשית של רשות שדות התעופה וחברות התעופה?",
+    "reasoning": "The question requires identifying and synthesizing the tension between the passengers' dismissive stance ('Israel is exaggerating', 'no reason to panic') and the severe, concrete crisis-management steps taken by the aviation authorities and airlines (closing terminals, unpaid leave, freezing flights).",
+    "answer_spans": [
+      "מדינת ישראל קצת מגזימה, אין סיבה לבהלה כזאת. אין אף מדינה בעולם שנוקטת בצעדים כל כך קיצוניים. אנחנו בוחרים שלא לפחד",
+      "כל הפעילות בטרמינל הועברה לשרוולים C ו-D בלבד, וכל שאר השרוולים נסגרו",
+      "עובדים רבים ברשות שדות התעופה הוצאו לחופשה ללא תשלום",
+      "ישראייר תקפיא את כל הטיסות הבינלאומית שלה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "travel-8334131",
+    "record_id": "ddf23b77"
+  },
+  {
+    "question": "כיצד מצדיק זבולון אורלב את נכונותו להתפשר על משך זמן ההיערכות שביקשה הממשלה?",
+    "reasoning": "The question requires evaluating the chairman's stance and synthesizing his philosophical justification for yielding to the government's request for a delay, moving beyond simple factual retrieval to understand the motive behind his compromise.",
+    "answer_spans": [
+      "אף פעם לא לריב על הזמן כי גם הזמן החדש מגיע. אל תבזבזו על זה הרבה אנרגיה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "yeled_18_ptv_186000",
+    "record_id": "12f1398a"
+  },
+  {
+    "question": "מהו היתרון המרכזי שרואה אבי דיכטר בהעברת החוק בהסכמה רחבה, למרות הוויתור על לוח הזמנים המקורי?",
+    "reasoning": "The question requires identifying the underlying rationale (stance evaluation) for the chairman's compromise, abstracting his explanation about committee consensus acting as a force multiplier, while strictly avoiding any quotation marks or acronyms with gershayim in the question text.",
+    "answer_spans": [
+      "החשיבות להעביר את זה בהסכמה של חברי הוועדה כדי שבתקופת התקנות והכללים של הרשות אנחנו נדע שאנחנו עובדים ביחד, יש לזה בעיני מכפיל כוח ומכפיל חשיבות."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "xuc_bitaxon_20_ptv_591920",
+    "record_id": "3706d4f5"
+  },
+  {
+    "question": "מה הם 2-3 הדברים העיקריים שעושים במועדונים?",
+    "reasoning": "נדרשת סינתזה רחבה של שלל פרטים מרחבי המסמך, ושקילה של מי מהם משמעותי יותר או פחות.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_001_1196898",
+    "record_id": "f0786c7e"
+  },
+  {
+    "question": "האם קפיטליזם מדיני שונה מקפיטליזם וסוציאליזם ״רגילים״?",
+    "reasoning": "נדרש סינתוז של שלל טיעונים ברחבי המסמך ע״מ לגבש סוג של ״דיעה״.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_002_1511547",
+    "record_id": "051a234e"
+  },
+  {
+    "question": "מדוע ההתגייסות המהירה ברשתות החברתיות למען מאבקים חברתיים אינה מבטיחה את הצלחתם לטווח ארוך?",
+    "reasoning": "Inference/tension: The question requires synthesizing the contrast between the rapid, widespread mobilization enabled by social media and the inherent risk of 'compassion fade' or digital fatigue that undermines long-term commitment.",
+    "answer_spans": [
+      "קיים סיכון של ירידת מעורבות עם הזמן",
+      "תופעה זו, המכונה \"חמלה מתפוגגת\", מדגישה את האופי החולף של האקטיביזם המקוון ואת האתגרים בשמירה על מחויבות ארוכת טווח מעבר לפרצי תשומת לב ראשוניים."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_063_273356",
+    "record_id": "d346c0a6"
+  },
+  {
+    "question": "לפי אלן דנדס, מה מונע מיצירת אמנות או מרומן להיחשב למיתוס של ממש?",
+    "reasoning": "Inference/abstraction: The reader must extract the underlying rationale for Dundes's distinction between true myth and artificial myth, identifying that an individual's artwork lacks the organic, sacred cultural tradition inherent to true mythology.",
+    "answer_spans": [
+      "אי אפשר לומר שיצירת אמנות, או חפץ אמנותי, היא הנרטיב של מסורת קדושה של תרבות"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_222_2141406",
+    "record_id": "98f34e4b"
+  },
+  {
+    "question": "כיצד איום וירטואלי על מערכת הבית החכם עלול להיתרגם לנזק פיזי ממשי?",
+    "reasoning": "Inference/Abstraction: The question requires the reader to abstract the specific examples of hacking (opening gas valves, causing floods) into the broader concept of a cyber (virtual) threat manifesting as physical destruction.",
+    "answer_spans": [
+      "האקר עשוי לפתוח ברז גז בישול שהותאם לבקרה ממוחשבת ולגרום לפיצוץ הבית, או לגרום להצפתו בעזרת ברז המחובר למערכת ויצירת קצר חשמלי שיוביל לשריפה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_371_249534",
+    "record_id": "c0f632ad"
+  },
+  {
+    "question": "כיצד משנה הגישה של מרטנס את סדר העדיפויות בתכנון מערכות תחבורה?",
+    "reasoning": "The question asks the reader to abstract the core paradigm shift (change in priorities) proposed by Martens, requiring them to synthesize the contrast between the traditional focus on system performance and his new focus on human accessibility and social justice.",
+    "answer_spans": [
+      "גישתו מדגישה את האדם ולא את יעילות המערכת כמרכז תכנון התחבורה, במטרה מוצהרת לצמצם את אי השוויון החברתי."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_514_2446983",
+    "record_id": "a0ff59c0"
+  },
+  {
+    "question": "איזה הסבר משותף עולה מדבריהם של טימברלייק, המקורבים ועדי הראייה להתנהגותו באותו ערב?",
+    "reasoning": "The question requires pattern recognition across multiple parts of the text, synthesizing the common excuse (alcohol consumption) provided independently by the eyewitness, the insider source, and Timberlake himself.",
+    "answer_spans": [
+      "הוא שתה המון",
+      "הוא שתה יותר מדי ונסחף",
+      "שתיתי יותר מדי באותו הלילה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "celebrities-8610463",
+    "record_id": "d8c5e015"
+  },
+  {
+    "question": "לפי הטקסט, אילו עמדות של ביינארט מעידות על כך שהביקורת שלו חרגה מהתנגדות להתנחלויות בלבד?",
+    "reasoning": "Synthesis/abstraction: The question requires the reader to synthesize multiple examples across the text that illustrate the author's claim about Beinart's radicalization, specifically identifying the stances that go beyond the standard critique of settlements.",
+    "answer_spans": [
+      "הוא מערער על קיומה של ישראל כמדינה יהודית וקורא לפירוזה מנשק גרעיני",
+      "הוא קורא לשינוי קיצוני: ישראל, לדעתו, צריכה להיות מדינה שבה יחיו בצוותא ובשוויון מלא יהודים ופלשתינים. נראה כי זו הסיבה שהוא קורא לישראל לפתוח את שעריה, ולאפשר לפלשתינים לממש את \"זכות השיבה\".",
+      "המחבר קורא לארה\"ב ולישראל להתחיל לחשוף את האמת על הטילים הגרעיניים של ישראל."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "opinions-4001915",
+    "record_id": "7a5e421c"
+  },
+  {
+    "question": "מדוע נאלץ משרד המשפטים לוותר על התנאי המקורי שמנע גבייה מקבילה של חובות ציבוריים ופרטיים?",
+    "reasoning": "Inference/Synthesis: The question requires the reader to connect the empirical data regarding the high overlap of debtors with the Ministry's realization that maintaining the original mutual-blocking condition would render the new legislation practically useless for a large portion of the public.",
+    "answer_spans": [
+      "ואם בסופו של יום הגענו למסקנה שעם חלק מאוד מאוד גדול של המקרים לא יכול להשתמש בו, אז אנחנו עשינו חשיבה מחדש והסכמנו כן להתגמש מבחינת העקרונות שלנו, וכן לוותר על התנאי הזה שציבורי חוסם פרטי ופרטי חוסם ציבורי"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "xuka_20_ptv_504632",
+    "record_id": "8c0c76b4"
+  },
+  {
+    "question": "איך יהודי התפוצות יכולים לצפות לחוות את הממשקים השונים עם מדינת ישראל?",
+    "reasoning": "דורש סינתוז של כל המידע בחלק הראשון על אתגרי העלייה וכל המידע בחלק השני על אתגרי ההסברה לכדי גיבוש מסקנה מתומצתת יחסית.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "aliya_klita_tfucot_17_ptv_134130",
+    "record_id": "71bb5a30"
+  },
+  {
+    "question": "מהנתונים שמפורטים בכתבה, מה היא החבילה המשתלמת ביותר עבור אדם אחד?",
+    "reasoning": "צריך להסיק מסקנה ו/או לגבש דיעה ע״ס הנותנים ב4-14 בעיקר. נדרש מיפוי והבנה של כל המחירים והתנאים השונים ואז עריכת השוואה ביניהם על מנת לגבש מסקנה/דיעה שאינה מופיעה בטקסט.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "business-10642983",
+    "record_id": "01201569"
+  },
+  {
+    "question": "איזה פרט משותף עולה מהכתבה לגבי בני הזוג של שני החולים שהחלימו?",
+    "reasoning": "The question requires pattern recognition across different sections of the text. The reader must locate the information about the spouses of both primary subjects (Yehuda and Dina) and synthesize the shared outcome (both contracted the virus).",
+    "answer_spans": [
+      "גם אשתו התגלתה כחיובית בבדיקה",
+      "בעלה אובחן גם הוא כחולה קורונה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "health-8282856",
+    "record_id": "6344b60e"
+  },
+  {
+    "question": "מה תהיה תוכנית העבודה של הוועדה כפי שאפשר להסיק מדברי החברים בה?",
+    "reasoning": "נדרש סינתוז של הנאמר ע״י רייטן (13-24), סעדי (31-50) ומרעי (71-88) בהרבה מקומות שונים, (תוך סינון הדוברים האחרים שאינם חברי הועדה כפי שמוסבר ב-5), ומתוכם לסנתז מסקנות ברורות, להבין קשרי סיבה ותוצאה בין הרצוי והמצוי, לאחד רעיונות שחוזרים על עצמם, ולהציע תוכנית פעולה.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "avoda_ravaxa_24_ptv_613498",
+    "record_id": "46fdac26"
+  },
+  {
+    "question": "לפי שמואל גולן, איזה שינוי באופי המערכה הצבאית דורש לבחון מחדש את תחומי האחריות של משרד הביטחון?",
+    "reasoning": "The question requires the reader to identify and abstract the conceptual shift described by Golan (the transition from a traditional front/home-front divide to a reality of 'two fronts') and connect it to the organizational dilemma regarding the Ministry of Defense's capacity.",
+    "answer_spans": [
+      "בעידן שבו ישנם שתי חזיתות, יש שתי חזיתות, זה כבר לא מלחמה שיש חזית ויש עורף, בעידן שיש שתי חזיתות, האם משרד הביטחון יכול לקחת אחריות על שתי חזיתות או שמה צריכים לעשות הפרדה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "bikoret_17_ptv_133395",
+    "record_id": "be4b3c38"
+  },
+  {
+    "question": "איזה פער מתאר הכלכלן בין המטרה של העלאת הריבית לבין ההשפעה המיידית שלה על הצרכנים?",
+    "reasoning": "Requires identifying and synthesizing the tension between the macroeconomic intent of the policy (cooling inflation) and its adverse microeconomic consequences (raising the cost of living).",
+    "answer_spans": [
+      "המטרה של העלאת הריבית היא \"לקרר\" את המשק ולהאט את הביקושים, במטרה להביא להקטנת הלחצים האינפלציוניים.",
+      "ההשפעה המיידית של העלאת הריבית בישראל תהיה דווקא בהעלאת יוקר המחיה."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "business-9254806",
+    "record_id": "42e2ef1a"
+  },
+  {
+    "question": "לפי המקרים השונים המתוארים, איזה מאפיין משותף יש לאוניות שאיראן מנצלת להעברת אמצעי הלחימה?",
+    "reasoning": "The question requires pattern recognition across multiple paragraphs, asking the reader to synthesize details from distinct incidents (Victoria, Monchegorsk, Karine A) to identify the recurring use of commercial/trade vessels as a smuggling method.",
+    "answer_spans": [
+      "אוניית הסחר",
+      "אוניית המסחר"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "tech-14018318",
+    "record_id": "3500ae31"
+  },
+  {
+    "question": "כיצד מנמקת היועצת המשפטית את העמדה שהצמצום בהצעת החוק אינו הופך אותה לסוגיה שונה לחלוטין מזו שהוצגה במקור?",
+    "reasoning": "Requires synthesizing the legal advisor's explanation that the amendments, despite significantly narrowing the bill's scope, are routine proportionality adjustments meant to protect privacy rather than a departure from the original topic.",
+    "answer_spans": [
+      "כל התיקונים שנעשו כאן הם כדי להשביח את המידתיות של הצעת החוק. הם בגדר של תיקונים שגרתיים שנעשים. אין פה דילוג על קריאה ראשונה, אין פה נושא זר לחלוטין. כל אחד מהתיקונים האלה רק מסייע לכך שההצעה תפגע פחות בפרטיות של אנשים, תהיה יותר מידתית."
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "knesset_19_ptv_242941",
+    "record_id": "c2abc6eb"
+  },
+  {
+    "question": "מדוע, לדעת הרב יונתן זקס ויצחק גרינברג, ההסברים הדתיים המסורתיים שמצדיקים סבל כבר אינם מתאימים כשמדובר בשואה?",
+    "reasoning": "The question requires synthesizing the shared meta-theological stance of Sacks and Greenberg, who both argue that the unprecedented scale and horror of the Holocaust render traditional justifications of suffering inadequate or morally unacceptable.",
+    "answer_spans": [
+      "הוא הבין שהסברים תאולוגים המצדיקים ייסורים, כבר לא מספיקים לאחר העוצמה של השואה.",
+      "טען שאין להגיד הסבר תאולוגי אם אינו סביר להגיד לנוכח ילדים נשרפים לדבריו כל תוכחות הנזכרות בתנך מתגמדות ביחס לסדר גודל ועוצמה של השואה"
+    ],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "gemini",
+    "doc_id": "article_113_2518944",
+    "record_id": "284ae494"
+  }
+]

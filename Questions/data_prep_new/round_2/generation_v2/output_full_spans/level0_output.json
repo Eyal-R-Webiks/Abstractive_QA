@@ -1,0 +1,230 @@
+[
+  {
+    "question": "איך השפיעה התרחבות בתי הקפה באירופה על תפוצת המועדנים?",
+    "reasoning": "מבוסס על שורה 9. נאמר שם כעובדה, אך אין הסבר בטקסט לאיך זה קרה.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_001_1196898",
+    "record_id": "22745125"
+  },
+  {
+    "question": "בכמה כסף רכשה חברת Penske Media את אינדיווייר?",
+    "reasoning": "The question asks for a specific, concrete detail (the purchase price of the website by Penske Media) using a direct, Level-1 style ('how much'). However, the text explicitly states that the terms of the deal were not published, making the exact amount unanswerable based on the passage.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "חברת Penske Media רכשה את האתר ב־19 בינואר 2016. תנאי העסקה לא פורסמו."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini",
+    "doc_id": "article_058_2462257",
+    "record_id": "6c13ae8c"
+  },
+  {
+    "question": "מדוע מלכה קפקא החליטה לעלות לארץ?",
+    "reasoning": "מוסבר ב-35 שהיא מגיעה מפולין, אך לא מוזכר אם היא עלתה ומדוע.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "aliya_klita_tfucot_17_ptv_134130",
+    "record_id": "2e4e4d4d"
+  },
+  {
+    "question": "באיזו שנה פותח מבחן איימס?",
+    "reasoning": "The question asks for the year the Ames test was developed, which is a straightforward factual detail (Level 1 style). However, the text only mentions that the Ames test is a method for determining mutagenicity, without stating when it was developed, making it a Level 0 unanswerable question.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מבחן איימס הוא שיטה אחת לקביעת מידת המוטגניות של גורם/חומר מסוים."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini",
+    "doc_id": "article_179_254373",
+    "record_id": "a3a4fd2a"
+  },
+  {
+    "question": "באיזו מאה החלה העת החדשה במדינות מזרח אירופה?",
+    "reasoning": "The question asks for a specific factual detail (the century the Modern Era began in Eastern Europe) using a direct, Level-1-style 'when' format. However, the text only states that it began 'much later' than in Italy, without specifying the exact century, making it unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "בעוד שההעת החדשה החלה באיטליה כמאה שנה לפני התאריך המצוין לעיל, במדינות מזרח אירופה היא החלה בתקופה מאוחרת הרבה יותר."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini",
+    "doc_id": "article_066_881044",
+    "record_id": "d20cfd04"
+  },
+  {
+    "question": "אילו סנקציות הופעלו נגד ראשי הערים שלא הגישו הצהרות הון בתחילת כהונתם?",
+    "reasoning": "The question mimics a Level 2 style by logically connecting a specific finding from the report (the failure to submit wealth declarations) to a practical consequence (sanctions). However, it is a Level 0 question because the text only states the severity of the omission but does not mention any actual sanctions or penalties applied to these mayors.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "העובדה ש-12 מראשי הערים ו-39% מהם ומסגניהם לא הגישו הצהרות הון בתחילת כהונתם היא חמורה."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini",
+    "doc_id": "bikoret_20_ptv_363765",
+    "record_id": "fb53ad1f"
+  },
+  {
+    "question": "מה הייתה הנקודה העיקרית במסמך שהוציאה המועצה לסחר הוגן?",
+    "reasoning": "במשפט 18 מוזכר המסמך אבל אין פירוט עליו.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "business-10642983",
+    "record_id": "f212940a"
+  },
+  {
+    "question": "מה הם השינויים שמוצעים במסגרת הרפורמה המתוכננת ע״י משרד העבודה?",
+    "reasoning": "הרפורמה מוזכרת ב-43 אך לא מפורטת.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "avoda_ravaxa_24_ptv_613498",
+    "record_id": "40c01bbb"
+  },
+  {
+    "question": "מדוע אליאב חושב שמגיע לאביבית או למירב לנצח?",
+    "reasoning": "בשני מקומות מוזכר שהוא תומך בהן אך לא מפורט מדוע",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "celebrities-10142742",
+    "record_id": "dbbda705"
+  },
+  {
+    "question": "מהו הקנס המוטל על חנות גדולה או בית קולנוע שמסרבים להעניק שירות ללא המתנה בתור לאישה בהיריון?",
+    "reasoning": "[Level 0 + Level 2 style] The question synthesizes the specific examples of public places (large stores, cinemas) with the core mandate of the bill (service without waiting) to ask about practical enforcement, but penalties for non-compliance are entirely absent from the text.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ענת מימון: בחוק שיווי זכויות האישה התשי\"א-1951 (להלן – החוק העיקרי), אחרי סעיף 6ד יבוא: \"6ה. מתן שירות ציבורי ללא המתנה בתור לאישה בהריון"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini",
+    "doc_id": "gender_20_ptv_504436",
+    "record_id": "e11c92fc"
+  },
+  {
+    "question": "כמה זמן שוהות האמניות האורחות בשכונה במסגרת תוכנית הרזידנסי של הפסטיבל?",
+    "reasoning": "The question synthesizes the mention of the residency program and the hosting of external guest artists to ask a practical implementation question (the duration of their stay). This mimics Level 2's focus on programmatic details, but the actual duration is completely absent from the text. No quote marks are used.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "הפסטיבל מתקיים מדי שנה ומארח מופעים מקצועיים אורחים, בכורות שנוצרות במסגרת תוכנית רזידנסי בשכונה לצד מופעים רצים. הבחירה באירוח של אמניות חיצוניות בשכונה נעשית מתוך צורך לתת ייצוג למגוון עולמות תרבותיים"
+    ],
+    "mimic_target": "level2",
+    "author": "gemini",
+    "doc_id": "article_401_2300254",
+    "record_id": "4972f1e8"
+  },
+  {
+    "question": "באילו אמצעים חזותיים משתמשת הסדרה כדי להמחיש את תחושת האשמה האימהית?",
+    "reasoning": "The question asks for an analysis of visual or cinematic techniques used to portray a specific theme mentioned in the text (maternal guilt). While the theme itself is discussed by the actress, the text provides no information about the artistic or visual methods used in the show, making it unanswerable (Level 0) while mimicking a higher-order media analysis question (Level 3).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "לדבריה, אחת התימות שהסדרה עוסקת בה היא האשמה הטיפוסית שמשותפת לכל הנשים מהרגע שבו הן יולדות את ילדיהן."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "judaism-11033303",
+    "record_id": "ac1e8d89"
+  },
+  {
+    "question": "מהו הנימוק המרכזי של משרד המשפטים לתמיכתו בהחמרת תנאי החיבור לחשמל?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for the underlying rationale of a specific stakeholder's position (the Ministry of Justice), which mimics a Level 3 argument-analysis question. However, while the text notes that the Ministry has a strict stance and presented it clearly in a previous meeting, it completely omits the actual justification or reasoning behind this stance, making it unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ולכן הממשלה וגם משרד המשפטים, שבדרך-כלל הוא מאוד קשה בזה, הוא היה גם בישיבה הקודמת והציג את זה באופן ברור, שזו העמדה שלהם"
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "kalkala_17_ptv_133438",
+    "record_id": "9e44b716"
+  },
+  {
+    "question": "אילו קריטריונים ינחו את המשטרה בקביעה שנשיאת סכינים על ידי שומרים הפכה למכת מדינה?",
+    "reasoning": "[Level 0 + Level 3 style] The question asks for the specific criteria or thresholds that would trigger a police officer's intervention regarding cold weapons. While the text mentions that an officer can intervene if the phenomenon becomes a 'national plague' (מכת מדינה), it provides no actual guidelines or criteria for making this determination. The phrasing mimics a Level 3 analytical/policy-evaluation question.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ואם קצין המשטרה רואה מכת מדינה שאנשים מסתובבים עם סכינים בבתים, הוא יאסור."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "pnim_exut_17_ptv_137205",
+    "record_id": "8b851cd6"
+  },
+  {
+    "question": "מהי עמדתו הרשמית של משרד הכלכלה בנוגע לזיקה שנוצרה בין משבר המאפייה לעיכוב החקיקה הביטחונית?",
+    "reasoning": "The text states that the Defense Ministry delayed the tender at the request of the Ministry of Economy, but it never provides the Ministry of Economy's actual stance on the political linkage between the bakery crisis and the military legislation. The phrasing mimics a Level 3 question by asking to synthesize a stakeholder's perspective on a complex situation, while avoiding any quotation marks.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "לבקשת משרד הכלכלה ומתוך ניסיון לסייע לעובדי המאפייה, מנהל הרכש (מנה\"ר) במשרד הביטחון השהה עד לסוף חודש אפריל 2021, את מימוש ההתקשרות"
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "military-life-6651786",
+    "record_id": "8299cff0"
+  },
+  {
+    "question": "באיזו מדינה שולטת מפלגה שמגדירה את עצמה כתומכת בקפיטליזם מדיני?",
+    "reasoning": "במשפטים כמו 3- ו-6 מוזכרות מדינות, אך לא מוזכרות מפלגות, והטיעונים מובאים ע״י אנשים אחרים ולא ע״י המפלגות עצמן.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [],
+    "mimic_target": "",
+    "author": "human",
+    "doc_id": "article_002_1511547",
+    "record_id": "42356553"
+  },
+  {
+    "question": "אילו צעדים יינקטו כדי להתמודד עם הקושי בזיהוי מגמות התחלואה?",
+    "reasoning": "The question asks for predictive or policy-oriented information (how the system plans to address a specific challenge), which mimics a Level 3 problem-solution analysis. However, it is Level 0 because the text only identifies the problem (difficulty in identifying trends due to low testing volume) but provides no information about any steps or solutions to handle it.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "היקף הבדיקות הנמוך מקשה על זיהוי מגמות התחלואה והבנתן\"."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "health-10745162",
+    "record_id": "6a3378c1"
+  },
+  {
+    "question": "כמה תעלות חוצות את הקרום בכל נקודת מגע?",
+    "reasoning": "The question asks for the exact number of channels at a contact point, mimicking a simple Level 1 'how many' factual question. The text states there is a 'large number' (מספר רב) of channels, but does not provide the exact quantity, making it unanswerable.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "כל נקודת מגע (aka nexus junction) מכילה מספר רב של תעלות החוצות את הקרום של שני תאים."
+    ],
+    "mimic_target": "level1",
+    "author": "gemini",
+    "doc_id": "article_202_1484294",
+    "record_id": "36a79efe"
+  },
+  {
+    "question": "מדוע מנה קטנה ברשת ANITA יקרה בשקל אחד ממנה קטנה ברשת הבת שלה, גולדה?",
+    "reasoning": "The question requires synthesizing the price of a small portion at ANITA (17 NIS) with the price at its subsidiary, Golda (16 NIS), which mimics a Level 2 comparison. However, the text never explains the reason for this one-shekel price difference, making it truly unanswerable (Level 0).",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "מחירים למנות אישיות: מנה קטנה: 17 שקלים, מנה בינונית: 22 שקלים, מנת ג'מבו: 26 שקלים."
+    ],
+    "mimic_target": "level2",
+    "author": "gemini",
+    "doc_id": "food-9789039",
+    "record_id": "a5359ab7"
+  },
+  {
+    "question": "מהו הנימוק שבגינו הגדיר יהלי רוטנברג חלק מטענות התעשיינים כדיס-אינפורמציה?",
+    "reasoning": "The question asks for the underlying rationale behind Rotenberg's accusation of 'disinformation', mimicking a Level 3 analytical question that requires unpacking a speaker's argument. However, it is strictly Level 0 because Rotenberg explicitly refuses to elaborate on his claim ('I don't want to get into it right now'), meaning the actual justification is completely absent from the text.",
+    "answer_spans": [],
+    "expected_answer_spans_level0": [
+      "ויש חלק בדברים שאמרתם שהם בגדר דיס-אינפורמציה ואני לא רוצה להיכנס לזה כרגע."
+    ],
+    "mimic_target": "level3",
+    "author": "gemini",
+    "doc_id": "ksafim_19_ptv_278103",
+    "record_id": "d36ac877"
+  }
+]

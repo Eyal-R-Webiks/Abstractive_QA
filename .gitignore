@@ -46,9 +46,17 @@ data_prep/original_data_sets/knesset/committee_no_morph_sentences_shards_bzip2_f
 
 # ── Full source datasets (very large; keep local, not in git) ─────────────────
 data_prep/original_data_sets/
+Questions/original_data_sets/
 
 # ── Copilot session archive (local working notes, not part of the project) ─────
 pilot/copilot_session_archive/
+
+# ── Cloned tools / dashboards (local only, not part of this project) ──────────
+human-signal-dashboard/
+Questions/human-signal-dashboard/
+
+# ── Runtime logs ──────────────────────────────────────────────────────────────
+*.log
 
 # ── Editor / IDE ──────────────────────────────────────────────────────────────
 .vscode/

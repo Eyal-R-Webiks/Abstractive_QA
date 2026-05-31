@@ -1,0 +1,57 @@
+[
+  {
+    "text": "[S1] המשרד השיק מערכת פניות מקוונת. [S2] הפונים יקבלו מספר מעקב אוטומטי. [S3] נציג אנושי יחזור במקרה הצורך. [S4] לא צוין זמן ההמתנה הממוצע למענה אנושי.",
+    "good": {
+      "reasoning": "[Level 0 + Level 2 style] The question links operational details (auto tracking + human callback), but the specific waiting-time metric is missing.",
+      "question": "מה זמן ההמתנה הממוצע בין קבלת מספר המעקב לחזרה מנציג אנושי?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "המשרד השיק מערכת פניות מקוונת."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "מה זמן ההמתנה?",
+        "why": "Too underspecified; weak synthesis-style signal."
+      },
+      {
+        "question": "לאור השינוי הדיגיטלי ובהתאם למדיניות השירות, מה זמן ההמתנה הממוצע?",
+        "why": "Premise-stacking and inflated opening."
+      }
+    ]
+  },
+  {
+    "text": "[S1] בית הספר האריך את שעות הספרייה עד 18:00. [S2] תלמידי שכבת י' יקבלו סדנת כתיבה שבועית. [S3] לא נמסר מי ינחה את הסדנה.",
+    "good": {
+      "reasoning": "[Level 0 + Level 2 style] The question ties the program detail to implementation, yet the instructor identity is absent.",
+      "question": "מי ינחה את סדנת הכתיבה השבועית לתלמידי שכבת י'?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "בית הספר האריך את שעות הספרייה עד 18:00."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "האם יש סדנת כתיבה שבועית לתלמידי שכבת י'?",
+        "why": "Yes/no form and answerable directly."
+      }
+    ]
+  },
+  {
+    "text": "[S1] העמותה פתחה מרכז סיוע חדש בדרום העיר. [S2] השירות כולל ייעוץ תעסוקתי וליווי ראשוני. [S3] לא פורסם מספר התקנים במרכז.",
+    "good": {
+      "reasoning": "[Level 0 + Level 2 style] The question is practical and implementation-oriented, but the staffing count is missing from the text.",
+      "question": "כמה תקני יועצים אוישו במרכז עם פתיחתו?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "העמותה פתחה מרכז סיוע חדש בדרום העיר."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "איזה מתח נוצר בין ההיצע לשירות לבין צורכי הקהילה המקומית?",
+        "why": "Drifts into abstract Level-3 wording."
+      }
+    ]
+  }
+]

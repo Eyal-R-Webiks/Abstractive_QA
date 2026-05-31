@@ -1,0 +1,53 @@
+[
+  {
+    "text": "[S1] ארגון הבריאות פרסם הנחיות חדשות לבתי חולים. [S2] כל בית חולים חייב לדווח על זמני המתנה אחת לחצי שנה. [S3] ההנחיות לא כוללות סעיף ענישה.",
+    "good": {
+      "reasoning": "[Level 1 Mimic] The question asks for a concrete penalty detail, but the text explicitly presents reporting duties and does not provide any penalty amount or sanction mechanism.",
+      "question": "איזה קנס יוטל על בית חולים שלא יגיש את הדיווח בזמן?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "ארגון הבריאות פרסם הנחיות חדשות לבתי חולים."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "על פי ההנחיות החדשות והמדיניות הכוללת, איזה קנס מנהלי כספי מדורג ומותנה יוטל?",
+        "why": "Premise-stacking and inflated phrasing."
+      }
+    ]
+  },
+  {
+    "text": "[S1] העירייה פתחה תוכנית לתמיכה בעסקים קטנים. [S2] עסקים יקבלו ייעוץ ושיווק דיגיטלי. [S3] לא נמסר מה התקציב הכולל של התוכנית.",
+    "good": {
+      "reasoning": "[Level 1 Mimic] The question targets a plausible factual field (budget), but that data is absent from the passage.",
+      "question": "מהו התקציב הכולל שהוקצה לתוכנית התמיכה בעסקים?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "העירייה פתחה תוכנית לתמיכה בעסקים קטנים."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "לאור הכיוונים הכלכליים ארוכי הטווח, כיצד תשפיע התוכנית על פריון המשק הלאומי בעוד עשור?",
+        "why": "Over-abstract, not a clean level mimic for missing information."
+      }
+    ]
+  },
+  {
+    "text": "[S1] הוועדה אישרה שינוי נוהל. [S2] ההחלטה תיכנס לתוקף בחודש הבא. [S3] אין פירוט מי יפקח על הביצוע בפועל.",
+    "good": {
+      "reasoning": "[Level 2 Mimic] It sounds operationally grounded, but the responsible oversight actor is not identified anywhere in the text.",
+      "question": "איזה גוף הוסמך לפקח על יישום הנוהל לאחר כניסתו לתוקף?",
+      "answer_spans": [],
+      "expected_answer_spans_level0": [
+        "הוועדה אישרה שינוי נוהל."
+      ]
+    },
+    "avoid": [
+      {
+        "question": "איזה גוף הוסמך לפקח על יישום הנוהל, אשר ייכנס לתוקף בחודש הבא?",
+        "why": "Redundant clause: trailing qualifier adds no value."
+      }
+    ]
+  }
+]
